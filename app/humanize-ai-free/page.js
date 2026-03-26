@@ -7,7 +7,7 @@ export default function HumanizeAIFreePage() {
   const [lang, setLang] = useState("en");
   const t = useMemo(() => getTranslations(lang), [lang]);
 
-  const [isDark, setIsDark] = useState(true);
+  const [isDark, setIsDark] = useState(false);
   useEffect(() => {
     try {
       const saved = localStorage.getItem("toolslify_theme");
@@ -30,7 +30,7 @@ export default function HumanizeAIFreePage() {
   const [input, setInput] = useState("");
   const [output, setOutput] = useState("");
 
-  const [tone, setTone] = useState("friendly");
+  const [tone, setTone] = useState("professional");
   const [strength, setStrength] = useState("medium");
   const [grammarMode, setGrammarMode] = useState(true);
   const [synonymEnhancer, setSynonymEnhancer] = useState(true);
@@ -127,463 +127,469 @@ export default function HumanizeAIFreePage() {
   }
 
   return (
-    <div className="min-h-screen bg-black text-white">
-      {/* Navigation */}
-      <motion.nav 
-        initial={{ opacity: 0, y: -20 }}
-        animate={{ opacity: 1, y: 0 }}
-        className="sticky top-0 z-50 border-b border-gray-800 bg-black/80 backdrop-blur-lg"
-      >
-        <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
-          <motion.a 
-            href="/" 
-            className="flex items-center space-x-3 group"
-            whileHover={{ scale: 1.05 }}
-          >
-            <div className="w-10 h-10 bg-gradient-to-br from-blue-500 to-purple-600 rounded-xl flex items-center justify-center font-bold text-white shadow-lg shadow-blue-500/25">
-              T
-            </div>
-            <div>
-              <h1 className="text-xl font-bold text-white">Toolslify</h1>
-              <p className="text-xs text-gray-400">AI Humanizer</p>
-            </div>
-          </motion.a>
-
-          <div className="flex items-center space-x-4">
-            <select
-              value={lang}
-              onChange={(e) => setLang(e.target.value)}
-              className="bg-gray-900 border border-gray-700 rounded-lg px-3 py-2 text-sm text-white focus:outline-none focus:border-blue-500 transition-colors"
-            >
-              <option value="en">English</option>
-              <option value="es">Español</option>
-            </select>
-
-            <button
-              onClick={() => setIsDark(!isDark)}
-              className="w-10 h-10 bg-gray-900 border border-gray-700 rounded-lg flex items-center justify-center hover:bg-gray-800 transition-colors"
-            >
-              <span className="text-lg">🌙</span>
-            </button>
-          </div>
-        </div>
-      </motion.nav>
-
-      <main className="max-w-7xl mx-auto px-6 py-12">
-        {/* Hero Section */}
-        <motion.section 
-          initial={{ opacity: 0, y: 40 }}
+    <div className={`min-h-screen ${isDark ? 'dark' : ''}`}>
+      <div className="bg-background text-foreground">
+        {/* Navigation */}
+        <motion.nav 
+          initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-          className="text-center mb-16"
+          className="sticky top-0 z-50 border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60"
         >
-          <motion.div 
-            className="inline-flex items-center space-x-2 bg-blue-500/10 border border-blue-500/30 rounded-full px-4 py-2 mb-6"
-            whileHover={{ scale: 1.05 }}
-          >
-            <span className="w-2 h-2 bg-blue-400 rounded-full animate-pulse"></span>
-            <span className="text-sm text-blue-300">AI-Powered Technology</span>
-          </motion.div>
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="flex justify-between items-center h-16">
+              <motion.a 
+                href="/" 
+                className="flex items-center space-x-3 group"
+                whileHover={{ scale: 1.02 }}
+              >
+                <div className="w-8 h-8 bg-primary rounded-lg flex items-center justify-center font-bold text-primary-foreground shadow-sm">
+                  T
+                </div>
+                <div className="hidden sm:block">
+                  <h1 className="text-lg font-semibold text-foreground">Toolslify</h1>
+                  <p className="text-xs text-muted-foreground">AI Humanizer</p>
+                </div>
+              </motion.a>
 
-          <h1 className="text-5xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-white via-gray-200 to-gray-400 bg-clip-text text-transparent">
-            Humanize AI Text
-            <span className="text-blue-400"> Instantly</span>
-          </h1>
-          
-          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
-            Transform AI-generated content into natural, human-like text. 
-            Perfect for students, writers, and professionals who want authentic content.
-          </p>
-
-          <motion.div 
-            className="flex flex-col sm:flex-row gap-4 justify-center mb-12"
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.3 }}
-          >
-            <motion.button
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-              className="bg-gradient-to-r from-blue-500 to-purple-600 text-white px-8 py-4 rounded-xl font-semibold shadow-lg shadow-blue-500/25 hover:shadow-blue-500/40 transition-all"
-            >
-              Start Humanizing Free
-            </motion.button>
-            <motion.button
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-              className="border border-gray-700 text-white px-8 py-4 rounded-xl font-semibold hover:bg-gray-900 transition-colors"
-            >
-              View Examples
-            </motion.button>
-          </motion.div>
-        </motion.section>
-
-        {/* Tool Section */}
-        <motion.section 
-          initial={{ opacity: 0, y: 40 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.2 }}
-          className="mb-16"
-        >
-          <div className="bg-gradient-to-br from-gray-900 to-black border border-gray-800 rounded-3xl p-8 shadow-2xl">
-            {/* Tab Selector */}
-            <div className="flex justify-center mb-8">
-              <div className="inline-flex bg-gray-800/50 rounded-xl p-1">
-                <button
-                  onClick={() => setTab("humanizer")}
-                  className={`px-6 py-3 rounded-lg font-medium transition-all ${
-                    tab === "humanizer" 
-                      ? "bg-blue-500 text-white shadow-lg shadow-blue-500/25" 
-                      : "text-gray-400 hover:text-white"
-                  }`}
-                >
-                  Humanizer
-                </button>
-                <button
-                  onClick={() => setTab("paraphraser")}
-                  className={`px-6 py-3 rounded-lg font-medium transition-all ${
-                    tab === "paraphraser" 
-                      ? "bg-blue-500 text-white shadow-lg shadow-blue-500/25" 
-                      : "text-gray-400 hover:text-white"
-                  }`}
-                >
-                  Paraphraser
-                </button>
-              </div>
-            </div>
-
-            {/* Controls */}
-            <div className="grid md:grid-cols-2 gap-6 mb-8">
-              <div className="space-y-2">
-                <label className="text-sm font-medium text-gray-300">Tone</label>
+              <div className="flex items-center space-x-4">
                 <select
-                  value={tone}
-                  onChange={(e) => setTone(e.target.value)}
-                  className="w-full bg-gray-800 border border-gray-700 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-blue-500 transition-colors"
+                  value={lang}
+                  onChange={(e) => setLang(e.target.value)}
+                  className="bg-secondary border border-input rounded-md px-3 py-1.5 text-sm focus:outline-none focus:ring-2 focus:ring-ring focus:border-transparent"
                 >
-                  <option value="casual">Casual</option>
-                  <option value="professional">Professional</option>
-                  <option value="academic">Academic</option>
-                  <option value="friendly">Friendly</option>
+                  <option value="en">English</option>
+                  <option value="es">Español</option>
                 </select>
+
+                <button
+                  onClick={() => setIsDark(!isDark)}
+                  className="w-9 h-9 bg-secondary border border-input rounded-md flex items-center justify-center hover:bg-accent transition-colors"
+                >
+                  <span className="text-sm">{isDark ? "☀" : "🌙"}</span>
+                </button>
+              </div>
+            </div>
+          </div>
+        </motion.nav>
+
+        <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+          {/* Hero Section */}
+          <motion.section 
+            initial={{ opacity: 0, y: 40 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            className="text-center mb-12"
+          >
+            <motion.div 
+              className="inline-flex items-center space-x-2 bg-primary/10 border border-primary/20 rounded-full px-4 py-2 mb-6"
+              whileHover={{ scale: 1.02 }}
+            >
+              <span className="w-2 h-2 bg-primary rounded-full animate-pulse"></span>
+              <span className="text-sm text-primary font-medium">AI-Powered Technology</span>
+            </motion.div>
+
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 text-foreground">
+              Humanize AI Text
+              <span className="text-primary"> Instantly</span>
+            </h1>
+            
+            <p className="text-lg md:text-xl text-muted-foreground mb-8 max-w-3xl mx-auto leading-relaxed">
+              Transform AI-generated content into natural, human-like text. 
+              Perfect for students, writers, and professionals who want authentic content.
+            </p>
+
+            <motion.div 
+              className="flex flex-col sm:flex-row gap-4 justify-center mb-12"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.3 }}
+            >
+              <motion.button
+                whileHover={{ scale: 1.02 }}
+                whileTap={{ scale: 0.98 }}
+                className="bg-primary text-primary-foreground px-8 py-3 rounded-lg font-medium shadow-sm hover:shadow-md transition-all"
+              >
+                Start Humanizing Free
+              </motion.button>
+              <motion.button
+                whileHover={{ scale: 1.02 }}
+                whileTap={{ scale: 0.98 }}
+                className="border border-input bg-background text-foreground px-8 py-3 rounded-lg font-medium hover:bg-accent transition-colors"
+              >
+                View Examples
+              </motion.button>
+            </motion.div>
+          </motion.section>
+
+          {/* Tool Section */}
+          <motion.section 
+            initial={{ opacity: 0, y: 40 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.2 }}
+            className="mb-16"
+          >
+            <div className="bg-card border border-border rounded-2xl p-6 md:p-8 shadow-sm">
+              {/* Tab Selector */}
+              <div className="flex justify-center mb-8">
+                <div className="inline-flex bg-muted rounded-lg p-1">
+                  <button
+                    onClick={() => setTab("humanizer")}
+                    className={`px-6 py-2 rounded-md font-medium transition-all ${
+                      tab === "humanizer" 
+                        ? "bg-background text-foreground shadow-sm" 
+                        : "text-muted-foreground hover:text-foreground"
+                    }`}
+                  >
+                    Humanizer
+                  </button>
+                  <button
+                    onClick={() => setTab("paraphraser")}
+                    className={`px-6 py-2 rounded-md font-medium transition-all ${
+                      tab === "paraphraser" 
+                        ? "bg-background text-foreground shadow-sm" 
+                        : "text-muted-foreground hover:text-foreground"
+                    }`}
+                  >
+                    Paraphraser
+                  </button>
+                </div>
               </div>
 
-              <div className="space-y-2">
-                <div className="flex justify-between items-center">
-                  <label className="text-sm font-medium text-gray-300">Strength</label>
-                  <span className="text-sm text-gray-400 capitalize">{strength}</span>
+              {/* Controls */}
+              <div className="grid md:grid-cols-2 gap-6 mb-8">
+                <div className="space-y-2">
+                  <label className="text-sm font-medium text-foreground">Tone</label>
+                  <select
+                    value={tone}
+                    onChange={(e) => setTone(e.target.value)}
+                    className="w-full bg-background border border-input rounded-md px-4 py-2 text-foreground focus:outline-none focus:ring-2 focus:ring-ring focus:border-transparent"
+                  >
+                    <option value="casual">Casual</option>
+                    <option value="professional">Professional</option>
+                    <option value="academic">Academic</option>
+                    <option value="friendly">Friendly</option>
+                  </select>
                 </div>
-                <input
-                  type="range"
-                  min={0}
-                  max={2}
-                  step={1}
-                  value={strengthToIndex(strength)}
-                  onChange={(e) => setStrength(indexToStrength(Number(e.target.value)))}
-                  className="w-full accent-blue-500"
-                />
-                <div className="flex justify-between text-xs text-gray-500">
-                  <span>Low</span>
-                  <span>Medium</span>
-                  <span>High</span>
+
+                <div className="space-y-2">
+                  <div className="flex justify-between items-center">
+                    <label className="text-sm font-medium text-foreground">Strength</label>
+                    <span className="text-sm text-muted-foreground capitalize">{strength}</span>
+                  </div>
+                  <input
+                    type="range"
+                    min={0}
+                    max={2}
+                    step={1}
+                    value={strengthToIndex(strength)}
+                    onChange={(e) => setStrength(indexToStrength(Number(e.target.value)))}
+                    className="w-full accent-primary"
+                  />
+                  <div className="flex justify-between text-xs text-muted-foreground">
+                    <span>Low</span>
+                    <span>Medium</span>
+                    <span>High</span>
+                  </div>
+                </div>
+              </div>
+
+              {/* Toggle Options */}
+              <div className="grid md:grid-cols-3 gap-4 mb-8">
+                {[
+                  { label: "Grammar Mode", value: grammarMode, onChange: setGrammarMode },
+                  { label: "Synonym Enhancer", value: synonymEnhancer, onChange: setSynonymEnhancer },
+                  { label: "Sentence Restructure", value: sentenceRestructure, onChange: setSentenceRestructure }
+                ].map((item, index) => (
+                  <motion.div
+                    key={index}
+                    whileHover={{ scale: 1.01 }}
+                    className="bg-muted border border-border rounded-lg p-4"
+                  >
+                    <div className="flex items-center justify-between">
+                      <span className="text-sm font-medium text-foreground">{item.label}</span>
+                      <button
+                        onClick={() => item.onChange(!item.value)}
+                        className={`relative inline-flex h-6 w-11 items-center rounded-full transition-colors ${
+                          item.value ? "bg-primary" : "bg-input"
+                        }`}
+                      >
+                        <span
+                          className={`inline-block h-4 w-4 transform rounded-full bg-background transition-transform ${
+                            item.value ? "translate-x-6" : "translate-x-1"
+                          }`}
+                        />
+                      </button>
+                    </div>
+                  </motion.div>
+                ))}
+              </div>
+
+              {/* Input/Output Grid */}
+              <div className="grid md:grid-cols-2 gap-6 mb-8">
+                <div className="space-y-3">
+                  <div className="flex justify-between items-center">
+                    <label className="text-sm font-medium text-foreground">Input Text</label>
+                    <div className="text-xs text-muted-foreground">
+                      {inputMetrics.words}w / {inputMetrics.chars}c
+                    </div>
+                  </div>
+                  <textarea
+                    value={input}
+                    onChange={(e) => setInput(e.target.value)}
+                    rows={12}
+                    placeholder="Paste your AI-generated text here..."
+                    className="w-full bg-background border border-input rounded-md p-4 text-foreground placeholder-muted-foreground focus:outline-none focus:ring-2 focus:ring-ring focus:border-transparent resize-none"
+                  />
+                </div>
+
+                <div className="space-y-3">
+                  <div className="flex justify-between items-center">
+                    <label className="text-sm font-medium text-foreground">Humanized Output</label>
+                    <div className="text-xs text-muted-foreground">
+                      {outputMetrics.words}w / {outputMetrics.chars}c
+                    </div>
+                  </div>
+                  <textarea
+                    value={output}
+                    onChange={(e) => setOutput(e.target.value)}
+                    rows={12}
+                    placeholder="Your humanized text will appear here..."
+                    className="w-full bg-background border border-input rounded-md p-4 text-foreground placeholder-muted-foreground focus:outline-none focus:ring-2 focus:ring-ring focus:border-transparent resize-none"
+                  />
+                  
+                  <div className="flex gap-2">
+                    <motion.button
+                      whileHover={{ scale: 1.02 }}
+                      whileTap={{ scale: 0.98 }}
+                      onClick={copyOutput}
+                      disabled={!output}
+                      className="flex-1 bg-secondary border border-input rounded-md px-4 py-2 text-sm text-foreground hover:bg-accent disabled:opacity-50 disabled:cursor-not-allowed transition-colors"
+                    >
+                      Copy
+                    </motion.button>
+                    <motion.button
+                      whileHover={{ scale: 1.02 }}
+                      whileTap={{ scale: 0.98 }}
+                      onClick={downloadTxt}
+                      disabled={!output}
+                      className="flex-1 bg-secondary border border-input rounded-md px-4 py-2 text-sm text-foreground hover:bg-accent disabled:opacity-50 disabled:cursor-not-allowed transition-colors"
+                    >
+                      Download
+                    </motion.button>
+                  </div>
+                </div>
+              </div>
+
+              {/* Action Buttons */}
+              <div className="flex flex-col lg:flex-row gap-4 items-center justify-between">
+                <div className="flex flex-col sm:flex-row gap-3">
+                  <motion.button
+                    whileHover={{ scale: 1.02 }}
+                    whileTap={{ scale: 0.98 }}
+                    onClick={() => runHumanize({ rehumanize: false })}
+                    disabled={!canRun}
+                    className="bg-primary text-primary-foreground px-8 py-3 rounded-lg font-medium shadow-sm hover:shadow-md disabled:opacity-50 disabled:cursor-not-allowed transition-all"
+                  >
+                    {isLoading ? (
+                      <span className="flex items-center gap-2">
+                        <div className="w-4 h-4 border-2 border-primary-foreground/30 border-t-primary-foreground rounded-full animate-spin" />
+                        Processing...
+                      </span>
+                    ) : (
+                      <span>Humanize AI Text</span>
+                    )}
+                  </motion.button>
+
+                  <motion.button
+                    whileHover={{ scale: 1.02 }}
+                    whileTap={{ scale: 0.98 }}
+                    onClick={() => runHumanize({ rehumanize: true })}
+                    disabled={!input.trim() || isLoading}
+                    className="bg-secondary border border-input text-foreground px-6 py-3 rounded-lg font-medium hover:bg-accent disabled:opacity-50 disabled:cursor-not-allowed transition-colors"
+                  >
+                    Re-humanize
+                  </motion.button>
+
+                  <motion.button
+                    whileHover={{ scale: 1.02 }}
+                    whileTap={{ scale: 0.98 }}
+                    onClick={clearAll}
+                    disabled={(!input && !output) || isLoading}
+                    className="bg-secondary border border-input text-foreground px-6 py-3 rounded-lg font-medium hover:bg-accent disabled:opacity-50 disabled:cursor-not-allowed transition-colors"
+                  >
+                    Clear All
+                  </motion.button>
+                </div>
+
+                {/* Stats */}
+                <div className="grid grid-cols-2 sm:grid-cols-4 gap-3">
+                  <div className="text-center">
+                    <div className="text-xs text-muted-foreground">AI Before</div>
+                    <div className="text-sm font-semibold text-destructive">{beforeAIDetect}%</div>
+                  </div>
+                  <div className="text-center">
+                    <div className="text-xs text-muted-foreground">AI After</div>
+                    <div className="text-sm font-semibold text-green-600">{afterAIDetect}%</div>
+                  </div>
+                  <div className="text-center">
+                    <div className="text-xs text-muted-foreground">Readability</div>
+                    <div className="text-sm font-semibold text-primary">{readability}</div>
+                  </div>
+                  <div className="text-center">
+                    <div className="text-xs text-muted-foreground">Reading Time</div>
+                    <div className="text-sm font-semibold text-primary">{outputMetrics.readingMinutes || inputMetrics.readingMinutes}m</div>
+                  </div>
                 </div>
               </div>
             </div>
+          </motion.section>
 
-            {/* Toggle Options */}
-            <div className="grid md:grid-cols-3 gap-4 mb-8">
+          {/* Features Section */}
+          <motion.section 
+            initial={{ opacity: 0, y: 40 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.4 }}
+            className="mb-16"
+          >
+            <h2 className="text-3xl font-bold text-center mb-12 text-foreground">Why Choose Toolslify?</h2>
+            <div className="grid md:grid-cols-3 gap-8">
               {[
-                { label: "Grammar Mode", value: grammarMode, onChange: setGrammarMode },
-                { label: "Synonym Enhancer", value: synonymEnhancer, onChange: setSynonymEnhancer },
-                { label: "Sentence Restructure", value: sentenceRestructure, onChange: setSentenceRestructure }
-              ].map((item, index) => (
+                {
+                  title: "Lightning Fast",
+                  description: "Process your text instantly with our optimized AI algorithms",
+                  icon: "⚡"
+                },
+                {
+                  title: "Privacy First",
+                  description: "All processing happens in your browser. Your text never leaves your device",
+                  icon: "🔒"
+                },
+                {
+                  title: "Free Forever",
+                  description: "No signup, no limits. Humanize as much text as you need",
+                  icon: "🎁"
+                }
+              ].map((feature, index) => (
                 <motion.div
                   key={index}
-                  whileHover={{ scale: 1.02 }}
-                  className="bg-gray-800/50 border border-gray-700 rounded-xl p-4"
+                  whileHover={{ scale: 1.02, y: -4 }}
+                  className="bg-card border border-border rounded-xl p-6 text-center shadow-sm"
                 >
-                  <div className="flex items-center justify-between">
-                    <span className="text-sm font-medium text-gray-300">{item.label}</span>
-                    <button
-                      onClick={() => item.onChange(!item.value)}
-                      className={`w-12 h-6 rounded-full transition-colors ${
-                        item.value ? "bg-blue-500" : "bg-gray-600"
-                      }`}
-                    >
-                      <div className={`w-5 h-5 bg-white rounded-full transition-transform ${
-                        item.value ? "translate-x-6" : "translate-x-0.5"
-                      }`} />
-                    </button>
-                  </div>
+                  <div className="text-3xl mb-4">{feature.icon}</div>
+                  <h3 className="text-lg font-semibold mb-3 text-foreground">{feature.title}</h3>
+                  <p className="text-muted-foreground">{feature.description}</p>
                 </motion.div>
               ))}
             </div>
+          </motion.section>
 
-            {/* Input/Output Grid */}
-            <div className="grid md:grid-cols-2 gap-6 mb-8">
-              <div className="space-y-3">
-                <div className="flex justify-between items-center">
-                  <label className="text-sm font-medium text-gray-300">Input Text</label>
-                  <div className="text-xs text-gray-500">
-                    {inputMetrics.words}w / {inputMetrics.chars}c
-                  </div>
-                </div>
-                <textarea
-                  value={input}
-                  onChange={(e) => setInput(e.target.value)}
-                  rows={12}
-                  placeholder="Paste your AI-generated text here..."
-                  className="w-full bg-gray-800 border border-gray-700 rounded-xl p-4 text-white placeholder-gray-500 focus:outline-none focus:border-blue-500 transition-colors resize-none"
-                />
-              </div>
-
-              <div className="space-y-3">
-                <div className="flex justify-between items-center">
-                  <label className="text-sm font-medium text-gray-300">Humanized Output</label>
-                  <div className="text-xs text-gray-500">
-                    {outputMetrics.words}w / {outputMetrics.chars}c
-                  </div>
-                </div>
-                <textarea
-                  value={output}
-                  onChange={(e) => setOutput(e.target.value)}
-                  rows={12}
-                  placeholder="Your humanized text will appear here..."
-                  className="w-full bg-gray-800 border border-gray-700 rounded-xl p-4 text-white placeholder-gray-500 focus:outline-none focus:border-blue-500 transition-colors resize-none"
-                />
+          {/* SEO Content Section */}
+          <motion.section 
+            initial={{ opacity: 0, y: 40 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.5 }}
+            className="mb-16"
+          >
+            <div className="bg-card border border-border rounded-2xl p-6 md:p-8 shadow-sm">
+              <article className="prose prose-lg max-w-none prose-headings:text-foreground prose-p:text-muted-foreground">
+                <h2 className="text-3xl font-bold mb-6 text-foreground">Humanize AI Free — Transform Your Text in Seconds</h2>
                 
-                <div className="flex gap-2">
-                  <motion.button
-                    whileHover={{ scale: 1.05 }}
-                    whileTap={{ scale: 0.95 }}
-                    onClick={copyOutput}
-                    disabled={!output}
-                    className="flex-1 bg-gray-800 border border-gray-700 rounded-lg px-4 py-2 text-sm text-gray-300 hover:bg-gray-700 disabled:opacity-50 disabled:cursor-not-allowed transition-colors"
-                  >
-                    Copy
-                  </motion.button>
-                  <motion.button
-                    whileHover={{ scale: 1.05 }}
-                    whileTap={{ scale: 0.95 }}
-                    onClick={downloadTxt}
-                    disabled={!output}
-                    className="flex-1 bg-gray-800 border border-gray-700 rounded-lg px-4 py-2 text-sm text-gray-300 hover:bg-gray-700 disabled:opacity-50 disabled:cursor-not-allowed transition-colors"
-                  >
-                    Download
-                  </motion.button>
+                <p className="text-muted-foreground mb-6 leading-relaxed">
+                  If you've ever pasted an AI-generated paragraph into a document and felt it sounded a little "too perfect," 
+                  you're not alone. Many AI drafts are accurate but can feel robotic, repetitive, or overly formal. 
+                  That's where our humanize AI free tool helps: it rewrites your text to read more naturally while keeping 
+                  the original idea intact.
+                </p>
+
+                <h3 className="text-2xl font-semibold mb-4 text-foreground">Why People Humanize AI Text Online</h3>
+                <p className="text-muted-foreground mb-6 leading-relaxed">
+                  Humanizing doesn't mean changing facts or adding fluff. It means adding the kind of natural variation 
+                  that real people use—small sentence rhythm changes, more natural transitions, and occasional synonym swaps. 
+                  When you humanize AI text online, you can make your writing feel less templated and more personal, 
+                  especially for emails, blog drafts, product descriptions, and school notes.
+                </p>
+
+                <div className="bg-muted border border-border rounded-xl p-6 mb-6">
+                  <h4 className="text-xl font-semibold mb-4 text-foreground">Key Benefits:</h4>
+                  <ul className="space-y-3 text-muted-foreground">
+                    <li className="flex items-start gap-3">
+                      <span className="text-primary mt-1">✓</span>
+                      <span>Better flow: split long sentences and merge short ones for smoother reading</span>
+                    </li>
+                    <li className="flex items-start gap-3">
+                      <span className="text-primary mt-1">✓</span>
+                      <span>More natural tone: casual, professional, academic, or friendly voice options</span>
+                    </li>
+                    <li className="flex items-start gap-3">
+                      <span className="text-primary mt-1">✓</span>
+                      <span>Cleaner writing: optional grammar improvement for punctuation and spacing</span>
+                    </li>
+                    <li className="flex items-start gap-3">
+                      <span className="text-primary mt-1">✓</span>
+                      <span>Fast iterations: re-humanize to generate a different version each time</span>
+                    </li>
+                  </ul>
                 </div>
+
+                <h3 className="text-2xl font-semibold mb-4 text-foreground">How Our AI Humanizer Works</h3>
+                <p className="text-muted-foreground mb-6 leading-relaxed">
+                  This free AI humanizer no login solution uses several lightweight steps to simulate a human rewrite. 
+                  It's intentionally fast and privacy-friendly because it runs locally in your browser:
+                </p>
+                
+                <ol className="space-y-3 text-muted-foreground">
+                  <li className="flex items-start gap-3">
+                    <span className="bg-primary text-primary-foreground w-6 h-6 rounded-full flex items-center justify-center text-sm font-semibold flex-shrink-0">1</span>
+                    <span>Normalize and clean the text (spacing, punctuation, and basic grammar rules)</span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <span className="bg-primary text-primary-foreground w-6 h-6 rounded-full flex items-center justify-center text-sm font-semibold flex-shrink-0">2</span>
+                    <span>Restructure sentences by splitting overly long lines and merging very short ones</span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <span className="bg-primary text-primary-foreground w-6 h-6 rounded-full flex items-center justify-center text-sm font-semibold flex-shrink-0">3</span>
+                    <span>Apply your selected tone by adjusting phrasing and transitions</span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <span className="bg-primary text-primary-foreground w-6 h-6 rounded-full flex items-center justify-center text-sm font-semibold flex-shrink-0">4</span>
+                    <span>Optionally enhance synonyms and add small randomness so each run feels different</span>
+                  </li>
+                </ol>
+
+                <h3 className="text-2xl font-semibold mb-4 text-foreground">Why Choose Toolslify's Humanize AI Free Tool</h3>
+                <p className="text-muted-foreground mb-6 leading-relaxed">
+                  If you need a free AI humanizer no login that's easy to use, Toolslify is built for you. 
+                  The interface is modern, responsive, and includes a light theme toggle. Action buttons stay visible 
+                  while you scroll, so you're never hunting for the next step.
+                </p>
+                
+                <p className="text-muted-foreground leading-relaxed">
+                  Most importantly, you stay in control: you can choose low, medium, or high rewrite strength and 
+                  switch tones to match your audience. Whether you're polishing an AI draft for a blog, making 
+                  an email sound less stiff, or simply improving readability, this humanize AI text online tool 
+                  helps you get a more natural result—quickly and for free.
+                </p>
+              </article>
+            </div>
+          </motion.section>
+        </main>
+
+        {/* Footer */}
+        <footer className="border-t bg-background">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+            <div className="flex flex-col md:flex-row justify-between items-center">
+              <p className="text-muted-foreground text-sm mb-4 md:mb-0">
+                © 2024 Toolslify. Free AI Tools for Everyone.
+              </p>
+              <div className="flex gap-6">
+                <a href="/" className="text-muted-foreground hover:text-foreground transition-colors">Home</a>
+                <a href="/tools" className="text-muted-foreground hover:text-foreground transition-colors">Tools</a>
+                <a href="/humanize-ai-free" className="text-muted-foreground hover:text-foreground transition-colors">AI Humanizer</a>
               </div>
             </div>
-
-            {/* Action Buttons */}
-            <div className="flex flex-col sm:flex-row gap-4 items-center justify-between">
-              <div className="flex flex-col sm:flex-row gap-3">
-                <motion.button
-                  whileHover={{ scale: 1.05 }}
-                  whileTap={{ scale: 0.95 }}
-                  onClick={() => runHumanize({ rehumanize: false })}
-                  disabled={!canRun}
-                  className="bg-gradient-to-r from-blue-500 to-purple-600 text-white px-8 py-3 rounded-xl font-semibold shadow-lg shadow-blue-500/25 disabled:opacity-50 disabled:cursor-not-allowed transition-all"
-                >
-                  {isLoading ? (
-                    <span className="flex items-center gap-2">
-                      <div className="w-4 h-4 border-2 border-white/30 border-t-white rounded-full animate-spin" />
-                      Processing...
-                    </span>
-                  ) : (
-                    <span>Humanize AI Text</span>
-                  )}
-                </motion.button>
-
-                <motion.button
-                  whileHover={{ scale: 1.05 }}
-                  whileTap={{ scale: 0.95 }}
-                  onClick={() => runHumanize({ rehumanize: true })}
-                  disabled={!input.trim() || isLoading}
-                  className="bg-gray-800 border border-gray-700 text-white px-6 py-3 rounded-xl font-semibold hover:bg-gray-700 disabled:opacity-50 disabled:cursor-not-allowed transition-colors"
-                >
-                  Re-humanize
-                </motion.button>
-
-                <motion.button
-                  whileHover={{ scale: 1.05 }}
-                  whileTap={{ scale: 0.95 }}
-                  onClick={clearAll}
-                  disabled={(!input && !output) || isLoading}
-                  className="bg-gray-800 border border-gray-700 text-white px-6 py-3 rounded-xl font-semibold hover:bg-gray-700 disabled:opacity-50 disabled:cursor-not-allowed transition-colors"
-                >
-                  Clear All
-                </motion.button>
-              </div>
-
-              {/* Stats */}
-              <div className="grid grid-cols-2 sm:grid-cols-4 gap-3">
-                <div className="text-center">
-                  <div className="text-xs text-gray-500">AI Before</div>
-                  <div className="text-sm font-semibold text-red-400">{beforeAIDetect}%</div>
-                </div>
-                <div className="text-center">
-                  <div className="text-xs text-gray-500">AI After</div>
-                  <div className="text-sm font-semibold text-green-400">{afterAIDetect}%</div>
-                </div>
-                <div className="text-center">
-                  <div className="text-xs text-gray-500">Readability</div>
-                  <div className="text-sm font-semibold text-blue-400">{readability}</div>
-                </div>
-                <div className="text-center">
-                  <div className="text-xs text-gray-500">Reading Time</div>
-                  <div className="text-sm font-semibold text-purple-400">{outputMetrics.readingMinutes || inputMetrics.readingMinutes}m</div>
-                </div>
-              </div>
-            </div>
           </div>
-        </motion.section>
-
-        {/* Features Section */}
-        <motion.section 
-          initial={{ opacity: 0, y: 40 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.4 }}
-          className="mb-16"
-        >
-          <h2 className="text-3xl font-bold text-center mb-12">Why Choose Toolslify?</h2>
-          <div className="grid md:grid-cols-3 gap-8">
-            {[
-              {
-                title: "Lightning Fast",
-                description: "Process your text instantly with our optimized AI algorithms",
-                icon: "⚡"
-              },
-              {
-                title: "Privacy First",
-                description: "All processing happens in your browser. Your text never leaves your device",
-                icon: "🔒"
-              },
-              {
-                title: "Free Forever",
-                description: "No signup, no limits. Humanize as much text as you need",
-                icon: "🎁"
-              }
-            ].map((feature, index) => (
-              <motion.div
-                key={index}
-                whileHover={{ scale: 1.05, y: -5 }}
-                className="bg-gradient-to-br from-gray-900 to-black border border-gray-800 rounded-2xl p-6 text-center"
-              >
-                <div className="text-4xl mb-4">{feature.icon}</div>
-                <h3 className="text-xl font-semibold mb-3">{feature.title}</h3>
-                <p className="text-gray-400">{feature.description}</p>
-              </motion.div>
-            ))}
-          </div>
-        </motion.section>
-
-        {/* SEO Content Section */}
-        <motion.section 
-          initial={{ opacity: 0, y: 40 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.5 }}
-          className="mb-16"
-        >
-          <div className="bg-gradient-to-br from-gray-900 to-black border border-gray-800 rounded-3xl p-8">
-            <article className="prose prose-invert max-w-none">
-              <h2 className="text-3xl font-bold mb-6">Humanize AI Free — Transform Your Text in Seconds</h2>
-              
-              <p className="text-gray-300 mb-6 leading-relaxed">
-                If you've ever pasted an AI-generated paragraph into a document and felt it sounded a little "too perfect," 
-                you're not alone. Many AI drafts are accurate but can feel robotic, repetitive, or overly formal. 
-                That's where our humanize AI free tool helps: it rewrites your text to read more naturally while keeping 
-                the original idea intact.
-              </p>
-
-              <h3 className="text-2xl font-semibold mb-4">Why People Humanize AI Text Online</h3>
-              <p className="text-gray-300 mb-6 leading-relaxed">
-                Humanizing doesn't mean changing facts or adding fluff. It means adding the kind of natural variation 
-                that real people use—small sentence rhythm changes, more natural transitions, and occasional synonym swaps. 
-                When you humanize AI text online, you can make your writing feel less templated and more personal, 
-                especially for emails, blog drafts, product descriptions, and school notes.
-              </p>
-
-              <div className="bg-gray-800/50 border border-gray-700 rounded-xl p-6 mb-6">
-                <h4 className="text-xl font-semibold mb-4">Key Benefits:</h4>
-                <ul className="space-y-3 text-gray-300">
-                  <li className="flex items-start gap-3">
-                    <span className="text-blue-400 mt-1">✓</span>
-                    <span>Better flow: split long sentences and merge short ones for smoother reading</span>
-                  </li>
-                  <li className="flex items-start gap-3">
-                    <span className="text-blue-400 mt-1">✓</span>
-                    <span>More natural tone: casual, professional, academic, or friendly voice options</span>
-                  </li>
-                  <li className="flex items-start gap-3">
-                    <span className="text-blue-400 mt-1">✓</span>
-                    <span>Cleaner writing: optional grammar improvement for punctuation and spacing</span>
-                  </li>
-                  <li className="flex items-start gap-3">
-                    <span className="text-blue-400 mt-1">✓</span>
-                    <span>Fast iterations: re-humanize to generate a different version each time</span>
-                  </li>
-                </ul>
-              </div>
-
-              <h3 className="text-2xl font-semibold mb-4">How Our AI Humanizer Works</h3>
-              <p className="text-gray-300 mb-6 leading-relaxed">
-                This free AI humanizer no login solution uses several lightweight steps to simulate a human rewrite. 
-                It's intentionally fast and privacy-friendly because it runs locally in your browser:
-              </p>
-              
-              <ol className="space-y-3 text-gray-300">
-                <li className="flex items-start gap-3">
-                  <span className="bg-blue-500 text-white w-6 h-6 rounded-full flex items-center justify-center text-sm font-semibold flex-shrink-0">1</span>
-                  <span>Normalize and clean the text (spacing, punctuation, and basic grammar rules)</span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <span className="bg-blue-500 text-white w-6 h-6 rounded-full flex items-center justify-center text-sm font-semibold flex-shrink-0">2</span>
-                  <span>Restructure sentences by splitting overly long lines and merging very short ones</span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <span className="bg-blue-500 text-white w-6 h-6 rounded-full flex items-center justify-center text-sm font-semibold flex-shrink-0">3</span>
-                  <span>Apply your selected tone by adjusting phrasing and transitions</span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <span className="bg-blue-500 text-white w-6 h-6 rounded-full flex items-center justify-center text-sm font-semibold flex-shrink-0">4</span>
-                  <span>Optionally enhance synonyms and add small randomness so each run feels different</span>
-                </li>
-              </ol>
-
-              <h3 className="text-2xl font-semibold mb-4">Why Choose Toolslify's Humanize AI Free Tool</h3>
-              <p className="text-gray-300 mb-6 leading-relaxed">
-                If you need a free AI humanizer no login that's easy to use, Toolslify is built for you. 
-                The interface is modern, responsive, and includes a dark mode toggle. Action buttons stay visible 
-                while you scroll, so you're never hunting for the next step.
-              </p>
-              
-              <p className="text-gray-300 leading-relaxed">
-                Most importantly, you stay in control: you can choose low, medium, or high rewrite strength and 
-                switch tones to match your audience. Whether you're polishing an AI draft for a blog, making 
-                an email sound less stiff, or simply improving readability, this humanize AI text online tool 
-                helps you get a more natural result—quickly and for free.
-              </p>
-            </article>
-          </div>
-        </motion.section>
-      </main>
-
-      {/* Footer */}
-      <footer className="border-t border-gray-800 bg-black">
-        <div className="max-w-7xl mx-auto px-6 py-8">
-          <div className="flex flex-col md:flex-row justify-between items-center">
-            <p className="text-gray-400 text-sm mb-4 md:mb-0">
-              © 2024 Toolslify. Free AI Tools for Everyone.
-            </p>
-            <div className="flex gap-6">
-              <a href="/" className="text-gray-400 hover:text-white transition-colors">Home</a>
-              <a href="/tools" className="text-gray-400 hover:text-white transition-colors">Tools</a>
-              <a href="/humanize-ai-free" className="text-gray-400 hover:text-white transition-colors">AI Humanizer</a>
-            </div>
-          </div>
-        </div>
-      </footer>
+        </footer>
+      </div>
     </div>
   );
 }
