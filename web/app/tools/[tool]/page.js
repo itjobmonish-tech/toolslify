@@ -22,8 +22,9 @@ export function generateStaticParams() {
   return TOOL_SLUGS.map((tool) => ({ tool }));
 }
 
-export function generateMetadata({ params }) {
-  const tool = getToolConfig(params.tool);
+export async function generateMetadata({ params }) {
+  const { tool: slug } = await params;
+  const tool = getToolConfig(slug);
   if (!tool) return {};
 
   return {
@@ -47,9 +48,10 @@ export function generateMetadata({ params }) {
   };
 }
 
-export default function ToolPage({ params }) {
-  const tool = getToolConfig(params.tool);
-  const seo = getToolSeoContent(params.tool);
+export default async function ToolPage({ params }) {
+  const { tool: slug } = await params;
+  const tool = getToolConfig(slug);
+  const seo = getToolSeoContent(slug);
 
   if (!tool || !seo) {
     notFound();
