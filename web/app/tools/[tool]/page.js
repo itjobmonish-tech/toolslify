@@ -26,9 +26,10 @@ export async function generateMetadata({ params }) {
   const { tool: slug } = await params;
   const tool = getToolConfig(slug);
   if (!tool) return {};
+  const pageTitle = tool.title.replace(/\s*\|\s*Toolslify$/, "");
 
   return {
-    title: tool.title,
+    title: pageTitle,
     description: tool.description,
     keywords: tool.keywords,
     alternates: {
