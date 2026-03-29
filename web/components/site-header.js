@@ -2,10 +2,10 @@ import Link from "next/link";
 import { ThemeToggle } from "@/components/theme-toggle";
 
 const navItems = [
-  { href: "/humanize-ai-free#tool", label: "Tool" },
-  { href: "/#features", label: "Features" },
-  { href: "/#why-toolslify", label: "Why Toolslify" },
-  { href: "/#faq", label: "FAQ" },
+  { href: "/tools", label: "Tools" },
+  { href: "/tools/humanize-ai-free", label: "AI Humanizer" },
+  { href: "/tools/ai-email-writer", label: "AI Email Writer" },
+  { href: "/#featured-tools", label: "Featured" },
 ];
 
 export function SiteHeader() {
@@ -21,7 +21,7 @@ export function SiteHeader() {
               Toolslify
             </span>
             <span className="block text-sm text-[var(--muted-foreground)]">
-              AI Humanizer
+              Search-ready AI tools
             </span>
           </span>
         </Link>
@@ -37,14 +37,13 @@ export function SiteHeader() {
         <div className="flex items-center gap-3">
           <ThemeToggle />
           <Link
-            href="/humanize-ai-free"
+            href="/tools"
             className="inline-flex h-10 items-center rounded-full bg-[var(--foreground)] px-4 text-sm font-medium text-[var(--background)] transition hover:opacity-90"
           >
-            Open tool
+            View tools
           </Link>
         </div>
       </div>
     </header>
   );
 }
-

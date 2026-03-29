@@ -13,18 +13,18 @@ const inter = Inter({
 export const metadata = {
   metadataBase: new URL("https://www.toolslify.com"),
   title: {
-    default: "Toolslify | Humanize AI Text with a Professional Rewrite Workflow",
+    default: "Toolslify | AI Tools for Writing, Career, and Social Growth",
     template: "%s | Toolslify",
   },
   description:
-    "Toolslify turns AI-generated drafts into cleaner, more natural writing with tone controls, compare mode, recent history, and a polished SaaS workflow.",
+    "Toolslify publishes SEO-friendly AI tools with long-form content, canonical /tools routes, and polished SaaS workflows for writing, career, and social media use cases.",
   alternates: {
     canonical: "/",
   },
   openGraph: {
     title: "Toolslify",
     description:
-      "Humanize AI text with a polished SaaS editor built for faster review, better readability, and stronger conversions.",
+      "Explore Toolslify's AI tools for writing, career growth, and social media with richer SEO pages and stronger product UX.",
     url: "https://www.toolslify.com",
     siteName: "Toolslify",
     type: "website",
@@ -33,7 +33,7 @@ export const metadata = {
     card: "summary_large_image",
     title: "Toolslify",
     description:
-      "Rewrite AI-generated content into more natural copy with tone controls, compare mode, and saved history.",
+      "AI tool pages built with long-form content, internal linking, and stronger SaaS UX.",
   },
 };
 
@@ -67,4 +67,3 @@ export default function RootLayout({ children }) {
     </html>
   );
 }
-

@@ -2,9 +2,13 @@ import Link from "next/link";
 
 const footerLinks = [
   { href: "/", label: "Home" },
-  { href: "/humanize-ai-free", label: "Humanize AI Free" },
-  { href: "/#features", label: "Features" },
-  { href: "/#faq", label: "FAQ" },
+  { href: "/tools", label: "All Tools" },
+  { href: "/tools/humanize-ai-free", label: "AI Humanizer" },
+  { href: "/tools/ai-email-writer", label: "AI Email Writer" },
+  { href: "/tools/resume-bullet-generator", label: "Resume Bullet Generator" },
+  { href: "/tools/cover-letter-generator", label: "Cover Letter Generator" },
+  { href: "/tools/instagram-caption-generator", label: "Instagram Caption Generator" },
+  { href: "/tools/tweet-rewriter", label: "Tweet Rewriter" },
 ];
 
 export function SiteFooter() {
@@ -16,14 +20,14 @@ export function SiteFooter() {
             Toolslify
           </p>
           <h2 className="text-2xl font-semibold text-[var(--foreground)]">
-            Cleaner AI-assisted writing without the template feel.
+            Long-form tool pages built for rankings, retention, and better product trust.
           </h2>
           <p className="text-sm leading-7 text-[var(--muted-foreground)]">
-            Rewrite drafts, compare changes, and keep your best outputs close at hand with a focused SaaS workflow.
+            Browse AI writing, career, and social media tools with richer content, semantic structure, internal linking, and cleaner user workflows.
           </p>
         </div>
 
-        <div className="flex flex-wrap gap-4 text-sm text-[var(--muted-foreground)]">
+        <div className="flex max-w-2xl flex-wrap gap-4 text-sm text-[var(--muted-foreground)]">
           {footerLinks.map((item) => (
             <Link key={item.href} href={item.href} className="transition hover:text-[var(--foreground)]">
               {item.label}
@@ -34,4 +38,3 @@ export function SiteFooter() {
     </footer>
   );
 }
-
