@@ -1,86 +1,139 @@
 @import "tailwindcss";
 
 :root {
-  --background: 0 0% 100%;
-  --foreground: 222.2 84% 4.9%;
-  --card: 0 0% 100%;
-  --card-foreground: 222.2 84% 4.9%;
-  --popover: 0 0% 100%;
-  --popover-foreground: 222.2 84% 4.9%;
-  --primary: 221.2 83.2% 53.3%;
-  --primary-foreground: 210 40% 98%;
-  --secondary: 210 40% 96%;
-  --secondary-foreground: 222.2 84% 4.9%;
-  --muted: 210 40% 96%;
-  --muted-foreground: 215.4 16.3% 46.9%;
-  --accent: 210 40% 96%;
-  --accent-foreground: 222.2 84% 4.9%;
-  --destructive: 0 84.2% 60.2%;
-  --destructive-foreground: 210 40% 98%;
-  --border: 214.3 31.8% 91.4%;
-  --input: 214.3 31.8% 91.4%;
-  --ring: 221.2 83.2% 53.3%;
-  --radius: 0.5rem;
+  color-scheme: light;
+  --background: #f4f7fb;
+  --foreground: #0f172a;
+  --muted-foreground: #526071;
+  --surface: rgba(255, 255, 255, 0.78);
+  --surface-elevated: rgba(255, 255, 255, 0.96);
+  --surface-raised: rgba(248, 250, 252, 0.98);
+  --border: rgba(148, 163, 184, 0.18);
+  --border-strong: rgba(148, 163, 184, 0.28);
+  --accent-strong: #2563eb;
+  --accent-stronger: #1d4ed8;
+  --accent-soft: rgba(59, 130, 246, 0.26);
+  --accent-faint: rgba(59, 130, 246, 0.12);
+  --accent-ring: rgba(37, 99, 235, 0.16);
+  --header-bg: #f4f7fb;
+  --shadow-soft: 0 28px 80px -42px rgba(15, 23, 42, 0.34);
 }
 
 .dark {
-  --background: 222.2 84% 4.9%;
-  --foreground: 210 40% 98%;
-  --card: 222.2 84% 4.9%;
-  --card-foreground: 210 40% 98%;
-  --popover: 222.2 84% 4.9%;
-  --popover-foreground: 210 40% 98%;
-  --primary: 217.2 91.2% 59.8%;
-  --primary-foreground: 222.2 84% 4.9%;
-  --secondary: 217.2 32.6% 17.5%;
-  --secondary-foreground: 210 40% 98%;
-  --muted: 217.2 32.6% 17.5%;
-  --muted-foreground: 215 20.2% 65.1%;
-  --accent: 217.2 32.6% 17.5%;
-  --accent-foreground: 210 40% 98%;
-  --destructive: 0 62.8% 30.6%;
-  --destructive-foreground: 210 40% 98%;
-  --border: 217.2 32.6% 17.5%;
-  --input: 217.2 32.6% 17.5%;
-  --ring: 224.3 76.3% 94.1%;
+  color-scheme: dark;
+  --background: #07111f;
+  --foreground: #e2e8f0;
+  --muted-foreground: #94a3b8;
+  --surface: rgba(8, 15, 28, 0.78);
+  --surface-elevated: rgba(15, 23, 42, 0.92);
+  --surface-raised: rgba(15, 23, 42, 0.98);
+  --border: rgba(148, 163, 184, 0.14);
+  --border-strong: rgba(148, 163, 184, 0.22);
+  --accent-strong: #60a5fa;
+  --accent-stronger: #bfdbfe;
+  --accent-soft: rgba(96, 165, 250, 0.28);
+  --accent-faint: rgba(96, 165, 250, 0.12);
+  --accent-ring: rgba(96, 165, 250, 0.18);
+  --header-bg: #07111f;
+  --shadow-soft: 0 30px 90px -44px rgba(2, 6, 23, 0.88);
 }
 
 * {
-  border-color: hsl(var(--border));
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 body {
-  background-color: hsl(var(--background));
-  color: hsl(var(--foreground));
-  font-feature-settings: "rlig" 1, "calt" 1;
+  margin: 0;
+  min-height: 100vh;
+  background:
+    radial-gradient(circle at top left, rgba(37, 99, 235, 0.16), transparent 30%),
+    radial-gradient(circle at top right, rgba(14, 165, 233, 0.08), transparent 24%),
+    var(--background);
+  color: var(--foreground);
+  font-family: var(--font-inter), sans-serif;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
-/* Custom scrollbar */
-::-webkit-scrollbar {
-  width: 8px;
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.04), transparent 24%, rgba(255, 255, 255, 0.02));
 }
 
-::-webkit-scrollbar-track {
-  background: #f1f5f9;
+.dark body::before {
+  background: linear-gradient(180deg, rgba(148, 163, 184, 0.02), transparent 24%, rgba(148, 163, 184, 0.03));
 }
 
-::-webkit-scrollbar-thumb {
-  background: #cbd5e1;
-  border-radius: 4px;
-}
-
-::-webkit-scrollbar-thumb:hover {
-  background: #94a3b8;
-}
-
-/* Focus styles */
-:focus-visible {
-  outline: 2px solid hsl(var(--ring));
-  outline-offset: 2px;
-}
-
-/* Selection */
 ::selection {
-  background: hsl(var(--primary) / 0.2);
-  color: hsl(var(--primary));
+  background: var(--accent-faint);
+  color: var(--foreground);
 }
+
+button,
+a,
+input,
+textarea,
+select {
+  font: inherit;
+}
+
+button,
+a {
+  -webkit-tap-highlight-color: transparent;
+}
+
+textarea::-webkit-scrollbar,
+body::-webkit-scrollbar {
+  width: 10px;
+}
+
+textarea::-webkit-scrollbar-thumb,
+body::-webkit-scrollbar-thumb {
+  background: rgba(148, 163, 184, 0.4);
+  border-radius: 999px;
+}
+
+textarea::-webkit-scrollbar-track,
+body::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+:focus-visible {
+  outline: none;
+  box-shadow: 0 0 0 4px var(--accent-ring);
+}
+
+.app-shell {
+  position: relative;
+  min-height: 100vh;
+}
+
+.ambient-grid {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  opacity: 0.4;
+  background-image:
+    linear-gradient(rgba(148, 163, 184, 0.06) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(148, 163, 184, 0.06) 1px, transparent 1px);
+  background-size: 72px 72px;
+  mask-image: radial-gradient(circle at center, black 34%, transparent 82%);
+}
+
+.dark .ambient-grid {
+  opacity: 0.22;
+}
+
+main {
+  position: relative;
+  z-index: 1;
+}
+
