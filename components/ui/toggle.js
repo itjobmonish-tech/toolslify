@@ -13,8 +13,8 @@ export function Toggle({ checked, onCheckedChange, label, className }) {
       className={cn(
         "relative inline-flex h-7 w-12 items-center rounded-full border transition duration-200",
         checked
-          ? "border-transparent bg-[var(--accent-strong)]"
-          : "border-[var(--border-strong)] bg-[var(--surface-elevated)]",
+          ? "border-transparent bg-[linear-gradient(135deg,var(--accent-start),var(--accent-end))]"
+          : "border-[var(--border-strong)] bg-[var(--surface-strong)]",
         className,
       )}
     >
@@ -27,4 +27,3 @@ export function Toggle({ checked, onCheckedChange, label, className }) {
     </button>
   );
 }
-

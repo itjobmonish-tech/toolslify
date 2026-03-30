@@ -1,12 +1,12 @@
-"use client";
-
 import { forwardRef } from "react";
 import { cn } from "@/lib/utils";
 
 const VARIANTS = {
-  primary: "bg-[var(--accent-strong)] text-white shadow-[0_20px_45px_-24px_rgba(15,23,42,0.75)] hover:-translate-y-0.5 hover:bg-[var(--accent-stronger)]",
-  secondary: "border border-[var(--border-strong)] bg-[var(--surface-elevated)] text-[var(--foreground)] hover:-translate-y-0.5 hover:border-[var(--accent-soft)] hover:bg-[var(--surface-raised)]",
-  ghost: "text-[var(--muted-foreground)] hover:bg-[var(--surface-elevated)] hover:text-[var(--foreground)]",
+  primary:
+    "border border-white/10 bg-[linear-gradient(135deg,var(--accent-start),var(--accent-end))] text-white shadow-[0_24px_54px_-24px_rgba(9,17,31,0.5)] hover:-translate-y-0.5 hover:brightness-105",
+  secondary:
+    "border border-[var(--border-strong)] bg-[linear-gradient(180deg,var(--surface-raised),var(--surface-strong))] text-[var(--foreground)] shadow-[0_20px_40px_-34px_rgba(9,17,31,0.3)] hover:-translate-y-0.5 hover:border-[var(--accent-edge)] hover:bg-[var(--surface-raised)]",
+  ghost: "text-[var(--muted-foreground)] hover:bg-[var(--surface-strong)] hover:text-[var(--foreground)]",
 };
 
 const SIZES = {
@@ -24,7 +24,7 @@ export const Button = forwardRef(function Button(
       ref={ref}
       {...(Component === "button" ? { type } : {})}
       className={cn(
-        "inline-flex items-center justify-center gap-2 rounded-full font-medium transition duration-200 ease-out disabled:cursor-not-allowed disabled:opacity-50",
+        "inline-flex items-center justify-center gap-2 rounded-full font-semibold transition duration-200 ease-out disabled:cursor-not-allowed disabled:opacity-50",
         VARIANTS[variant],
         SIZES[size],
         className,
@@ -33,4 +33,3 @@ export const Button = forwardRef(function Button(
     />
   );
 });
-

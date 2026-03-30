@@ -4,7 +4,7 @@ export function Card({ className, children, as: Component = "div" }) {
   return (
     <Component
       className={cn(
-        "rounded-[28px] border border-[var(--border)] bg-[var(--surface)] shadow-[0_25px_80px_-45px_rgba(15,23,42,0.45)] backdrop-blur",
+        "rounded-[32px] border border-[var(--border)] bg-[linear-gradient(180deg,var(--surface-raised),var(--surface))] shadow-[var(--shadow-soft)] ring-1 ring-white/45 backdrop-blur-2xl dark:ring-white/[0.04]",
         className,
       )}
     >
@@ -12,4 +12,3 @@ export function Card({ className, children, as: Component = "div" }) {
     </Component>
   );
 }
-

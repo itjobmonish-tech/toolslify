@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <defs>
+    <linearGradient id="toolslifyGradient" x1="6" x2="58" y1="8" y2="56" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#0f766e"/>
+      <stop offset="1" stop-color="#f97316"/>
+    </linearGradient>
+  </defs>
+  <rect width="64" height="64" rx="18" fill="#0c1824"/>
+  <rect x="7" y="7" width="50" height="50" rx="16" fill="url(#toolslifyGradient)"/>
+  <path d="M21 23h22v6H35v18h-7V29h-7z" fill="#fff7ed"/>
+</svg>

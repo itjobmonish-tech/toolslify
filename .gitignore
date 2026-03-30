@@ -6,3 +6,8 @@ npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 pnpm-debug.log*
+.vercel
+dev-server*.log
+dev-*.log
+qa-server*.log
+qa-sample.pdf

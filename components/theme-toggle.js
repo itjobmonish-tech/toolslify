@@ -1,42 +1,26 @@
 "use client";
 
-import { useEffect, useState } from "react";
-import { Button } from "@/components/ui/button";
+import { usePreferences } from "@/components/providers/preferences-provider";
+import { cn } from "@/lib/utils";
 
-const STORAGE_KEY = "toolslify-theme";
-
-export function ThemeToggle() {
-  const [mounted, setMounted] = useState(false);
-  const [theme, setTheme] = useState("light");
-
-  useEffect(() => {
-    const root = document.documentElement;
-    const initial = root.dataset.theme || "light";
-    setTheme(initial);
-    setMounted(true);
-  }, []);
-
-  function handleToggle() {
-    const nextTheme = theme === "dark" ? "light" : "dark";
-    const root = document.documentElement;
-    root.dataset.theme = nextTheme;
-    root.classList.toggle("dark", nextTheme === "dark");
-    localStorage.setItem(STORAGE_KEY, nextTheme);
-    setTheme(nextTheme);
-  }
+export function ThemeToggle({ className }) {
+  const { theme, setTheme, text } = usePreferences();
+  const nextTheme = theme === "dark" ? "light" : "dark";
 
   return (
-    <Button
-      variant="secondary"
-      size="sm"
-      onClick={handleToggle}
+    <button
+      type="button"
+      onClick={() => setTheme(nextTheme)}
       aria-label="Toggle color theme"
-      className="h-10 min-w-[108px]"
+      className={cn(
+        "inline-flex items-center gap-2 rounded-full border border-[var(--border-strong)] bg-[var(--surface-strong)] px-3 py-2 text-sm text-[var(--muted-foreground)] shadow-[var(--shadow-soft)] transition hover:border-[var(--accent-edge)] hover:text-[var(--foreground)]",
+        className,
+      )}
     >
-      <span className="text-xs uppercase tracking-[0.22em] text-[var(--muted-foreground)]">
-        {mounted ? theme : "light"}
+      <span className="h-2.5 w-2.5 rounded-full bg-[var(--foreground)]" />
+      <span className="text-[11px] font-semibold uppercase tracking-[0.18em]">
+        {theme === "dark" ? text.dark : text.light}
       </span>
-    </Button>
+    </button>
   );
 }
-
