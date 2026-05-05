@@ -60,33 +60,18 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en" data-scroll-behavior="smooth" suppressHydrationWarning>
       <head>
-        <Script
-          src="https://www.googletagmanager.com/gtag/js?id=G-DXZK3NK4V0"
-          strategy="afterInteractive"
-        />
-        <Script id="google-analytics" strategy="afterInteractive">
+        <!-- Google tag (gtag.js) -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-DXZK3NK4V0"></script>
+        <script>
           {`
             window.dataLayer = window.dataLayer || [];
             function gtag(){dataLayer.push(arguments);}
             gtag('js', new Date());
             gtag('config', 'G-DXZK3NK4V0');
           `}
-        </Script>
+        </script>
       </head>
-      <body className={`${manrope.variable} ${spaceGrotesk.variable}`}>
-        <Script src="/theme-init.js" strategy="beforeInteractive" />
-        <PreferencesProvider>
-          <ToastProvider>
-            <div className="app-shell">
-              <div className="ambient-rings" aria-hidden="true" />
-              <div className="ambient-grid" aria-hidden="true" />
-              <SiteHeader />
-              <main>{children}</main>
-              <SiteFooter />
-            </div>
-          </ToastProvider>
-        </PreferencesProvider>
-      </body>
+      <body>{children}</body>
     </html>
   );
 }
