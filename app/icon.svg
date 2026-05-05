@@ -1,11 +1,12 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <rect width="64" height="64" rx="18" fill="#080913"/>
+  <rect x="7" y="7" width="50" height="50" rx="16" fill="url(#g)"/>
+  <path d="M20 22h24v6H34v18h-7V28h-7z" fill="#ffffff"/>
+  <circle cx="44" cy="19" r="4" fill="#ffffff" fill-opacity="0.4"/>
   <defs>
-    <linearGradient id="toolslifyGradient" x1="6" x2="58" y1="8" y2="56" gradientUnits="userSpaceOnUse">
-      <stop stop-color="#0f766e"/>
-      <stop offset="1" stop-color="#f97316"/>
+    <linearGradient id="g" x1="9" y1="9" x2="55" y2="55" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#8b5cf6"/>
+      <stop offset="1" stop-color="#4f46e5"/>
     </linearGradient>
   </defs>
-  <rect width="64" height="64" rx="18" fill="#0c1824"/>
-  <rect x="7" y="7" width="50" height="50" rx="16" fill="url(#toolslifyGradient)"/>
-  <path d="M21 23h22v6H35v18h-7V29h-7z" fill="#fff7ed"/>
 </svg>

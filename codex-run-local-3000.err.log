@@ -1,0 +1,241 @@
+[browser] Detected `scroll-behavior: smooth` on the `<html>` element. To disable smooth scrolling during route transitions, add `data-scroll-behavior="smooth"` to your <html> element. Learn more: https://nextjs.org/docs/messages/missing-data-scroll-behavior
+⨯ ./components/tools/workspace-primitives.js
+Error:   x Unexpected token. Did you mean `{'}'}` or `&rbrace;`?
+     ,-[C:\Users\monis\OneDrive\Pictures\Documents\toolslify\components\tools\workspace-primitives.js:391:1]
+ 388 |         />
+ 389 |       </label>
+ 390 |     );
+ 391 |   }
+     :   ^
+ 392 | 
+ 393 |   return (
+ 394 |       <label
+     `----
+  x Expected '</', got 'jsx text'
+     ,-[C:\Users\monis\OneDrive\Pictures\Documents\toolslify\components\tools\workspace-primitives.js:389:1]
+ 386 |               className="sr-only"
+ 387 |               onChange={(event) => onFileChange(event.target.files?.[0] || null)}
+ 388 |             />
+ 389 | ,->       </label>
+ 390 | |       );
+ 391 | |     }
+ 392 | |   
+ 393 | |     return (
+ 394 | `->       <label
+ 395 |             className={cn(
+ 396 |               "block cursor-pointer rounded-[22px] border border-[var(--border)] bg-[linear-gradient(180deg,var(--background-strong),var(--surface-elevated))] p-4 transition duration-300 hover:border-[var(--border-strong)] hover:shadow-[var(--shadow-soft)]",
+ 397 |               isDragging && "border-[var(--primary-edge)] bg-[color:color-mix(in_srgb,var(--primary-soft)_62%,white)]",
+     `----
+
+Caused by:
+    Syntax Error
+
+Import trace for requested module:
+./components/tools/workspace-primitives.js
+./components/tools/studio-workspace.js
+./components/marketing/tool-route-shell.js
+[browser] ./components/tools/workspace-primitives.js
+Error:   x Unexpected token. Did you mean `{'}'}` or `&rbrace;`?
+     ,-[C:\Users\monis\OneDrive\Pictures\Documents\toolslify\components\tools\workspace-primitives.js:391:1]
+ 388 |         />
+ 389 |       </label>
+ 390 |     );
+ 391 |   }
+     :   ^
+ 392 | 
+ 393 |   return (
+ 394 |       <label
+     `----
+  x Expected '</', got 'jsx text'
+     ,-[C:\Users\monis\OneDrive\Pictures\Documents\toolslify\components\tools\workspace-primitives.js:389:1]
+ 386 |               className="sr-only"
+ 387 |               onChange={(event) => onFileChange(event.target.files?.[0] || null)}
+ 388 |             />
+ 389 | ,->       </label>
+ 390 | |       );
+ 391 | |     }
+ 392 | |   
+ 393 | |     return (
+ 394 | `->       <label
+ 395 |             className={cn(
+ 396 |               "block cursor-pointer rounded-[22px] border border-[var(--border)] bg-[linear-gradient(180deg,var(--background-strong),var(--surface-elevated))] p-4 transition duration-300 hover:border-[var(--border-strong)] hover:shadow-[var(--shadow-soft)]",
+ 397 |               isDragging && "border-[var(--primary-edge)] bg-[color:color-mix(in_srgb,var(--primary-soft)_62%,white)]",
+     `----
+
+Caused by:
+    Syntax Error
+
+Import trace for requested module:
+./components/tools/workspace-primitives.js
+./components/tools/calculator-workspace.js
+./components/marketing/tool-route-shell.js 
+[browser] ./components/tools/workspace-primitives.js
+Error:   x Unexpected token. Did you mean `{'}'}` or `&rbrace;`?
+     ,-[C:\Users\monis\OneDrive\Pictures\Documents\toolslify\components\tools\workspace-primitives.js:391:1]
+ 388 |         />
+ 389 |       </label>
+ 390 |     );
+ 391 |   }
+     :   ^
+ 392 | 
+ 393 |   return (
+ 394 |       <label
+     `----
+  x Expected '</', got 'jsx text'
+     ,-[C:\Users\monis\OneDrive\Pictures\Documents\toolslify\components\tools\workspace-primitives.js:389:1]
+ 386 |               className="sr-only"
+ 387 |               onChange={(event) => onFileChange(event.target.files?.[0] || null)}
+ 388 |             />
+ 389 | ,->       </label>
+ 390 | |       );
+ 391 | |     }
+ 392 | |   
+ 393 | |     return (
+ 394 | `->       <label
+ 395 |             className={cn(
+ 396 |               "block cursor-pointer rounded-[22px] border border-[var(--border)] bg-[linear-gradient(180deg,var(--background-strong),var(--surface-elevated))] p-4 transition duration-300 hover:border-[var(--border-strong)] hover:shadow-[var(--shadow-soft)]",
+ 397 |               isDragging && "border-[var(--primary-edge)] bg-[color:color-mix(in_srgb,var(--primary-soft)_62%,white)]",
+     `----
+
+Caused by:
+    Syntax Error
+
+Import trace for requested module:
+./components/tools/workspace-primitives.js
+./components/tools/calculator-workspace.js
+./components/marketing/tool-route-shell.js 
+[browser] ./components/tools/workspace-primitives.js
+Error:   x Unexpected token. Did you mean `{'}'}` or `&rbrace;`?
+     ,-[C:\Users\monis\OneDrive\Pictures\Documents\toolslify\components\tools\workspace-primitives.js:391:1]
+ 388 |         />
+ 389 |       </label>
+ 390 |     );
+ 391 |   }
+     :   ^
+ 392 | 
+ 393 |   return (
+ 394 |       <label
+     `----
+  x Expected '</', got 'jsx text'
+     ,-[C:\Users\monis\OneDrive\Pictures\Documents\toolslify\components\tools\workspace-primitives.js:389:1]
+ 386 |               className="sr-only"
+ 387 |               onChange={(event) => onFileChange(event.target.files?.[0] || null)}
+ 388 |             />
+ 389 | ,->       </label>
+ 390 | |       );
+ 391 | |     }
+ 392 | |   
+ 393 | |     return (
+ 394 | `->       <label
+ 395 |             className={cn(
+ 396 |               "block cursor-pointer rounded-[22px] border border-[var(--border)] bg-[linear-gradient(180deg,var(--background-strong),var(--surface-elevated))] p-4 transition duration-300 hover:border-[var(--border-strong)] hover:shadow-[var(--shadow-soft)]",
+ 397 |               isDragging && "border-[var(--primary-edge)] bg-[color:color-mix(in_srgb,var(--primary-soft)_62%,white)]",
+     `----
+
+Caused by:
+    Syntax Error
+
+Import trace for requested module:
+./components/tools/workspace-primitives.js
+./components/tools/studio-workspace.js
+./components/marketing/tool-route-shell.js 
+[browser] Detected `scroll-behavior: smooth` on the `<html>` element. To disable smooth scrolling during route transitions, add `data-scroll-behavior="smooth"` to your <html> element. Learn more: https://nextjs.org/docs/messages/missing-data-scroll-behavior
+[browser] ReferenceError: BodyGridMark is not defined
+    at SingleIcon (components\marketing\tool-glyph.js:813:15)
+  811 |   switch (icon) {
+  812 |     case "body-grid":
+> 813 |       return <BodyGridMark color={color} />;
+      |               ^
+  814 |     case "chart":
+  815 |       return <ChartMark color={color} />;
+  816 |     case "clock-grid": (app\error.js:10:13)
+[browser] ReferenceError: BodyGridMark is not defined
+    at SingleIcon (components\marketing\tool-glyph.js:813:15)
+  811 |   switch (icon) {
+  812 |     case "body-grid":
+> 813 |       return <BodyGridMark color={color} />;
+      |               ^
+  814 |     case "chart":
+  815 |       return <ChartMark color={color} />;
+  816 |     case "clock-grid": (app\error.js:10:13)
+⨯ ./lib/site-data.js
+Error:   x Unexpected token `,`. Expected identifier
+    ,-[C:\Users\monis\OneDrive\Pictures\Documents\toolslify\lib\site-data.js:90:1]
+ 87 |     question: "What kind of tools does Toolslify focus on now?",
+ 88 |     answer:
+ 89 |       "Toolslify now focuses on calculator categories like finance, health, home projects, cooking, converters, and everyday math.",
+ 90 |       "Toolslify now focuses on calculator categories like finance, health, home projects, math, time, cooking, converters, and everyday math.",
+    :                                                                                                                                                ^
+ 91 |   },
+ 92 |   {
+ 93 |     question: "Do I need an account before using the tools?",
+    `----
+
+Caused by:
+    Syntax Error
+
+Import trace for requested module:
+./lib/site-data.js
+./components/site-footer.js
+[browser] Detected `scroll-behavior: smooth` on the `<html>` element. To disable smooth scrolling during route transitions, add `data-scroll-behavior="smooth"` to your <html> element. Learn more: https://nextjs.org/docs/messages/missing-data-scroll-behavior
+⨯ ./lib/tool-page-content.js
+Error: 
+
+Caused by:
+    0: Failed to read source code from C:\Users\monis\OneDrive\Pictures\Documents\toolslify\lib\tool-page-content.js
+    1: The system cannot find the file specified. (os error 2)
+
+Import trace for requested module:
+./lib/tool-page-content.js
+./app/tools/[slug]/page.js
+⨯ ./lib/tool-page-content.js
+Error: 
+
+Caused by:
+    0: Failed to read source code from C:\Users\monis\OneDrive\Pictures\Documents\toolslify\lib\tool-page-content.js
+    1: The system cannot find the file specified. (os error 2)
+
+Import trace for requested module:
+./lib/tool-page-content.js
+./app/tools/[slug]/page.js
+⨯ ./lib/tool-page-content.js
+Error:   x Expected a semicolon
+     ,-[C:\Users\monis\OneDrive\Pictures\Documents\toolslify\lib\tool-page-content.js:323:1]
+ 320 |       "That is why the tax pages should link directly into paycheck, withholding, budget, and payoff pages instead of acting like isolated calculators.",
+ 321 |     ],
+ 322 |   },
+ 323 | ]);
+     :  ^
+ 324 | 
+ 325 | const DEFAULT_CONTENT = Object.freeze({
+ 326 |   intentPaths: ["related scenarios", "supporting comparisons", "next-step planning"],
+     `----
+
+Caused by:
+    Syntax Error
+
+Import trace for requested module:
+./lib/tool-page-content.js
+./app/tools/[slug]/page.js
+⨯ ./lib/tool-page-content.js
+Error:   x Expected a semicolon
+     ,-[C:\Users\monis\OneDrive\Pictures\Documents\toolslify\lib\tool-page-content.js:323:1]
+ 320 |       "That is why the tax pages should link directly into paycheck, withholding, budget, and payoff pages instead of acting like isolated calculators.",
+ 321 |     ],
+ 322 |   },
+ 323 | ]);
+     :  ^
+ 324 | 
+ 325 | const DEFAULT_CONTENT = Object.freeze({
+ 326 |   intentPaths: ["related scenarios", "supporting comparisons", "next-step planning"],
+     `----
+
+Caused by:
+    Syntax Error
+
+Import trace for requested module:
+./lib/tool-page-content.js
+./components/marketing/tool-route-shell.js
+⚠ Fast Refresh had to perform a full reload. Read more: https://nextjs.org/docs/messages/fast-refresh-reload
+[browser] Detected `scroll-behavior: smooth` on the `<html>` element. To disable smooth scrolling during route transitions, add `data-scroll-behavior="smooth"` to your <html> element. Learn more: https://nextjs.org/docs/messages/missing-data-scroll-behavior
+^C

@@ -1,7 +1,7 @@
 "use client";
 
 import { createContext, useContext, useEffect, useMemo, useState } from "react";
-import { getUIText } from "@/lib/i18n";
+import { formatUiText, getUIText, LANGUAGES } from "@/lib/i18n";
 
 const THEME_STORAGE_KEY = "toolslify-theme";
 const LANGUAGE_STORAGE_KEY = "toolslify-language";
@@ -14,19 +14,29 @@ export function PreferencesProvider({ children }) {
 
   useEffect(() => {
     const root = document.documentElement;
-    const initialTheme = root.dataset.theme || "light";
-    const savedLanguage = localStorage.getItem(LANGUAGE_STORAGE_KEY) || "en";
+    const savedLanguage = localStorage.getItem(LANGUAGE_STORAGE_KEY);
+    const browserLanguage = (navigator.language || "en").slice(0, 2).toLowerCase();
+    const supportedLanguage = LANGUAGES.some((item) => item.code === browserLanguage) ? browserLanguage : "en";
+    const nextLanguage = savedLanguage || supportedLanguage;
 
-    setTheme(initialTheme);
-    setLanguage(savedLanguage);
+    root.dataset.theme = "light";
+    root.classList.remove("dark");
+    localStorage.setItem(THEME_STORAGE_KEY, "light");
+    setTheme("light");
+    setLanguage(nextLanguage);
   }, []);
+
+  useEffect(() => {
+    document.documentElement.lang = language;
+    document.cookie = `${LANGUAGE_STORAGE_KEY}=${language}; path=/; max-age=31536000`;
+  }, [language]);
 
   function updateTheme(nextTheme) {
     const root = document.documentElement;
-    root.dataset.theme = nextTheme;
-    root.classList.toggle("dark", nextTheme === "dark");
-    localStorage.setItem(THEME_STORAGE_KEY, nextTheme);
-    setTheme(nextTheme);
+    root.dataset.theme = "light";
+    root.classList.remove("dark");
+    localStorage.setItem(THEME_STORAGE_KEY, "light");
+    setTheme("light");
   }
 
   function updateLanguage(nextLanguage) {
@@ -36,6 +46,7 @@ export function PreferencesProvider({ children }) {
 
   const value = useMemo(
     () => ({
+      t: (key, replacements) => formatUiText(getUIText(language)[key] || key, replacements),
       language,
       setLanguage: updateLanguage,
       theme,

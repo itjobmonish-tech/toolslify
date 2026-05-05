@@ -1,10 +1,10 @@
 (function () {
   try {
-    var savedTheme = localStorage.getItem("toolslify-theme");
-    var theme = savedTheme || (window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
-    document.documentElement.dataset.theme = theme;
-    document.documentElement.classList.toggle("dark", theme === "dark");
+    localStorage.setItem("toolslify-theme", "light");
+    document.documentElement.dataset.theme = "light";
+    document.documentElement.classList.remove("dark");
   } catch (error) {
     document.documentElement.dataset.theme = "light";
+    document.documentElement.classList.remove("dark");
   }
 })();

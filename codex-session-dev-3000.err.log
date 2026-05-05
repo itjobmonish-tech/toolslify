@@ -1,0 +1,194 @@
+⨯ ./components/marketing/tool-card.js
+Error: 
+
+Caused by:
+    0: Failed to read source code from C:\Users\monis\OneDrive\Pictures\Documents\toolslify\components\marketing\tool-card.js
+    1: The system cannot find the file specified. (os error 2)
+
+Import trace for requested module:
+./components/marketing/tool-card.js
+./components/marketing/tool-directory.js
+⚠ Fast Refresh had to perform a full reload. Read more: https://nextjs.org/docs/messages/fast-refresh-reload
+[browser] A tree hydrated but some attributes of the server rendered HTML didn't match the client properties. This won't be patched up. This can happen if a SSR-ed Client Component used:
+
+- A server/client branch `if (typeof window !== 'undefined')`.
+- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
+- Date formatting in a user's locale which doesn't match the server.
+- External changing data without sending a snapshot of it along with the HTML.
+- Invalid HTML tag nesting.
+
+It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.
+
+https://react.dev/link/hydration-mismatch
+
+  ...
+    <body className="__variable...">
+      <Script>
+      <PreferencesProvider>
+        <ToastProvider>
+          <div className="app-shell">
+            <div>
+            <div>
+            <SiteHeader>
+              <motion.header initial={{opacity:0,y:-14}} animate={{opacity:1,y:0}} transition={{duration:0.48, ...}} ...>
+                <header className="sticky top..." style={{opacity:0, ...}} ref={function useMotionRef.useCallback}>
+                  <div className="mx-auto w-...">
+                    <div className="flex items...">
+                      <div>
+                      <div>
+                      <div className="flex items...">
+                        <LinkComponent>
+                        <LinkComponent>
+                        <HeaderSettingsPanel className="hidden sm:...">
+                          <div ref={{current:null}} className="relative h...">
+                            <button
+                              type="button"
+                              onClick={function onClick}
+                              aria-label="Settings"
+                              aria-expanded={false}
+                              className="inline-flex h-10 w-10 items-center justify-center rounded-[12px] text-[#2d313..."
+-                             fdprocessedid="2voeea"
+                            >
+                        ...
+                    ...
+            ...
+          ...
+ 
+[browser] A tree hydrated but some attributes of the server rendered HTML didn't match the client properties. This won't be patched up. This can happen if a SSR-ed Client Component used:
+
+- A server/client branch `if (typeof window !== 'undefined')`.
+- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
+- Date formatting in a user's locale which doesn't match the server.
+- External changing data without sending a snapshot of it along with the HTML.
+- Invalid HTML tag nesting.
+
+It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.
+
+https://react.dev/link/hydration-mismatch
+
+  ...
+    <ToolRouteShell slug="body-fat-c...">
+      <div className="mx-auto w-..." style={{...}}>
+        <section>
+        <section id="tool-works..." className="tool-works..." data-workspace="calculator">
+          <LoadableComponent slug="body-fat-c...">
+            <Suspense fallback={<loading>}>
+              <CalculatorWorkspace slug="body-fat-c...">
+                <div className="calculator..." style={{...}} data-surface-style="wellnessSplit">
+                  <MobileEstimateCard>
+                  <section id="tool-works..." className="scroll-mt-...">
+                    <CalculatorSurface config={{title:"Bod...", ...}} tool={{slug:"body...", ...}} fieldGroups={[...]} ...>
+                      <WellnessSplitSurface config={{title:"Bod...", ...}} tool={{slug:"body...", ...}} ...>
+                        <section className="overflow-h...">
+                          <div className="grid xl:gr...">
+                            <div className="space-y-6 ...">
+                              <div className="space-y-4">
+                                <SurfaceGroupHeader>
+                                <div className="grid gap-4...">
+                                  <CalculatorField field={{name:"sex", ...}} value="male" onChange={function onChange} ...>
+                                    <CalculatorFieldShell label="Sex" help={undefined} appearance="flat">
+                                      <div className="space-y-2">
+                                        <div>
+                                        <div className="calculator...">
+                                          <select
+                                            value="male"
+                                            onChange={function onChange}
+                                            className="calculator-field-control w-full appearance-none text-[var(--for..."
+-                                           fdprocessedid="certsl"
+                                          >
+                                          ...
+                                  <CalculatorField field={{name:"heig...", ...}} value={178} onChange={function onChange} ...>
+                                    <CalculatorFieldShell label="Height (cm)" help={undefined} appearance="flat">
+                                      <div className="space-y-2">
+                                        <div>
+                                        <div className="relative">
+                                          <input
+                                            type="number"
+                                            min={120}
+                                            max={250}
+                                            step={0.1}
+                                            inputMode="decimal"
+                                            value={178}
+                                            onChange={function onChange}
+                                            className="calculator-field-control w-full appearance-none text-[var(--for..."
+-                                           fdprocessedid="p0yjet"
+                                          >
+                                  <CalculatorField field={{name:"neckCm", ...}} value={39} onChange={function onChange} ...>
+                                    <CalculatorFieldShell label="Neck (cm)" help={undefined} appearance="flat">
+                                      <div className="space-y-2">
+                                        <div>
+                                        <div className="relative">
+                                          <input
+                                            type="number"
+                                            min={20}
+                                            max={80}
+                                            step={0.1}
+                                            inputMode="decimal"
+                                            value={39}
+                                            onChange={function onChange}
+                                            className="calculator-field-control w-full appearance-none text-[var(--for..."
+-                                           fdprocessedid="9zf83d"
+                                          >
+                              <div className="space-y-4">
+                                <SurfaceGroupHeader>
+                                <div className="grid gap-4...">
+                                  <CalculatorField field={{name:"waistCm", ...}} value={88} onChange={function onChange} ...>
+                                    <CalculatorFieldShell label="Waist (cm)" help={undefined} appearance="flat">
+                                      <div className="space-y-2">
+                                        <div>
+                                        <div className="relative">
+                                          <input
+                                            type="number"
+                                            min={30}
+                                            max={200}
+                                            step={0.1}
+                                            inputMode="decimal"
+                                            value={88}
+                                            onChange={function onChange}
+                                            className="calculator-field-control w-full appearance-none text-[var(--for..."
+-                                           fdprocessedid="dzmb8s"
+                                          >
+                                  <CalculatorField field={{name:"hipCm", ...}} value={98} onChange={function onChange} ...>
+                                    <CalculatorFieldShell label="Hip (cm, f..." help={undefined} appearance="flat">
+                                      <div className="space-y-2">
+                                        <div>
+                                        <div className="relative">
+                                          <input
+                                            type="number"
+                                            min={0}
+                                            max={200}
+                                            step={0.1}
+                                            inputMode="decimal"
+                                            value={98}
+                                            onChange={function onChange}
+                                            className="calculator-field-control w-full appearance-none text-[var(--for..."
+-                                           fdprocessedid="2ollhk"
+                                          >
+                                  <CalculatorField field={{name:"weig...", ...}} value={78} onChange={function onChange} ...>
+                                    <CalculatorFieldShell label="Weight (kg)" help={undefined} appearance="flat">
+                                      <div className="space-y-2">
+                                        <div>
+                                        <div className="relative">
+                                          <input
+                                            type="number"
+                                            min={20}
+                                            max={300}
+                                            step={0.1}
+                                            inputMode="decimal"
+                                            value={78}
+                                            onChange={function onChange}
+                                            className="calculator-field-control w-full appearance-none text-[var(--for..."
+-                                           fdprocessedid="q45cr"
+                                          >
+                              <Button type="button" onClick={function handleCalculate} className="w-full sm:...">
+                                <button
+                                  ref={null}
+                                  type="button"
+                                  className="inline-flex max-w-full items-center justify-center gap-2 rounded-[14px] t..."
+                                  onClick={function handleCalculate}
+-                                 fdprocessedid="51wkxf"
+                                >
++                                 Calculate body fat
+                            ...
+        ...
+ 

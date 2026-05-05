@@ -1,0 +1,91 @@
+[browser] Detected `scroll-behavior: smooth` on the `<html>` element. To disable smooth scrolling during route transitions, add `data-scroll-behavior="smooth"` to your <html> element. Learn more: https://nextjs.org/docs/messages/missing-data-scroll-behavior
+[browser] A tree hydrated but some attributes of the server rendered HTML didn't match the client properties. This won't be patched up. This can happen if a SSR-ed Client Component used:
+
+- A server/client branch `if (typeof window !== 'undefined')`.
+- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
+- Date formatting in a user's locale which doesn't match the server.
+- External changing data without sending a snapshot of it along with the HTML.
+- Invalid HTML tag nesting.
+
+It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.
+
+https://react.dev/link/hydration-mismatch
+
+  ...
+    <body className="__variable...">
+      <Script>
+      <PreferencesProvider>
+        <ToastProvider>
+          <div className="app-shell">
+            <div>
+            <div>
+            <SiteHeader>
+              <motion.header initial={{opacity:0,y:-14}} animate={{opacity:1,y:0}} transition={{duration:0.48, ...}} ...>
+                <header className="sticky top..." style={{opacity:0, ...}} ref={function useMotionRef.useCallback}>
+                  <div className="mx-auto w-...">
+                    <div className="flex items...">
+                      <div>
+                      <div>
+                      <div className="flex items...">
+                        <LinkComponent>
+                        <LinkComponent>
+                        <HeaderSettingsPanel className="hidden sm:...">
+                          <div ref={{current:null}} className="relative h...">
+                            <button
+                              type="button"
+                              onClick={function onClick}
+                              aria-label="Settings"
+                              aria-expanded={false}
+                              className="inline-flex h-10 w-10 items-center justify-center rounded-[12px] text-[#2d313..."
+-                             fdprocessedid="bfbtj9"
+                            >
+                        ...
+                    ...
+            ...
+          ...
+ 
+[browser] A tree hydrated but some attributes of the server rendered HTML didn't match the client properties. This won't be patched up. This can happen if a SSR-ed Client Component used:
+
+- A server/client branch `if (typeof window !== 'undefined')`.
+- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
+- Date formatting in a user's locale which doesn't match the server.
+- External changing data without sending a snapshot of it along with the HTML.
+- Invalid HTML tag nesting.
+
+It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.
+
+https://react.dev/link/hydration-mismatch
+
+  ...
+    <SegmentViewNode type="page" pagePath="tools/[slu...">
+      <SegmentTrieNode>
+      <ToolPage>
+        <div className="page-shell...">
+          <script>
+          <script>
+          <script>
+          <script>
+          ...
+            <section className="tool-works...">
+              <LoadableComponent slug="age-calcul...">
+                <Suspense fallback={<loading>}>
+                  <CalculatorWorkspace slug="age-calcul...">
+                    <div className="calculator..." style={{...}}>
+                      <section id="tool-works..." className="calculator...">
+                        <CalculatorSectionCard>
+                        <CalculatorSubmitCard title="Age Calcul..." actionLabel="Calculate age" ...>
+                          <section className="calculator...">
+                            <div className="calculator...">
+                              <div>
+                              <Button type="button" onClick={function handleCalculate} className="calculator...">
+                                <button
+                                  ref={null}
+                                  type="button"
+                                  className="inline-flex items-center justify-center gap-2 rounded-[14px] font-semibol..."
+                                  onClick={function handleCalculate}
+-                                 fdprocessedid="70k3nu"
+                                >
++                                 Calculate age
+ 
+[browser] Detected `scroll-behavior: smooth` on the `<html>` element. To disable smooth scrolling during route transitions, add `data-scroll-behavior="smooth"` to your <html> element. Learn more: https://nextjs.org/docs/messages/missing-data-scroll-behavior
+^C^C

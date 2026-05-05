@@ -1,0 +1,52 @@
+
+> toolslify@1.0.0 dev
+> next dev
+
+▲ Next.js 16.2.1 (Turbopack)
+- Local:         http://localhost:3000
+- Network:       http://10.155.209.204:3000
+✓ Ready in 1560ms
+Creating turbopack project {
+  dir: 'C:\\Users\\monis\\OneDrive\\Pictures\\Documents\\toolslify',
+  testMode: true
+}
+
+ GET /manifest.webmanifest 200 in 278ms (next.js: 236ms, application-code: 42ms)
+ GET / 200 in 3.4s (next.js: 854ms, application-code: 2.5s)
+ GET / 200 in 569ms (next.js: 10ms, application-code: 559ms)
+ GET /tools/pdf-to-text-converter 404 in 345ms (next.js: 84ms, application-code: 262ms)
+ GET /tools/bank-statement-to-excel-converter 404 in 324ms (next.js: 15ms, application-code: 309ms)
+ GET / 200 in 1337ms (next.js: 34ms, application-code: 1304ms)
+ GET / 200 in 1369ms (next.js: 153ms, application-code: 1217ms)
+ GET /manifest.webmanifest 200 in 21ms (next.js: 12ms, application-code: 9ms)
+ GET / 200 in 702ms (next.js: 11ms, application-code: 691ms)
+ GET /tools/document-difference-checker 404 in 128ms (next.js: 29ms, application-code: 98ms)
+ GET /tools/document-difference-checker 404 in 277ms (next.js: 17ms, application-code: 260ms)
+ GET /manifest.webmanifest 200 in 14ms (next.js: 6ms, application-code: 9ms)
+ GET / 200 in 102ms (next.js: 10ms, application-code: 93ms)
+ GET /manifest.webmanifest 200 in 29ms (next.js: 5ms, application-code: 24ms)
+ GET /tools/bilingual-subtitle-generator 404 in 128ms (next.js: 18ms, application-code: 110ms)
+ GET /tools/bilingual-subtitle-generator 404 in 313ms (next.js: 19ms, application-code: 294ms)
+ GET /manifest.webmanifest 200 in 23ms (next.js: 5ms, application-code: 18ms)
+ GET / 200 in 120ms (next.js: 10ms, application-code: 110ms)
+ GET /manifest.webmanifest 200 in 17ms (next.js: 5ms, application-code: 12ms)
+○ Compiling /tools ...
+ GET /tools/subscription-finder-from-bank-statements 404 in 123ms (next.js: 16ms, application-code: 107ms)
+ GET /tools/subscription-finder-from-bank-statements 404 in 300ms (next.js: 22ms, application-code: 278ms)
+ GET /manifest.webmanifest 200 in 17ms (next.js: 7ms, application-code: 10ms)
+ GET /tools/subscription-finder-from-bank-statements 404 in 263ms (next.js: 19ms, application-code: 244ms)
+ GET /manifest.webmanifest 200 in 24ms (next.js: 12ms, application-code: 12ms)
+ GET / 200 in 108ms (next.js: 8ms, application-code: 100ms)
+ GET /manifest.webmanifest 200 in 22ms (next.js: 8ms, application-code: 14ms)
+ GET /tools/passport-photo-checker 404 in 114ms (next.js: 18ms, application-code: 95ms)
+ GET /tools/passport-photo-checker 404 in 293ms (next.js: 25ms, application-code: 268ms)
+ GET /manifest.webmanifest 200 in 29ms (next.js: 7ms, application-code: 22ms)
+ GET /manifest.webmanifest 200 in 41ms (next.js: 20ms, application-code: 21ms)
+ GET / 200 in 990ms (next.js: 40ms, application-code: 950ms)
+ GET / 200 in 1551ms (next.js: 155ms, application-code: 1396ms)
+ GET / 200 in 2.3s (next.js: 463ms, application-code: 1885ms)
+ GET /manifest.webmanifest 200 in 43ms (next.js: 27ms, application-code: 17ms)
+ GET / 200 in 1644ms (next.js: 10ms, application-code: 1634ms)
+ GET /tools/resume-builder 404 in 705ms (next.js: 490ms, application-code: 215ms)
+ GET /tools/resume-builder 404 in 840ms (next.js: 24ms, application-code: 817ms)
+ GET /manifest.webmanifest 200 in 28ms (next.js: 16ms, application-code: 13ms)

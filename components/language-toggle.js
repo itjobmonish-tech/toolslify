@@ -10,7 +10,7 @@ export function LanguageToggle({ className }) {
   return (
     <div
       className={cn(
-        "inline-flex items-center rounded-full border border-[var(--border-strong)] bg-[var(--surface-strong)] p-1 shadow-[var(--shadow-soft)]",
+        "inline-flex items-center rounded-full border border-[var(--border-strong)] bg-[var(--surface-muted)] p-1.5 shadow-[var(--shadow-soft)]",
         className,
       )}
       aria-label="Choose interface language"
@@ -22,11 +22,12 @@ export function LanguageToggle({ className }) {
             key={item.code}
             type="button"
             onClick={() => setLanguage(item.code)}
+            aria-pressed={active}
             className={cn(
-              "rounded-full px-3 py-1.5 text-[11px] font-semibold tracking-[0.18em] transition",
+              "rounded-full px-3 py-1.5 text-[11px] font-semibold tracking-[0.08em] transition",
               active
-                ? "bg-[var(--foreground)] text-[var(--background)]"
-                : "text-[var(--muted-foreground)] hover:text-[var(--foreground)]",
+                ? "border border-[var(--primary-edge)] bg-[var(--surface-elevated)] text-[var(--primary)] shadow-[0_8px_20px_-16px_rgba(124,58,237,0.55)]"
+                : "border border-transparent text-[var(--muted-foreground)] hover:bg-[var(--surface-elevated)] hover:text-[var(--foreground)]",
             )}
           >
             {item.label}

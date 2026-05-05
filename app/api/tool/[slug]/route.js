@@ -13,6 +13,8 @@ import { runTool } from "@/lib/tool-engine";
 
 export const runtime = "nodejs";
 
+const MAX_STUDIO_UPLOAD_BYTES = 12 * 1024 * 1024;
+
 export async function POST(request, { params }) {
   const { slug } = await params;
   const tool = getToolBySlug(slug);
@@ -54,37 +56,53 @@ export async function POST(request, { params }) {
     } else if (contentType.includes("multipart/form-data")) {
       const formData = await request.formData();
       const file = formData.get("file");
+      const fileTwo = formData.get("fileTwo");
       payload = {
         file: file && typeof file === "object" && "arrayBuffer" in file ? file : undefined,
+        fileTwo: fileTwo && typeof fileTwo === "object" && "arrayBuffer" in fileTwo ? fileTwo : undefined,
         format: formData.get("format"),
         language: formData.get("language"),
         transcript: formData.get("transcript"),
+        input: formData.get("input"),
+        detail: formData.get("detail"),
       };
 
-      if (slug === "voice-note-to-text" && payload.file && !isAudioFile(payload.file)) {
+      if (tool.workspace === "audio" && payload.file && !isAudioFile(payload.file)) {
         return NextResponse.json(
           { ok: false, error: "Unsupported audio file format." },
           { status: 400, headers: responseHeaders },
         );
       }
 
-      if (slug === "voice-note-to-text" && payload.file && isFileTooLarge(payload.file, MAX_AUDIO_UPLOAD_BYTES)) {
+      if (tool.workspace === "audio" && payload.file && isFileTooLarge(payload.file, MAX_AUDIO_UPLOAD_BYTES)) {
         return NextResponse.json(
           { ok: false, error: "Audio files must be 15 MB or smaller." },
           { status: 413, headers: responseHeaders },
         );
       }
 
-      if (slug === "pdf-all-format-converter" && payload.file && !isPdfFile(payload.file)) {
+      if (tool.workspace === "pdf" && payload.file && !isPdfFile(payload.file)) {
         return NextResponse.json(
           { ok: false, error: "Only PDF files are supported here." },
           { status: 400, headers: responseHeaders },
         );
       }
 
-      if (slug === "pdf-all-format-converter" && payload.file && isFileTooLarge(payload.file, MAX_PDF_UPLOAD_BYTES)) {
+      if (tool.workspace === "pdf" && payload.file && isFileTooLarge(payload.file, MAX_PDF_UPLOAD_BYTES)) {
         return NextResponse.json(
           { ok: false, error: "PDF files must be 12 MB or smaller." },
+          { status: 413, headers: responseHeaders },
+        );
+      }
+
+      if (
+        tool.workspace === "studio" &&
+        [payload.file, payload.fileTwo].some(
+          (upload) => upload && isFileTooLarge(upload, MAX_STUDIO_UPLOAD_BYTES),
+        )
+      ) {
+        return NextResponse.json(
+          { ok: false, error: "Files must be 12 MB or smaller for this tool." },
           { status: 413, headers: responseHeaders },
         );
       }

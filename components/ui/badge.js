@@ -1,21 +1,27 @@
+"use client";
+
+import { useTranslatedValue } from "@/lib/runtime-localization";
 import { cn } from "@/lib/utils";
 
 export function Badge({ className, children, tone = "default" }) {
+  const translatedChildren = useTranslatedValue(typeof children === "string" ? children : "");
   const tones = {
-    default: "border-[var(--border-strong)] bg-[rgba(255,255,255,0.72)] text-[var(--muted-foreground)] dark:bg-[rgba(255,255,255,0.04)]",
-    accent: "border-[var(--accent-edge)] bg-[var(--accent-surface)] text-[var(--accent-text)]",
-    success: "border-[rgba(34,197,94,0.26)] bg-[rgba(34,197,94,0.12)] text-[rgb(22,163,74)] dark:text-[rgb(134,239,172)]",
+    default:
+      "border-[var(--border)] bg-[linear-gradient(180deg,var(--background-strong),var(--surface-elevated))] text-[var(--muted-foreground)]",
+    accent:
+      "border-[var(--primary-edge)] bg-[color:color-mix(in_srgb,var(--primary-soft)_82%,white)] text-[var(--accent-stronger)]",
+    success: "border-[rgba(22,130,93,0.28)] bg-[rgba(22,130,93,0.12)] text-[var(--success)]",
   };
 
   return (
     <span
       className={cn(
-        "inline-flex items-center rounded-full border px-3 py-1 text-[11px] font-semibold uppercase tracking-[0.16em]",
+        "inline-flex items-center rounded-[999px] border px-2.5 py-1 text-[11px] font-semibold shadow-[0_12px_26px_-24px_rgba(15,23,42,0.5)]",
         tones[tone],
         className,
       )}
     >
-      {children}
+      {typeof children === "string" ? translatedChildren : children}
     </span>
   );
 }

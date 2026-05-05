@@ -1,0 +1,8 @@
+
+> toolslify@1.0.0 start
+> next start --port 3212
+
+▲ Next.js 16.2.1
+- Local:         http://localhost:3212
+- Network:       http://192.168.137.134:3212
+✓ Ready in 518ms

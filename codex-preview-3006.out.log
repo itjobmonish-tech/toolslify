@@ -1,0 +1,8 @@
+
+> toolslify@1.0.0 start
+> next start --port 3006
+
+▲ Next.js 16.2.1
+- Local:         http://localhost:3006
+- Network:       http://10.155.209.204:3006
+✓ Ready in 357ms

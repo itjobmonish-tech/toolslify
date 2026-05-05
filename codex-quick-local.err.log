@@ -1,0 +1,1949 @@
+[browser] A tree hydrated but some attributes of the server rendered HTML didn't match the client properties. This won't be patched up. This can happen if a SSR-ed Client Component used:
+
+- A server/client branch `if (typeof window !== 'undefined')`.
+- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
+- Date formatting in a user's locale which doesn't match the server.
+- External changing data without sending a snapshot of it along with the HTML.
+- Invalid HTML tag nesting.
+
+It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.
+
+https://react.dev/link/hydration-mismatch
+
+  ...
+    <body className="manrope_9c...">
+      <Script>
+      <PreferencesProvider>
+        <ToastProvider>
+          <div className="app-shell">
+            <div>
+            <div>
+            <SiteHeader>
+              <motion.header initial={{opacity:0,y:-14}} animate={{opacity:1,y:0}} transition={{duration:0.48, ...}} ...>
+                <header className="sticky top..." style={{opacity:0, ...}} ref={function useMotionRef.useCallback}>
+                  <div className="mx-auto w-...">
+                    <div className="flex items...">
+                      <div>
+                      <motion.nav>
+                      <div className="flex items...">
+                        <LinkComponent>
+                        <LinkComponent>
+                        <HeaderSettingsPanel className="hidden sm:...">
+                          <div ref={{current:null}} className="relative h...">
+                            <button
+                              type="button"
+                              onClick={function onClick}
+                              aria-label="Settings"
+                              aria-expanded={false}
+                              className="inline-flex h-10 w-10 items-center justify-center rounded-[12px] text-[#2d313..."
+-                             fdprocessedid="9n36im"
+                            >
+                        ...
+                    ...
+            ...
+          ...
+ 
+    at <unknown> (file://C:/Users/monis/OneDrive/Pictures/Documents/toolslify/.next/dev/static/chunks/node_modules_next_dist_compiled_react-dom_058-ah~._.js:3439:25)
+    at runWithFiberInDEV (file://C:/Users/monis/OneDrive/Pictures/Documents/toolslify/.next/dev/static/chunks/node_modules_next_dist_compiled_react-dom_058-ah~._.js:965:74)
+    at emitPendingHydrationWarnings (file://C:/Users/monis/OneDrive/Pictures/Documents/toolslify/.next/dev/static/chunks/node_modules_next_dist_compiled_react-dom_058-ah~._.js:3438:13)
+    at completeWork (file://C:/Users/monis/OneDrive/Pictures/Documents/toolslify/.next/dev/static/chunks/node_modules_next_dist_compiled_react-dom_058-ah~._.js:6885:102)
+    at runWithFiberInDEV (file://C:/Users/monis/OneDrive/Pictures/Documents/toolslify/.next/dev/static/chunks/node_modules_next_dist_compiled_react-dom_058-ah~._.js:965:131)
+    at completeUnitOfWork (file://C:/Users/monis/OneDrive/Pictures/Documents/toolslify/.next/dev/static/chunks/node_modules_next_dist_compiled_react-dom_058-ah~._.js:9622:23)
+    at performUnitOfWork (file://C:/Users/monis/OneDrive/Pictures/Documents/toolslify/.next/dev/static/chunks/node_modules_next_dist_compiled_react-dom_058-ah~._.js:9557:28)
+    at workLoopConcurrentByScheduler (file://C:/Users/monis/OneDrive/Pictures/Documents/toolslify/.next/dev/static/chunks/node_modules_next_dist_compiled_react-dom_058-ah~._.js:9551:58)
+    at renderRootConcurrent (file://C:/Users/monis/OneDrive/Pictures/Documents/toolslify/.next/dev/static/chunks/node_modules_next_dist_compiled_react-dom_058-ah~._.js:9534:71)
+    at performWorkOnRoot (file://C:/Users/monis/OneDrive/Pictures/Documents/toolslify/.next/dev/static/chunks/node_modules_next_dist_compiled_react-dom_058-ah~._.js:9061:150)
+    at performWorkOnRootViaSchedulerTask (file://C:/Users/monis/OneDrive/Pictures/Documents/toolslify/.next/dev/static/chunks/node_modules_next_dist_compiled_react-dom_058-ah~._.js:10255:9)
+    at MessagePort.performWorkUntilDeadline (file://C:/Users/monis/OneDrive/Pictures/Documents/toolslify/.next/dev/static/chunks/node_modules_next_dist_compiled_0rpq4pf._.js:2647:64) (file://C:/Users/monis/OneDrive/Pictures/Documents/toolslify/.next/dev/static/chunks/node_modules_next_dist_compiled_react-dom_058-ah~._.js:3439:25)
+Error: Route "/tools" used `searchParams.query`. `searchParams` is a Promise and must be unwrapped with `await` or `React.use()` before accessing its properties. Learn more: https://nextjs.org/docs/messages/sync-dynamic-apis
+    at ToolsIndexPage (app\tools\page.js:46:31)
+  44 |     { name: "Tools", path: "/tools" },
+  45 |   ]);
+> 46 |   const initialQuery = typeof searchParams?.query === "string" ? searchParams.query : "";
+     |                               ^
+  47 |
+  48 |   return (
+  49 |     <div className="page-shell">
+Error: Route "/tools" used `searchParams.query`. `searchParams` is a Promise and must be unwrapped with `await` or `React.use()` before accessing its properties. Learn more: https://nextjs.org/docs/messages/sync-dynamic-apis
+    at ToolsIndexPage (app\tools\page.js:46:31)
+  44 |     { name: "Tools", path: "/tools" },
+  45 |   ]);
+> 46 |   const initialQuery = typeof searchParams?.query === "string" ? searchParams.query : "";
+     |                               ^
+  47 |
+  48 |   return (
+  49 |     <div className="page-shell">
+Error: Route "/tools" used `searchParams.query`. `searchParams` is a Promise and must be unwrapped with `await` or `React.use()` before accessing its properties. Learn more: https://nextjs.org/docs/messages/sync-dynamic-apis
+    at ToolsIndexPage (app\tools\page.js:46:31)
+  44 |     { name: "Tools", path: "/tools" },
+  45 |   ]);
+> 46 |   const initialQuery = typeof searchParams?.query === "string" ? searchParams.query : "";
+     |                               ^
+  47 |
+  48 |   return (
+  49 |     <div className="page-shell">
+[browser] Detected `scroll-behavior: smooth` on the `<html>` element. To disable smooth scrolling during route transitions, add `data-scroll-behavior="smooth"` to your <html> element. Learn more: https://nextjs.org/docs/messages/missing-data-scroll-behavior
+⨯ TypeError: The "path" argument must be of type string or an instance of URL. Received an instance of URL
+    at eval (lib\windows-ocr.js:10:38)
+    at <unknown> (rsc)/./lib/windows-ocr.js (C:\Users\monis\OneDrive\Pictures\Documents\toolslify\.next\dev\server\app\api\tool\[slug]\route.js:132:1)
+    at eval (webpack-internal:///(rsc)/./lib/studio-tool-engine.js:10:73)
+    at eval (webpack-internal:///(rsc)/./lib/studio-tool-engine.js:1:21)
+    at <unknown> (rsc)/./lib/studio-tool-engine.js (C:\Users\monis\OneDrive\Pictures\Documents\toolslify\.next\dev\server\app\api\tool\[slug]\route.js:77:1)
+    at eval (webpack-internal:///(rsc)/./lib/tool-engine.js:7:80)
+    at eval (webpack-internal:///(rsc)/./lib/tool-engine.js:1:21)
+    at <unknown> (rsc)/./lib/tool-engine.js (C:\Users\monis\OneDrive\Pictures\Documents\toolslify\.next\dev\server\app\api\tool\[slug]\route.js:99:1)
+    at eval (webpack-internal:///(rsc)/./app/api/tool/[slug]/route.js:11:74)
+    at eval (webpack-internal:///(rsc)/./app/api/tool/[slug]/route.js:1:21)
+    at <unknown> (rsc)/./app/api/tool/[slug]/route.js (C:\Users\monis\OneDrive\Pictures\Documents\toolslify\.next\dev\server\app\api\tool\[slug]\route.js:22:1)
+    at __webpack_exec__ (C:\Users\monis\OneDrive\Pictures\Documents\toolslify\.next\dev\server\app\api\tool\[slug]\route.js:338:39)
+    at <unknown> (C:\Users\monis\OneDrive\Pictures\Documents\toolslify\.next\dev\server\app\api\tool\[slug]\route.js:339:83)
+    at <unknown> (C:\Users\monis\OneDrive\Pictures\Documents\toolslify\.next\dev\server\app\api\tool\[slug]\route.js:339:47)
+    at Object.<anonymous> (C:\Users\monis\OneDrive\Pictures\Documents\toolslify\.next\dev\server\app\api\tool\[slug]\route.js:342:3)
+   8 |
+   9 | const execFileAsync = promisify(execFile);
+> 10 | const OCR_SCRIPT_PATH = fileURLToPath(new URL("../scripts/windows-ocr.ps1", import.meta.ur...
+     |                                      ^
+  11 |
+  12 | export async function extractImageTextWithWindowsOcr(file) {
+  13 |   if (process.platform !== "win32") { {
+  code: 'ERR_INVALID_ARG_TYPE',
+  page: '/api/tool/cover-letter-generator'
+}
+Error: Route "/tools" used `searchParams.query`. `searchParams` is a Promise and must be unwrapped with `await` or `React.use()` before accessing its properties. Learn more: https://nextjs.org/docs/messages/sync-dynamic-apis
+    at ToolsIndexPage (app\tools\page.js:46:31)
+  44 |     { name: "Tools", path: "/tools" },
+  45 |   ]);
+> 46 |   const initialQuery = typeof searchParams?.query === "string" ? searchParams.query : "";
+     |                               ^
+  47 |
+  48 |   return (
+  49 |     <div className="page-shell">
+Error: Route "/tools" used `searchParams.query`. `searchParams` is a Promise and must be unwrapped with `await` or `React.use()` before accessing its properties. Learn more: https://nextjs.org/docs/messages/sync-dynamic-apis
+    at ToolsIndexPage (app\tools\page.js:46:31)
+  44 |     { name: "Tools", path: "/tools" },
+  45 |   ]);
+> 46 |   const initialQuery = typeof searchParams?.query === "string" ? searchParams.query : "";
+     |                               ^
+  47 |
+  48 |   return (
+  49 |     <div className="page-shell">
+Error: Route "/tools" used `searchParams.query`. `searchParams` is a Promise and must be unwrapped with `await` or `React.use()` before accessing its properties. Learn more: https://nextjs.org/docs/messages/sync-dynamic-apis
+    at ToolsIndexPage (app\tools\page.js:46:31)
+  44 |     { name: "Tools", path: "/tools" },
+  45 |   ]);
+> 46 |   const initialQuery = typeof searchParams?.query === "string" ? searchParams.query : "";
+     |                               ^
+  47 |
+  48 |   return (
+  49 |     <div className="page-shell">
+Error: Route "/tools" used `searchParams.query`. `searchParams` is a Promise and must be unwrapped with `await` or `React.use()` before accessing its properties. Learn more: https://nextjs.org/docs/messages/sync-dynamic-apis
+    at ToolsIndexPage (app\tools\page.js:46:31)
+  44 |     { name: "Tools", path: "/tools" },
+  45 |   ]);
+> 46 |   const initialQuery = typeof searchParams?.query === "string" ? searchParams.query : "";
+     |                               ^
+  47 |
+  48 |   return (
+  49 |     <div className="page-shell">
+Error: Route "/tools" used `searchParams.query`. `searchParams` is a Promise and must be unwrapped with `await` or `React.use()` before accessing its properties. Learn more: https://nextjs.org/docs/messages/sync-dynamic-apis
+    at ToolsIndexPage (app\tools\page.js:46:31)
+  44 |     { name: "Tools", path: "/tools" },
+  45 |   ]);
+> 46 |   const initialQuery = typeof searchParams?.query === "string" ? searchParams.query : "";
+     |                               ^
+  47 |
+  48 |   return (
+  49 |     <div className="page-shell">
+Error: Route "/tools" used `searchParams.query`. `searchParams` is a Promise and must be unwrapped with `await` or `React.use()` before accessing its properties. Learn more: https://nextjs.org/docs/messages/sync-dynamic-apis
+    at ToolsIndexPage (app\tools\page.js:46:31)
+  44 |     { name: "Tools", path: "/tools" },
+  45 |   ]);
+> 46 |   const initialQuery = typeof searchParams?.query === "string" ? searchParams.query : "";
+     |                               ^
+  47 |
+  48 |   return (
+  49 |     <div className="page-shell">
+Error: Route "/tools" used `searchParams.query`. `searchParams` is a Promise and must be unwrapped with `await` or `React.use()` before accessing its properties. Learn more: https://nextjs.org/docs/messages/sync-dynamic-apis
+    at ToolsIndexPage (app\tools\page.js:46:31)
+  44 |     { name: "Tools", path: "/tools" },
+  45 |   ]);
+> 46 |   const initialQuery = typeof searchParams?.query === "string" ? searchParams.query : "";
+     |                               ^
+  47 |
+  48 |   return (
+  49 |     <div className="page-shell">
+Error: Route "/tools" used `searchParams.query`. `searchParams` is a Promise and must be unwrapped with `await` or `React.use()` before accessing its properties. Learn more: https://nextjs.org/docs/messages/sync-dynamic-apis
+    at ToolsIndexPage (app\tools\page.js:46:31)
+  44 |     { name: "Tools", path: "/tools" },
+  45 |   ]);
+> 46 |   const initialQuery = typeof searchParams?.query === "string" ? searchParams.query : "";
+     |                               ^
+  47 |
+  48 |   return (
+  49 |     <div className="page-shell">
+Error: Route "/tools" used `searchParams.query`. `searchParams` is a Promise and must be unwrapped with `await` or `React.use()` before accessing its properties. Learn more: https://nextjs.org/docs/messages/sync-dynamic-apis
+    at ToolsIndexPage (app\tools\page.js:46:31)
+  44 |     { name: "Tools", path: "/tools" },
+  45 |   ]);
+> 46 |   const initialQuery = typeof searchParams?.query === "string" ? searchParams.query : "";
+     |                               ^
+  47 |
+  48 |   return (
+  49 |     <div className="page-shell">
+Error: Route "/tools" used `searchParams.query`. `searchParams` is a Promise and must be unwrapped with `await` or `React.use()` before accessing its properties. Learn more: https://nextjs.org/docs/messages/sync-dynamic-apis
+    at ToolsIndexPage (app\tools\page.js:46:31)
+  44 |     { name: "Tools", path: "/tools" },
+  45 |   ]);
+> 46 |   const initialQuery = typeof searchParams?.query === "string" ? searchParams.query : "";
+     |                               ^
+  47 |
+  48 |   return (
+  49 |     <div className="page-shell">
+Error: Route "/tools" used `searchParams.query`. `searchParams` is a Promise and must be unwrapped with `await` or `React.use()` before accessing its properties. Learn more: https://nextjs.org/docs/messages/sync-dynamic-apis
+    at ToolsIndexPage (app\tools\page.js:46:31)
+  44 |     { name: "Tools", path: "/tools" },
+  45 |   ]);
+> 46 |   const initialQuery = typeof searchParams?.query === "string" ? searchParams.query : "";
+     |                               ^
+  47 |
+  48 |   return (
+  49 |     <div className="page-shell">
+Error: Route "/tools" used `searchParams.query`. `searchParams` is a Promise and must be unwrapped with `await` or `React.use()` before accessing its properties. Learn more: https://nextjs.org/docs/messages/sync-dynamic-apis
+    at ToolsIndexPage (app\tools\page.js:46:31)
+  44 |     { name: "Tools", path: "/tools" },
+  45 |   ]);
+> 46 |   const initialQuery = typeof searchParams?.query === "string" ? searchParams.query : "";
+     |                               ^
+  47 |
+  48 |   return (
+  49 |     <div className="page-shell">
+Error: Route "/tools" used `searchParams.query`. `searchParams` is a Promise and must be unwrapped with `await` or `React.use()` before accessing its properties. Learn more: https://nextjs.org/docs/messages/sync-dynamic-apis
+    at ToolsIndexPage (app\tools\page.js:46:31)
+  44 |     { name: "Tools", path: "/tools" },
+  45 |   ]);
+> 46 |   const initialQuery = typeof searchParams?.query === "string" ? searchParams.query : "";
+     |                               ^
+  47 |
+  48 |   return (
+  49 |     <div className="page-shell">
+Error: Route "/tools" used `searchParams.query`. `searchParams` is a Promise and must be unwrapped with `await` or `React.use()` before accessing its properties. Learn more: https://nextjs.org/docs/messages/sync-dynamic-apis
+    at ToolsIndexPage (app\tools\page.js:46:31)
+  44 |     { name: "Tools", path: "/tools" },
+  45 |   ]);
+> 46 |   const initialQuery = typeof searchParams?.query === "string" ? searchParams.query : "";
+     |                               ^
+  47 |
+  48 |   return (
+  49 |     <div className="page-shell">
+Error: Route "/tools" used `searchParams.query`. `searchParams` is a Promise and must be unwrapped with `await` or `React.use()` before accessing its properties. Learn more: https://nextjs.org/docs/messages/sync-dynamic-apis
+    at ToolsIndexPage (app\tools\page.js:46:31)
+  44 |     { name: "Tools", path: "/tools" },
+  45 |   ]);
+> 46 |   const initialQuery = typeof searchParams?.query === "string" ? searchParams.query : "";
+     |                               ^
+  47 |
+  48 |   return (
+  49 |     <div className="page-shell">
+Error: Route "/tools" used `searchParams.query`. `searchParams` is a Promise and must be unwrapped with `await` or `React.use()` before accessing its properties. Learn more: https://nextjs.org/docs/messages/sync-dynamic-apis
+    at ToolsIndexPage (app\tools\page.js:46:31)
+  44 |     { name: "Tools", path: "/tools" },
+  45 |   ]);
+> 46 |   const initialQuery = typeof searchParams?.query === "string" ? searchParams.query : "";
+     |                               ^
+  47 |
+  48 |   return (
+  49 |     <div className="page-shell">
+Error: Route "/tools" used `searchParams.query`. `searchParams` is a Promise and must be unwrapped with `await` or `React.use()` before accessing its properties. Learn more: https://nextjs.org/docs/messages/sync-dynamic-apis
+    at ToolsIndexPage (app\tools\page.js:46:31)
+  44 |     { name: "Tools", path: "/tools" },
+  45 |   ]);
+> 46 |   const initialQuery = typeof searchParams?.query === "string" ? searchParams.query : "";
+     |                               ^
+  47 |
+  48 |   return (
+  49 |     <div className="page-shell">
+Error: Route "/tools" used `searchParams.query`. `searchParams` is a Promise and must be unwrapped with `await` or `React.use()` before accessing its properties. Learn more: https://nextjs.org/docs/messages/sync-dynamic-apis
+    at ToolsIndexPage (app\tools\page.js:46:31)
+  44 |     { name: "Tools", path: "/tools" },
+  45 |   ]);
+> 46 |   const initialQuery = typeof searchParams?.query === "string" ? searchParams.query : "";
+     |                               ^
+  47 |
+  48 |   return (
+  49 |     <div className="page-shell">
+Error: Route "/tools" used `searchParams.query`. `searchParams` is a Promise and must be unwrapped with `await` or `React.use()` before accessing its properties. Learn more: https://nextjs.org/docs/messages/sync-dynamic-apis
+    at ToolsIndexPage (app\tools\page.js:46:31)
+  44 |     { name: "Tools", path: "/tools" },
+  45 |   ]);
+> 46 |   const initialQuery = typeof searchParams?.query === "string" ? searchParams.query : "";
+     |                               ^
+  47 |
+  48 |   return (
+  49 |     <div className="page-shell">
+Error: Route "/tools" used `searchParams.query`. `searchParams` is a Promise and must be unwrapped with `await` or `React.use()` before accessing its properties. Learn more: https://nextjs.org/docs/messages/sync-dynamic-apis
+    at ToolsIndexPage (app\tools\page.js:46:31)
+  44 |     { name: "Tools", path: "/tools" },
+  45 |   ]);
+> 46 |   const initialQuery = typeof searchParams?.query === "string" ? searchParams.query : "";
+     |                               ^
+  47 |
+  48 |   return (
+  49 |     <div className="page-shell">
+Error: Route "/tools" used `searchParams.query`. `searchParams` is a Promise and must be unwrapped with `await` or `React.use()` before accessing its properties. Learn more: https://nextjs.org/docs/messages/sync-dynamic-apis
+    at ToolsIndexPage (app\tools\page.js:46:31)
+  44 |     { name: "Tools", path: "/tools" },
+  45 |   ]);
+> 46 |   const initialQuery = typeof searchParams?.query === "string" ? searchParams.query : "";
+     |                               ^
+  47 |
+  48 |   return (
+  49 |     <div className="page-shell">
+Error: Route "/tools" used `searchParams.query`. `searchParams` is a Promise and must be unwrapped with `await` or `React.use()` before accessing its properties. Learn more: https://nextjs.org/docs/messages/sync-dynamic-apis
+    at ToolsIndexPage (app\tools\page.js:46:31)
+  44 |     { name: "Tools", path: "/tools" },
+  45 |   ]);
+> 46 |   const initialQuery = typeof searchParams?.query === "string" ? searchParams.query : "";
+     |                               ^
+  47 |
+  48 |   return (
+  49 |     <div className="page-shell">
+Error: Route "/tools" used `searchParams.query`. `searchParams` is a Promise and must be unwrapped with `await` or `React.use()` before accessing its properties. Learn more: https://nextjs.org/docs/messages/sync-dynamic-apis
+    at ToolsIndexPage (app\tools\page.js:46:31)
+  44 |     { name: "Tools", path: "/tools" },
+  45 |   ]);
+> 46 |   const initialQuery = typeof searchParams?.query === "string" ? searchParams.query : "";
+     |                               ^
+  47 |
+  48 |   return (
+  49 |     <div className="page-shell">
+Error: Route "/tools" used `searchParams.query`. `searchParams` is a Promise and must be unwrapped with `await` or `React.use()` before accessing its properties. Learn more: https://nextjs.org/docs/messages/sync-dynamic-apis
+    at ToolsIndexPage (app\tools\page.js:46:31)
+  44 |     { name: "Tools", path: "/tools" },
+  45 |   ]);
+> 46 |   const initialQuery = typeof searchParams?.query === "string" ? searchParams.query : "";
+     |                               ^
+  47 |
+  48 |   return (
+  49 |     <div className="page-shell">
+Error: Route "/tools" used `searchParams.query`. `searchParams` is a Promise and must be unwrapped with `await` or `React.use()` before accessing its properties. Learn more: https://nextjs.org/docs/messages/sync-dynamic-apis
+    at ToolsIndexPage (app\tools\page.js:46:31)
+  44 |     { name: "Tools", path: "/tools" },
+  45 |   ]);
+> 46 |   const initialQuery = typeof searchParams?.query === "string" ? searchParams.query : "";
+     |                               ^
+  47 |
+  48 |   return (
+  49 |     <div className="page-shell">
+Error: Route "/tools" used `searchParams.query`. `searchParams` is a Promise and must be unwrapped with `await` or `React.use()` before accessing its properties. Learn more: https://nextjs.org/docs/messages/sync-dynamic-apis
+    at ToolsIndexPage (app\tools\page.js:46:31)
+  44 |     { name: "Tools", path: "/tools" },
+  45 |   ]);
+> 46 |   const initialQuery = typeof searchParams?.query === "string" ? searchParams.query : "";
+     |                               ^
+  47 |
+  48 |   return (
+  49 |     <div className="page-shell">
+Error: Route "/tools" used `searchParams.query`. `searchParams` is a Promise and must be unwrapped with `await` or `React.use()` before accessing its properties. Learn more: https://nextjs.org/docs/messages/sync-dynamic-apis
+    at ToolsIndexPage (app\tools\page.js:46:31)
+  44 |     { name: "Tools", path: "/tools" },
+  45 |   ]);
+> 46 |   const initialQuery = typeof searchParams?.query === "string" ? searchParams.query : "";
+     |                               ^
+  47 |
+  48 |   return (
+  49 |     <div className="page-shell">
+Error: Route "/tools" used `searchParams.query`. `searchParams` is a Promise and must be unwrapped with `await` or `React.use()` before accessing its properties. Learn more: https://nextjs.org/docs/messages/sync-dynamic-apis
+    at ToolsIndexPage (app\tools\page.js:46:31)
+  44 |     { name: "Tools", path: "/tools" },
+  45 |   ]);
+> 46 |   const initialQuery = typeof searchParams?.query === "string" ? searchParams.query : "";
+     |                               ^
+  47 |
+  48 |   return (
+  49 |     <div className="page-shell">
+Error: Route "/tools" used `searchParams.query`. `searchParams` is a Promise and must be unwrapped with `await` or `React.use()` before accessing its properties. Learn more: https://nextjs.org/docs/messages/sync-dynamic-apis
+    at ToolsIndexPage (app\tools\page.js:46:31)
+  44 |     { name: "Tools", path: "/tools" },
+  45 |   ]);
+> 46 |   const initialQuery = typeof searchParams?.query === "string" ? searchParams.query : "";
+     |                               ^
+  47 |
+  48 |   return (
+  49 |     <div className="page-shell">
+Error: Route "/tools" used `searchParams.query`. `searchParams` is a Promise and must be unwrapped with `await` or `React.use()` before accessing its properties. Learn more: https://nextjs.org/docs/messages/sync-dynamic-apis
+    at ToolsIndexPage (app\tools\page.js:46:31)
+  44 |     { name: "Tools", path: "/tools" },
+  45 |   ]);
+> 46 |   const initialQuery = typeof searchParams?.query === "string" ? searchParams.query : "";
+     |                               ^
+  47 |
+  48 |   return (
+  49 |     <div className="page-shell">
+[browser] ReferenceError: pickPalette is not defined
+    at getGlyphSpec (components\marketing\tool-glyph.js:254:39)
+    at ToolGlyph (components\marketing\tool-glyph.js:69:16)
+  252 |     slug.includes("cost-of-living")
+  253 |   ) {
+> 254 |     return { kind: "single", palette: pickPalette(slug, ["navy", "violet", "slate"]), ico...
+      |                                       ^
+  255 |   }
+  256 |
+  257 |   if ( (app\error.js:10:13)
+[browser] ReferenceError: pickPalette is not defined
+    at getGlyphSpec (components\marketing\tool-glyph.js:254:39)
+    at ToolGlyph (components\marketing\tool-glyph.js:69:16)
+  252 |     slug.includes("cost-of-living")
+  253 |   ) {
+> 254 |     return { kind: "single", palette: pickPalette(slug, ["navy", "violet", "slate"]), ico...
+      |                                       ^
+  255 |   }
+  256 |
+  257 |   if ( (app\error.js:10:13)
+[browser] ReferenceError: pickPalette is not defined
+    at getGlyphSpec (components\marketing\tool-glyph.js:254:39)
+    at ToolGlyph (components\marketing\tool-glyph.js:69:16)
+  252 |     slug.includes("cost-of-living")
+  253 |   ) {
+> 254 |     return { kind: "single", palette: pickPalette(slug, ["navy", "violet", "slate"]), ico...
+      |                                       ^
+  255 |   }
+  256 |
+  257 |   if ( (app\error.js:10:13)
+[browser] ReferenceError: CompareMark is not defined
+    at SingleIcon (components\marketing\tool-glyph.js:711:15)
+  709 |       return <CoinsMark color={color} />;
+  710 |     case "compare":
+> 711 |       return <CompareMark color={color} />;
+      |               ^
+  712 |     case "tools":
+  713 |       return <ToolsMark color={color} />;
+  714 |     case "nib": (app\error.js:10:13)
+[browser] ReferenceError: CompareMark is not defined
+    at SingleIcon (components\marketing\tool-glyph.js:711:15)
+  709 |       return <CoinsMark color={color} />;
+  710 |     case "compare":
+> 711 |       return <CompareMark color={color} />;
+      |               ^
+  712 |     case "tools":
+  713 |       return <ToolsMark color={color} />;
+  714 |     case "nib": (app\error.js:10:13)
+[browser] ReferenceError: CompareMark is not defined
+    at SingleIcon (components\marketing\tool-glyph.js:711:15)
+  709 |       return <CoinsMark color={color} />;
+  710 |     case "compare":
+> 711 |       return <CompareMark color={color} />;
+      |               ^
+  712 |     case "tools":
+  713 |       return <ToolsMark color={color} />;
+  714 |     case "nib": (app\error.js:10:13)
+[browser] ReferenceError: CompareMark is not defined
+    at SingleIcon (components\marketing\tool-glyph.js:711:15)
+  709 |       return <CoinsMark color={color} />;
+  710 |     case "compare":
+> 711 |       return <CompareMark color={color} />;
+      |               ^
+  712 |     case "tools":
+  713 |       return <ToolsMark color={color} />;
+  714 |     case "nib": (app\error.js:10:13)
+[browser] ReferenceError: CompareMark is not defined
+    at SingleIcon (components\marketing\tool-glyph.js:711:15)
+  709 |       return <CoinsMark color={color} />;
+  710 |     case "compare":
+> 711 |       return <CompareMark color={color} />;
+      |               ^
+  712 |     case "tools":
+  713 |       return <ToolsMark color={color} />;
+  714 |     case "nib": (app\error.js:10:13)
+[browser] ReferenceError: CompareMark is not defined
+    at SingleIcon (components\marketing\tool-glyph.js:711:15)
+  709 |       return <CoinsMark color={color} />;
+  710 |     case "compare":
+> 711 |       return <CompareMark color={color} />;
+      |               ^
+  712 |     case "tools":
+  713 |       return <ToolsMark color={color} />;
+  714 |     case "nib": (app\error.js:10:13)
+[browser] ReferenceError: CompareMark is not defined
+    at SingleIcon (components\marketing\tool-glyph.js:711:15)
+  709 |       return <CoinsMark color={color} />;
+  710 |     case "compare":
+> 711 |       return <CompareMark color={color} />;
+      |               ^
+  712 |     case "tools":
+  713 |       return <ToolsMark color={color} />;
+  714 |     case "nib": (app\error.js:10:13)
+Error: Route "/tools" used `searchParams.query`. `searchParams` is a Promise and must be unwrapped with `await` or `React.use()` before accessing its properties. Learn more: https://nextjs.org/docs/messages/sync-dynamic-apis
+    at ToolsIndexPage (app\tools\page.js:46:31)
+  44 |     { name: "Tools", path: "/tools" },
+  45 |   ]);
+> 46 |   const initialQuery = typeof searchParams?.query === "string" ? searchParams.query : "";
+     |                               ^
+  47 |
+  48 |   return (
+  49 |     <div className="page-shell">
+⨯ ReferenceError: CompareMark is not defined
+    at SingleIcon (components\marketing\tool-glyph.js:711:15)
+  709 |       return <CoinsMark color={color} />;
+  710 |     case "compare":
+> 711 |       return <CompareMark color={color} />;
+      |               ^
+  712 |     case "tools":
+  713 |       return <ToolsMark color={color} />;
+  714 |     case "nib": {
+  digest: '4080235262'
+}
+[browser] ReferenceError: CompareMark is not defined
+    at SingleIcon (components\marketing\tool-glyph.js:711:15)
+  709 |       return <CoinsMark color={color} />;
+  710 |     case "compare":
+> 711 |       return <CompareMark color={color} />;
+      |               ^
+  712 |     case "tools":
+  713 |       return <ToolsMark color={color} />;
+  714 |     case "nib": (app\error.js:10:13)
+[browser] ReferenceError: CompareMark is not defined
+    at SingleIcon (components\marketing\tool-glyph.js:711:15)
+  709 |       return <CoinsMark color={color} />;
+  710 |     case "compare":
+> 711 |       return <CompareMark color={color} />;
+      |               ^
+  712 |     case "tools":
+  713 |       return <ToolsMark color={color} />;
+  714 |     case "nib": (app\error.js:10:13)
+Error: Route "/tools" used `searchParams.query`. `searchParams` is a Promise and must be unwrapped with `await` or `React.use()` before accessing its properties. Learn more: https://nextjs.org/docs/messages/sync-dynamic-apis
+    at ToolsIndexPage (app\tools\page.js:46:31)
+  44 |     { name: "Tools", path: "/tools" },
+  45 |   ]);
+> 46 |   const initialQuery = typeof searchParams?.query === "string" ? searchParams.query : "";
+     |                               ^
+  47 |
+  48 |   return (
+  49 |     <div className="page-shell">
+Error: Route "/tools" used `searchParams.query`. `searchParams` is a Promise and must be unwrapped with `await` or `React.use()` before accessing its properties. Learn more: https://nextjs.org/docs/messages/sync-dynamic-apis
+    at ToolsIndexPage (app\tools\page.js:46:31)
+  44 |     { name: "Tools", path: "/tools" },
+  45 |   ]);
+> 46 |   const initialQuery = typeof searchParams?.query === "string" ? searchParams.query : "";
+     |                               ^
+  47 |
+  48 |   return (
+  49 |     <div className="page-shell">
+Error: Route "/tools" used `searchParams.query`. `searchParams` is a Promise and must be unwrapped with `await` or `React.use()` before accessing its properties. Learn more: https://nextjs.org/docs/messages/sync-dynamic-apis
+    at ToolsIndexPage (app\tools\page.js:46:31)
+  44 |     { name: "Tools", path: "/tools" },
+  45 |   ]);
+> 46 |   const initialQuery = typeof searchParams?.query === "string" ? searchParams.query : "";
+     |                               ^
+  47 |
+  48 |   return (
+  49 |     <div className="page-shell">
+Error: Route "/tools" used `searchParams.query`. `searchParams` is a Promise and must be unwrapped with `await` or `React.use()` before accessing its properties. Learn more: https://nextjs.org/docs/messages/sync-dynamic-apis
+    at ToolsIndexPage (app\tools\page.js:46:31)
+  44 |     { name: "Tools", path: "/tools" },
+  45 |   ]);
+> 46 |   const initialQuery = typeof searchParams?.query === "string" ? searchParams.query : "";
+     |                               ^
+  47 |
+  48 |   return (
+  49 |     <div className="page-shell">
+Error: Route "/tools" used `searchParams.query`. `searchParams` is a Promise and must be unwrapped with `await` or `React.use()` before accessing its properties. Learn more: https://nextjs.org/docs/messages/sync-dynamic-apis
+    at ToolsIndexPage (app\tools\page.js:46:31)
+  44 |     { name: "Tools", path: "/tools" },
+  45 |   ]);
+> 46 |   const initialQuery = typeof searchParams?.query === "string" ? searchParams.query : "";
+     |                               ^
+  47 |
+  48 |   return (
+  49 |     <div className="page-shell">
+[browser] Detected `scroll-behavior: smooth` on the `<html>` element. To disable smooth scrolling during route transitions, add `data-scroll-behavior="smooth"` to your <html> element. Learn more: https://nextjs.org/docs/messages/missing-data-scroll-behavior
+⨯ TypeError: The "path" argument must be of type string or an instance of URL. Received an instance of URL
+    at eval (lib\windows-ocr.js:10:38)
+    at <unknown> (rsc)/./lib/windows-ocr.js (C:\Users\monis\OneDrive\Pictures\Documents\toolslify\.next\dev\server\app\api\tool\[slug]\route.js:132:1)
+    at eval (webpack-internal:///(rsc)/./lib/studio-tool-engine.js:10:73)
+    at eval (webpack-internal:///(rsc)/./lib/studio-tool-engine.js:1:21)
+    at <unknown> (rsc)/./lib/studio-tool-engine.js (C:\Users\monis\OneDrive\Pictures\Documents\toolslify\.next\dev\server\app\api\tool\[slug]\route.js:77:1)
+    at eval (webpack-internal:///(rsc)/./lib/tool-engine.js:7:80)
+    at eval (webpack-internal:///(rsc)/./lib/tool-engine.js:1:21)
+    at <unknown> (rsc)/./lib/tool-engine.js (C:\Users\monis\OneDrive\Pictures\Documents\toolslify\.next\dev\server\app\api\tool\[slug]\route.js:99:1)
+    at eval (webpack-internal:///(rsc)/./app/api/tool/[slug]/route.js:11:74)
+    at eval (webpack-internal:///(rsc)/./app/api/tool/[slug]/route.js:1:21)
+    at <unknown> (rsc)/./app/api/tool/[slug]/route.js (C:\Users\monis\OneDrive\Pictures\Documents\toolslify\.next\dev\server\app\api\tool\[slug]\route.js:22:1)
+    at __webpack_exec__ (C:\Users\monis\OneDrive\Pictures\Documents\toolslify\.next\dev\server\app\api\tool\[slug]\route.js:338:39)
+    at <unknown> (C:\Users\monis\OneDrive\Pictures\Documents\toolslify\.next\dev\server\app\api\tool\[slug]\route.js:339:83)
+    at <unknown> (C:\Users\monis\OneDrive\Pictures\Documents\toolslify\.next\dev\server\app\api\tool\[slug]\route.js:339:47)
+    at Object.<anonymous> (C:\Users\monis\OneDrive\Pictures\Documents\toolslify\.next\dev\server\app\api\tool\[slug]\route.js:342:3)
+   8 |
+   9 | const execFileAsync = promisify(execFile);
+> 10 | const OCR_SCRIPT_PATH = fileURLToPath(new URL("../scripts/windows-ocr.ps1", import.meta.ur...
+     |                                      ^
+  11 |
+  12 | export async function extractImageTextWithWindowsOcr(file) {
+  13 |   if (process.platform !== "win32") { {
+  code: 'ERR_INVALID_ARG_TYPE',
+  page: '/api/tool/freelance-contract-generator'
+}
+Error: Route "/tools" used `searchParams.query`. `searchParams` is a Promise and must be unwrapped with `await` or `React.use()` before accessing its properties. Learn more: https://nextjs.org/docs/messages/sync-dynamic-apis
+    at ToolsIndexPage (app\tools\page.js:46:31)
+  44 |     { name: "Tools", path: "/tools" },
+  45 |   ]);
+> 46 |   const initialQuery = typeof searchParams?.query === "string" ? searchParams.query : "";
+     |                               ^
+  47 |
+  48 |   return (
+  49 |     <div className="page-shell">
+[browser] ReferenceError: HomeToolListCard is not defined
+    at eval (components\marketing\tool-directory.js:362:22)
+    at Array.map (<anonymous>)
+    at ToolDirectory (components\marketing\tool-directory.js:361:38)
+  360 |                 <div className="grid gap-4 md:grid-cols-2 xl:grid-cols-4">
+  361 |                   {homeFeaturedTools.map((tool) => (
+> 362 |                     <HomeToolListCard key={tool.slug} tool={tool} />
+      |                      ^
+  363 |                   ))}
+  364 |                 </div>
+  365 |                 <div className="flex justify-center"> (app\error.js:10:13)
+[browser] ReferenceError: HomeToolListCard is not defined
+    at eval (components\marketing\tool-directory.js:362:22)
+    at Array.map (<anonymous>)
+    at ToolDirectory (components\marketing\tool-directory.js:361:38)
+  360 |                 <div className="grid gap-4 md:grid-cols-2 xl:grid-cols-4">
+  361 |                   {homeFeaturedTools.map((tool) => (
+> 362 |                     <HomeToolListCard key={tool.slug} tool={tool} />
+      |                      ^
+  363 |                   ))}
+  364 |                 </div>
+  365 |                 <div className="flex justify-center"> (app\error.js:10:13)
+Error: Route "/tools" used `searchParams.query`. `searchParams` is a Promise and must be unwrapped with `await` or `React.use()` before accessing its properties. Learn more: https://nextjs.org/docs/messages/sync-dynamic-apis
+    at ToolsIndexPage (app\tools\page.js:46:31)
+  44 |     { name: "Tools", path: "/tools" },
+  45 |   ]);
+> 46 |   const initialQuery = typeof searchParams?.query === "string" ? searchParams.query : "";
+     |                               ^
+  47 |
+  48 |   return (
+  49 |     <div className="page-shell">
+[browser] Detected `scroll-behavior: smooth` on the `<html>` element. To disable smooth scrolling during route transitions, add `data-scroll-behavior="smooth"` to your <html> element. Learn more: https://nextjs.org/docs/messages/missing-data-scroll-behavior
+Error: Route "/tools" used `searchParams.query`. `searchParams` is a Promise and must be unwrapped with `await` or `React.use()` before accessing its properties. Learn more: https://nextjs.org/docs/messages/sync-dynamic-apis
+    at ToolsIndexPage (app\tools\page.js:46:31)
+  44 |     { name: "Tools", path: "/tools" },
+  45 |   ]);
+> 46 |   const initialQuery = typeof searchParams?.query === "string" ? searchParams.query : "";
+     |                               ^
+  47 |
+  48 |   return (
+  49 |     <div className="page-shell">
+Error: Route "/tools" used `searchParams.query`. `searchParams` is a Promise and must be unwrapped with `await` or `React.use()` before accessing its properties. Learn more: https://nextjs.org/docs/messages/sync-dynamic-apis
+    at ToolsIndexPage (app\tools\page.js:46:31)
+  44 |     { name: "Tools", path: "/tools" },
+  45 |   ]);
+> 46 |   const initialQuery = typeof searchParams?.query === "string" ? searchParams.query : "";
+     |                               ^
+  47 |
+  48 |   return (
+  49 |     <div className="page-shell">
+Error: Route "/tools" used `searchParams.query`. `searchParams` is a Promise and must be unwrapped with `await` or `React.use()` before accessing its properties. Learn more: https://nextjs.org/docs/messages/sync-dynamic-apis
+    at ToolsIndexPage (app\tools\page.js:46:31)
+  44 |     { name: "Tools", path: "/tools" },
+  45 |   ]);
+> 46 |   const initialQuery = typeof searchParams?.query === "string" ? searchParams.query : "";
+     |                               ^
+  47 |
+  48 |   return (
+  49 |     <div className="page-shell">
+Error: Route "/tools" used `searchParams.query`. `searchParams` is a Promise and must be unwrapped with `await` or `React.use()` before accessing its properties. Learn more: https://nextjs.org/docs/messages/sync-dynamic-apis
+    at ToolsIndexPage (app\tools\page.js:46:31)
+  44 |     { name: "Tools", path: "/tools" },
+  45 |   ]);
+> 46 |   const initialQuery = typeof searchParams?.query === "string" ? searchParams.query : "";
+     |                               ^
+  47 |
+  48 |   return (
+  49 |     <div className="page-shell">
+Error: Route "/tools" used `searchParams.query`. `searchParams` is a Promise and must be unwrapped with `await` or `React.use()` before accessing its properties. Learn more: https://nextjs.org/docs/messages/sync-dynamic-apis
+    at ToolsIndexPage (app\tools\page.js:46:31)
+  44 |     { name: "Tools", path: "/tools" },
+  45 |   ]);
+> 46 |   const initialQuery = typeof searchParams?.query === "string" ? searchParams.query : "";
+     |                               ^
+  47 |
+  48 |   return (
+  49 |     <div className="page-shell">
+Error: Route "/tools" used `searchParams.query`. `searchParams` is a Promise and must be unwrapped with `await` or `React.use()` before accessing its properties. Learn more: https://nextjs.org/docs/messages/sync-dynamic-apis
+    at ToolsIndexPage (app\tools\page.js:46:31)
+  44 |     { name: "Tools", path: "/tools" },
+  45 |   ]);
+> 46 |   const initialQuery = typeof searchParams?.query === "string" ? searchParams.query : "";
+     |                               ^
+  47 |
+  48 |   return (
+  49 |     <div className="page-shell">
+Error: Route "/tools" used `searchParams.query`. `searchParams` is a Promise and must be unwrapped with `await` or `React.use()` before accessing its properties. Learn more: https://nextjs.org/docs/messages/sync-dynamic-apis
+    at ToolsIndexPage (app\tools\page.js:46:31)
+  44 |     { name: "Tools", path: "/tools" },
+  45 |   ]);
+> 46 |   const initialQuery = typeof searchParams?.query === "string" ? searchParams.query : "";
+     |                               ^
+  47 |
+  48 |   return (
+  49 |     <div className="page-shell">
+Error: Route "/tools" used `searchParams.query`. `searchParams` is a Promise and must be unwrapped with `await` or `React.use()` before accessing its properties. Learn more: https://nextjs.org/docs/messages/sync-dynamic-apis
+    at ToolsIndexPage (app\tools\page.js:46:31)
+  44 |     { name: "Tools", path: "/tools" },
+  45 |   ]);
+> 46 |   const initialQuery = typeof searchParams?.query === "string" ? searchParams.query : "";
+     |                               ^
+  47 |
+  48 |   return (
+  49 |     <div className="page-shell">
+Error: Route "/tools" used `searchParams.query`. `searchParams` is a Promise and must be unwrapped with `await` or `React.use()` before accessing its properties. Learn more: https://nextjs.org/docs/messages/sync-dynamic-apis
+    at ToolsIndexPage (app\tools\page.js:46:31)
+  44 |     { name: "Tools", path: "/tools" },
+  45 |   ]);
+> 46 |   const initialQuery = typeof searchParams?.query === "string" ? searchParams.query : "";
+     |                               ^
+  47 |
+  48 |   return (
+  49 |     <div className="page-shell">
+Error: Route "/tools" used `searchParams.query`. `searchParams` is a Promise and must be unwrapped with `await` or `React.use()` before accessing its properties. Learn more: https://nextjs.org/docs/messages/sync-dynamic-apis
+    at ToolsIndexPage (app\tools\page.js:46:31)
+  44 |     { name: "Tools", path: "/tools" },
+  45 |   ]);
+> 46 |   const initialQuery = typeof searchParams?.query === "string" ? searchParams.query : "";
+     |                               ^
+  47 |
+  48 |   return (
+  49 |     <div className="page-shell">
+Error: Route "/tools" used `searchParams.query`. `searchParams` is a Promise and must be unwrapped with `await` or `React.use()` before accessing its properties. Learn more: https://nextjs.org/docs/messages/sync-dynamic-apis
+    at ToolsIndexPage (app\tools\page.js:46:31)
+  44 |     { name: "Tools", path: "/tools" },
+  45 |   ]);
+> 46 |   const initialQuery = typeof searchParams?.query === "string" ? searchParams.query : "";
+     |                               ^
+  47 |
+  48 |   return (
+  49 |     <div className="page-shell">
+Error: Route "/tools" used `searchParams.query`. `searchParams` is a Promise and must be unwrapped with `await` or `React.use()` before accessing its properties. Learn more: https://nextjs.org/docs/messages/sync-dynamic-apis
+    at ToolsIndexPage (app\tools\page.js:46:31)
+  44 |     { name: "Tools", path: "/tools" },
+  45 |   ]);
+> 46 |   const initialQuery = typeof searchParams?.query === "string" ? searchParams.query : "";
+     |                               ^
+  47 |
+  48 |   return (
+  49 |     <div className="page-shell">
+Error: Route "/tools" used `searchParams.query`. `searchParams` is a Promise and must be unwrapped with `await` or `React.use()` before accessing its properties. Learn more: https://nextjs.org/docs/messages/sync-dynamic-apis
+    at ToolsIndexPage (app\tools\page.js:46:31)
+  44 |     { name: "Tools", path: "/tools" },
+  45 |   ]);
+> 46 |   const initialQuery = typeof searchParams?.query === "string" ? searchParams.query : "";
+     |                               ^
+  47 |
+  48 |   return (
+  49 |     <div className="page-shell">
+Error: Route "/tools" used `searchParams.query`. `searchParams` is a Promise and must be unwrapped with `await` or `React.use()` before accessing its properties. Learn more: https://nextjs.org/docs/messages/sync-dynamic-apis
+    at ToolsIndexPage (app\tools\page.js:46:31)
+  44 |     { name: "Tools", path: "/tools" },
+  45 |   ]);
+> 46 |   const initialQuery = typeof searchParams?.query === "string" ? searchParams.query : "";
+     |                               ^
+  47 |
+  48 |   return (
+  49 |     <div className="page-shell">
+Error: Route "/tools" used `searchParams.query`. `searchParams` is a Promise and must be unwrapped with `await` or `React.use()` before accessing its properties. Learn more: https://nextjs.org/docs/messages/sync-dynamic-apis
+    at ToolsIndexPage (app\tools\page.js:46:31)
+  44 |     { name: "Tools", path: "/tools" },
+  45 |   ]);
+> 46 |   const initialQuery = typeof searchParams?.query === "string" ? searchParams.query : "";
+     |                               ^
+  47 |
+  48 |   return (
+  49 |     <div className="page-shell">
+Error: Route "/tools" used `searchParams.query`. `searchParams` is a Promise and must be unwrapped with `await` or `React.use()` before accessing its properties. Learn more: https://nextjs.org/docs/messages/sync-dynamic-apis
+    at ToolsIndexPage (app\tools\page.js:46:31)
+  44 |     { name: "Tools", path: "/tools" },
+  45 |   ]);
+> 46 |   const initialQuery = typeof searchParams?.query === "string" ? searchParams.query : "";
+     |                               ^
+  47 |
+  48 |   return (
+  49 |     <div className="page-shell">
+Error: Route "/tools" used `searchParams.query`. `searchParams` is a Promise and must be unwrapped with `await` or `React.use()` before accessing its properties. Learn more: https://nextjs.org/docs/messages/sync-dynamic-apis
+    at ToolsIndexPage (app\tools\page.js:46:31)
+  44 |     { name: "Tools", path: "/tools" },
+  45 |   ]);
+> 46 |   const initialQuery = typeof searchParams?.query === "string" ? searchParams.query : "";
+     |                               ^
+  47 |
+  48 |   return (
+  49 |     <div className="page-shell">
+Error: Route "/tools" used `searchParams.query`. `searchParams` is a Promise and must be unwrapped with `await` or `React.use()` before accessing its properties. Learn more: https://nextjs.org/docs/messages/sync-dynamic-apis
+    at ToolsIndexPage (app\tools\page.js:46:31)
+  44 |     { name: "Tools", path: "/tools" },
+  45 |   ]);
+> 46 |   const initialQuery = typeof searchParams?.query === "string" ? searchParams.query : "";
+     |                               ^
+  47 |
+  48 |   return (
+  49 |     <div className="page-shell">
+Error: Route "/tools" used `searchParams.query`. `searchParams` is a Promise and must be unwrapped with `await` or `React.use()` before accessing its properties. Learn more: https://nextjs.org/docs/messages/sync-dynamic-apis
+    at ToolsIndexPage (app\tools\page.js:46:31)
+  44 |     { name: "Tools", path: "/tools" },
+  45 |   ]);
+> 46 |   const initialQuery = typeof searchParams?.query === "string" ? searchParams.query : "";
+     |                               ^
+  47 |
+  48 |   return (
+  49 |     <div className="page-shell">
+Error: Route "/tools" used `searchParams.query`. `searchParams` is a Promise and must be unwrapped with `await` or `React.use()` before accessing its properties. Learn more: https://nextjs.org/docs/messages/sync-dynamic-apis
+    at ToolsIndexPage (app\tools\page.js:46:31)
+  44 |     { name: "Tools", path: "/tools" },
+  45 |   ]);
+> 46 |   const initialQuery = typeof searchParams?.query === "string" ? searchParams.query : "";
+     |                               ^
+  47 |
+  48 |   return (
+  49 |     <div className="page-shell">
+Error: Route "/tools" used `searchParams.query`. `searchParams` is a Promise and must be unwrapped with `await` or `React.use()` before accessing its properties. Learn more: https://nextjs.org/docs/messages/sync-dynamic-apis
+    at ToolsIndexPage (app\tools\page.js:46:31)
+  44 |     { name: "Tools", path: "/tools" },
+  45 |   ]);
+> 46 |   const initialQuery = typeof searchParams?.query === "string" ? searchParams.query : "";
+     |                               ^
+  47 |
+  48 |   return (
+  49 |     <div className="page-shell">
+[browser] ReferenceError: Cannot access 'selectedHomeCategory' before initialization
+    at ToolDirectory (components\marketing\tool-directory.js:146:11)
+  144 |   const homeFeaturedTools = filteredTools;
+  145 |   const selectedHomeCategory = useMemo(
+> 146 |     () => heroCategoryCards.find((category) => category.slug === activeCategory) || null,
+      |           ^
+  147 |     [activeCategory, heroCategoryCards],
+  148 |   );
+  149 |   const selectedHomeCategoryTools = useMemo(() => { (app\error.js:10:13)
+[browser] ReferenceError: Cannot access 'selectedHomeCategory' before initialization
+    at ToolDirectory (components\marketing\tool-directory.js:146:11)
+  144 |   const homeFeaturedTools = filteredTools;
+  145 |   const selectedHomeCategory = useMemo(
+> 146 |     () => heroCategoryCards.find((category) => category.slug === activeCategory) || null,
+      |           ^
+  147 |     [activeCategory, heroCategoryCards],
+  148 |   );
+  149 |   const selectedHomeCategoryTools = useMemo(() => { (app\error.js:10:13)
+[browser] Detected `scroll-behavior: smooth` on the `<html>` element. To disable smooth scrolling during route transitions, add `data-scroll-behavior="smooth"` to your <html> element. Learn more: https://nextjs.org/docs/messages/missing-data-scroll-behavior
+Error: Route "/tools" used `searchParams.query`. `searchParams` is a Promise and must be unwrapped with `await` or `React.use()` before accessing its properties. Learn more: https://nextjs.org/docs/messages/sync-dynamic-apis
+    at ToolsIndexPage (app\tools\page.js:46:31)
+  44 |     { name: "Tools", path: "/tools" },
+  45 |   ]);
+> 46 |   const initialQuery = typeof searchParams?.query === "string" ? searchParams.query : "";
+     |                               ^
+  47 |
+  48 |   return (
+  49 |     <div className="page-shell">
+Error: Route "/tools" used `searchParams.query`. `searchParams` is a Promise and must be unwrapped with `await` or `React.use()` before accessing its properties. Learn more: https://nextjs.org/docs/messages/sync-dynamic-apis
+    at ToolsIndexPage (app\tools\page.js:46:31)
+  44 |     { name: "Tools", path: "/tools" },
+  45 |   ]);
+> 46 |   const initialQuery = typeof searchParams?.query === "string" ? searchParams.query : "";
+     |                               ^
+  47 |
+  48 |   return (
+  49 |     <div className="page-shell">
+Error: Route "/tools" used `searchParams.query`. `searchParams` is a Promise and must be unwrapped with `await` or `React.use()` before accessing its properties. Learn more: https://nextjs.org/docs/messages/sync-dynamic-apis
+    at ToolsIndexPage (app\tools\page.js:46:31)
+  44 |     { name: "Tools", path: "/tools" },
+  45 |   ]);
+> 46 |   const initialQuery = typeof searchParams?.query === "string" ? searchParams.query : "";
+     |                               ^
+  47 |
+  48 |   return (
+  49 |     <div className="page-shell">
+Error: Route "/tools" used `searchParams.query`. `searchParams` is a Promise and must be unwrapped with `await` or `React.use()` before accessing its properties. Learn more: https://nextjs.org/docs/messages/sync-dynamic-apis
+    at ToolsIndexPage (app\tools\page.js:46:31)
+  44 |     { name: "Tools", path: "/tools" },
+  45 |   ]);
+> 46 |   const initialQuery = typeof searchParams?.query === "string" ? searchParams.query : "";
+     |                               ^
+  47 |
+  48 |   return (
+  49 |     <div className="page-shell">
+Error: Route "/tools" used `searchParams.query`. `searchParams` is a Promise and must be unwrapped with `await` or `React.use()` before accessing its properties. Learn more: https://nextjs.org/docs/messages/sync-dynamic-apis
+    at ToolsIndexPage (app\tools\page.js:46:31)
+  44 |     { name: "Tools", path: "/tools" },
+  45 |   ]);
+> 46 |   const initialQuery = typeof searchParams?.query === "string" ? searchParams.query : "";
+     |                               ^
+  47 |
+  48 |   return (
+  49 |     <div className="page-shell">
+Error: Route "/tools" used `searchParams.query`. `searchParams` is a Promise and must be unwrapped with `await` or `React.use()` before accessing its properties. Learn more: https://nextjs.org/docs/messages/sync-dynamic-apis
+    at ToolsIndexPage (app\tools\page.js:46:31)
+  44 |     { name: "Tools", path: "/tools" },
+  45 |   ]);
+> 46 |   const initialQuery = typeof searchParams?.query === "string" ? searchParams.query : "";
+     |                               ^
+  47 |
+  48 |   return (
+  49 |     <div className="page-shell">
+Error: Route "/tools" used `searchParams.query`. `searchParams` is a Promise and must be unwrapped with `await` or `React.use()` before accessing its properties. Learn more: https://nextjs.org/docs/messages/sync-dynamic-apis
+    at ToolsIndexPage (app\tools\page.js:46:31)
+  44 |     { name: "Tools", path: "/tools" },
+  45 |   ]);
+> 46 |   const initialQuery = typeof searchParams?.query === "string" ? searchParams.query : "";
+     |                               ^
+  47 |
+  48 |   return (
+  49 |     <div className="page-shell">
+Error: Route "/tools" used `searchParams.query`. `searchParams` is a Promise and must be unwrapped with `await` or `React.use()` before accessing its properties. Learn more: https://nextjs.org/docs/messages/sync-dynamic-apis
+    at ToolsIndexPage (app\tools\page.js:46:31)
+  44 |     { name: "Tools", path: "/tools" },
+  45 |   ]);
+> 46 |   const initialQuery = typeof searchParams?.query === "string" ? searchParams.query : "";
+     |                               ^
+  47 |
+  48 |   return (
+  49 |     <div className="page-shell">
+Error: Route "/tools" used `searchParams.query`. `searchParams` is a Promise and must be unwrapped with `await` or `React.use()` before accessing its properties. Learn more: https://nextjs.org/docs/messages/sync-dynamic-apis
+    at ToolsIndexPage (app\tools\page.js:46:31)
+  44 |     { name: "Tools", path: "/tools" },
+  45 |   ]);
+> 46 |   const initialQuery = typeof searchParams?.query === "string" ? searchParams.query : "";
+     |                               ^
+  47 |
+  48 |   return (
+  49 |     <div className="page-shell">
+Error: Route "/tools" used `searchParams.query`. `searchParams` is a Promise and must be unwrapped with `await` or `React.use()` before accessing its properties. Learn more: https://nextjs.org/docs/messages/sync-dynamic-apis
+    at ToolsIndexPage (app\tools\page.js:46:31)
+  44 |     { name: "Tools", path: "/tools" },
+  45 |   ]);
+> 46 |   const initialQuery = typeof searchParams?.query === "string" ? searchParams.query : "";
+     |                               ^
+  47 |
+  48 |   return (
+  49 |     <div className="page-shell">
+Error: Route "/tools" used `searchParams.query`. `searchParams` is a Promise and must be unwrapped with `await` or `React.use()` before accessing its properties. Learn more: https://nextjs.org/docs/messages/sync-dynamic-apis
+    at ToolsIndexPage (app\tools\page.js:46:31)
+  44 |     { name: "Tools", path: "/tools" },
+  45 |   ]);
+> 46 |   const initialQuery = typeof searchParams?.query === "string" ? searchParams.query : "";
+     |                               ^
+  47 |
+  48 |   return (
+  49 |     <div className="page-shell">
+Error: Route "/tools" used `searchParams.query`. `searchParams` is a Promise and must be unwrapped with `await` or `React.use()` before accessing its properties. Learn more: https://nextjs.org/docs/messages/sync-dynamic-apis
+    at ToolsIndexPage (app\tools\page.js:46:31)
+  44 |     { name: "Tools", path: "/tools" },
+  45 |   ]);
+> 46 |   const initialQuery = typeof searchParams?.query === "string" ? searchParams.query : "";
+     |                               ^
+  47 |
+  48 |   return (
+  49 |     <div className="page-shell">
+Error: Route "/tools" used `searchParams.query`. `searchParams` is a Promise and must be unwrapped with `await` or `React.use()` before accessing its properties. Learn more: https://nextjs.org/docs/messages/sync-dynamic-apis
+    at ToolsIndexPage (app\tools\page.js:46:31)
+  44 |     { name: "Tools", path: "/tools" },
+  45 |   ]);
+> 46 |   const initialQuery = typeof searchParams?.query === "string" ? searchParams.query : "";
+     |                               ^
+  47 |
+  48 |   return (
+  49 |     <div className="page-shell">
+Error: Route "/tools" used `searchParams.query`. `searchParams` is a Promise and must be unwrapped with `await` or `React.use()` before accessing its properties. Learn more: https://nextjs.org/docs/messages/sync-dynamic-apis
+    at ToolsIndexPage (app\tools\page.js:46:31)
+  44 |     { name: "Tools", path: "/tools" },
+  45 |   ]);
+> 46 |   const initialQuery = typeof searchParams?.query === "string" ? searchParams.query : "";
+     |                               ^
+  47 |
+  48 |   return (
+  49 |     <div className="page-shell">
+⨯ TypeError: The "path" argument must be of type string or an instance of URL. Received an instance of URL
+    at eval (lib\windows-ocr.js:10:38)
+    at <unknown> (rsc)/./lib/windows-ocr.js (C:\Users\monis\OneDrive\Pictures\Documents\toolslify\.next\dev\server\app\api\tool\[slug]\route.js:132:1)
+    at eval (webpack-internal:///(rsc)/./lib/studio-tool-engine.js:10:73)
+    at eval (webpack-internal:///(rsc)/./lib/studio-tool-engine.js:1:21)
+    at <unknown> (rsc)/./lib/studio-tool-engine.js (C:\Users\monis\OneDrive\Pictures\Documents\toolslify\.next\dev\server\app\api\tool\[slug]\route.js:77:1)
+    at eval (webpack-internal:///(rsc)/./lib/tool-engine.js:7:80)
+    at eval (webpack-internal:///(rsc)/./lib/tool-engine.js:1:21)
+    at <unknown> (rsc)/./lib/tool-engine.js (C:\Users\monis\OneDrive\Pictures\Documents\toolslify\.next\dev\server\app\api\tool\[slug]\route.js:99:1)
+    at eval (webpack-internal:///(rsc)/./app/api/tool/[slug]/route.js:11:74)
+    at eval (webpack-internal:///(rsc)/./app/api/tool/[slug]/route.js:1:21)
+    at <unknown> (rsc)/./app/api/tool/[slug]/route.js (C:\Users\monis\OneDrive\Pictures\Documents\toolslify\.next\dev\server\app\api\tool\[slug]\route.js:22:1)
+    at __webpack_exec__ (C:\Users\monis\OneDrive\Pictures\Documents\toolslify\.next\dev\server\app\api\tool\[slug]\route.js:338:39)
+    at <unknown> (C:\Users\monis\OneDrive\Pictures\Documents\toolslify\.next\dev\server\app\api\tool\[slug]\route.js:339:83)
+    at <unknown> (C:\Users\monis\OneDrive\Pictures\Documents\toolslify\.next\dev\server\app\api\tool\[slug]\route.js:339:47)
+    at Object.<anonymous> (C:\Users\monis\OneDrive\Pictures\Documents\toolslify\.next\dev\server\app\api\tool\[slug]\route.js:342:3)
+   8 |
+   9 | const execFileAsync = promisify(execFile);
+> 10 | const OCR_SCRIPT_PATH = fileURLToPath(new URL("../scripts/windows-ocr.ps1", import.meta.ur...
+     |                                      ^
+  11 |
+  12 | export async function extractImageTextWithWindowsOcr(file) {
+  13 |   if (process.platform !== "win32") { {
+  code: 'ERR_INVALID_ARG_TYPE',
+  page: '/api/tool/client-onboarding-form-builder'
+}
+Error: Route "/tools" used `searchParams.query`. `searchParams` is a Promise and must be unwrapped with `await` or `React.use()` before accessing its properties. Learn more: https://nextjs.org/docs/messages/sync-dynamic-apis
+    at ToolsIndexPage (app\tools\page.js:46:31)
+  44 |     { name: "Tools", path: "/tools" },
+  45 |   ]);
+> 46 |   const initialQuery = typeof searchParams?.query === "string" ? searchParams.query : "";
+     |                               ^
+  47 |
+  48 |   return (
+  49 |     <div className="page-shell">
+Error: Route "/tools" used `searchParams.query`. `searchParams` is a Promise and must be unwrapped with `await` or `React.use()` before accessing its properties. Learn more: https://nextjs.org/docs/messages/sync-dynamic-apis
+    at ToolsIndexPage (app\tools\page.js:46:31)
+  44 |     { name: "Tools", path: "/tools" },
+  45 |   ]);
+> 46 |   const initialQuery = typeof searchParams?.query === "string" ? searchParams.query : "";
+     |                               ^
+  47 |
+  48 |   return (
+  49 |     <div className="page-shell">
+Error: Route "/tools" used `searchParams.query`. `searchParams` is a Promise and must be unwrapped with `await` or `React.use()` before accessing its properties. Learn more: https://nextjs.org/docs/messages/sync-dynamic-apis
+    at ToolsIndexPage (app\tools\page.js:46:31)
+  44 |     { name: "Tools", path: "/tools" },
+  45 |   ]);
+> 46 |   const initialQuery = typeof searchParams?.query === "string" ? searchParams.query : "";
+     |                               ^
+  47 |
+  48 |   return (
+  49 |     <div className="page-shell">
+Error: Route "/tools" used `searchParams.query`. `searchParams` is a Promise and must be unwrapped with `await` or `React.use()` before accessing its properties. Learn more: https://nextjs.org/docs/messages/sync-dynamic-apis
+    at ToolsIndexPage (app\tools\page.js:46:31)
+  44 |     { name: "Tools", path: "/tools" },
+  45 |   ]);
+> 46 |   const initialQuery = typeof searchParams?.query === "string" ? searchParams.query : "";
+     |                               ^
+  47 |
+  48 |   return (
+  49 |     <div className="page-shell">
+Error: Route "/tools" used `searchParams.query`. `searchParams` is a Promise and must be unwrapped with `await` or `React.use()` before accessing its properties. Learn more: https://nextjs.org/docs/messages/sync-dynamic-apis
+    at ToolsIndexPage (app\tools\page.js:46:31)
+  44 |     { name: "Tools", path: "/tools" },
+  45 |   ]);
+> 46 |   const initialQuery = typeof searchParams?.query === "string" ? searchParams.query : "";
+     |                               ^
+  47 |
+  48 |   return (
+  49 |     <div className="page-shell">
+Error: Route "/tools" used `searchParams.query`. `searchParams` is a Promise and must be unwrapped with `await` or `React.use()` before accessing its properties. Learn more: https://nextjs.org/docs/messages/sync-dynamic-apis
+    at ToolsIndexPage (app\tools\page.js:46:31)
+  44 |     { name: "Tools", path: "/tools" },
+  45 |   ]);
+> 46 |   const initialQuery = typeof searchParams?.query === "string" ? searchParams.query : "";
+     |                               ^
+  47 |
+  48 |   return (
+  49 |     <div className="page-shell">
+Error: Route "/tools" used `searchParams.query`. `searchParams` is a Promise and must be unwrapped with `await` or `React.use()` before accessing its properties. Learn more: https://nextjs.org/docs/messages/sync-dynamic-apis
+    at ToolsIndexPage (app\tools\page.js:52:31)
+  50 |     { name: "Tools", path: "/tools" },
+  51 |   ]);
+> 52 |   const initialQuery = typeof searchParams?.query === "string" ? searchParams.query : "";
+     |                               ^
+  53 |
+  54 |   return (
+  55 |     <div className="page-shell">
+Error: Route "/tools" used `searchParams.query`. `searchParams` is a Promise and must be unwrapped with `await` or `React.use()` before accessing its properties. Learn more: https://nextjs.org/docs/messages/sync-dynamic-apis
+    at ToolsIndexPage (app\tools\page.js:52:31)
+  50 |     { name: "Tools", path: "/tools" },
+  51 |   ]);
+> 52 |   const initialQuery = typeof searchParams?.query === "string" ? searchParams.query : "";
+     |                               ^
+  53 |
+  54 |   return (
+  55 |     <div className="page-shell">
+Error: Route "/tools" used `searchParams.query`. `searchParams` is a Promise and must be unwrapped with `await` or `React.use()` before accessing its properties. Learn more: https://nextjs.org/docs/messages/sync-dynamic-apis
+    at ToolsIndexPage (app\tools\page.js:52:31)
+  50 |     { name: "Tools", path: "/tools" },
+  51 |   ]);
+> 52 |   const initialQuery = typeof searchParams?.query === "string" ? searchParams.query : "";
+     |                               ^
+  53 |
+  54 |   return (
+  55 |     <div className="page-shell">
+Error: Route "/tools" used `searchParams.query`. `searchParams` is a Promise and must be unwrapped with `await` or `React.use()` before accessing its properties. Learn more: https://nextjs.org/docs/messages/sync-dynamic-apis
+    at ToolsIndexPage (app\tools\page.js:52:31)
+  50 |     { name: "Tools", path: "/tools" },
+  51 |   ]);
+> 52 |   const initialQuery = typeof searchParams?.query === "string" ? searchParams.query : "";
+     |                               ^
+  53 |
+  54 |   return (
+  55 |     <div className="page-shell">
+Error: Route "/tools" used `searchParams.query`. `searchParams` is a Promise and must be unwrapped with `await` or `React.use()` before accessing its properties. Learn more: https://nextjs.org/docs/messages/sync-dynamic-apis
+    at ToolsIndexPage (app\tools\page.js:52:31)
+  50 |     { name: "Tools", path: "/tools" },
+  51 |   ]);
+> 52 |   const initialQuery = typeof searchParams?.query === "string" ? searchParams.query : "";
+     |                               ^
+  53 |
+  54 |   return (
+  55 |     <div className="page-shell">
+Error: Route "/tools" used `searchParams.query`. `searchParams` is a Promise and must be unwrapped with `await` or `React.use()` before accessing its properties. Learn more: https://nextjs.org/docs/messages/sync-dynamic-apis
+    at ToolsIndexPage (app\tools\page.js:52:31)
+  50 |     { name: "Tools", path: "/tools" },
+  51 |   ]);
+> 52 |   const initialQuery = typeof searchParams?.query === "string" ? searchParams.query : "";
+     |                               ^
+  53 |
+  54 |   return (
+  55 |     <div className="page-shell">
+Error: Route "/tools" used `searchParams.query`. `searchParams` is a Promise and must be unwrapped with `await` or `React.use()` before accessing its properties. Learn more: https://nextjs.org/docs/messages/sync-dynamic-apis
+    at ToolsIndexPage (app\tools\page.js:52:31)
+  50 |     { name: "Tools", path: "/tools" },
+  51 |   ]);
+> 52 |   const initialQuery = typeof searchParams?.query === "string" ? searchParams.query : "";
+     |                               ^
+  53 |
+  54 |   return (
+  55 |     <div className="page-shell">
+Error: Route "/tools" used `searchParams.query`. `searchParams` is a Promise and must be unwrapped with `await` or `React.use()` before accessing its properties. Learn more: https://nextjs.org/docs/messages/sync-dynamic-apis
+    at ToolsIndexPage (app\tools\page.js:52:31)
+  50 |     { name: "Tools", path: "/tools" },
+  51 |   ]);
+> 52 |   const initialQuery = typeof searchParams?.query === "string" ? searchParams.query : "";
+     |                               ^
+  53 |
+  54 |   return (
+  55 |     <div className="page-shell">
+Error: Route "/tools" used `searchParams.query`. `searchParams` is a Promise and must be unwrapped with `await` or `React.use()` before accessing its properties. Learn more: https://nextjs.org/docs/messages/sync-dynamic-apis
+    at ToolsIndexPage (app\tools\page.js:52:31)
+  50 |     { name: "Tools", path: "/tools" },
+  51 |   ]);
+> 52 |   const initialQuery = typeof searchParams?.query === "string" ? searchParams.query : "";
+     |                               ^
+  53 |
+  54 |   return (
+  55 |     <div className="page-shell">
+Error: Route "/tools" used `searchParams.query`. `searchParams` is a Promise and must be unwrapped with `await` or `React.use()` before accessing its properties. Learn more: https://nextjs.org/docs/messages/sync-dynamic-apis
+    at ToolsIndexPage (app\tools\page.js:52:31)
+  50 |     { name: "Tools", path: "/tools" },
+  51 |   ]);
+> 52 |   const initialQuery = typeof searchParams?.query === "string" ? searchParams.query : "";
+     |                               ^
+  53 |
+  54 |   return (
+  55 |     <div className="page-shell">
+Error: Route "/tools" used `searchParams.query`. `searchParams` is a Promise and must be unwrapped with `await` or `React.use()` before accessing its properties. Learn more: https://nextjs.org/docs/messages/sync-dynamic-apis
+    at ToolsIndexPage (app\tools\page.js:52:31)
+  50 |     { name: "Tools", path: "/tools" },
+  51 |   ]);
+> 52 |   const initialQuery = typeof searchParams?.query === "string" ? searchParams.query : "";
+     |                               ^
+  53 |
+  54 |   return (
+  55 |     <div className="page-shell">
+Error: Route "/tools" used `searchParams.query`. `searchParams` is a Promise and must be unwrapped with `await` or `React.use()` before accessing its properties. Learn more: https://nextjs.org/docs/messages/sync-dynamic-apis
+    at ToolsIndexPage (app\tools\page.js:52:31)
+  50 |     { name: "Tools", path: "/tools" },
+  51 |   ]);
+> 52 |   const initialQuery = typeof searchParams?.query === "string" ? searchParams.query : "";
+     |                               ^
+  53 |
+  54 |   return (
+  55 |     <div className="page-shell">
+Error: Route "/tools" used `searchParams.query`. `searchParams` is a Promise and must be unwrapped with `await` or `React.use()` before accessing its properties. Learn more: https://nextjs.org/docs/messages/sync-dynamic-apis
+    at ToolsIndexPage (app\tools\page.js:52:31)
+  50 |     { name: "Tools", path: "/tools" },
+  51 |   ]);
+> 52 |   const initialQuery = typeof searchParams?.query === "string" ? searchParams.query : "";
+     |                               ^
+  53 |
+  54 |   return (
+  55 |     <div className="page-shell">
+Error: Route "/tools" used `searchParams.query`. `searchParams` is a Promise and must be unwrapped with `await` or `React.use()` before accessing its properties. Learn more: https://nextjs.org/docs/messages/sync-dynamic-apis
+    at ToolsIndexPage (app\tools\page.js:52:31)
+  50 |     { name: "Tools", path: "/tools" },
+  51 |   ]);
+> 52 |   const initialQuery = typeof searchParams?.query === "string" ? searchParams.query : "";
+     |                               ^
+  53 |
+  54 |   return (
+  55 |     <div className="page-shell">
+Error: Route "/tools" used `searchParams.query`. `searchParams` is a Promise and must be unwrapped with `await` or `React.use()` before accessing its properties. Learn more: https://nextjs.org/docs/messages/sync-dynamic-apis
+    at ToolsIndexPage (app\tools\page.js:52:31)
+  50 |     { name: "Tools", path: "/tools" },
+  51 |   ]);
+> 52 |   const initialQuery = typeof searchParams?.query === "string" ? searchParams.query : "";
+     |                               ^
+  53 |
+  54 |   return (
+  55 |     <div className="page-shell">
+Error: Route "/tools" used `searchParams.query`. `searchParams` is a Promise and must be unwrapped with `await` or `React.use()` before accessing its properties. Learn more: https://nextjs.org/docs/messages/sync-dynamic-apis
+    at ToolsIndexPage (app\tools\page.js:52:31)
+  50 |     { name: "Tools", path: "/tools" },
+  51 |   ]);
+> 52 |   const initialQuery = typeof searchParams?.query === "string" ? searchParams.query : "";
+     |                               ^
+  53 |
+  54 |   return (
+  55 |     <div className="page-shell">
+Error: Route "/tools" used `searchParams.query`. `searchParams` is a Promise and must be unwrapped with `await` or `React.use()` before accessing its properties. Learn more: https://nextjs.org/docs/messages/sync-dynamic-apis
+    at ToolsIndexPage (app\tools\page.js:59:31)
+  57 |     { name: "Tools", path: "/tools" },
+  58 |   ]);
+> 59 |   const initialQuery = typeof searchParams?.query === "string" ? searchParams.query : "";
+     |                               ^
+  60 |
+  61 |   return (
+  62 |     <div className="page-shell">
+[browser] Detected `scroll-behavior: smooth` on the `<html>` element. To disable smooth scrolling during route transitions, add `data-scroll-behavior="smooth"` to your <html> element. Learn more: https://nextjs.org/docs/messages/missing-data-scroll-behavior
+⨯ TypeError: The "path" argument must be of type string or an instance of URL. Received an instance of URL
+    at eval (lib\windows-ocr.js:10:38)
+    at <unknown> (rsc)/./lib/windows-ocr.js (C:\Users\monis\OneDrive\Pictures\Documents\toolslify\.next\dev\server\app\api\tool\[slug]\route.js:132:1)
+    at eval (webpack-internal:///(rsc)/./lib/studio-tool-engine.js:10:73)
+    at eval (webpack-internal:///(rsc)/./lib/studio-tool-engine.js:1:21)
+    at <unknown> (rsc)/./lib/studio-tool-engine.js (C:\Users\monis\OneDrive\Pictures\Documents\toolslify\.next\dev\server\app\api\tool\[slug]\route.js:77:1)
+    at eval (webpack-internal:///(rsc)/./lib/tool-engine.js:7:80)
+    at eval (webpack-internal:///(rsc)/./lib/tool-engine.js:1:21)
+    at <unknown> (rsc)/./lib/tool-engine.js (C:\Users\monis\OneDrive\Pictures\Documents\toolslify\.next\dev\server\app\api\tool\[slug]\route.js:99:1)
+    at eval (webpack-internal:///(rsc)/./app/api/tool/[slug]/route.js:11:74)
+    at eval (webpack-internal:///(rsc)/./app/api/tool/[slug]/route.js:1:21)
+    at <unknown> (rsc)/./app/api/tool/[slug]/route.js (C:\Users\monis\OneDrive\Pictures\Documents\toolslify\.next\dev\server\app\api\tool\[slug]\route.js:22:1)
+    at __webpack_exec__ (C:\Users\monis\OneDrive\Pictures\Documents\toolslify\.next\dev\server\app\api\tool\[slug]\route.js:338:39)
+    at <unknown> (C:\Users\monis\OneDrive\Pictures\Documents\toolslify\.next\dev\server\app\api\tool\[slug]\route.js:339:83)
+    at <unknown> (C:\Users\monis\OneDrive\Pictures\Documents\toolslify\.next\dev\server\app\api\tool\[slug]\route.js:339:47)
+    at Object.<anonymous> (C:\Users\monis\OneDrive\Pictures\Documents\toolslify\.next\dev\server\app\api\tool\[slug]\route.js:342:3)
+   8 |
+   9 | const execFileAsync = promisify(execFile);
+> 10 | const OCR_SCRIPT_PATH = fileURLToPath(new URL("../scripts/windows-ocr.ps1", import.meta.ur...
+     |                                      ^
+  11 |
+  12 | export async function extractImageTextWithWindowsOcr(file) {
+  13 |   if (process.platform !== "win32") { {
+  code: 'ERR_INVALID_ARG_TYPE',
+  page: '/api/tool/ats-resume-checker'
+}
+[browser] Uncaught Error: Internal Next.js error: Router action dispatched before initialization.
+[browser] Detected `scroll-behavior: smooth` on the `<html>` element. To disable smooth scrolling during route transitions, add `data-scroll-behavior="smooth"` to your <html> element. Learn more: https://nextjs.org/docs/messages/missing-data-scroll-behavior
+[browser] A tree hydrated but some attributes of the server rendered HTML didn't match the client properties. This won't be patched up. This can happen if a SSR-ed Client Component used:
+
+- A server/client branch `if (typeof window !== 'undefined')`.
+- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
+- Date formatting in a user's locale which doesn't match the server.
+- External changing data without sending a snapshot of it along with the HTML.
+- Invalid HTML tag nesting.
+
+It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.
+
+https://react.dev/link/hydration-mismatch
+
+  ...
+    <InnerLayoutRouter url="/tools/res..." tree={[...]} params={{slug:"resu..."}} cacheNode={{rsc:{...}, ...}} ...>
+      <SegmentViewNode type="page" pagePath="tools/[slu...">
+        <SegmentTrieNode>
+        <ToolPage>
+          <div className="page-shell...">
+            <script>
+            <script>
+            <script>
+            <script>
+            <ToolRouteShell slug="resume-bui...">
+              <div className="mx-auto w-...">
+                <ToolPageHeader>
+                <div className="grid gap-6...">
+                  <div>
+                  <aside className="hidden xl:...">
+                    <ToolStudioSidebar tool={{slug:"resu...", ...}} popularTools={[...]} relatedTools={[...]} ...>
+                      <aside className="space-y-4 ...">
+                        <Card className="overflow-h...">
+                          <div className="card-surfa...">
+                            <div className="space-y-4">
+                              <div>
+                              <form action="/tools" className="flex items...">
+                                <input
+                                  type="search"
+                                  name="query"
+                                  placeholder="Search Toolslify tools"
+                                  className="h-11 w-full rounded-[14px] border-0 bg-transparent px-3 text-sm font-medi..."
+-                                 style={{caret-color:"transparent"}}
+                                >
+                                ...
+                              ...
+                        ...
+      ...
+ 
+[browser] A tree hydrated but some attributes of the server rendered HTML didn't match the client properties. This won't be patched up. This can happen if a SSR-ed Client Component used:
+
+- A server/client branch `if (typeof window !== 'undefined')`.
+- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
+- Date formatting in a user's locale which doesn't match the server.
+- External changing data without sending a snapshot of it along with the HTML.
+- Invalid HTML tag nesting.
+
+It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.
+
+https://react.dev/link/hydration-mismatch
+
+  ...
+    <InnerLayoutRouter url="/tools/sal..." tree={[...]} params={{slug:"sala..."}} cacheNode={{rsc:{...}, ...}} ...>
+      <SegmentViewNode type="page" pagePath="tools/[slu...">
+        <SegmentTrieNode>
+        <ToolPage>
+          <div className="page-shell...">
+            <script>
+            <script>
+            <script>
+            <script>
+            <ToolRouteShell slug="salary-to-...">
+              <div className="mx-auto w-...">
+                <ToolPageHeader>
+                <div className="grid gap-6...">
+                  <div>
+                  <aside className="hidden xl:...">
+                    <ToolStudioSidebar tool={{slug:"sala...", ...}} popularTools={[...]} relatedTools={[...]} ...>
+                      <aside className="space-y-4 ...">
+                        <Card className="overflow-h...">
+                          <div className="card-surfa...">
+                            <div className="space-y-4">
+                              <div>
+                              <form action="/tools" className="flex items...">
+                                <input
+                                  type="search"
+                                  name="query"
+                                  placeholder="Search Toolslify tools"
+                                  className="h-11 w-full rounded-[14px] border-0 bg-transparent px-3 text-sm font-medi..."
+-                                 style={{caret-color:"transparent"}}
+                                >
+                                ...
+                              ...
+                        ...
+      ...
+ 
+[browser] A tree hydrated but some attributes of the server rendered HTML didn't match the client properties. This won't be patched up. This can happen if a SSR-ed Client Component used:
+
+- A server/client branch `if (typeof window !== 'undefined')`.
+- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
+- Date formatting in a user's locale which doesn't match the server.
+- External changing data without sending a snapshot of it along with the HTML.
+- Invalid HTML tag nesting.
+
+It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.
+
+https://react.dev/link/hydration-mismatch
+
+  ...
+    <InnerLayoutRouter url="/tools/inv..." tree={[...]} params={{slug:"invo..."}} cacheNode={{rsc:{...}, ...}} ...>
+      <SegmentViewNode type="page" pagePath="tools/[slu...">
+        <SegmentTrieNode>
+        <ToolPage>
+          <div className="page-shell...">
+            <script>
+            <script>
+            <script>
+            <script>
+            <ToolRouteShell slug="invoice-ge...">
+              <div className="mx-auto w-...">
+                <ToolPageHeader>
+                <div className="grid gap-6...">
+                  <div>
+                  <aside className="hidden xl:...">
+                    <ToolStudioSidebar tool={{slug:"invo...", ...}} popularTools={[...]} relatedTools={[...]} ...>
+                      <aside className="space-y-4 ...">
+                        <Card className="overflow-h...">
+                          <div className="card-surfa...">
+                            <div className="space-y-4">
+                              <div>
+                              <form action="/tools" className="flex items...">
+                                <input
+                                  type="search"
+                                  name="query"
+                                  placeholder="Search Toolslify tools"
+                                  className="h-11 w-full rounded-[14px] border-0 bg-transparent px-3 text-sm font-medi..."
+-                                 style={{caret-color:"transparent"}}
+                                >
+                                ...
+                              ...
+                        ...
+      ...
+ 
+[browser] A tree hydrated but some attributes of the server rendered HTML didn't match the client properties. This won't be patched up. This can happen if a SSR-ed Client Component used:
+
+- A server/client branch `if (typeof window !== 'undefined')`.
+- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
+- Date formatting in a user's locale which doesn't match the server.
+- External changing data without sending a snapshot of it along with the HTML.
+- Invalid HTML tag nesting.
+
+It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.
+
+https://react.dev/link/hydration-mismatch
+
+  ...
+    <body className="__variable...">
+      <Script>
+      <PreferencesProvider>
+        <ToastProvider>
+          <div className="app-shell">
+            <div>
+            <div>
+            <SiteHeader>
+              <motion.header initial={{opacity:0,y:-14}} animate={{opacity:1,y:0}} transition={{duration:0.48, ...}} ...>
+                <header className="sticky top..." style={{opacity:0, ...}} ref={function useMotionRef.useCallback}>
+                  <div className="mx-auto w-...">
+                    <div className="flex items...">
+                      <div>
+                      <div ref={{current:null}} className="relative h..." onMouseLeave={function onMouseLeave}>
+                        <motion.nav initial={{opacity:0,y:-10}} animate={{opacity:1,y:0}} ...>
+                          <nav className="flex items..." style={{opacity:0, ...}} ref={function useMotionRef.useCallback}>
+                            <LinkComponent>
+                            <button
+                              type="button"
+                              onMouseEnter={function onMouseEnter}
+                              onFocus={function onFocus}
+                              onClick={function onClick}
+                              aria-expanded={false}
+                              className="group/nav relative inline-flex items-center gap-2 px-0 py-3 text-[0.96rem] fo..."
+-                             fdprocessedid="lez5x"
+                            >
+                            <button
+                              type="button"
+                              onMouseEnter={function onMouseEnter}
+                              onFocus={function onFocus}
+                              onClick={function onClick}
+                              aria-expanded={false}
+                              className="group/nav relative inline-flex items-center gap-2 px-0 py-3 text-[0.96rem] fo..."
+-                             fdprocessedid="b3c3z"
+                            >
+                            <button
+                              type="button"
+                              onMouseEnter={function onMouseEnter}
+                              onFocus={function onFocus}
+                              onClick={function onClick}
+                              aria-expanded={false}
+                              className="group/nav relative inline-flex items-center gap-2 px-0 py-3 text-[0.96rem] fo..."
+-                             fdprocessedid="8yrok8"
+                            >
+                        ...
+                      <div className="flex items...">
+                        <LinkComponent>
+                        <LinkComponent>
+                        <HeaderSettingsPanel className="hidden sm:...">
+                          <div ref={{current:null}} className="relative h...">
+                            <button
+                              type="button"
+                              onClick={function onClick}
+                              aria-label="Settings"
+                              aria-expanded={false}
+                              className="inline-flex h-10 w-10 items-center justify-center rounded-[12px] text-[#2d313..."
+-                             fdprocessedid="sag8lm"
+                            >
+                        ...
+                    ...
+            ...
+          ...
+ 
+[browser] A tree hydrated but some attributes of the server rendered HTML didn't match the client properties. This won't be patched up. This can happen if a SSR-ed Client Component used:
+
+- A server/client branch `if (typeof window !== 'undefined')`.
+- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
+- Date formatting in a user's locale which doesn't match the server.
+- External changing data without sending a snapshot of it along with the HTML.
+- Invalid HTML tag nesting.
+
+It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.
+
+https://react.dev/link/hydration-mismatch
+
+  ...
+    <InnerLayoutRouter url="/tools/fre..." tree={[...]} params={{slug:"free..."}} cacheNode={{rsc:{...}, ...}} ...>
+      <SegmentViewNode type="page" pagePath="tools/[slu...">
+        <SegmentTrieNode>
+        <ToolPage>
+          <div className="page-shell...">
+            <script>
+            <script>
+            <script>
+            <script>
+            <ToolRouteShell slug="freelance-...">
+              <div className="mx-auto w-...">
+                <ToolPageHeader>
+                <div className="grid gap-6...">
+                  <div>
+                  <aside className="hidden xl:...">
+                    <ToolStudioSidebar tool={{slug:"free...", ...}} popularTools={[...]} relatedTools={[...]} ...>
+                      <aside className="space-y-4 ...">
+                        <Card className="overflow-h...">
+                          <div className="card-surfa...">
+                            <div className="space-y-4">
+                              <div>
+                              <form action="/tools" className="flex items...">
+                                <input>
+                                <button
+                                  type="submit"
+                                  className="inline-flex h-11 w-11 shrink-0 items-center justify-center rounded-[14px]..."
+                                  aria-label="Search tools"
+-                                 fdprocessedid="v7ns3k"
+                                >
+                              ...
+                        ...
+      ...
+ 
+[browser] Detected `scroll-behavior: smooth` on the `<html>` element. To disable smooth scrolling during route transitions, add `data-scroll-behavior="smooth"` to your <html> element. Learn more: https://nextjs.org/docs/messages/missing-data-scroll-behavior
+⨯ ./components/marketing/tool-route-shell.js
+Error:   x Unexpected token. Did you mean `{'>'}` or `&gt;`?
+     ,-[C:\Users\monis\OneDrive\Pictures\Documents\toolslify\components\marketing\tool-route-shell.js:165:1]
+ 162 |                       className="flex items-center justify-between rounded-[20px] border border-[rgba(18,24,31,0.08)] bg-[#fbfcfe] px-4 py-4 text-sm font-semibold text-[var(--foreground)] transition duration-300 hover:-translate-y-0.5 hover:border-[rgba(18,24,31,0.14)] hover:bg-white hover:shadow-[0_18px_34px_-30px_rgba(15,23,42,0.12)]"
+ 163 |                     >
+ 164 |                       <span>{translatedRelatedTools[index] || item.shortName}</span>
+ 165 |                       <span className="text-[#8a91a2]">-></span>
+     :                                                         ^
+ 166 |                     </Link>
+ 167 |                   ))}
+ 168 |                 </div>
+     `----
+
+Caused by:
+    Syntax Error
+
+Import trace for requested module:
+./components/marketing/tool-route-shell.js
+./app/tools/[slug]/page.js
+⨯ ./components/marketing/tool-route-shell.js
+Error:   x Unexpected token. Did you mean `{'>'}` or `&gt;`?
+     ,-[C:\Users\monis\OneDrive\Pictures\Documents\toolslify\components\marketing\tool-route-shell.js:165:1]
+ 162 |                       className="flex items-center justify-between rounded-[20px] border border-[rgba(18,24,31,0.08)] bg-[#fbfcfe] px-4 py-4 text-sm font-semibold text-[var(--foreground)] transition duration-300 hover:-translate-y-0.5 hover:border-[rgba(18,24,31,0.14)] hover:bg-white hover:shadow-[0_18px_34px_-30px_rgba(15,23,42,0.12)]"
+ 163 |                     >
+ 164 |                       <span>{translatedRelatedTools[index] || item.shortName}</span>
+ 165 |                       <span className="text-[#8a91a2]">-></span>
+     :                                                         ^
+ 166 |                     </Link>
+ 167 |                   ))}
+ 168 |                 </div>
+     `----
+
+Caused by:
+    Syntax Error
+
+Import trace for requested module:
+./components/marketing/tool-route-shell.js
+./app/tools/[slug]/page.js
+[browser] Uncaught ModuleBuildError: Module build failed (from ./node_modules/next/dist/build/webpack/loaders/next-swc-loader.js):
+Error:   x Unexpected token. Did you mean `{'>'}` or `&gt;`?
+     ,-[C:\Users\monis\OneDrive\Pictures\Documents\toolslify\components\marketing\tool-route-shell.js:165:1]
+ 162 |                       className="flex items-center justify-between rounded-[20px] border border-[rgba(18,24,31,0.08)] bg-[#fbfcfe] px-4 py-4 text-sm font-semibold text-[var(--foreground)] transition duration-300 hover:-translate-y-0.5 hover:border-[rgba(18,24,31,0.14)] hover:bg-white hover:shadow-[0_18px_34px_-30px_rgba(15,23,42,0.12)]"
+ 163 |                     >
+ 164 |                       <span>{translatedRelatedTools[index] || item.shortName}</span>
+ 165 |                       <span className="text-[#8a91a2]">-></span>
+     :                                                         ^
+ 166 |                     </Link>
+ 167 |                   ))}
+ 168 |                 </div>
+     `----
+
+
+Caused by:
+    Syntax Error
+⚠ Fast Refresh had to perform a full reload. Read more: https://nextjs.org/docs/messages/fast-refresh-reload
+⚠ Fast Refresh had to perform a full reload. Read more: https://nextjs.org/docs/messages/fast-refresh-reload
+⚠ Fast Refresh had to perform a full reload. Read more: https://nextjs.org/docs/messages/fast-refresh-reload
+⨯ ./components/marketing/tool-route-shell.js
+Error:   x Unexpected token. Did you mean `{'>'}` or `&gt;`?
+     ,-[C:\Users\monis\OneDrive\Pictures\Documents\toolslify\components\marketing\tool-route-shell.js:165:1]
+ 162 |                       className="flex items-center justify-between rounded-[20px] border border-[rgba(18,24,31,0.08)] bg-[#fbfcfe] px-4 py-4 text-sm font-semibold text-[var(--foreground)] transition duration-300 hover:-translate-y-0.5 hover:border-[rgba(18,24,31,0.14)] hover:bg-white hover:shadow-[0_18px_34px_-30px_rgba(15,23,42,0.12)]"
+ 163 |                     >
+ 164 |                       <span>{translatedRelatedTools[index] || item.shortName}</span>
+ 165 |                       <span className="text-[#8a91a2]">-></span>
+     :                                                         ^
+ 166 |                     </Link>
+ 167 |                   ))}
+ 168 |                 </div>
+     `----
+
+Caused by:
+    Syntax Error
+
+Import trace for requested module:
+./components/marketing/tool-route-shell.js
+./app/tools/[slug]/page.js
+[browser] Uncaught ModuleBuildError: Module build failed (from ./node_modules/next/dist/build/webpack/loaders/next-swc-loader.js):
+Error:   x Unexpected token. Did you mean `{'>'}` or `&gt;`?
+     ,-[C:\Users\monis\OneDrive\Pictures\Documents\toolslify\components\marketing\tool-route-shell.js:165:1]
+ 162 |                       className="flex items-center justify-between rounded-[20px] border border-[rgba(18,24,31,0.08)] bg-[#fbfcfe] px-4 py-4 text-sm font-semibold text-[var(--foreground)] transition duration-300 hover:-translate-y-0.5 hover:border-[rgba(18,24,31,0.14)] hover:bg-white hover:shadow-[0_18px_34px_-30px_rgba(15,23,42,0.12)]"
+ 163 |                     >
+ 164 |                       <span>{translatedRelatedTools[index] || item.shortName}</span>
+ 165 |                       <span className="text-[#8a91a2]">-></span>
+     :                                                         ^
+ 166 |                     </Link>
+ 167 |                   ))}
+ 168 |                 </div>
+     `----
+
+
+Caused by:
+    Syntax Error
+⚠ Fast Refresh had to perform a full reload. Read more: https://nextjs.org/docs/messages/fast-refresh-reload
+⚠ Fast Refresh had to perform a full reload. Read more: https://nextjs.org/docs/messages/fast-refresh-reload
+⚠ Fast Refresh had to perform a full reload. Read more: https://nextjs.org/docs/messages/fast-refresh-reload
+⚠ Fast Refresh had to perform a full reload. Read more: https://nextjs.org/docs/messages/fast-refresh-reload
+⨯ ./components/marketing/tool-route-shell.js
+Error:   x Unexpected token. Did you mean `{'>'}` or `&gt;`?
+     ,-[C:\Users\monis\OneDrive\Pictures\Documents\toolslify\components\marketing\tool-route-shell.js:165:1]
+ 162 |                       className="flex items-center justify-between rounded-[20px] border border-[rgba(18,24,31,0.08)] bg-[#fbfcfe] px-4 py-4 text-sm font-semibold text-[var(--foreground)] transition duration-300 hover:-translate-y-0.5 hover:border-[rgba(18,24,31,0.14)] hover:bg-white hover:shadow-[0_18px_34px_-30px_rgba(15,23,42,0.12)]"
+ 163 |                     >
+ 164 |                       <span>{translatedRelatedTools[index] || item.shortName}</span>
+ 165 |                       <span className="text-[#8a91a2]">-></span>
+     :                                                         ^
+ 166 |                     </Link>
+ 167 |                   ))}
+ 168 |                 </div>
+     `----
+
+Caused by:
+    Syntax Error
+
+Import trace for requested module:
+./components/marketing/tool-route-shell.js
+./app/tools/[slug]/page.js
+[browser] Uncaught ModuleBuildError: Module build failed (from ./node_modules/next/dist/build/webpack/loaders/next-swc-loader.js):
+Error:   x Unexpected token. Did you mean `{'>'}` or `&gt;`?
+     ,-[C:\Users\monis\OneDrive\Pictures\Documents\toolslify\components\marketing\tool-route-shell.js:165:1]
+ 162 |                       className="flex items-center justify-between rounded-[20px] border border-[rgba(18,24,31,0.08)] bg-[#fbfcfe] px-4 py-4 text-sm font-semibold text-[var(--foreground)] transition duration-300 hover:-translate-y-0.5 hover:border-[rgba(18,24,31,0.14)] hover:bg-white hover:shadow-[0_18px_34px_-30px_rgba(15,23,42,0.12)]"
+ 163 |                     >
+ 164 |                       <span>{translatedRelatedTools[index] || item.shortName}</span>
+ 165 |                       <span className="text-[#8a91a2]">-></span>
+     :                                                         ^
+ 166 |                     </Link>
+ 167 |                   ))}
+ 168 |                 </div>
+     `----
+
+
+Caused by:
+    Syntax Error
+[browser] Uncaught ModuleBuildError: Module build failed (from ./node_modules/next/dist/build/webpack/loaders/next-swc-loader.js):
+Error:   x Unexpected token. Did you mean `{'>'}` or `&gt;`?
+     ,-[C:\Users\monis\OneDrive\Pictures\Documents\toolslify\components\marketing\tool-route-shell.js:165:1]
+ 162 |                       className="flex items-center justify-between rounded-[20px] border border-[rgba(18,24,31,0.08)] bg-[#fbfcfe] px-4 py-4 text-sm font-semibold text-[var(--foreground)] transition duration-300 hover:-translate-y-0.5 hover:border-[rgba(18,24,31,0.14)] hover:bg-white hover:shadow-[0_18px_34px_-30px_rgba(15,23,42,0.12)]"
+ 163 |                     >
+ 164 |                       <span>{translatedRelatedTools[index] || item.shortName}</span>
+ 165 |                       <span className="text-[#8a91a2]">-></span>
+     :                                                         ^
+ 166 |                     </Link>
+ 167 |                   ))}
+ 168 |                 </div>
+     `----
+
+
+Caused by:
+    Syntax Error
+[browser] Uncaught ModuleBuildError: Module build failed (from ./node_modules/next/dist/build/webpack/loaders/next-swc-loader.js):
+Error:   x Unexpected token. Did you mean `{'>'}` or `&gt;`?
+     ,-[C:\Users\monis\OneDrive\Pictures\Documents\toolslify\components\marketing\tool-route-shell.js:165:1]
+ 162 |                       className="flex items-center justify-between rounded-[20px] border border-[rgba(18,24,31,0.08)] bg-[#fbfcfe] px-4 py-4 text-sm font-semibold text-[var(--foreground)] transition duration-300 hover:-translate-y-0.5 hover:border-[rgba(18,24,31,0.14)] hover:bg-white hover:shadow-[0_18px_34px_-30px_rgba(15,23,42,0.12)]"
+ 163 |                     >
+ 164 |                       <span>{translatedRelatedTools[index] || item.shortName}</span>
+ 165 |                       <span className="text-[#8a91a2]">-></span>
+     :                                                         ^
+ 166 |                     </Link>
+ 167 |                   ))}
+ 168 |                 </div>
+     `----
+
+
+Caused by:
+    Syntax Error
+[browser] Uncaught ModuleBuildError: Module build failed (from ./node_modules/next/dist/build/webpack/loaders/next-swc-loader.js):
+Error:   x Unexpected token. Did you mean `{'>'}` or `&gt;`?
+     ,-[C:\Users\monis\OneDrive\Pictures\Documents\toolslify\components\marketing\tool-route-shell.js:165:1]
+ 162 |                       className="flex items-center justify-between rounded-[20px] border border-[rgba(18,24,31,0.08)] bg-[#fbfcfe] px-4 py-4 text-sm font-semibold text-[var(--foreground)] transition duration-300 hover:-translate-y-0.5 hover:border-[rgba(18,24,31,0.14)] hover:bg-white hover:shadow-[0_18px_34px_-30px_rgba(15,23,42,0.12)]"
+ 163 |                     >
+ 164 |                       <span>{translatedRelatedTools[index] || item.shortName}</span>
+ 165 |                       <span className="text-[#8a91a2]">-></span>
+     :                                                         ^
+ 166 |                     </Link>
+ 167 |                   ))}
+ 168 |                 </div>
+     `----
+
+
+Caused by:
+    Syntax Error
+[browser] Uncaught ModuleBuildError: Module build failed (from ./node_modules/next/dist/build/webpack/loaders/next-swc-loader.js):
+Error:   x Unexpected token. Did you mean `{'>'}` or `&gt;`?
+     ,-[C:\Users\monis\OneDrive\Pictures\Documents\toolslify\components\marketing\tool-route-shell.js:165:1]
+ 162 |                       className="flex items-center justify-between rounded-[20px] border border-[rgba(18,24,31,0.08)] bg-[#fbfcfe] px-4 py-4 text-sm font-semibold text-[var(--foreground)] transition duration-300 hover:-translate-y-0.5 hover:border-[rgba(18,24,31,0.14)] hover:bg-white hover:shadow-[0_18px_34px_-30px_rgba(15,23,42,0.12)]"
+ 163 |                     >
+ 164 |                       <span>{translatedRelatedTools[index] || item.shortName}</span>
+ 165 |                       <span className="text-[#8a91a2]">-></span>
+     :                                                         ^
+ 166 |                     </Link>
+ 167 |                   ))}
+ 168 |                 </div>
+     `----
+
+
+Caused by:
+    Syntax Error
+[browser] Uncaught ModuleBuildError: Module build failed (from ./node_modules/next/dist/build/webpack/loaders/next-swc-loader.js):
+Error:   x Unexpected token. Did you mean `{'>'}` or `&gt;`?
+     ,-[C:\Users\monis\OneDrive\Pictures\Documents\toolslify\components\marketing\tool-route-shell.js:165:1]
+ 162 |                       className="flex items-center justify-between rounded-[20px] border border-[rgba(18,24,31,0.08)] bg-[#fbfcfe] px-4 py-4 text-sm font-semibold text-[var(--foreground)] transition duration-300 hover:-translate-y-0.5 hover:border-[rgba(18,24,31,0.14)] hover:bg-white hover:shadow-[0_18px_34px_-30px_rgba(15,23,42,0.12)]"
+ 163 |                     >
+ 164 |                       <span>{translatedRelatedTools[index] || item.shortName}</span>
+ 165 |                       <span className="text-[#8a91a2]">-></span>
+     :                                                         ^
+ 166 |                     </Link>
+ 167 |                   ))}
+ 168 |                 </div>
+     `----
+
+
+Caused by:
+    Syntax Error
+[browser] Uncaught ModuleBuildError: Module build failed (from ./node_modules/next/dist/build/webpack/loaders/next-swc-loader.js):
+Error:   x Unexpected token. Did you mean `{'>'}` or `&gt;`?
+     ,-[C:\Users\monis\OneDrive\Pictures\Documents\toolslify\components\marketing\tool-route-shell.js:165:1]
+ 162 |                       className="flex items-center justify-between rounded-[20px] border border-[rgba(18,24,31,0.08)] bg-[#fbfcfe] px-4 py-4 text-sm font-semibold text-[var(--foreground)] transition duration-300 hover:-translate-y-0.5 hover:border-[rgba(18,24,31,0.14)] hover:bg-white hover:shadow-[0_18px_34px_-30px_rgba(15,23,42,0.12)]"
+ 163 |                     >
+ 164 |                       <span>{translatedRelatedTools[index] || item.shortName}</span>
+ 165 |                       <span className="text-[#8a91a2]">-></span>
+     :                                                         ^
+ 166 |                     </Link>
+ 167 |                   ))}
+ 168 |                 </div>
+     `----
+
+
+Caused by:
+    Syntax Error
+⚠ Fast Refresh had to perform a full reload. Read more: https://nextjs.org/docs/messages/fast-refresh-reload
+⚠ Fast Refresh had to perform a full reload. Read more: https://nextjs.org/docs/messages/fast-refresh-reload
+⚠ Fast Refresh had to perform a full reload. Read more: https://nextjs.org/docs/messages/fast-refresh-reload
+⨯ ./components/marketing/tool-sidebar-lists.js
+Error:   x Unexpected token. Did you mean `{'>'}` or `&gt;`?
+    ,-[C:\Users\monis\OneDrive\Pictures\Documents\toolslify\components\marketing\tool-sidebar-lists.js:28:1]
+ 25 |                   </span>
+ 26 |                   <span className="truncate">{item.label}</span>
+ 27 |                 </span>
+ 28 |                 <span className="text-[var(--muted-foreground)]">-></span>
+    :                                                                   ^
+ 29 |               </Link>
+ 30 |             ))}
+ 31 |           </div>
+    `----
+
+Caused by:
+    Syntax Error
+
+Import trace for requested module:
+./components/marketing/tool-sidebar-lists.js
+./components/marketing/tool-studio-sidebar.js
+./components/marketing/tool-route-shell.js
+⨯ ./components/marketing/tool-sidebar-lists.js
+Error:   x Unexpected token. Did you mean `{'>'}` or `&gt;`?
+    ,-[C:\Users\monis\OneDrive\Pictures\Documents\toolslify\components\marketing\tool-sidebar-lists.js:28:1]
+ 25 |                   </span>
+ 26 |                   <span className="truncate">{item.label}</span>
+ 27 |                 </span>
+ 28 |                 <span className="text-[var(--muted-foreground)]">-></span>
+    :                                                                   ^
+ 29 |               </Link>
+ 30 |             ))}
+ 31 |           </div>
+    `----
+
+Caused by:
+    Syntax Error
+
+Import trace for requested module:
+./components/marketing/tool-sidebar-lists.js
+./components/marketing/tool-studio-sidebar.js
+./components/marketing/tool-route-shell.js
+[browser] Uncaught ModuleBuildError: Module build failed (from ./node_modules/next/dist/build/webpack/loaders/next-swc-loader.js):
+Error:   x Unexpected token. Did you mean `{'>'}` or `&gt;`?
+    ,-[C:\Users\monis\OneDrive\Pictures\Documents\toolslify\components\marketing\tool-sidebar-lists.js:28:1]
+ 25 |                   </span>
+ 26 |                   <span className="truncate">{item.label}</span>
+ 27 |                 </span>
+ 28 |                 <span className="text-[var(--muted-foreground)]">-></span>
+    :                                                                   ^
+ 29 |               </Link>
+ 30 |             ))}
+ 31 |           </div>
+    `----
+
+
+Caused by:
+    Syntax Error
+⚠ Fast Refresh had to perform a full reload. Read more: https://nextjs.org/docs/messages/fast-refresh-reload
+⚠ Fast Refresh had to perform a full reload. Read more: https://nextjs.org/docs/messages/fast-refresh-reload
+[browser] Detected `scroll-behavior: smooth` on the `<html>` element. To disable smooth scrolling during route transitions, add `data-scroll-behavior="smooth"` to your <html> element. Learn more: https://nextjs.org/docs/messages/missing-data-scroll-behavior
+⨯ TypeError: The "path" argument must be of type string or an instance of URL. Received an instance of URL
+    at eval (lib\windows-ocr.js:10:38)
+    at <unknown> (rsc)/./lib/windows-ocr.js (C:\Users\monis\OneDrive\Pictures\Documents\toolslify\.next\dev\server\app\api\tool\[slug]\route.js:143:1)
+    at eval (webpack-internal:///(rsc)/./lib/studio-tool-engine.js:10:73)
+    at eval (webpack-internal:///(rsc)/./lib/studio-tool-engine.js:1:21)
+    at <unknown> (rsc)/./lib/studio-tool-engine.js (C:\Users\monis\OneDrive\Pictures\Documents\toolslify\.next\dev\server\app\api\tool\[slug]\route.js:77:1)
+    at eval (webpack-internal:///(rsc)/./lib/tool-engine.js:7:80)
+    at eval (webpack-internal:///(rsc)/./lib/tool-engine.js:1:21)
+    at <unknown> (rsc)/./lib/tool-engine.js (C:\Users\monis\OneDrive\Pictures\Documents\toolslify\.next\dev\server\app\api\tool\[slug]\route.js:99:1)
+    at eval (webpack-internal:///(rsc)/./app/api/tool/[slug]/route.js:11:74)
+    at eval (webpack-internal:///(rsc)/./app/api/tool/[slug]/route.js:1:21)
+    at <unknown> (rsc)/./app/api/tool/[slug]/route.js (C:\Users\monis\OneDrive\Pictures\Documents\toolslify\.next\dev\server\app\api\tool\[slug]\route.js:22:1)
+    at __webpack_exec__ (C:\Users\monis\OneDrive\Pictures\Documents\toolslify\.next\dev\server\app\api\tool\[slug]\route.js:349:39)
+    at <unknown> (C:\Users\monis\OneDrive\Pictures\Documents\toolslify\.next\dev\server\app\api\tool\[slug]\route.js:350:83)
+    at <unknown> (C:\Users\monis\OneDrive\Pictures\Documents\toolslify\.next\dev\server\app\api\tool\[slug]\route.js:350:47)
+    at Object.<anonymous> (C:\Users\monis\OneDrive\Pictures\Documents\toolslify\.next\dev\server\app\api\tool\[slug]\route.js:353:3)
+   8 |
+   9 | const execFileAsync = promisify(execFile);
+> 10 | const OCR_SCRIPT_PATH = fileURLToPath(new URL("../scripts/windows-ocr.ps1", import.meta.ur...
+     |                                      ^
+  11 |
+  12 | export async function extractImageTextWithWindowsOcr(file) {
+  13 |   if (process.platform !== "win32") { {
+  code: 'ERR_INVALID_ARG_TYPE',
+  page: '/api/tool/interview-answer-builder'
+}
+[browser] A tree hydrated but some attributes of the server rendered HTML didn't match the client properties. This won't be patched up. This can happen if a SSR-ed Client Component used:
+
+- A server/client branch `if (typeof window !== 'undefined')`.
+- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
+- Date formatting in a user's locale which doesn't match the server.
+- External changing data without sending a snapshot of it along with the HTML.
+- Invalid HTML tag nesting.
+
+It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.
+
+https://react.dev/link/hydration-mismatch
+
+  ...
+    <body className="__variable...">
+      <Script>
+      <PreferencesProvider>
+        <ToastProvider>
+          <div className="app-shell">
+            <div>
+            <div>
+            <SiteHeader>
+              <motion.header initial={{opacity:0,y:-14}} animate={{opacity:1,y:0}} transition={{duration:0.48, ...}} ...>
+                <header className="sticky top..." style={{opacity:0, ...}} ref={function useMotionRef.useCallback}>
+                  <div className="mx-auto w-...">
+                    <div className="flex items...">
+                      <div>
+                      <div ref={{current:null}} className="relative h..." onMouseLeave={function onMouseLeave}>
+                        <motion.nav initial={{opacity:0,y:-10}} animate={{opacity:1,y:0}} ...>
+                          <nav className="flex items..." style={{opacity:0, ...}} ref={function useMotionRef.useCallback}>
+                            <LinkComponent>
+                            <button
+                              type="button"
+                              onMouseEnter={function onMouseEnter}
+                              onFocus={function onFocus}
+                              onClick={function onClick}
+                              aria-expanded={false}
+                              className="group/nav relative inline-flex items-center gap-2 px-0 py-3 text-[0.96rem] fo..."
+-                             fdprocessedid="i5fcd"
+                            >
+                            <button
+                              type="button"
+                              onMouseEnter={function onMouseEnter}
+                              onFocus={function onFocus}
+                              onClick={function onClick}
+                              aria-expanded={false}
+                              className="group/nav relative inline-flex items-center gap-2 px-0 py-3 text-[0.96rem] fo..."
+-                             fdprocessedid="65eszf"
+                            >
+                            <button
+                              type="button"
+                              onMouseEnter={function onMouseEnter}
+                              onFocus={function onFocus}
+                              onClick={function onClick}
+                              aria-expanded={false}
+                              className="group/nav relative inline-flex items-center gap-2 px-0 py-3 text-[0.96rem] fo..."
+-                             fdprocessedid="hrdi4s"
+                            >
+                        ...
+                      <div className="flex items...">
+                        <LinkComponent>
+                        <LinkComponent>
+                        <HeaderSettingsPanel className="hidden sm:...">
+                          <div ref={{current:null}} className="relative h...">
+                            <button
+                              type="button"
+                              onClick={function onClick}
+                              aria-label="Settings"
+                              aria-expanded={false}
+                              className="inline-flex h-10 w-10 items-center justify-center rounded-[12px] text-[#2d313..."
+-                             fdprocessedid="pq4ux5"
+                            >
+                        ...
+                    ...
+            ...
+          ...
+ 
+[browser] A tree hydrated but some attributes of the server rendered HTML didn't match the client properties. This won't be patched up. This can happen if a SSR-ed Client Component used:
+
+- A server/client branch `if (typeof window !== 'undefined')`.
+- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
+- Date formatting in a user's locale which doesn't match the server.
+- External changing data without sending a snapshot of it along with the HTML.
+- Invalid HTML tag nesting.
+
+It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.
+
+https://react.dev/link/hydration-mismatch
+
+  ...
+    <InnerLayoutRouter url="/tools/int..." tree={[...]} params={{slug:"inte..."}} cacheNode={{rsc:{...}, ...}} ...>
+      <SegmentViewNode type="page" pagePath="tools/[slu...">
+        <SegmentTrieNode>
+        <ToolPage>
+          <div className="page-shell...">
+            <script>
+            <script>
+            <script>
+            <script>
+            <ToolRouteShell slug="interview-...">
+              <div className="mx-auto w-...">
+                <ToolPageHeader>
+                <div className="grid gap-5...">
+                  <div>
+                  <aside className="hidden xl:...">
+                    <ToolStudioSidebar tool={{slug:"inte...", ...}} popularTools={[...]} relatedTools={[...]} ...>
+                      <aside className="space-y-4 ...">
+                        <Card className="overflow-h...">
+                          <div className="card-surfa...">
+                            <div className="space-y-4">
+                              <div>
+                              <form action="/tools" className="flex items...">
+                                <input>
+                                <button
+                                  type="submit"
+                                  className="inline-flex h-11 w-11 shrink-0 items-center justify-center rounded-[14px]..."
+                                  aria-label="Search tools"
+-                                 fdprocessedid="de6hfo"
+                                >
+                              ...
+                        ...
+      ...
+ 
+⨯ TypeError: The "path" argument must be of type string or an instance of URL. Received an instance of URL
+    at eval (lib\windows-ocr.js:10:38)
+    at <unknown> (rsc)/./lib/windows-ocr.js (C:\Users\monis\OneDrive\Pictures\Documents\toolslify\.next\dev\server\app\api\tool\[slug]\route.js:143:1)
+    at eval (webpack-internal:///(rsc)/./lib/studio-tool-engine.js:10:73)
+    at eval (webpack-internal:///(rsc)/./lib/studio-tool-engine.js:1:21)
+    at <unknown> (rsc)/./lib/studio-tool-engine.js (C:\Users\monis\OneDrive\Pictures\Documents\toolslify\.next\dev\server\app\api\tool\[slug]\route.js:77:1)
+    at eval (webpack-internal:///(rsc)/./lib/tool-engine.js:7:80)
+    at eval (webpack-internal:///(rsc)/./lib/tool-engine.js:1:21)
+    at <unknown> (rsc)/./lib/tool-engine.js (C:\Users\monis\OneDrive\Pictures\Documents\toolslify\.next\dev\server\app\api\tool\[slug]\route.js:99:1)
+    at eval (webpack-internal:///(rsc)/./app/api/tool/[slug]/route.js:11:74)
+    at eval (webpack-internal:///(rsc)/./app/api/tool/[slug]/route.js:1:21)
+    at <unknown> (rsc)/./app/api/tool/[slug]/route.js (C:\Users\monis\OneDrive\Pictures\Documents\toolslify\.next\dev\server\app\api\tool\[slug]\route.js:22:1)
+    at __webpack_exec__ (C:\Users\monis\OneDrive\Pictures\Documents\toolslify\.next\dev\server\app\api\tool\[slug]\route.js:349:39)
+    at <unknown> (C:\Users\monis\OneDrive\Pictures\Documents\toolslify\.next\dev\server\app\api\tool\[slug]\route.js:350:83)
+    at <unknown> (C:\Users\monis\OneDrive\Pictures\Documents\toolslify\.next\dev\server\app\api\tool\[slug]\route.js:350:47)
+    at Object.<anonymous> (C:\Users\monis\OneDrive\Pictures\Documents\toolslify\.next\dev\server\app\api\tool\[slug]\route.js:353:3)
+   8 |
+   9 | const execFileAsync = promisify(execFile);
+> 10 | const OCR_SCRIPT_PATH = fileURLToPath(new URL("../scripts/windows-ocr.ps1", import.meta.ur...
+     |                                      ^
+  11 |
+  12 | export async function extractImageTextWithWindowsOcr(file) {
+  13 |   if (process.platform !== "win32") { {
+  code: 'ERR_INVALID_ARG_TYPE',
+  page: '/api/tool/interview-answer-builder'
+}
+[browser] Detected `scroll-behavior: smooth` on the `<html>` element. To disable smooth scrolling during route transitions, add `data-scroll-behavior="smooth"` to your <html> element. Learn more: https://nextjs.org/docs/messages/missing-data-scroll-behavior

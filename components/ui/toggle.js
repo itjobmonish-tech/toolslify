@@ -11,17 +11,17 @@ export function Toggle({ checked, onCheckedChange, label, className }) {
       aria-label={label}
       onClick={() => onCheckedChange(!checked)}
       className={cn(
-        "relative inline-flex h-7 w-12 items-center rounded-full border transition duration-200",
+        "relative inline-flex h-8 w-14 items-center rounded-full border transition duration-300",
         checked
-          ? "border-transparent bg-[linear-gradient(135deg,var(--accent-start),var(--accent-end))]"
-          : "border-[var(--border-strong)] bg-[var(--surface-strong)]",
+          ? "border-[var(--primary)] bg-[var(--primary)]"
+          : "border-[var(--border)] bg-white",
         className,
       )}
     >
       <span
         className={cn(
-          "block h-5 w-5 rounded-full bg-white shadow-sm transition duration-200",
-          checked ? "translate-x-6" : "translate-x-1",
+          "block h-6 w-6 rounded-full border border-[#dbe3ef] bg-white transition duration-300",
+          checked ? "translate-x-7" : "translate-x-1",
         )}
       />
     </button>

@@ -1,0 +1,8 @@
+⨯ Another next dev server is already running.
+
+- Local:        http://localhost:3000
+- PID:          62836
+- Dir:          C:\Users\monis\OneDrive\Pictures\Documents\toolslify
+- Log:          .next\dev\logs\next-development.log
+
+Run taskkill /PID 62836 /F to stop it.

@@ -7,7 +7,7 @@ import { Card } from "@/components/ui/card";
 const comparisonRows = [
   { before: "In addition, the platform facilitates optimization.", after: "It also helps teams improve the way they work." },
   { before: "Users can utilize the feature for maximum efficiency.", after: "Teams can use the feature to move faster day to day." },
-  { before: "The solution demonstrates improved consistency.", after: "The workflow stays clearer and more consistent." },
+  { before: "The solution demonstrates improved consistency.", after: "The message is clearer and easier to read." },
 ];
 
 export function HeroPreview() {

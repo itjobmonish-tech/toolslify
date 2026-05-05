@@ -20,7 +20,7 @@ const strengthOptions = ["low", "medium", "high"];
 const featureCards = [
   {
     title: "Intentional rewriting",
-    body: "Choose tone and rewrite strength so the output fits a real workflow, not a generic one-size-fits-all spinner.",
+    body: "Choose tone and rewrite strength so the output fits the actual audience and job.",
   },
   {
     title: "Built for review",
@@ -184,7 +184,7 @@ export default function HumanizerExperience() {
           transition={{ duration: 0.45 }}
           className="space-y-6"
         >
-          <Badge tone="accent">SEO-ready rewrite workflow</Badge>
+          <Badge tone="accent">Rewrite editor</Badge>
           <div className="space-y-5">
             <h1 className="max-w-3xl text-4xl font-semibold leading-[1.05] tracking-[-0.04em] text-[var(--foreground)] sm:text-5xl lg:text-6xl">
               Humanize AI writing with the polish of a real SaaS tool.

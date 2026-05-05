@@ -1,0 +1,9 @@
+
+> toolslify@1.0.0 dev
+> next dev --webpack --hostname 127.0.0.1 --port 3001
+
+▲ Next.js 16.2.1 (webpack)
+- Local:         http://127.0.0.1:3001
+- Network:       http://127.0.0.1:3001
+✓ Ready in 1067ms
+[?25h

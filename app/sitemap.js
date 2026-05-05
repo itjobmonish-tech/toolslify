@@ -1,27 +1,38 @@
-import { getSeoSlugs } from "@/lib/seo-pages";
-import { SITE_URL, getAllTools } from "@/lib/site-data";
+import { SITE_URL, getAllTools, getCategoryPages } from "@/lib/site-data";
 
 export default function sitemap() {
-  const staticRoutes = ["", "/tools", "/privacy", "/terms"].map((path) => ({
+  const lastModified = new Date("2026-04-27T00:00:00.000Z");
+  const staticRoutes = ["", "/tools", "/about", "/contact", "/editorial-policy", "/accuracy-disclaimer", "/privacy", "/terms"].map((path) => ({
     url: `${SITE_URL}${path}`,
-    lastModified: new Date("2026-03-31"),
-    changeFrequency: "weekly",
-    priority: path === "" ? 1 : 0.8,
+    lastModified,
+    changeFrequency: path === "" ? "daily" : "monthly",
+    priority: path === "" ? 1 : path === "/tools" ? 0.9 : 0.3,
   }));
 
   const toolRoutes = getAllTools().map((tool) => ({
     url: `${SITE_URL}${tool.path}`,
-    lastModified: new Date("2026-03-31"),
-    changeFrequency: "weekly",
-    priority: 0.9,
+    lastModified,
+    changeFrequency: tool.popular ? "weekly" : "monthly",
+    priority: getToolPriority(tool),
   }));
 
-  const seoRoutes = getSeoSlugs().map((slug) => ({
-    url: `${SITE_URL}/${slug}`,
-    lastModified: new Date("2026-03-31"),
+  const categoryRoutes = getCategoryPages().map((page) => ({
+    url: `${SITE_URL}${page.path}`,
+    lastModified,
     changeFrequency: "weekly",
-    priority: 0.85,
+    priority: 0.86,
   }));
 
-  return [...staticRoutes, ...toolRoutes, ...seoRoutes];
+  return [...staticRoutes, ...categoryRoutes, ...toolRoutes];
+}
+
+function getToolPriority(tool) {
+  if (tool.popular) return 0.82;
+  if (["salary-data", "cost-of-living", "education-roi", "mortgage-data", "tax-budget", "home-costs"].includes(tool.categorySlug)) {
+    return 0.72;
+  }
+  if (tool.categorySlug === "converters" || tool.categorySlug === "cooking") {
+    return 0.58;
+  }
+  return 0.64;
 }

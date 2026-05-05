@@ -1,0 +1,821 @@
+[browser] Detected `scroll-behavior: smooth` on the `<html>` element. To disable smooth scrolling during route transitions, add `data-scroll-behavior="smooth"` to your <html> element. Learn more: https://nextjs.org/docs/messages/missing-data-scroll-behavior
+⨯ ./components/marketing/tool-directory.js
+Error: 
+
+Caused by:
+    0: Failed to read source code from C:\Users\monis\OneDrive\Pictures\Documents\toolslify\components\marketing\tool-directory.js
+    1: The system cannot find the file specified. (os error 2)
+
+Import trace for requested module:
+./components/marketing/tool-directory.js
+⨯ ./components/marketing/tool-directory.js
+Error: 
+
+Caused by:
+    0: Failed to read source code from C:\Users\monis\OneDrive\Pictures\Documents\toolslify\components\marketing\tool-directory.js
+    1: The system cannot find the file specified. (os error 2)
+
+Import trace for requested module:
+./components/marketing/tool-directory.js
+⨯ SyntaxError: Unexpected end of JSON input
+    at JSON.parse (<anonymous>) {
+  page: '/manifest.webmanifest'
+}
+⚠ Found a change in next.config.mjs. Restarting the server to apply the changes...
+[browser] ./components/marketing/tool-directory.js
+Error: 
+
+Caused by:
+    0: Failed to read source code from C:\Users\monis\OneDrive\Pictures\Documents\toolslify\components\marketing\tool-directory.js
+    1: The system cannot find the file specified. (os error 2)
+
+Import trace for requested module:
+./components/marketing/tool-directory.js
+./app/page.js 
+[browser] ./components/marketing/tool-directory.js
+Error: 
+
+Caused by:
+    0: Failed to read source code from C:\Users\monis\OneDrive\Pictures\Documents\toolslify\components\marketing\tool-directory.js
+    1: The system cannot find the file specified. (os error 2)
+
+Import trace for requested module:
+./components/marketing/tool-directory.js 
+[browser] ReferenceError: decodeDraftFromUrl is not defined
+    at CalculatorWorkspace.useEffect (webpack-internal:///(app-pages-browser)/./components/tools/calculator-workspace.js:90:33) (webpack-internal:///(app-pages-browser)
+[browser] ReferenceError: decodeDraftFromUrl is not defined
+    at CalculatorWorkspace.useEffect (webpack-internal:///(app-pages-browser)/./components/tools/calculator-workspace.js:90:33) (webpack-internal:///(app-pages-browser)
+[browser] ReferenceError: decodeDraftFromUrl is not defined
+    at CalculatorWorkspace.useEffect (webpack-internal:///(app-pages-browser)/./components/tools/calculator-workspace.js:90:33) (webpack-internal:///(app-pages-browser)
+[browser] ReferenceError: decodeDraftFromUrl is not defined
+    at CalculatorWorkspace.useEffect (webpack-internal:///(app-pages-browser)/./components/tools/calculator-workspace.js:90:33) (webpack-internal:///(app-pages-browser)
+[browser] ./components/marketing/tool-directory.js
+Error: 
+
+Caused by:
+    0: Failed to read source code from C:\Users\monis\OneDrive\Pictures\Documents\toolslify\components\marketing\tool-directory.js
+    1: The system cannot find the file specified. (os error 2)
+
+Import trace for requested module:
+./components/marketing/tool-directory.js
+./app/page.js 
+[browser] ./components/marketing/tool-directory.js
+Error: 
+
+Caused by:
+    0: Failed to read source code from C:\Users\monis\OneDrive\Pictures\Documents\toolslify\components\marketing\tool-directory.js
+    1: The system cannot find the file specified. (os error 2)
+
+Import trace for requested module:
+./components/marketing/tool-directory.js 
+[browser] TypeError: Cannot read properties of undefined (reading 'flatMap')
+    at ToolDirectory (webpack-internal:///(app-pages-browser)/./components/marketing/tool-directory.js:86:127) (webpack-internal:///(app-pages-browser)
+[browser] TypeError: Cannot read properties of undefined (reading 'flatMap')
+    at ToolDirectory (webpack-internal:///(app-pages-browser)/./components/marketing/tool-directory.js:86:127) (webpack-internal:///(app-pages-browser)
+[browser] A tree hydrated but some attributes of the server rendered HTML didn't match the client properties. This won't be patched up. This can happen if a SSR-ed Client Component used:
+
+- A server/client branch `if (typeof window !== 'undefined')`.
+- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
+- Date formatting in a user's locale which doesn't match the server.
+- External changing data without sending a snapshot of it along with the HTML.
+- Invalid HTML tag nesting.
+
+It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.
+
+https://react.dev/link/hydration-mismatch
+
+  ...
+    <body className="__variable...">
+      <Script>
+      <PreferencesProvider>
+        <ToastProvider>
+          <div className="app-shell">
+            <div>
+            <div>
+            <SiteHeader>
+              <motion.header initial={{opacity:0,y:-14}} animate={{opacity:1,y:0}} transition={{duration:0.48, ...}} ...>
+                <header className="sticky top..." style={{opacity:0, ...}} ref={function useMotionRef.useCallback}>
+                  <div className="mx-auto w-...">
+                    <div className="flex items...">
+                      <div>
+                      <div>
+                      <div className="flex items...">
+                        <LinkComponent>
+                        <LinkComponent>
+                        <HeaderSettingsPanel className="hidden sm:...">
+                          <div ref={{current:null}} className="relative h...">
+                            <button
+                              type="button"
+                              onClick={function onClick}
+                              aria-label="Settings"
+                              aria-expanded={false}
+                              className="inline-flex h-10 w-10 items-center justify-center rounded-[12px] text-[#2d313..."
+-                             fdprocessedid="f5p8um"
+                            >
+                        ...
+                    ...
+            ...
+          ...
+ 
+[browser] A tree hydrated but some attributes of the server rendered HTML didn't match the client properties. This won't be patched up. This can happen if a SSR-ed Client Component used:
+
+- A server/client branch `if (typeof window !== 'undefined')`.
+- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
+- Date formatting in a user's locale which doesn't match the server.
+- External changing data without sending a snapshot of it along with the HTML.
+- Invalid HTML tag nesting.
+
+It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.
+
+https://react.dev/link/hydration-mismatch
+
+  ...
+    <ToolRouteShell slug="paycheck-c...">
+      <div className="mx-auto w-...">
+        <section>
+        <section className="tool-works..." style={{...}} data-workspace="calculator">
+          <LoadableComponent slug="paycheck-c...">
+            <Suspense fallback={<loading>}>
+              <CalculatorWorkspace slug="paycheck-c...">
+                <div className="calculator..." style={{...}} data-surface-style="salarySplit">
+                  <MobileEstimateCard>
+                  <section id="tool-works..." className="scroll-mt-...">
+                    <CalculatorSurface config={{title:"Pay...", ...}} tool={{slug:"payc...", ...}} fieldGroups={[...]} ...>
+                      <SalarySplitSurface config={{title:"Pay...", ...}} tool={{slug:"payc...", ...}} fieldGroups={[...]} ...>
+                        <section className="overflow-h...">
+                          <div className="grid xl:gr...">
+                            <div className="space-y-6 ...">
+                              <div className="space-y-4">
+                                <SurfaceGroupHeader>
+                                <div className="grid gap-4...">
+                                  <CalculatorField field={{name:"annu...", ...}} value={78000} ...>
+                                    <CalculatorFieldShell label="Annual salary" help={undefined} appearance="flat">
+                                      <div className="space-y-2">
+                                        <div>
+                                        <div className="relative">
+                                          <span>
+                                          <input
+                                            type="number"
+                                            min={0}
+                                            max={undefined}
+                                            step={100}
+                                            inputMode="decimal"
+                                            value={78000}
+                                            onChange={function onChange}
+                                            className="calculator-field-control w-full appearance-none text-[var(--for..."
+-                                           fdprocessedid="3f44f"
+                                          >
+                                  <CalculatorField field={{name:"payF...", ...}} value="biweekly" ...>
+                                    <CalculatorFieldShell label="Pay frequency" help={undefined} appearance="flat">
+                                      <div className="space-y-2">
+                                        <div>
+                                        <div className="calculator...">
+                                          <select
+                                            value="biweekly"
+                                            onChange={function onChange}
+                                            className="calculator-field-control w-full appearance-none text-[var(--for..."
+-                                           fdprocessedid="6bhanq"
+                                          >
+                                          ...
+                                  <CalculatorField field={{name:"taxRate", ...}} value={23} onChange={function onChange} ...>
+                                    <CalculatorFieldShell label="Estimated ..." help={undefined} appearance="flat">
+                                      <div className="space-y-2">
+                                        <div>
+                                        <div className="relative">
+                                          <input
+                                            type="number"
+                                            min={0}
+                                            max={60}
+                                            step={0.5}
+                                            inputMode="decimal"
+                                            value={23}
+                                            onChange={function onChange}
+                                            className="calculator-field-control w-full appearance-none text-[var(--for..."
+-                                           fdprocessedid="7borc9"
+                                          >
+                                          ...
+                              ...
+                                <CalculatorFieldShell label="Deductions..." help={undefined} appearance="flat">
+                                  <div className="space-y-2">
+                                    <div>
+                                    <div className="relative">
+                                      <span>
+                                      <input
+                                        type="number"
+                                        min={0}
+                                        max={undefined}
+                                        step={5}
+                                        inputMode="decimal"
+                                        value={135}
+                                        onChange={function onChange}
+                                        className="calculator-field-control w-full appearance-none text-[var(--foregro..."
+-                                       fdprocessedid="5arid"
+                                      >
+                              ...
+                                <CalculatorFieldShell label="Currency" help={undefined} appearance="flat">
+                                  <div className="space-y-2">
+                                    <div>
+                                    <div className="calculator...">
+                                      <select
+                                        value="USD"
+                                        onChange={function onChange}
+                                        className="calculator-field-control w-full appearance-none text-[var(--foregro..."
+-                                       fdprocessedid="rjbjon"
+                                      >
+                                      ...
+                            ...
+                          <LeadActionStrip row={{label:"Gro...", ...}} actionLabel="Calculate ..." ...>
+                            <div className="flex flex-...">
+                              <div>
+                              <Button type="button" onClick={function handleCalculate} className="min-w-[180px]">
+                                <button
+                                  ref={null}
+                                  type="button"
+                                  className="inline-flex items-center justify-center gap-2 rounded-[14px] font-semibol..."
+                                  onClick={function handleCalculate}
+-                                 fdprocessedid="lp277"
+                                >
++                                 Calculate paycheck
+        ...
+ 
+[browser] Detected `scroll-behavior: smooth` on the `<html>` element. To disable smooth scrolling during route transitions, add `data-scroll-behavior="smooth"` to your <html> element. Learn more: https://nextjs.org/docs/messages/missing-data-scroll-behavior
+[browser] A tree hydrated but some attributes of the server rendered HTML didn't match the client properties. This won't be patched up. This can happen if a SSR-ed Client Component used:
+
+- A server/client branch `if (typeof window !== 'undefined')`.
+- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
+- Date formatting in a user's locale which doesn't match the server.
+- External changing data without sending a snapshot of it along with the HTML.
+- Invalid HTML tag nesting.
+
+It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.
+
+https://react.dev/link/hydration-mismatch
+
+  ...
+    <body className="__variable...">
+      <Script>
+      <PreferencesProvider>
+        <ToastProvider>
+          <div className="app-shell">
+            <div>
+            <div>
+            <SiteHeader>
+              <motion.header initial={{opacity:0,y:-14}} animate={{opacity:1,y:0}} transition={{duration:0.48, ...}} ...>
+                <header className="sticky top..." style={{opacity:0, ...}} ref={function useMotionRef.useCallback}>
+                  <div className="mx-auto w-...">
+                    <div className="flex items...">
+                      <div>
+                      <div>
+                      <div className="flex items...">
+                        <LinkComponent>
+                        <LinkComponent>
+                        <HeaderSettingsPanel className="hidden sm:...">
+                          <div ref={{current:null}} className="relative h...">
+                            <button
+                              type="button"
+                              onClick={function onClick}
+                              aria-label="Settings"
+                              aria-expanded={false}
+                              className="inline-flex h-10 w-10 items-center justify-center rounded-[12px] text-[#2d313..."
+-                             fdprocessedid="80p6za"
+                            >
+                        ...
+                    ...
+            ...
+          ...
+ 
+[browser] A tree hydrated but some attributes of the server rendered HTML didn't match the client properties. This won't be patched up. This can happen if a SSR-ed Client Component used:
+
+- A server/client branch `if (typeof window !== 'undefined')`.
+- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
+- Date formatting in a user's locale which doesn't match the server.
+- External changing data without sending a snapshot of it along with the HTML.
+- Invalid HTML tag nesting.
+
+It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.
+
+https://react.dev/link/hydration-mismatch
+
+  ...
+    <ToolRouteShell slug="tax-refund...">
+      <div className="mx-auto w-...">
+        <section>
+        <section className="tool-works..." style={{...}} data-workspace="calculator">
+          <LoadableComponent slug="tax-refund...">
+            <Suspense fallback={<loading>}>
+              <CalculatorWorkspace slug="tax-refund...">
+                <div className="calculator..." style={{...}} data-surface-style="taxGrid">
+                  <MobileEstimateCard>
+                  <section id="tool-works..." className="scroll-mt-...">
+                    <CalculatorSurface config={{title:"Tax...", ...}} tool={{slug:"tax-...", ...}} fieldGroups={[...]} ...>
+                      <TaxGridSurface config={{title:"Tax...", ...}} tool={{slug:"tax-...", ...}} fieldGroups={[...]} ...>
+                        <SurfaceCard className="mx-auto ma...">
+                          <section className="overflow-h...">
+                            <div className="space-y-6">
+                              <div className="space-y-3 ...">
+                                <SurfaceGroupHeader>
+                                <div className="grid gap-3...">
+                                  <CalculatorField field={{name:"annu...", ...}} value={92000} ...>
+                                    <CalculatorFieldShell label="Annual income" help={undefined} appearance="tax">
+                                      <div className="space-y-2">
+                                        <div>
+                                        <div className="relative">
+                                          <span>
+                                          <input
+                                            type="number"
+                                            min={0}
+                                            max={undefined}
+                                            step={500}
+                                            inputMode="decimal"
+                                            value={92000}
+                                            onChange={function onChange}
+                                            className="calculator-field-control w-full appearance-none text-[var(--for..."
+-                                           fdprocessedid="bqbeuo"
+                                          >
+                                  <CalculatorField field={{name:"with...", ...}} value={17500} ...>
+                                    <CalculatorFieldShell label="Tax alread..." help={undefined} appearance="tax">
+                                      <div className="space-y-2">
+                                        <div>
+                                        <div className="relative">
+                                          <span>
+                                          <input
+                                            type="number"
+                                            min={0}
+                                            max={undefined}
+                                            step={100}
+                                            inputMode="decimal"
+                                            value={17500}
+                                            onChange={function onChange}
+                                            className="calculator-field-control w-full appearance-none text-[var(--for..."
+-                                           fdprocessedid="htfqp6"
+                                          >
+                                  <CalculatorField field={{name:"credits", ...}} value={1200} ...>
+                                    <CalculatorFieldShell label="Credits an..." help={undefined} appearance="tax">
+                                      <div className="space-y-2">
+                                        <div>
+                                        <div className="relative">
+                                          <span>
+                                          <input
+                                            type="number"
+                                            min={0}
+                                            max={undefined}
+                                            step={100}
+                                            inputMode="decimal"
+                                            value={1200}
+                                            onChange={function onChange}
+                                            className="calculator-field-control w-full appearance-none text-[var(--for..."
+-                                           fdprocessedid="bzsll"
+                                          >
+                              <div className="space-y-3 ...">
+                                <SurfaceGroupHeader>
+                                <div className="grid gap-3...">
+                                  <CalculatorField field={{name:"state", ...}} value="tx" onChange={function onChange} ...>
+                                    <CalculatorFieldShell label="State" help={undefined} appearance="tax">
+                                      <div className="space-y-2">
+                                        <div>
+                                        <div className="calculator...">
+                                          <select
+                                            value="tx"
+                                            onChange={function onChange}
+                                            className="calculator-field-control w-full appearance-none text-[var(--for..."
+-                                           fdprocessedid="y6uvxm"
+                                          >
+                                          ...
+                                  <CalculatorField field={{name:"fili...", ...}} value="single" ...>
+                                    <CalculatorFieldShell label="Filing status" help={undefined} appearance="tax">
+                                      <div className="space-y-2">
+                                        <div>
+                                        <div className="calculator...">
+                                          <select
+                                            value="single"
+                                            onChange={function onChange}
+                                            className="calculator-field-control w-full appearance-none text-[var(--for..."
+-                                           fdprocessedid="jjgri"
+                                          >
+                                          ...
+                                  <CalculatorField field={{name:"curr...", ...}} value="USD" onChange={function onChange} ...>
+                                    <CalculatorFieldShell label="Currency" help={undefined} appearance="tax">
+                                      <div className="space-y-2">
+                                        <div>
+                                        <div className="calculator...">
+                                          <select
+                                            value="USD"
+                                            onChange={function onChange}
+                                            className="calculator-field-control w-full appearance-none text-[var(--for..."
+-                                           fdprocessedid="nqq3ut"
+                                          >
+                                          ...
+                            <div className="flex justi...">
+                              <Button type="button" onClick={function handleCalculate} className="min-w-[180px]">
+                                <button
+                                  ref={null}
+                                  type="button"
+                                  className="inline-flex items-center justify-center gap-2 rounded-[14px] font-semibol..."
+                                  onClick={function handleCalculate}
+-                                 fdprocessedid="f43oet"
+                                >
++                                 Estimate refund
+                            ...
+        ...
+ 
+[browser] Detected `scroll-behavior: smooth` on the `<html>` element. To disable smooth scrolling during route transitions, add `data-scroll-behavior="smooth"` to your <html> element. Learn more: https://nextjs.org/docs/messages/missing-data-scroll-behavior
+⚠ Fast Refresh had to perform a full reload. Read more: https://nextjs.org/docs/messages/fast-refresh-reload
+⨯ ReferenceError: makeCpmConfig is not defined
+    at eval (lib\calculator-commercial-expansion.js:140:21)
+    at <unknown> (rsc)/./lib/calculator-commercial-expansion.js (C:\Users\monis\OneDrive\Pictures\Documents\toolslify\.next\dev\server\app\tools\[slug]\page.js:242:1)
+    at eval (webpack-internal:///(rsc)/./lib/calculator-tools.js:8:93)
+    at <unknown> (rsc)/./lib/calculator-tools.js (C:\Users\monis\OneDrive\Pictures\Documents\toolslify\.next\dev\server\app\tools\[slug]\page.js:286:1)
+    at eval (webpack-internal:///(rsc)/./lib/tool-catalog.js:8:78)
+    at <unknown> (rsc)/./lib/tool-catalog.js (C:\Users\monis\OneDrive\Pictures\Documents\toolslify\.next\dev\server\app\tools\[slug]\page.js:341:1)
+    at eval (webpack-internal:///(rsc)/./lib/site-data.js:39:74)
+    at <unknown> (rsc)/./lib/site-data.js (C:\Users\monis\OneDrive\Pictures\Documents\toolslify\.next\dev\server\app\tools\[slug]\page.js:319:1)
+    at eval (webpack-internal:///(rsc)/./lib/seo-metadata.js:6:71)
+    at <unknown> (rsc)/./lib/seo-metadata.js (C:\Users\monis\OneDrive\Pictures\Documents\toolslify\.next\dev\server\app\tools\[slug]\page.js:308:1)
+    at eval (webpack-internal:///(rsc)/./app/layout.js:18:75)
+    at <unknown> (rsc)/./app/layout.js (C:\Users\monis\OneDrive\Pictures\Documents\toolslify\.next\dev\server\app\tools\[slug]\page.js:44:1)
+  138 |     aliases: ["cost per click calculator"],
+  139 |   }),
+> 140 |   "cpm-calculator": makeCpmConfig(),
+      |                     ^
+  141 |   "ctr-calculator": makePercentMetricConfig({
+  142 |     title: "CTR Calculator",
+  143 |     actionLabel: "Calculate CTR",
+⨯ ReferenceError: makeCpmConfig is not defined
+    at eval (lib\calculator-commercial-expansion.js:140:21)
+    at <unknown> (rsc)/./lib/calculator-commercial-expansion.js (C:\Users\monis\OneDrive\Pictures\Documents\toolslify\.next\dev\server\app\tools\[slug]\page.js:242:1)
+    at eval (webpack-internal:///(rsc)/./lib/calculator-tools.js:8:93)
+    at <unknown> (rsc)/./lib/calculator-tools.js (C:\Users\monis\OneDrive\Pictures\Documents\toolslify\.next\dev\server\app\tools\[slug]\page.js:286:1)
+    at eval (webpack-internal:///(rsc)/./lib/tool-catalog.js:8:78)
+    at <unknown> (rsc)/./lib/tool-catalog.js (C:\Users\monis\OneDrive\Pictures\Documents\toolslify\.next\dev\server\app\tools\[slug]\page.js:341:1)
+    at eval (webpack-internal:///(rsc)/./lib/site-data.js:39:74)
+    at <unknown> (rsc)/./lib/site-data.js (C:\Users\monis\OneDrive\Pictures\Documents\toolslify\.next\dev\server\app\tools\[slug]\page.js:319:1)
+    at eval (webpack-internal:///(rsc)/./lib/seo-metadata.js:6:71)
+    at <unknown> (rsc)/./lib/seo-metadata.js (C:\Users\monis\OneDrive\Pictures\Documents\toolslify\.next\dev\server\app\tools\[slug]\page.js:308:1)
+    at eval (webpack-internal:///(rsc)/./app/layout.js:18:75)
+    at <unknown> (rsc)/./app/layout.js (C:\Users\monis\OneDrive\Pictures\Documents\toolslify\.next\dev\server\app\tools\[slug]\page.js:44:1)
+  138 |     aliases: ["cost per click calculator"],
+  139 |   }),
+> 140 |   "cpm-calculator": makeCpmConfig(),
+      |                     ^
+  141 |   "ctr-calculator": makePercentMetricConfig({
+  142 |     title: "CTR Calculator",
+  143 |     actionLabel: "Calculate CTR",
+⨯ ReferenceError: makeCpmConfig is not defined
+    at eval (lib\calculator-commercial-expansion.js:140:21)
+    at <unknown> (rsc)/./lib/calculator-commercial-expansion.js (C:\Users\monis\OneDrive\Pictures\Documents\toolslify\.next\dev\server\app\tools\[slug]\page.js:242:1)
+    at eval (webpack-internal:///(rsc)/./lib/calculator-tools.js:8:93)
+    at <unknown> (rsc)/./lib/calculator-tools.js (C:\Users\monis\OneDrive\Pictures\Documents\toolslify\.next\dev\server\app\tools\[slug]\page.js:286:1)
+    at eval (webpack-internal:///(rsc)/./lib/tool-catalog.js:8:78)
+    at <unknown> (rsc)/./lib/tool-catalog.js (C:\Users\monis\OneDrive\Pictures\Documents\toolslify\.next\dev\server\app\tools\[slug]\page.js:341:1)
+    at eval (webpack-internal:///(rsc)/./lib/site-data.js:39:74)
+    at <unknown> (rsc)/./lib/site-data.js (C:\Users\monis\OneDrive\Pictures\Documents\toolslify\.next\dev\server\app\tools\[slug]\page.js:319:1)
+    at eval (webpack-internal:///(rsc)/./lib/seo-metadata.js:6:71)
+    at <unknown> (rsc)/./lib/seo-metadata.js (C:\Users\monis\OneDrive\Pictures\Documents\toolslify\.next\dev\server\app\tools\[slug]\page.js:308:1)
+    at eval (webpack-internal:///(rsc)/./app/layout.js:18:75)
+    at <unknown> (rsc)/./app/layout.js (C:\Users\monis\OneDrive\Pictures\Documents\toolslify\.next\dev\server\app\tools\[slug]\page.js:44:1)
+  138 |     aliases: ["cost per click calculator"],
+  139 |   }),
+> 140 |   "cpm-calculator": makeCpmConfig(),
+      |                     ^
+  141 |   "ctr-calculator": makePercentMetricConfig({
+  142 |     title: "CTR Calculator",
+  143 |     actionLabel: "Calculate CTR", {
+  page: '/tools/bmi-calculator'
+}
+⨯ ReferenceError: makeCpmConfig is not defined
+    at eval (lib\calculator-commercial-expansion.js:140:21)
+    at <unknown> (rsc)/./lib/calculator-commercial-expansion.js (C:\Users\monis\OneDrive\Pictures\Documents\toolslify\.next\dev\server\app\tools\[slug]\page.js:242:1)
+    at eval (webpack-internal:///(rsc)/./lib/calculator-tools.js:8:93)
+    at <unknown> (rsc)/./lib/calculator-tools.js (C:\Users\monis\OneDrive\Pictures\Documents\toolslify\.next\dev\server\app\tools\[slug]\page.js:286:1)
+    at eval (webpack-internal:///(rsc)/./lib/tool-catalog.js:8:78)
+    at <unknown> (rsc)/./lib/tool-catalog.js (C:\Users\monis\OneDrive\Pictures\Documents\toolslify\.next\dev\server\app\tools\[slug]\page.js:341:1)
+    at eval (webpack-internal:///(rsc)/./lib/site-data.js:39:74)
+    at <unknown> (rsc)/./lib/site-data.js (C:\Users\monis\OneDrive\Pictures\Documents\toolslify\.next\dev\server\app\tools\[slug]\page.js:319:1)
+    at eval (webpack-internal:///(rsc)/./lib/seo-metadata.js:6:71)
+    at <unknown> (rsc)/./lib/seo-metadata.js (C:\Users\monis\OneDrive\Pictures\Documents\toolslify\.next\dev\server\app\tools\[slug]\page.js:308:1)
+    at eval (webpack-internal:///(rsc)/./app/layout.js:18:75)
+    at <unknown> (rsc)/./app/layout.js (C:\Users\monis\OneDrive\Pictures\Documents\toolslify\.next\dev\server\app\tools\[slug]\page.js:44:1)
+  138 |     aliases: ["cost per click calculator"],
+  139 |   }),
+> 140 |   "cpm-calculator": makeCpmConfig(),
+      |                     ^
+  141 |   "ctr-calculator": makePercentMetricConfig({
+  142 |     title: "CTR Calculator",
+  143 |     actionLabel: "Calculate CTR", {
+  page: '/tools/bmi-calculator'
+}
+⨯ Failed to generate static paths for /tools/[slug]:
+ReferenceError: makeCpmConfig is not defined
+    at eval (lib\calculator-commercial-expansion.js:140:21)
+    at <unknown> (rsc)/./lib/calculator-commercial-expansion.js (C:\Users\monis\OneDrive\Pictures\Documents\toolslify\.next\dev\server\app\tools\[slug]\page.js:242:1)
+    at eval (webpack-internal:///(rsc)/./lib/calculator-tools.js:8:93)
+    at <unknown> (rsc)/./lib/calculator-tools.js (C:\Users\monis\OneDrive\Pictures\Documents\toolslify\.next\dev\server\app\tools\[slug]\page.js:286:1)
+    at eval (webpack-internal:///(rsc)/./lib/tool-catalog.js:8:78)
+    at <unknown> (rsc)/./lib/tool-catalog.js (C:\Users\monis\OneDrive\Pictures\Documents\toolslify\.next\dev\server\app\tools\[slug]\page.js:341:1)
+    at eval (webpack-internal:///(rsc)/./lib/site-data.js:39:74)
+  138 |     aliases: ["cost per click calculator"],
+  139 |   }),
+> 140 |   "cpm-calculator": makeCpmConfig(),
+      |                     ^
+  141 |   "ctr-calculator": makePercentMetricConfig({
+  142 |     title: "CTR Calculator",
+  143 |     actionLabel: "Calculate CTR", {
+  type: 'ReferenceError'
+}
+⨯ Failed to generate static paths for /tools/[slug]:
+ReferenceError: makeCpmConfig is not defined
+    at eval (lib\calculator-commercial-expansion.js:140:21)
+    at <unknown> (rsc)/./lib/calculator-commercial-expansion.js (C:\Users\monis\OneDrive\Pictures\Documents\toolslify\.next\dev\server\app\tools\[slug]\page.js:242:1)
+    at eval (webpack-internal:///(rsc)/./lib/calculator-tools.js:8:93)
+    at <unknown> (rsc)/./lib/calculator-tools.js (C:\Users\monis\OneDrive\Pictures\Documents\toolslify\.next\dev\server\app\tools\[slug]\page.js:286:1)
+    at eval (webpack-internal:///(rsc)/./lib/tool-catalog.js:8:78)
+    at <unknown> (rsc)/./lib/tool-catalog.js (C:\Users\monis\OneDrive\Pictures\Documents\toolslify\.next\dev\server\app\tools\[slug]\page.js:341:1)
+    at eval (webpack-internal:///(rsc)/./lib/site-data.js:39:74)
+  138 |     aliases: ["cost per click calculator"],
+  139 |   }),
+> 140 |   "cpm-calculator": makeCpmConfig(),
+      |                     ^
+  141 |   "ctr-calculator": makePercentMetricConfig({
+  142 |     title: "CTR Calculator",
+  143 |     actionLabel: "Calculate CTR", {
+  type: 'ReferenceError'
+}
+⨯ ReferenceError: makeCpmConfig is not defined
+    at eval (lib\calculator-commercial-expansion.js:140:21)
+    at <unknown> (rsc)/./lib/calculator-commercial-expansion.js (C:\Users\monis\OneDrive\Pictures\Documents\toolslify\.next\dev\server\app\tools\[slug]\page.js:242:1)
+    at eval (webpack-internal:///(rsc)/./lib/calculator-tools.js:8:93)
+    at <unknown> (rsc)/./lib/calculator-tools.js (C:\Users\monis\OneDrive\Pictures\Documents\toolslify\.next\dev\server\app\tools\[slug]\page.js:286:1)
+    at eval (webpack-internal:///(rsc)/./lib/tool-catalog.js:8:78)
+    at <unknown> (rsc)/./lib/tool-catalog.js (C:\Users\monis\OneDrive\Pictures\Documents\toolslify\.next\dev\server\app\tools\[slug]\page.js:341:1)
+    at eval (webpack-internal:///(rsc)/./lib/site-data.js:39:74)
+  138 |     aliases: ["cost per click calculator"],
+  139 |   }),
+> 140 |   "cpm-calculator": makeCpmConfig(),
+      |                     ^
+  141 |   "ctr-calculator": makePercentMetricConfig({
+  142 |     title: "CTR Calculator",
+  143 |     actionLabel: "Calculate CTR", {
+  type: 'ReferenceError',
+  page: '/tools/bmi-calculator'
+}
+⨯ ReferenceError: makeCpmConfig is not defined
+    at eval (lib\calculator-commercial-expansion.js:140:21)
+    at <unknown> (rsc)/./lib/calculator-commercial-expansion.js (C:\Users\monis\OneDrive\Pictures\Documents\toolslify\.next\dev\server\app\tools\[slug]\page.js:242:1)
+    at eval (webpack-internal:///(rsc)/./lib/calculator-tools.js:8:93)
+    at <unknown> (rsc)/./lib/calculator-tools.js (C:\Users\monis\OneDrive\Pictures\Documents\toolslify\.next\dev\server\app\tools\[slug]\page.js:286:1)
+    at eval (webpack-internal:///(rsc)/./lib/tool-catalog.js:8:78)
+    at <unknown> (rsc)/./lib/tool-catalog.js (C:\Users\monis\OneDrive\Pictures\Documents\toolslify\.next\dev\server\app\tools\[slug]\page.js:341:1)
+    at eval (webpack-internal:///(rsc)/./lib/site-data.js:39:74)
+  138 |     aliases: ["cost per click calculator"],
+  139 |   }),
+> 140 |   "cpm-calculator": makeCpmConfig(),
+      |                     ^
+  141 |   "ctr-calculator": makePercentMetricConfig({
+  142 |     title: "CTR Calculator",
+  143 |     actionLabel: "Calculate CTR", {
+  type: 'ReferenceError',
+  page: '/tools/bmi-calculator'
+}
+[browser] Uncaught ReferenceError: makeCpmConfig is not defined
+    at eval (lib\calculator-commercial-expansion.js:140:21)
+    at <unknown> (rsc)/./lib/calculator-commercial-expansion.js (C:\Users\monis\OneDrive\Pictures\Documents\toolslify\.next\dev\server\app\tools\[slug]\page.js:242:1)
+    at eval (webpack-internal:///(rsc)/./lib/calculator-tools.js:8:93)
+    at <unknown> (rsc)/./lib/calculator-tools.js (C:\Users\monis\OneDrive\Pictures\Documents\toolslify\.next\dev\server\app\tools\[slug]\page.js:286:1)
+    at eval (webpack-internal:///(rsc)/./lib/tool-catalog.js:8:78)
+    at <unknown> (rsc)/./lib/tool-catalog.js (C:\Users\monis\OneDrive\Pictures\Documents\toolslify\.next\dev\server\app\tools\[slug]\page.js:341:1)
+    at eval (webpack-internal:///(rsc)/./lib/site-data.js:39:74)
+  138 |     aliases: ["cost per click calculator"],
+  139 |   }),
+> 140 |   "cpm-calculator": makeCpmConfig(),
+      |                     ^
+  141 |   "ctr-calculator": makePercentMetricConfig({
+  142 |     title: "CTR Calculator",
+  143 |     actionLabel: "Calculate CTR",
+⨯ ReferenceError: makeCpmConfig is not defined
+    at eval (lib\calculator-commercial-expansion.js:140:21)
+    at <unknown> (rsc)/./lib/calculator-commercial-expansion.js (C:\Users\monis\OneDrive\Pictures\Documents\toolslify\.next\dev\server\app\[slug]\page.js:220:1)
+    at eval (webpack-internal:///(rsc)/./lib/calculator-tools.js:8:93)
+    at <unknown> (rsc)/./lib/calculator-tools.js (C:\Users\monis\OneDrive\Pictures\Documents\toolslify\.next\dev\server\app\[slug]\page.js:253:1)
+    at eval (webpack-internal:///(rsc)/./lib/tool-catalog.js:8:78)
+    at <unknown> (rsc)/./lib/tool-catalog.js (C:\Users\monis\OneDrive\Pictures\Documents\toolslify\.next\dev\server\app\[slug]\page.js:308:1)
+    at eval (webpack-internal:///(rsc)/./lib/site-data.js:39:74)
+  138 |     aliases: ["cost per click calculator"],
+  139 |   }),
+> 140 |   "cpm-calculator": makeCpmConfig(),
+      |                     ^
+  141 |   "ctr-calculator": makePercentMetricConfig({
+  142 |     title: "CTR Calculator",
+  143 |     actionLabel: "Calculate CTR", {
+  type: 'ReferenceError',
+  page: '/favicon.ico'
+}
+[browser] A tree hydrated but some attributes of the server rendered HTML didn't match the client properties. This won't be patched up. This can happen if a SSR-ed Client Component used:
+
+- A server/client branch `if (typeof window !== 'undefined')`.
+- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
+- Date formatting in a user's locale which doesn't match the server.
+- External changing data without sending a snapshot of it along with the HTML.
+- Invalid HTML tag nesting.
+
+It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.
+
+https://react.dev/link/hydration-mismatch
+
+  ...
+    <body className="__variable...">
+      <Script>
+      <PreferencesProvider>
+        <ToastProvider>
+          <div className="app-shell">
+            <div>
+            <div>
+            <SiteHeader>
+              <motion.header initial={{opacity:0,y:-14}} animate={{opacity:1,y:0}} transition={{duration:0.48, ...}} ...>
+                <header className="sticky top..." style={{opacity:0, ...}} ref={function useMotionRef.useCallback}>
+                  <div className="mx-auto w-...">
+                    <div className="flex items...">
+                      <div>
+                      <div>
+                      <div className="flex items...">
+                        <LinkComponent>
+                        <LinkComponent>
+                        <HeaderSettingsPanel className="hidden sm:...">
+                          <div ref={{current:null}} className="relative h...">
+                            <button
+                              type="button"
+                              onClick={function onClick}
+                              aria-label="Settings"
+                              aria-expanded={false}
+                              className="inline-flex h-10 w-10 items-center justify-center rounded-[12px] text-[#2d313..."
+-                             fdprocessedid="ra16ej"
+                            >
+                        ...
+                    ...
+            ...
+          ...
+ 
+[browser] A tree hydrated but some attributes of the server rendered HTML didn't match the client properties. This won't be patched up. This can happen if a SSR-ed Client Component used:
+
+- A server/client branch `if (typeof window !== 'undefined')`.
+- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
+- Date formatting in a user's locale which doesn't match the server.
+- External changing data without sending a snapshot of it along with the HTML.
+- Invalid HTML tag nesting.
+
+It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.
+
+https://react.dev/link/hydration-mismatch
+
+  ...
+    <ToolRouteShell slug="bmi-calcul...">
+      <div className="mx-auto w-...">
+        <section>
+        <section className="tool-works..." style={{...}} data-workspace="calculator">
+          <LoadableComponent slug="bmi-calcul...">
+            <Suspense fallback={<loading>}>
+              <CalculatorWorkspace slug="bmi-calcul...">
+                <div className="calculator..." style={{...}} data-surface-style="wellnessSplit">
+                  <MobileEstimateCard>
+                  <section id="tool-works..." className="scroll-mt-...">
+                    <CalculatorSurface config={{title:"BMI...", ...}} tool={{slug:"bmi-...", ...}} fieldGroups={[...]} ...>
+                      <WellnessSplitSurface config={{title:"BMI...", ...}} tool={{slug:"bmi-...", ...}} ...>
+                        <section className="overflow-h...">
+                          <div className="grid xl:gr...">
+                            <div className="space-y-6 ...">
+                              ...
+                                <div className="grid gap-4...">
+                                  <CalculatorField field={{name:"weig...", ...}} value={72} onChange={function onChange} ...>
+                                    <CalculatorFieldShell label="Weight (kg)" help={undefined} appearance="flat">
+                                      <div className="space-y-2">
+                                        <div>
+                                        <div className="relative">
+                                          <input
+                                            type="number"
+                                            min={1}
+                                            max={1000}
+                                            step={0.1}
+                                            inputMode="decimal"
+                                            value={72}
+                                            onChange={function onChange}
+                                            className="calculator-field-control w-full appearance-none text-[var(--for..."
+-                                           fdprocessedid="dxjomo"
+                                          >
+                                  <CalculatorField field={{name:"heig...", ...}} value={176} onChange={function onChange} ...>
+                                    <CalculatorFieldShell label="Height (cm)" help={undefined} appearance="flat">
+                                      <div className="space-y-2">
+                                        <div>
+                                        <div className="relative">
+                                          <input
+                                            type="number"
+                                            min={1}
+                                            max={300}
+                                            step={0.1}
+                                            inputMode="decimal"
+                                            value={176}
+                                            onChange={function onChange}
+                                            className="calculator-field-control w-full appearance-none text-[var(--for..."
+-                                           fdprocessedid="b4ncbc"
+                                          >
+                              <Button type="button" onClick={function handleCalculate} className="min-w-[220px]">
+                                <button
+                                  ref={null}
+                                  type="button"
+                                  className="inline-flex items-center justify-center gap-2 rounded-[14px] font-semibol..."
+                                  onClick={function handleCalculate}
+-                                 fdprocessedid="1hukd"
+                                >
++                                 Calculate BMI
+                            ...
+        ...
+ 
+[browser] A tree hydrated but some attributes of the server rendered HTML didn't match the client properties. This won't be patched up. This can happen if a SSR-ed Client Component used:
+
+- A server/client branch `if (typeof window !== 'undefined')`.
+- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
+- Date formatting in a user's locale which doesn't match the server.
+- External changing data without sending a snapshot of it along with the HTML.
+- Invalid HTML tag nesting.
+
+It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.
+
+https://react.dev/link/hydration-mismatch
+
+  ...
+    <body className="__variable...">
+      <Script>
+      <PreferencesProvider>
+        <ToastProvider>
+          <div className="app-shell">
+            <div>
+            <div>
+            <SiteHeader>
+              <motion.header initial={{opacity:0,y:-14}} animate={{opacity:1,y:0}} transition={{duration:0.48, ...}} ...>
+                <header className="sticky top..." style={{opacity:0, ...}} ref={function useMotionRef.useCallback}>
+                  <div className="mx-auto w-...">
+                    <div className="flex items...">
+                      <div>
+                      <div>
+                      <div className="flex items...">
+                        <LinkComponent>
+                        <LinkComponent>
+                        <HeaderSettingsPanel className="hidden sm:...">
+                          <div ref={{current:null}} className="relative h...">
+                            <button
+                              type="button"
+                              onClick={function onClick}
+                              aria-label="Settings"
+                              aria-expanded={false}
+                              className="inline-flex h-10 w-10 items-center justify-center rounded-[12px] text-[#2d313..."
+-                             fdprocessedid="62pt97"
+                            >
+                        ...
+                    ...
+            ...
+          ...
+ 
+[browser] A tree hydrated but some attributes of the server rendered HTML didn't match the client properties. This won't be patched up. This can happen if a SSR-ed Client Component used:
+
+- A server/client branch `if (typeof window !== 'undefined')`.
+- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
+- Date formatting in a user's locale which doesn't match the server.
+- External changing data without sending a snapshot of it along with the HTML.
+- Invalid HTML tag nesting.
+
+It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.
+
+https://react.dev/link/hydration-mismatch
+
+  ...
+    <body className="__variable...">
+      <Script>
+      <PreferencesProvider>
+        <ToastProvider>
+          <div className="app-shell">
+            <div>
+            <div>
+            <SiteHeader>
+              <motion.header initial={{opacity:0,y:-14}} animate={{opacity:1,y:0}} transition={{duration:0.48, ...}} ...>
+                <header className="sticky top..." style={{opacity:0, ...}} ref={function useMotionRef.useCallback}>
+                  <div className="mx-auto w-...">
+                    <div className="flex items...">
+                      <div>
+                      <div>
+                      <div className="flex items...">
+                        <LinkComponent>
+                        <LinkComponent>
+                        <HeaderSettingsPanel className="hidden sm:...">
+                          <div ref={{current:null}} className="relative h...">
+                            <button
+                              type="button"
+                              onClick={function onClick}
+                              aria-label="Settings"
+                              aria-expanded={false}
+                              className="inline-flex h-10 w-10 items-center justify-center rounded-[12px] text-[#2d313..."
+-                             fdprocessedid="0eghg"
+                            >
+                        ...
+                    ...
+            ...
+          ...
+ 
+[browser] Detected `scroll-behavior: smooth` on the `<html>` element. To disable smooth scrolling during route transitions, add `data-scroll-behavior="smooth"` to your <html> element. Learn more: https://nextjs.org/docs/messages/missing-data-scroll-behavior

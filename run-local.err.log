@@ -1,0 +1,2664 @@
+[browser] eval() is not supported in this environment. If this page was served with a `Content-Security-Policy` header, make sure that `unsafe-eval` is included. React requires eval() in development mode for various debugging features like reconstructing callstacks from a different environment.
+React will never use eval() in production mode 
+[browser] Detected `scroll-behavior: smooth` on the `<html>` element. To disable smooth scrolling during route transitions, add `data-scroll-behavior="smooth"` to your <html> element. Learn more: https://nextjs.org/docs/messages/missing-data-scroll-behavior
+[browser] eval() is not supported in this environment. If this page was served with a `Content-Security-Policy` header, make sure that `unsafe-eval` is included. React requires eval() in development mode for various debugging features like reconstructing callstacks from a different environment.
+React will never use eval() in production mode 
+[browser] eval() is not supported in this environment. If this page was served with a `Content-Security-Policy` header, make sure that `unsafe-eval` is included. React requires eval() in development mode for various debugging features like reconstructing callstacks from a different environment.
+React will never use eval() in production mode 
+⨯ ./app/page.js:3:1
+Module not found: Can't resolve '@/components/marketing/tool-directory'
+  [90m1 |[0m [36mimport[0m { [33mLiveWorkbenchDemo[0m } [36mfrom[0m [32m"@/components/marketing/live-workbench-demo"[0m;
+  [90m2 |[0m [36mimport[0m { [33mRecentlyUsedTools[0m } [36mfrom[0m [32m"@/components/marketing/recently-used-tools"[0m;
+[31m[1m>[0m [90m3 |[0m [36mimport[0m { [33mToolDirectory[0m } [36mfrom[0m [32m"@/components/marketing/tool-directory"[0m;
+  [90m  |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m4 |[0m [36mimport[0m { [33mBadge[0m } [36mfrom[0m [32m"@/components/ui/badge"[0m;
+  [90m5 |[0m [36mimport[0m { [33mCard[0m } [36mfrom[0m [32m"@/components/ui/card"[0m;
+  [90m6 |[0m [36mimport[0m {
+
+Import map: aliased to relative './components/marketing/tool-directory' inside of [project]/
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./app/page.js:3:1
+Module not found: Can't resolve '@/components/marketing/tool-directory'
+  [90m1 |[0m [36mimport[0m { [33mLiveWorkbenchDemo[0m } [36mfrom[0m [32m"@/components/marketing/live-workbench-demo"[0m;
+  [90m2 |[0m [36mimport[0m { [33mRecentlyUsedTools[0m } [36mfrom[0m [32m"@/components/marketing/recently-used-tools"[0m;
+[31m[1m>[0m [90m3 |[0m [36mimport[0m { [33mToolDirectory[0m } [36mfrom[0m [32m"@/components/marketing/tool-directory"[0m;
+  [90m  |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m4 |[0m [36mimport[0m { [33mBadge[0m } [36mfrom[0m [32m"@/components/ui/badge"[0m;
+  [90m5 |[0m [36mimport[0m { [33mCard[0m } [36mfrom[0m [32m"@/components/ui/card"[0m;
+  [90m6 |[0m [36mimport[0m {
+
+Import map: aliased to relative './components/marketing/tool-directory' inside of [project]/
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./app/page.js:3:1
+Module not found: Can't resolve '@/components/marketing/tool-directory'
+  [90m1 |[0m [36mimport[0m { [33mLiveWorkbenchDemo[0m } [36mfrom[0m [32m"@/components/marketing/live-workbench-demo"[0m;
+  [90m2 |[0m [36mimport[0m { [33mRecentlyUsedTools[0m } [36mfrom[0m [32m"@/components/marketing/recently-used-tools"[0m;
+[31m[1m>[0m [90m3 |[0m [36mimport[0m { [33mToolDirectory[0m } [36mfrom[0m [32m"@/components/marketing/tool-directory"[0m;
+  [90m  |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m4 |[0m [36mimport[0m { [33mBadge[0m } [36mfrom[0m [32m"@/components/ui/badge"[0m;
+  [90m5 |[0m [36mimport[0m { [33mCard[0m } [36mfrom[0m [32m"@/components/ui/card"[0m;
+  [90m6 |[0m [36mimport[0m {
+
+Import map: aliased to relative './components/marketing/tool-directory' inside of [project]/
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./app/page.js:3:1
+Module not found: Can't resolve '@/components/marketing/tool-directory'
+  [90m1 |[0m [36mimport[0m { [33mLiveWorkbenchDemo[0m } [36mfrom[0m [32m"@/components/marketing/live-workbench-demo"[0m;
+  [90m2 |[0m [36mimport[0m { [33mRecentlyUsedTools[0m } [36mfrom[0m [32m"@/components/marketing/recently-used-tools"[0m;
+[31m[1m>[0m [90m3 |[0m [36mimport[0m { [33mToolDirectory[0m } [36mfrom[0m [32m"@/components/marketing/tool-directory"[0m;
+  [90m  |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m4 |[0m [36mimport[0m { [33mBadge[0m } [36mfrom[0m [32m"@/components/ui/badge"[0m;
+  [90m5 |[0m [36mimport[0m { [33mCard[0m } [36mfrom[0m [32m"@/components/ui/card"[0m;
+  [90m6 |[0m [36mimport[0m {
+
+Import map: aliased to relative './components/marketing/tool-directory' inside of [project]/
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./app/page.js:3:1
+Module not found: Can't resolve '@/components/marketing/tool-directory'
+  [90m1 |[0m [36mimport[0m { [33mLiveWorkbenchDemo[0m } [36mfrom[0m [32m"@/components/marketing/live-workbench-demo"[0m;
+  [90m2 |[0m [36mimport[0m { [33mRecentlyUsedTools[0m } [36mfrom[0m [32m"@/components/marketing/recently-used-tools"[0m;
+[31m[1m>[0m [90m3 |[0m [36mimport[0m { [33mToolDirectory[0m } [36mfrom[0m [32m"@/components/marketing/tool-directory"[0m;
+  [90m  |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m4 |[0m [36mimport[0m { [33mBadge[0m } [36mfrom[0m [32m"@/components/ui/badge"[0m;
+  [90m5 |[0m [36mimport[0m { [33mCard[0m } [36mfrom[0m [32m"@/components/ui/card"[0m;
+  [90m6 |[0m [36mimport[0m {
+
+Import map: aliased to relative './components/marketing/tool-directory' inside of [project]/
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./app/page.js:3:1
+Module not found: Can't resolve '@/components/marketing/tool-directory'
+  [90m1 |[0m [36mimport[0m { [33mLiveWorkbenchDemo[0m } [36mfrom[0m [32m"@/components/marketing/live-workbench-demo"[0m;
+  [90m2 |[0m [36mimport[0m { [33mRecentlyUsedTools[0m } [36mfrom[0m [32m"@/components/marketing/recently-used-tools"[0m;
+[31m[1m>[0m [90m3 |[0m [36mimport[0m { [33mToolDirectory[0m } [36mfrom[0m [32m"@/components/marketing/tool-directory"[0m;
+  [90m  |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m4 |[0m [36mimport[0m { [33mBadge[0m } [36mfrom[0m [32m"@/components/ui/badge"[0m;
+  [90m5 |[0m [36mimport[0m { [33mCard[0m } [36mfrom[0m [32m"@/components/ui/card"[0m;
+  [90m6 |[0m [36mimport[0m {
+
+Import map: aliased to relative './components/marketing/tool-directory' inside of [project]/
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./app/page.js:3:1
+Module not found: Can't resolve '@/components/marketing/tool-directory'
+  [90m1 |[0m [36mimport[0m { [33mLiveWorkbenchDemo[0m } [36mfrom[0m [32m"@/components/marketing/live-workbench-demo"[0m;
+  [90m2 |[0m [36mimport[0m { [33mRecentlyUsedTools[0m } [36mfrom[0m [32m"@/components/marketing/recently-used-tools"[0m;
+[31m[1m>[0m [90m3 |[0m [36mimport[0m { [33mToolDirectory[0m } [36mfrom[0m [32m"@/components/marketing/tool-directory"[0m;
+  [90m  |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m4 |[0m [36mimport[0m { [33mBadge[0m } [36mfrom[0m [32m"@/components/ui/badge"[0m;
+  [90m5 |[0m [36mimport[0m { [33mCard[0m } [36mfrom[0m [32m"@/components/ui/card"[0m;
+  [90m6 |[0m [36mimport[0m {
+
+Import map: aliased to relative './components/marketing/tool-directory' inside of [project]/
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./app/page.js:3:1
+Module not found: Can't resolve '@/components/marketing/tool-directory'
+  [90m1 |[0m [36mimport[0m { [33mLiveWorkbenchDemo[0m } [36mfrom[0m [32m"@/components/marketing/live-workbench-demo"[0m;
+  [90m2 |[0m [36mimport[0m { [33mRecentlyUsedTools[0m } [36mfrom[0m [32m"@/components/marketing/recently-used-tools"[0m;
+[31m[1m>[0m [90m3 |[0m [36mimport[0m { [33mToolDirectory[0m } [36mfrom[0m [32m"@/components/marketing/tool-directory"[0m;
+  [90m  |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m4 |[0m [36mimport[0m { [33mBadge[0m } [36mfrom[0m [32m"@/components/ui/badge"[0m;
+  [90m5 |[0m [36mimport[0m { [33mCard[0m } [36mfrom[0m [32m"@/components/ui/card"[0m;
+  [90m6 |[0m [36mimport[0m {
+
+Import map: aliased to relative './components/marketing/tool-directory' inside of [project]/
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[browser] Uncaught Error: ./app/page.js:3:1
+Module not found: Can't resolve '@/components/marketing/tool-directory'
+  1 | import { LiveWorkbenchDemo } from "@/components/marketing/live-workbench-demo";
+  2 | import { RecentlyUsedTools } from "@/components/marketing/recently-used-tools";
+> 3 | import { ToolDirectory } from "@/components/marketing/tool-directory";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  4 | import { Badge } from "@/components/ui/badge";
+  5 | import { Card } from "@/components/ui/card";
+  6 | import {
+
+Import map: aliased to relative './components/marketing/tool-directory' inside of [project]/
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+    at <unknown> (Error: ./app/page.js:3:1)
+    at <unknown> (https://nextjs.org/docs/messages/module-not-found)
+    at <unknown> (Error: (./app/page.js:3:1)
+    at <unknown> (https://nextjs.org/docs/messages/module-not-found)
+[browser] eval() is not supported in this environment. If this page was served with a `Content-Security-Policy` header, make sure that `unsafe-eval` is included. React requires eval() in development mode for various debugging features like reconstructing callstacks from a different environment.
+React will never use eval() in production mode 
+[browser] eval() is not supported in this environment. If this page was served with a `Content-Security-Policy` header, make sure that `unsafe-eval` is included. React requires eval() in development mode for various debugging features like reconstructing callstacks from a different environment.
+React will never use eval() in production mode 
+[browser] A tree hydrated but some attributes of the server rendered HTML didn't match the client properties. This won't be patched up. This can happen if a SSR-ed Client Component used:
+
+- A server/client branch `if (typeof window !== 'undefined')`.
+- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
+- Date formatting in a user's locale which doesn't match the server.
+- External changing data without sending a snapshot of it along with the HTML.
+- Invalid HTML tag nesting.
+
+It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.
+
+https://react.dev/link/hydration-mismatch
+
+  ...
+    <SegmentViewNode type="layout" pagePath="layout.js">
+      <SegmentTrieNode>
+      <link>
+      <script>
+      <script>
+      <script>
+      <RootLayout>
+        <html lang="en" suppressHydrationWarning={true}>
+          <body className="manrope_9c...">
+            <Script>
+            <PreferencesProvider>
+              <ToastProvider>
+                <div className="app-shell">
+                  <div>
+                  <div>
+                  <SiteHeader>
+                    <header className="sticky top...">
+                      <div className="mx-auto fl...">
+                        <LinkComponent>
+                        <nav>
+                        <div className="hidden ite...">
+                          <LanguageToggle>
+                            <div className="inline-fle..." aria-label="Choose int...">
+                              <button
+                                type="button"
+                                onClick={function onClick}
+                                className="rounded-[12px] px-3 py-1.5 text-[11px] font-semibold tracking-[0.08em] tran..."
+-                               fdprocessedid="w5fbbk"
+                              >
++                               EN
+                              <button
+                                type="button"
+                                onClick={function onClick}
+                                className="rounded-[12px] px-3 py-1.5 text-[11px] font-semibold tracking-[0.08em] tran..."
+-                               fdprocessedid="f5clht"
+                              >
++                               ES
+                              <button
+                                type="button"
+                                onClick={function onClick}
+                                className="rounded-[12px] px-3 py-1.5 text-[11px] font-semibold tracking-[0.08em] tran..."
+-                               fdprocessedid="37kyu"
+                              >
++                               HI
+                          <ThemeToggle>
+                            <button
+                              type="button"
+                              onClick={function onClick}
+                              aria-label="Toggle color theme"
+                              className="inline-flex items-center gap-2 rounded-[16px] border border-[var(--border-str..."
+-                             fdprocessedid="7eaxmk"
+                            >
+                          ...
+                        ...
+                  ...
+                ...
+ 
+[browser] eval() is not supported in this environment. If this page was served with a `Content-Security-Policy` header, make sure that `unsafe-eval` is included. React requires eval() in development mode for various debugging features like reconstructing callstacks from a different environment.
+React will never use eval() in production mode 
+[browser] A tree hydrated but some attributes of the server rendered HTML didn't match the client properties. This won't be patched up. This can happen if a SSR-ed Client Component used:
+
+- A server/client branch `if (typeof window !== 'undefined')`.
+- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
+- Date formatting in a user's locale which doesn't match the server.
+- External changing data without sending a snapshot of it along with the HTML.
+- Invalid HTML tag nesting.
+
+It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.
+
+https://react.dev/link/hydration-mismatch
+
+  ...
+    <SegmentViewNode type="layout" pagePath="layout.js">
+      <SegmentTrieNode>
+      <link>
+      <script>
+      <script>
+      <script>
+      <RootLayout>
+        <html lang="en" suppressHydrationWarning={true}>
+          <body className="manrope_9c...">
+            <Script>
+            <PreferencesProvider>
+              <ToastProvider>
+                <div className="app-shell">
+                  <div>
+                  <div>
+                  <SiteHeader>
+                    <header className="sticky top...">
+                      <div className="mx-auto fl...">
+                        <LinkComponent>
+                        <nav>
+                        <div className="hidden ite...">
+                          <LanguageToggle>
+                            <div className="inline-fle..." aria-label="Choose int...">
+                              <button
+                                type="button"
+                                onClick={function onClick}
+                                className="rounded-[12px] px-3 py-1.5 text-[11px] font-semibold tracking-[0.08em] tran..."
+-                               fdprocessedid="lpsdyq"
+                              >
++                               EN
+                              <button
+                                type="button"
+                                onClick={function onClick}
+                                className="rounded-[12px] px-3 py-1.5 text-[11px] font-semibold tracking-[0.08em] tran..."
+-                               fdprocessedid="9p5uwr"
+                              >
++                               ES
+                              <button
+                                type="button"
+                                onClick={function onClick}
+                                className="rounded-[12px] px-3 py-1.5 text-[11px] font-semibold tracking-[0.08em] tran..."
+-                               fdprocessedid="93uxyu"
+                              >
++                               HI
+                          <ThemeToggle>
+                            <button
+                              type="button"
+                              onClick={function onClick}
+                              aria-label="Toggle color theme"
+                              className="inline-flex items-center gap-2 rounded-[16px] border border-[var(--border-str..."
+-                             fdprocessedid="alagcj"
+                            >
+                          ...
+                        ...
+                  ...
+                ...
+ 
+[browser] A tree hydrated but some attributes of the server rendered HTML didn't match the client properties. This won't be patched up. This can happen if a SSR-ed Client Component used:
+
+- A server/client branch `if (typeof window !== 'undefined')`.
+- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
+- Date formatting in a user's locale which doesn't match the server.
+- External changing data without sending a snapshot of it along with the HTML.
+- Invalid HTML tag nesting.
+
+It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.
+
+https://react.dev/link/hydration-mismatch
+
+  ...
+    <div className="grid gap-8...">
+      <div className="space-y-6">
+        <div>
+        <LoadableComponent>
+          <Suspense fallback={{...}}>
+            ...
+              <div className="space-y-6">
+                <div id="tool-works..." className="workspace-...">
+                  <PanelCard className="p-6 sm:p-7">
+                    <Card className="p-5 sm:p-6...">
+                      <div className="rounded-[2...">
+                        <div className="space-y-5">
+                          <div>
+                          <StarterCard title="Quick start" description="Load a rea..." actionLabel="Use sample" ...>
+                            <div className="rounded-[2...">
+                              <div className="flex flex-...">
+                                <div>
+                                <Button variant="secondary" size="sm" onClick={function loadExample}>
+                                  <button
+                                    ref={null}
+                                    type="button"
+                                    className="inline-flex items-center justify-center gap-2 rounded-[18px] font-semib..."
+                                    onClick={function loadExample}
+-                                   fdprocessedid="8y8xt"
+                                  >
++                                   Use sample
+                          <FieldGroup>
+                          <InlineInfo>
+                          ...
+                            <div className="grid gap-4">
+                              <FieldGroup label="Subject" help="Useful if ...">
+                                <div className="space-y-2">
+                                  <div>
+                                  <InputField value="" onChange={function onChange} placeholder="History, B...">
+                                    <input
+                                      value=""
+                                      onChange={function onChange}
+                                      placeholder="History, Biology, Economics..."
+                                      className="h-12 w-full rounded-[18px] border border-[var(--border-strong)] bg-[v..."
+-                                     fdprocessedid="vsmhl"
+                                    >
+                              <FieldGroup>
+                              <RangeField>
+                              <div className="rounded-[2...">
+                                <div className="flex items...">
+                                  <div>
+                                  <Toggle checked={true} onCheckedChange={function onCheckedChange} label="Toggle aca...">
+                                    <button
+                                      type="button"
+                                      role="switch"
+                                      aria-checked={true}
+                                      aria-label="Toggle academic tone"
+                                      onClick={function onClick}
+                                      className="relative inline-flex h-8 w-14 items-center rounded-full border transi..."
+-                                     fdprocessedid="2ubaa"
+                                    >
+                          ...
+                  ...
+                ...
+      ...
+ 
+[browser] Detected `scroll-behavior: smooth` on the `<html>` element. To disable smooth scrolling during route transitions, add `data-scroll-behavior="smooth"` to your <html> element. Learn more: https://nextjs.org/docs/messages/missing-data-scroll-behavior
+[browser] eval() is not supported in this environment. If this page was served with a `Content-Security-Policy` header, make sure that `unsafe-eval` is included. React requires eval() in development mode for various debugging features like reconstructing callstacks from a different environment.
+React will never use eval() in production mode 
+[browser] eval() is not supported in this environment. If this page was served with a `Content-Security-Policy` header, make sure that `unsafe-eval` is included. React requires eval() in development mode for various debugging features like reconstructing callstacks from a different environment.
+React will never use eval() in production mode 
+⨯ ./app/page.js:3:1
+Module not found: Can't resolve '@/components/marketing/tool-directory'
+  [90m1 |[0m [36mimport[0m { [33mLiveWorkbenchDemo[0m } [36mfrom[0m [32m"@/components/marketing/live-workbench-demo"[0m;
+  [90m2 |[0m [36mimport[0m { [33mRecentlyUsedTools[0m } [36mfrom[0m [32m"@/components/marketing/recently-used-tools"[0m;
+[31m[1m>[0m [90m3 |[0m [36mimport[0m { [33mToolDirectory[0m } [36mfrom[0m [32m"@/components/marketing/tool-directory"[0m;
+  [90m  |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m4 |[0m [36mimport[0m { [33mBadge[0m } [36mfrom[0m [32m"@/components/ui/badge"[0m;
+  [90m5 |[0m [36mimport[0m { [33mCard[0m } [36mfrom[0m [32m"@/components/ui/card"[0m;
+  [90m6 |[0m [36mimport[0m {
+
+Import map: aliased to relative './components/marketing/tool-directory' inside of [project]/
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./app/page.js:3:1
+Module not found: Can't resolve '@/components/marketing/tool-directory'
+  [90m1 |[0m [36mimport[0m { [33mLiveWorkbenchDemo[0m } [36mfrom[0m [32m"@/components/marketing/live-workbench-demo"[0m;
+  [90m2 |[0m [36mimport[0m { [33mRecentlyUsedTools[0m } [36mfrom[0m [32m"@/components/marketing/recently-used-tools"[0m;
+[31m[1m>[0m [90m3 |[0m [36mimport[0m { [33mToolDirectory[0m } [36mfrom[0m [32m"@/components/marketing/tool-directory"[0m;
+  [90m  |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m4 |[0m [36mimport[0m { [33mBadge[0m } [36mfrom[0m [32m"@/components/ui/badge"[0m;
+  [90m5 |[0m [36mimport[0m { [33mCard[0m } [36mfrom[0m [32m"@/components/ui/card"[0m;
+  [90m6 |[0m [36mimport[0m {
+
+Import map: aliased to relative './components/marketing/tool-directory' inside of [project]/
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./app/page.js:3:1
+Module not found: Can't resolve '@/components/marketing/tool-directory'
+  [90m1 |[0m [36mimport[0m { [33mLiveWorkbenchDemo[0m } [36mfrom[0m [32m"@/components/marketing/live-workbench-demo"[0m;
+  [90m2 |[0m [36mimport[0m { [33mRecentlyUsedTools[0m } [36mfrom[0m [32m"@/components/marketing/recently-used-tools"[0m;
+[31m[1m>[0m [90m3 |[0m [36mimport[0m { [33mToolDirectory[0m } [36mfrom[0m [32m"@/components/marketing/tool-directory"[0m;
+  [90m  |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m4 |[0m [36mimport[0m { [33mBadge[0m } [36mfrom[0m [32m"@/components/ui/badge"[0m;
+  [90m5 |[0m [36mimport[0m { [33mCard[0m } [36mfrom[0m [32m"@/components/ui/card"[0m;
+  [90m6 |[0m [36mimport[0m {
+
+Import map: aliased to relative './components/marketing/tool-directory' inside of [project]/
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./app/page.js:3:1
+Module not found: Can't resolve '@/components/marketing/tool-directory'
+  [90m1 |[0m [36mimport[0m { [33mLiveWorkbenchDemo[0m } [36mfrom[0m [32m"@/components/marketing/live-workbench-demo"[0m;
+  [90m2 |[0m [36mimport[0m { [33mRecentlyUsedTools[0m } [36mfrom[0m [32m"@/components/marketing/recently-used-tools"[0m;
+[31m[1m>[0m [90m3 |[0m [36mimport[0m { [33mToolDirectory[0m } [36mfrom[0m [32m"@/components/marketing/tool-directory"[0m;
+  [90m  |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m4 |[0m [36mimport[0m { [33mBadge[0m } [36mfrom[0m [32m"@/components/ui/badge"[0m;
+  [90m5 |[0m [36mimport[0m { [33mCard[0m } [36mfrom[0m [32m"@/components/ui/card"[0m;
+  [90m6 |[0m [36mimport[0m {
+
+Import map: aliased to relative './components/marketing/tool-directory' inside of [project]/
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./app/page.js:3:1
+Module not found: Can't resolve '@/components/marketing/tool-directory'
+  [90m1 |[0m [36mimport[0m { [33mLiveWorkbenchDemo[0m } [36mfrom[0m [32m"@/components/marketing/live-workbench-demo"[0m;
+  [90m2 |[0m [36mimport[0m { [33mRecentlyUsedTools[0m } [36mfrom[0m [32m"@/components/marketing/recently-used-tools"[0m;
+[31m[1m>[0m [90m3 |[0m [36mimport[0m { [33mToolDirectory[0m } [36mfrom[0m [32m"@/components/marketing/tool-directory"[0m;
+  [90m  |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m4 |[0m [36mimport[0m { [33mBadge[0m } [36mfrom[0m [32m"@/components/ui/badge"[0m;
+  [90m5 |[0m [36mimport[0m { [33mCard[0m } [36mfrom[0m [32m"@/components/ui/card"[0m;
+  [90m6 |[0m [36mimport[0m {
+
+Import map: aliased to relative './components/marketing/tool-directory' inside of [project]/
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./app/page.js:3:1
+Module not found: Can't resolve '@/components/marketing/tool-directory'
+  [90m1 |[0m [36mimport[0m { [33mLiveWorkbenchDemo[0m } [36mfrom[0m [32m"@/components/marketing/live-workbench-demo"[0m;
+  [90m2 |[0m [36mimport[0m { [33mRecentlyUsedTools[0m } [36mfrom[0m [32m"@/components/marketing/recently-used-tools"[0m;
+[31m[1m>[0m [90m3 |[0m [36mimport[0m { [33mToolDirectory[0m } [36mfrom[0m [32m"@/components/marketing/tool-directory"[0m;
+  [90m  |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m4 |[0m [36mimport[0m { [33mBadge[0m } [36mfrom[0m [32m"@/components/ui/badge"[0m;
+  [90m5 |[0m [36mimport[0m { [33mCard[0m } [36mfrom[0m [32m"@/components/ui/card"[0m;
+  [90m6 |[0m [36mimport[0m {
+
+Import map: aliased to relative './components/marketing/tool-directory' inside of [project]/
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./app/page.js:3:1
+Module not found: Can't resolve '@/components/marketing/tool-directory'
+  [90m1 |[0m [36mimport[0m { [33mLiveWorkbenchDemo[0m } [36mfrom[0m [32m"@/components/marketing/live-workbench-demo"[0m;
+  [90m2 |[0m [36mimport[0m { [33mRecentlyUsedTools[0m } [36mfrom[0m [32m"@/components/marketing/recently-used-tools"[0m;
+[31m[1m>[0m [90m3 |[0m [36mimport[0m { [33mToolDirectory[0m } [36mfrom[0m [32m"@/components/marketing/tool-directory"[0m;
+  [90m  |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m4 |[0m [36mimport[0m { [33mBadge[0m } [36mfrom[0m [32m"@/components/ui/badge"[0m;
+  [90m5 |[0m [36mimport[0m { [33mCard[0m } [36mfrom[0m [32m"@/components/ui/card"[0m;
+  [90m6 |[0m [36mimport[0m {
+
+Import map: aliased to relative './components/marketing/tool-directory' inside of [project]/
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./app/page.js:3:1
+Module not found: Can't resolve '@/components/marketing/tool-directory'
+  [90m1 |[0m [36mimport[0m { [33mLiveWorkbenchDemo[0m } [36mfrom[0m [32m"@/components/marketing/live-workbench-demo"[0m;
+  [90m2 |[0m [36mimport[0m { [33mRecentlyUsedTools[0m } [36mfrom[0m [32m"@/components/marketing/recently-used-tools"[0m;
+[31m[1m>[0m [90m3 |[0m [36mimport[0m { [33mToolDirectory[0m } [36mfrom[0m [32m"@/components/marketing/tool-directory"[0m;
+  [90m  |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m4 |[0m [36mimport[0m { [33mBadge[0m } [36mfrom[0m [32m"@/components/ui/badge"[0m;
+  [90m5 |[0m [36mimport[0m { [33mCard[0m } [36mfrom[0m [32m"@/components/ui/card"[0m;
+  [90m6 |[0m [36mimport[0m {
+
+Import map: aliased to relative './components/marketing/tool-directory' inside of [project]/
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./app/page.js:3:1
+Module not found: Can't resolve '@/components/marketing/tool-directory'
+  [90m1 |[0m [36mimport[0m { [33mLiveWorkbenchDemo[0m } [36mfrom[0m [32m"@/components/marketing/live-workbench-demo"[0m;
+  [90m2 |[0m [36mimport[0m { [33mRecentlyUsedTools[0m } [36mfrom[0m [32m"@/components/marketing/recently-used-tools"[0m;
+[31m[1m>[0m [90m3 |[0m [36mimport[0m { [33mToolDirectory[0m } [36mfrom[0m [32m"@/components/marketing/tool-directory"[0m;
+  [90m  |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m4 |[0m [36mimport[0m { [33mBadge[0m } [36mfrom[0m [32m"@/components/ui/badge"[0m;
+  [90m5 |[0m [36mimport[0m { [33mCard[0m } [36mfrom[0m [32m"@/components/ui/card"[0m;
+  [90m6 |[0m [36mimport[0m {
+
+Import map: aliased to relative './components/marketing/tool-directory' inside of [project]/
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./app/page.js:3:1
+Module not found: Can't resolve '@/components/marketing/tool-directory'
+  [90m1 |[0m [36mimport[0m { [33mLiveWorkbenchDemo[0m } [36mfrom[0m [32m"@/components/marketing/live-workbench-demo"[0m;
+  [90m2 |[0m [36mimport[0m { [33mRecentlyUsedTools[0m } [36mfrom[0m [32m"@/components/marketing/recently-used-tools"[0m;
+[31m[1m>[0m [90m3 |[0m [36mimport[0m { [33mToolDirectory[0m } [36mfrom[0m [32m"@/components/marketing/tool-directory"[0m;
+  [90m  |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m4 |[0m [36mimport[0m { [33mBadge[0m } [36mfrom[0m [32m"@/components/ui/badge"[0m;
+  [90m5 |[0m [36mimport[0m { [33mCard[0m } [36mfrom[0m [32m"@/components/ui/card"[0m;
+  [90m6 |[0m [36mimport[0m {
+
+Import map: aliased to relative './components/marketing/tool-directory' inside of [project]/
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./app/page.js:3:1
+Module not found: Can't resolve '@/components/marketing/tool-directory'
+  [90m1 |[0m [36mimport[0m { [33mLiveWorkbenchDemo[0m } [36mfrom[0m [32m"@/components/marketing/live-workbench-demo"[0m;
+  [90m2 |[0m [36mimport[0m { [33mRecentlyUsedTools[0m } [36mfrom[0m [32m"@/components/marketing/recently-used-tools"[0m;
+[31m[1m>[0m [90m3 |[0m [36mimport[0m { [33mToolDirectory[0m } [36mfrom[0m [32m"@/components/marketing/tool-directory"[0m;
+  [90m  |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m4 |[0m [36mimport[0m { [33mBadge[0m } [36mfrom[0m [32m"@/components/ui/badge"[0m;
+  [90m5 |[0m [36mimport[0m { [33mCard[0m } [36mfrom[0m [32m"@/components/ui/card"[0m;
+  [90m6 |[0m [36mimport[0m {
+
+Import map: aliased to relative './components/marketing/tool-directory' inside of [project]/
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./app/page.js:3:1
+Module not found: Can't resolve '@/components/marketing/tool-directory'
+  [90m1 |[0m [36mimport[0m { [33mLiveWorkbenchDemo[0m } [36mfrom[0m [32m"@/components/marketing/live-workbench-demo"[0m;
+  [90m2 |[0m [36mimport[0m { [33mRecentlyUsedTools[0m } [36mfrom[0m [32m"@/components/marketing/recently-used-tools"[0m;
+[31m[1m>[0m [90m3 |[0m [36mimport[0m { [33mToolDirectory[0m } [36mfrom[0m [32m"@/components/marketing/tool-directory"[0m;
+  [90m  |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m4 |[0m [36mimport[0m { [33mBadge[0m } [36mfrom[0m [32m"@/components/ui/badge"[0m;
+  [90m5 |[0m [36mimport[0m { [33mCard[0m } [36mfrom[0m [32m"@/components/ui/card"[0m;
+  [90m6 |[0m [36mimport[0m {
+
+Import map: aliased to relative './components/marketing/tool-directory' inside of [project]/
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./app/tools/page.js:1:1
+Module not found: Can't resolve '@/components/marketing/tool-directory'
+[31m[1m>[0m [90m1 |[0m [36mimport[0m { [33mToolDirectory[0m } [36mfrom[0m [32m"@/components/marketing/tool-directory"[0m;
+  [90m  |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m2 |[0m [36mimport[0m {
+  [90m3 |[0m   [33mSOCIAL_IMAGE[0m,
+  [90m4 |[0m   [33mTWITTER_IMAGE_PATH[0m,
+
+Import map: aliased to relative './components/marketing/tool-directory' inside of [project]/
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./app/tools/page.js:1:1
+Module not found: Can't resolve '@/components/marketing/tool-directory'
+[31m[1m>[0m [90m1 |[0m [36mimport[0m { [33mToolDirectory[0m } [36mfrom[0m [32m"@/components/marketing/tool-directory"[0m;
+  [90m  |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m2 |[0m [36mimport[0m {
+  [90m3 |[0m   [33mSOCIAL_IMAGE[0m,
+  [90m4 |[0m   [33mTWITTER_IMAGE_PATH[0m,
+
+Import map: aliased to relative './components/marketing/tool-directory' inside of [project]/
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[browser] Uncaught Error: ./app/page.js:3:1
+Module not found: Can't resolve '@/components/marketing/tool-directory'
+  1 | import { LiveWorkbenchDemo } from "@/components/marketing/live-workbench-demo";
+  2 | import { RecentlyUsedTools } from "@/components/marketing/recently-used-tools";
+> 3 | import { ToolDirectory } from "@/components/marketing/tool-directory";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  4 | import { Badge } from "@/components/ui/badge";
+  5 | import { Card } from "@/components/ui/card";
+  6 | import {
+
+Import map: aliased to relative './components/marketing/tool-directory' inside of [project]/
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+    at <unknown> (Error: ./app/page.js:3:1)
+    at <unknown> (https://nextjs.org/docs/messages/module-not-found)
+    at <unknown> (Error: (./app/page.js:3:1)
+    at <unknown> (https://nextjs.org/docs/messages/module-not-found)
+[browser] eval() is not supported in this environment. If this page was served with a `Content-Security-Policy` header, make sure that `unsafe-eval` is included. React requires eval() in development mode for various debugging features like reconstructing callstacks from a different environment.
+React will never use eval() in production mode 
+⨯ Failed to generate static paths for /tools/[slug]:
+Error: Could not parse module '[project]/app/tools/[slug]/page.js', file not found
+    at module evaluation (C:\Users\monis\OneDrive\Pictures\Documents\toolslify\.next\dev\server\chunks\ssr\[root-of-the-server]__06hy6ga._.js:1289:11)
+    at module evaluation (C:\Users\monis\OneDrive\Pictures\Documents\toolslify\.next\dev\server\chunks\ssr\[root-of-the-server]__06hy6ga._.js:1295:47) {
+  type: 'Error',
+  code: 'MODULE_UNPARSABLE'
+}
+⨯ Failed to generate static paths for /tools/[slug]:
+Error: Could not parse module '[project]/app/tools/[slug]/page.js', file not found
+    at module evaluation (C:\Users\monis\OneDrive\Pictures\Documents\toolslify\.next\dev\server\chunks\ssr\[root-of-the-server]__06hy6ga._.js:1289:11)
+    at module evaluation (C:\Users\monis\OneDrive\Pictures\Documents\toolslify\.next\dev\server\chunks\ssr\[root-of-the-server]__06hy6ga._.js:1295:47) {
+  type: 'Error',
+  code: 'MODULE_UNPARSABLE'
+}
+[browser] eval() is not supported in this environment. If this page was served with a `Content-Security-Policy` header, make sure that `unsafe-eval` is included. React requires eval() in development mode for various debugging features like reconstructing callstacks from a different environment.
+React will never use eval() in production mode 
+⨯ ./app/layout.js:6:1
+Module not found: Can't resolve '@/components/site-footer'
+  [90m4 |[0m [36mimport[0m { [33mPreferencesProvider[0m } [36mfrom[0m [32m"@/components/providers/preferences-provider"[0m;
+  [90m5 |[0m [36mimport[0m { [33mToastProvider[0m } [36mfrom[0m [32m"@/components/providers/toast-provider"[0m;
+[31m[1m>[0m [90m6 |[0m [36mimport[0m { [33mSiteFooter[0m } [36mfrom[0m [32m"@/components/site-footer"[0m;
+  [90m  |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m7 |[0m [36mimport[0m { [33mSiteHeader[0m } [36mfrom[0m [32m"@/components/site-header"[0m;
+  [90m8 |[0m [36mimport[0m { [33mSITE_URL[0m, [33mSOCIAL_IMAGE[0m, [33mTWITTER_IMAGE_PATH[0m } [36mfrom[0m [32m"@/lib/site-data"[0m;
+  [90m9 |[0m
+
+Import map: aliased to relative './components/site-footer' inside of [project]/
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./app/layout.js:6:1
+Module not found: Can't resolve '@/components/site-footer'
+  [90m4 |[0m [36mimport[0m { [33mPreferencesProvider[0m } [36mfrom[0m [32m"@/components/providers/preferences-provider"[0m;
+  [90m5 |[0m [36mimport[0m { [33mToastProvider[0m } [36mfrom[0m [32m"@/components/providers/toast-provider"[0m;
+[31m[1m>[0m [90m6 |[0m [36mimport[0m { [33mSiteFooter[0m } [36mfrom[0m [32m"@/components/site-footer"[0m;
+  [90m  |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m7 |[0m [36mimport[0m { [33mSiteHeader[0m } [36mfrom[0m [32m"@/components/site-header"[0m;
+  [90m8 |[0m [36mimport[0m { [33mSITE_URL[0m, [33mSOCIAL_IMAGE[0m, [33mTWITTER_IMAGE_PATH[0m } [36mfrom[0m [32m"@/lib/site-data"[0m;
+  [90m9 |[0m
+
+Import map: aliased to relative './components/site-footer' inside of [project]/
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./app/layout.js:6:1
+Module not found: Can't resolve '@/components/site-footer'
+  [90m4 |[0m [36mimport[0m { [33mPreferencesProvider[0m } [36mfrom[0m [32m"@/components/providers/preferences-provider"[0m;
+  [90m5 |[0m [36mimport[0m { [33mToastProvider[0m } [36mfrom[0m [32m"@/components/providers/toast-provider"[0m;
+[31m[1m>[0m [90m6 |[0m [36mimport[0m { [33mSiteFooter[0m } [36mfrom[0m [32m"@/components/site-footer"[0m;
+  [90m  |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m7 |[0m [36mimport[0m { [33mSiteHeader[0m } [36mfrom[0m [32m"@/components/site-header"[0m;
+  [90m8 |[0m [36mimport[0m { [33mSITE_URL[0m, [33mSOCIAL_IMAGE[0m, [33mTWITTER_IMAGE_PATH[0m } [36mfrom[0m [32m"@/lib/site-data"[0m;
+  [90m9 |[0m
+
+Import map: aliased to relative './components/site-footer' inside of [project]/
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./app/layout.js:6:1
+Module not found: Can't resolve '@/components/site-footer'
+  [90m4 |[0m [36mimport[0m { [33mPreferencesProvider[0m } [36mfrom[0m [32m"@/components/providers/preferences-provider"[0m;
+  [90m5 |[0m [36mimport[0m { [33mToastProvider[0m } [36mfrom[0m [32m"@/components/providers/toast-provider"[0m;
+[31m[1m>[0m [90m6 |[0m [36mimport[0m { [33mSiteFooter[0m } [36mfrom[0m [32m"@/components/site-footer"[0m;
+  [90m  |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m7 |[0m [36mimport[0m { [33mSiteHeader[0m } [36mfrom[0m [32m"@/components/site-header"[0m;
+  [90m8 |[0m [36mimport[0m { [33mSITE_URL[0m, [33mSOCIAL_IMAGE[0m, [33mTWITTER_IMAGE_PATH[0m } [36mfrom[0m [32m"@/lib/site-data"[0m;
+  [90m9 |[0m
+
+Import map: aliased to relative './components/site-footer' inside of [project]/
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./app/layout.js:6:1
+Module not found: Can't resolve '@/components/site-footer'
+  [90m4 |[0m [36mimport[0m { [33mPreferencesProvider[0m } [36mfrom[0m [32m"@/components/providers/preferences-provider"[0m;
+  [90m5 |[0m [36mimport[0m { [33mToastProvider[0m } [36mfrom[0m [32m"@/components/providers/toast-provider"[0m;
+[31m[1m>[0m [90m6 |[0m [36mimport[0m { [33mSiteFooter[0m } [36mfrom[0m [32m"@/components/site-footer"[0m;
+  [90m  |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m7 |[0m [36mimport[0m { [33mSiteHeader[0m } [36mfrom[0m [32m"@/components/site-header"[0m;
+  [90m8 |[0m [36mimport[0m { [33mSITE_URL[0m, [33mSOCIAL_IMAGE[0m, [33mTWITTER_IMAGE_PATH[0m } [36mfrom[0m [32m"@/lib/site-data"[0m;
+  [90m9 |[0m
+
+Import map: aliased to relative './components/site-footer' inside of [project]/
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./app/layout.js:6:1
+Module not found: Can't resolve '@/components/site-footer'
+  [90m4 |[0m [36mimport[0m { [33mPreferencesProvider[0m } [36mfrom[0m [32m"@/components/providers/preferences-provider"[0m;
+  [90m5 |[0m [36mimport[0m { [33mToastProvider[0m } [36mfrom[0m [32m"@/components/providers/toast-provider"[0m;
+[31m[1m>[0m [90m6 |[0m [36mimport[0m { [33mSiteFooter[0m } [36mfrom[0m [32m"@/components/site-footer"[0m;
+  [90m  |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m7 |[0m [36mimport[0m { [33mSiteHeader[0m } [36mfrom[0m [32m"@/components/site-header"[0m;
+  [90m8 |[0m [36mimport[0m { [33mSITE_URL[0m, [33mSOCIAL_IMAGE[0m, [33mTWITTER_IMAGE_PATH[0m } [36mfrom[0m [32m"@/lib/site-data"[0m;
+  [90m9 |[0m
+
+Import map: aliased to relative './components/site-footer' inside of [project]/
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./app/layout.js:6:1
+Module not found: Can't resolve '@/components/site-footer'
+  [90m4 |[0m [36mimport[0m { [33mPreferencesProvider[0m } [36mfrom[0m [32m"@/components/providers/preferences-provider"[0m;
+  [90m5 |[0m [36mimport[0m { [33mToastProvider[0m } [36mfrom[0m [32m"@/components/providers/toast-provider"[0m;
+[31m[1m>[0m [90m6 |[0m [36mimport[0m { [33mSiteFooter[0m } [36mfrom[0m [32m"@/components/site-footer"[0m;
+  [90m  |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m7 |[0m [36mimport[0m { [33mSiteHeader[0m } [36mfrom[0m [32m"@/components/site-header"[0m;
+  [90m8 |[0m [36mimport[0m { [33mSITE_URL[0m, [33mSOCIAL_IMAGE[0m, [33mTWITTER_IMAGE_PATH[0m } [36mfrom[0m [32m"@/lib/site-data"[0m;
+  [90m9 |[0m
+
+Import map: aliased to relative './components/site-footer' inside of [project]/
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./app/layout.js:6:1
+Module not found: Can't resolve '@/components/site-footer'
+  [90m4 |[0m [36mimport[0m { [33mPreferencesProvider[0m } [36mfrom[0m [32m"@/components/providers/preferences-provider"[0m;
+  [90m5 |[0m [36mimport[0m { [33mToastProvider[0m } [36mfrom[0m [32m"@/components/providers/toast-provider"[0m;
+[31m[1m>[0m [90m6 |[0m [36mimport[0m { [33mSiteFooter[0m } [36mfrom[0m [32m"@/components/site-footer"[0m;
+  [90m  |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m7 |[0m [36mimport[0m { [33mSiteHeader[0m } [36mfrom[0m [32m"@/components/site-header"[0m;
+  [90m8 |[0m [36mimport[0m { [33mSITE_URL[0m, [33mSOCIAL_IMAGE[0m, [33mTWITTER_IMAGE_PATH[0m } [36mfrom[0m [32m"@/lib/site-data"[0m;
+  [90m9 |[0m
+
+Import map: aliased to relative './components/site-footer' inside of [project]/
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./app/layout.js:6:1
+Module not found: Can't resolve '@/components/site-footer'
+  [90m4 |[0m [36mimport[0m { [33mPreferencesProvider[0m } [36mfrom[0m [32m"@/components/providers/preferences-provider"[0m;
+  [90m5 |[0m [36mimport[0m { [33mToastProvider[0m } [36mfrom[0m [32m"@/components/providers/toast-provider"[0m;
+[31m[1m>[0m [90m6 |[0m [36mimport[0m { [33mSiteFooter[0m } [36mfrom[0m [32m"@/components/site-footer"[0m;
+  [90m  |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m7 |[0m [36mimport[0m { [33mSiteHeader[0m } [36mfrom[0m [32m"@/components/site-header"[0m;
+  [90m8 |[0m [36mimport[0m { [33mSITE_URL[0m, [33mSOCIAL_IMAGE[0m, [33mTWITTER_IMAGE_PATH[0m } [36mfrom[0m [32m"@/lib/site-data"[0m;
+  [90m9 |[0m
+
+Import map: aliased to relative './components/site-footer' inside of [project]/
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./app/layout.js:6:1
+Module not found: Can't resolve '@/components/site-footer'
+  [90m4 |[0m [36mimport[0m { [33mPreferencesProvider[0m } [36mfrom[0m [32m"@/components/providers/preferences-provider"[0m;
+  [90m5 |[0m [36mimport[0m { [33mToastProvider[0m } [36mfrom[0m [32m"@/components/providers/toast-provider"[0m;
+[31m[1m>[0m [90m6 |[0m [36mimport[0m { [33mSiteFooter[0m } [36mfrom[0m [32m"@/components/site-footer"[0m;
+  [90m  |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m7 |[0m [36mimport[0m { [33mSiteHeader[0m } [36mfrom[0m [32m"@/components/site-header"[0m;
+  [90m8 |[0m [36mimport[0m { [33mSITE_URL[0m, [33mSOCIAL_IMAGE[0m, [33mTWITTER_IMAGE_PATH[0m } [36mfrom[0m [32m"@/lib/site-data"[0m;
+  [90m9 |[0m
+
+Import map: aliased to relative './components/site-footer' inside of [project]/
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./app/layout.js:6:1
+Module not found: Can't resolve '@/components/site-footer'
+  [90m4 |[0m [36mimport[0m { [33mPreferencesProvider[0m } [36mfrom[0m [32m"@/components/providers/preferences-provider"[0m;
+  [90m5 |[0m [36mimport[0m { [33mToastProvider[0m } [36mfrom[0m [32m"@/components/providers/toast-provider"[0m;
+[31m[1m>[0m [90m6 |[0m [36mimport[0m { [33mSiteFooter[0m } [36mfrom[0m [32m"@/components/site-footer"[0m;
+  [90m  |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m7 |[0m [36mimport[0m { [33mSiteHeader[0m } [36mfrom[0m [32m"@/components/site-header"[0m;
+  [90m8 |[0m [36mimport[0m { [33mSITE_URL[0m, [33mSOCIAL_IMAGE[0m, [33mTWITTER_IMAGE_PATH[0m } [36mfrom[0m [32m"@/lib/site-data"[0m;
+  [90m9 |[0m
+
+Import map: aliased to relative './components/site-footer' inside of [project]/
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./app/layout.js:6:1
+Module not found: Can't resolve '@/components/site-footer'
+  [90m4 |[0m [36mimport[0m { [33mPreferencesProvider[0m } [36mfrom[0m [32m"@/components/providers/preferences-provider"[0m;
+  [90m5 |[0m [36mimport[0m { [33mToastProvider[0m } [36mfrom[0m [32m"@/components/providers/toast-provider"[0m;
+[31m[1m>[0m [90m6 |[0m [36mimport[0m { [33mSiteFooter[0m } [36mfrom[0m [32m"@/components/site-footer"[0m;
+  [90m  |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m7 |[0m [36mimport[0m { [33mSiteHeader[0m } [36mfrom[0m [32m"@/components/site-header"[0m;
+  [90m8 |[0m [36mimport[0m { [33mSITE_URL[0m, [33mSOCIAL_IMAGE[0m, [33mTWITTER_IMAGE_PATH[0m } [36mfrom[0m [32m"@/lib/site-data"[0m;
+  [90m9 |[0m
+
+Import map: aliased to relative './components/site-footer' inside of [project]/
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./app/layout.js:6:1
+Module not found: Can't resolve '@/components/site-footer'
+  [90m4 |[0m [36mimport[0m { [33mPreferencesProvider[0m } [36mfrom[0m [32m"@/components/providers/preferences-provider"[0m;
+  [90m5 |[0m [36mimport[0m { [33mToastProvider[0m } [36mfrom[0m [32m"@/components/providers/toast-provider"[0m;
+[31m[1m>[0m [90m6 |[0m [36mimport[0m { [33mSiteFooter[0m } [36mfrom[0m [32m"@/components/site-footer"[0m;
+  [90m  |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m7 |[0m [36mimport[0m { [33mSiteHeader[0m } [36mfrom[0m [32m"@/components/site-header"[0m;
+  [90m8 |[0m [36mimport[0m { [33mSITE_URL[0m, [33mSOCIAL_IMAGE[0m, [33mTWITTER_IMAGE_PATH[0m } [36mfrom[0m [32m"@/lib/site-data"[0m;
+  [90m9 |[0m
+
+Import map: aliased to relative './components/site-footer' inside of [project]/
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./app/layout.js:6:1
+Module not found: Can't resolve '@/components/site-footer'
+  [90m4 |[0m [36mimport[0m { [33mPreferencesProvider[0m } [36mfrom[0m [32m"@/components/providers/preferences-provider"[0m;
+  [90m5 |[0m [36mimport[0m { [33mToastProvider[0m } [36mfrom[0m [32m"@/components/providers/toast-provider"[0m;
+[31m[1m>[0m [90m6 |[0m [36mimport[0m { [33mSiteFooter[0m } [36mfrom[0m [32m"@/components/site-footer"[0m;
+  [90m  |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m7 |[0m [36mimport[0m { [33mSiteHeader[0m } [36mfrom[0m [32m"@/components/site-header"[0m;
+  [90m8 |[0m [36mimport[0m { [33mSITE_URL[0m, [33mSOCIAL_IMAGE[0m, [33mTWITTER_IMAGE_PATH[0m } [36mfrom[0m [32m"@/lib/site-data"[0m;
+  [90m9 |[0m
+
+Import map: aliased to relative './components/site-footer' inside of [project]/
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./app/layout.js:6:1
+Module not found: Can't resolve '@/components/site-footer'
+  [90m4 |[0m [36mimport[0m { [33mPreferencesProvider[0m } [36mfrom[0m [32m"@/components/providers/preferences-provider"[0m;
+  [90m5 |[0m [36mimport[0m { [33mToastProvider[0m } [36mfrom[0m [32m"@/components/providers/toast-provider"[0m;
+[31m[1m>[0m [90m6 |[0m [36mimport[0m { [33mSiteFooter[0m } [36mfrom[0m [32m"@/components/site-footer"[0m;
+  [90m  |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m7 |[0m [36mimport[0m { [33mSiteHeader[0m } [36mfrom[0m [32m"@/components/site-header"[0m;
+  [90m8 |[0m [36mimport[0m { [33mSITE_URL[0m, [33mSOCIAL_IMAGE[0m, [33mTWITTER_IMAGE_PATH[0m } [36mfrom[0m [32m"@/lib/site-data"[0m;
+  [90m9 |[0m
+
+Import map: aliased to relative './components/site-footer' inside of [project]/
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./app/layout.js:6:1
+Module not found: Can't resolve '@/components/site-footer'
+  [90m4 |[0m [36mimport[0m { [33mPreferencesProvider[0m } [36mfrom[0m [32m"@/components/providers/preferences-provider"[0m;
+  [90m5 |[0m [36mimport[0m { [33mToastProvider[0m } [36mfrom[0m [32m"@/components/providers/toast-provider"[0m;
+[31m[1m>[0m [90m6 |[0m [36mimport[0m { [33mSiteFooter[0m } [36mfrom[0m [32m"@/components/site-footer"[0m;
+  [90m  |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m7 |[0m [36mimport[0m { [33mSiteHeader[0m } [36mfrom[0m [32m"@/components/site-header"[0m;
+  [90m8 |[0m [36mimport[0m { [33mSITE_URL[0m, [33mSOCIAL_IMAGE[0m, [33mTWITTER_IMAGE_PATH[0m } [36mfrom[0m [32m"@/lib/site-data"[0m;
+  [90m9 |[0m
+
+Import map: aliased to relative './components/site-footer' inside of [project]/
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./app/layout.js:6:1
+Module not found: Can't resolve '@/components/site-footer'
+  [90m4 |[0m [36mimport[0m { [33mPreferencesProvider[0m } [36mfrom[0m [32m"@/components/providers/preferences-provider"[0m;
+  [90m5 |[0m [36mimport[0m { [33mToastProvider[0m } [36mfrom[0m [32m"@/components/providers/toast-provider"[0m;
+[31m[1m>[0m [90m6 |[0m [36mimport[0m { [33mSiteFooter[0m } [36mfrom[0m [32m"@/components/site-footer"[0m;
+  [90m  |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m7 |[0m [36mimport[0m { [33mSiteHeader[0m } [36mfrom[0m [32m"@/components/site-header"[0m;
+  [90m8 |[0m [36mimport[0m { [33mSITE_URL[0m, [33mSOCIAL_IMAGE[0m, [33mTWITTER_IMAGE_PATH[0m } [36mfrom[0m [32m"@/lib/site-data"[0m;
+  [90m9 |[0m
+
+Import map: aliased to relative './components/site-footer' inside of [project]/
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./app/layout.js:6:1
+Module not found: Can't resolve '@/components/site-footer'
+  [90m4 |[0m [36mimport[0m { [33mPreferencesProvider[0m } [36mfrom[0m [32m"@/components/providers/preferences-provider"[0m;
+  [90m5 |[0m [36mimport[0m { [33mToastProvider[0m } [36mfrom[0m [32m"@/components/providers/toast-provider"[0m;
+[31m[1m>[0m [90m6 |[0m [36mimport[0m { [33mSiteFooter[0m } [36mfrom[0m [32m"@/components/site-footer"[0m;
+  [90m  |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m7 |[0m [36mimport[0m { [33mSiteHeader[0m } [36mfrom[0m [32m"@/components/site-header"[0m;
+  [90m8 |[0m [36mimport[0m { [33mSITE_URL[0m, [33mSOCIAL_IMAGE[0m, [33mTWITTER_IMAGE_PATH[0m } [36mfrom[0m [32m"@/lib/site-data"[0m;
+  [90m9 |[0m
+
+Import map: aliased to relative './components/site-footer' inside of [project]/
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./app/layout.js:6:1
+Module not found: Can't resolve '@/components/site-footer'
+  [90m4 |[0m [36mimport[0m { [33mPreferencesProvider[0m } [36mfrom[0m [32m"@/components/providers/preferences-provider"[0m;
+  [90m5 |[0m [36mimport[0m { [33mToastProvider[0m } [36mfrom[0m [32m"@/components/providers/toast-provider"[0m;
+[31m[1m>[0m [90m6 |[0m [36mimport[0m { [33mSiteFooter[0m } [36mfrom[0m [32m"@/components/site-footer"[0m;
+  [90m  |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m7 |[0m [36mimport[0m { [33mSiteHeader[0m } [36mfrom[0m [32m"@/components/site-header"[0m;
+  [90m8 |[0m [36mimport[0m { [33mSITE_URL[0m, [33mSOCIAL_IMAGE[0m, [33mTWITTER_IMAGE_PATH[0m } [36mfrom[0m [32m"@/lib/site-data"[0m;
+  [90m9 |[0m
+
+Import map: aliased to relative './components/site-footer' inside of [project]/
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./app/layout.js:6:1
+Module not found: Can't resolve '@/components/site-footer'
+  [90m4 |[0m [36mimport[0m { [33mPreferencesProvider[0m } [36mfrom[0m [32m"@/components/providers/preferences-provider"[0m;
+  [90m5 |[0m [36mimport[0m { [33mToastProvider[0m } [36mfrom[0m [32m"@/components/providers/toast-provider"[0m;
+[31m[1m>[0m [90m6 |[0m [36mimport[0m { [33mSiteFooter[0m } [36mfrom[0m [32m"@/components/site-footer"[0m;
+  [90m  |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m7 |[0m [36mimport[0m { [33mSiteHeader[0m } [36mfrom[0m [32m"@/components/site-header"[0m;
+  [90m8 |[0m [36mimport[0m { [33mSITE_URL[0m, [33mSOCIAL_IMAGE[0m, [33mTWITTER_IMAGE_PATH[0m } [36mfrom[0m [32m"@/lib/site-data"[0m;
+  [90m9 |[0m
+
+Import map: aliased to relative './components/site-footer' inside of [project]/
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./app/layout.js:6:1
+Module not found: Can't resolve '@/components/site-footer'
+  [90m4 |[0m [36mimport[0m { [33mPreferencesProvider[0m } [36mfrom[0m [32m"@/components/providers/preferences-provider"[0m;
+  [90m5 |[0m [36mimport[0m { [33mToastProvider[0m } [36mfrom[0m [32m"@/components/providers/toast-provider"[0m;
+[31m[1m>[0m [90m6 |[0m [36mimport[0m { [33mSiteFooter[0m } [36mfrom[0m [32m"@/components/site-footer"[0m;
+  [90m  |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m7 |[0m [36mimport[0m { [33mSiteHeader[0m } [36mfrom[0m [32m"@/components/site-header"[0m;
+  [90m8 |[0m [36mimport[0m { [33mSITE_URL[0m, [33mSOCIAL_IMAGE[0m, [33mTWITTER_IMAGE_PATH[0m } [36mfrom[0m [32m"@/lib/site-data"[0m;
+  [90m9 |[0m
+
+Import map: aliased to relative './components/site-footer' inside of [project]/
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./app/layout.js:6:1
+Module not found: Can't resolve '@/components/site-footer'
+  [90m4 |[0m [36mimport[0m { [33mPreferencesProvider[0m } [36mfrom[0m [32m"@/components/providers/preferences-provider"[0m;
+  [90m5 |[0m [36mimport[0m { [33mToastProvider[0m } [36mfrom[0m [32m"@/components/providers/toast-provider"[0m;
+[31m[1m>[0m [90m6 |[0m [36mimport[0m { [33mSiteFooter[0m } [36mfrom[0m [32m"@/components/site-footer"[0m;
+  [90m  |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m7 |[0m [36mimport[0m { [33mSiteHeader[0m } [36mfrom[0m [32m"@/components/site-header"[0m;
+  [90m8 |[0m [36mimport[0m { [33mSITE_URL[0m, [33mSOCIAL_IMAGE[0m, [33mTWITTER_IMAGE_PATH[0m } [36mfrom[0m [32m"@/lib/site-data"[0m;
+  [90m9 |[0m
+
+Import map: aliased to relative './components/site-footer' inside of [project]/
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./app/layout.js:6:1
+Module not found: Can't resolve '@/components/site-footer'
+  [90m4 |[0m [36mimport[0m { [33mPreferencesProvider[0m } [36mfrom[0m [32m"@/components/providers/preferences-provider"[0m;
+  [90m5 |[0m [36mimport[0m { [33mToastProvider[0m } [36mfrom[0m [32m"@/components/providers/toast-provider"[0m;
+[31m[1m>[0m [90m6 |[0m [36mimport[0m { [33mSiteFooter[0m } [36mfrom[0m [32m"@/components/site-footer"[0m;
+  [90m  |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m7 |[0m [36mimport[0m { [33mSiteHeader[0m } [36mfrom[0m [32m"@/components/site-header"[0m;
+  [90m8 |[0m [36mimport[0m { [33mSITE_URL[0m, [33mSOCIAL_IMAGE[0m, [33mTWITTER_IMAGE_PATH[0m } [36mfrom[0m [32m"@/lib/site-data"[0m;
+  [90m9 |[0m
+
+Import map: aliased to relative './components/site-footer' inside of [project]/
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./app/layout.js:6:1
+Module not found: Can't resolve '@/components/site-footer'
+  [90m4 |[0m [36mimport[0m { [33mPreferencesProvider[0m } [36mfrom[0m [32m"@/components/providers/preferences-provider"[0m;
+  [90m5 |[0m [36mimport[0m { [33mToastProvider[0m } [36mfrom[0m [32m"@/components/providers/toast-provider"[0m;
+[31m[1m>[0m [90m6 |[0m [36mimport[0m { [33mSiteFooter[0m } [36mfrom[0m [32m"@/components/site-footer"[0m;
+  [90m  |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m7 |[0m [36mimport[0m { [33mSiteHeader[0m } [36mfrom[0m [32m"@/components/site-header"[0m;
+  [90m8 |[0m [36mimport[0m { [33mSITE_URL[0m, [33mSOCIAL_IMAGE[0m, [33mTWITTER_IMAGE_PATH[0m } [36mfrom[0m [32m"@/lib/site-data"[0m;
+  [90m9 |[0m
+
+Import map: aliased to relative './components/site-footer' inside of [project]/
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./app/layout.js:6:1
+Module not found: Can't resolve '@/components/site-footer'
+  [90m4 |[0m [36mimport[0m { [33mPreferencesProvider[0m } [36mfrom[0m [32m"@/components/providers/preferences-provider"[0m;
+  [90m5 |[0m [36mimport[0m { [33mToastProvider[0m } [36mfrom[0m [32m"@/components/providers/toast-provider"[0m;
+[31m[1m>[0m [90m6 |[0m [36mimport[0m { [33mSiteFooter[0m } [36mfrom[0m [32m"@/components/site-footer"[0m;
+  [90m  |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m7 |[0m [36mimport[0m { [33mSiteHeader[0m } [36mfrom[0m [32m"@/components/site-header"[0m;
+  [90m8 |[0m [36mimport[0m { [33mSITE_URL[0m, [33mSOCIAL_IMAGE[0m, [33mTWITTER_IMAGE_PATH[0m } [36mfrom[0m [32m"@/lib/site-data"[0m;
+  [90m9 |[0m
+
+Import map: aliased to relative './components/site-footer' inside of [project]/
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./app/layout.js:6:1
+Module not found: Can't resolve '@/components/site-footer'
+  [90m4 |[0m [36mimport[0m { [33mPreferencesProvider[0m } [36mfrom[0m [32m"@/components/providers/preferences-provider"[0m;
+  [90m5 |[0m [36mimport[0m { [33mToastProvider[0m } [36mfrom[0m [32m"@/components/providers/toast-provider"[0m;
+[31m[1m>[0m [90m6 |[0m [36mimport[0m { [33mSiteFooter[0m } [36mfrom[0m [32m"@/components/site-footer"[0m;
+  [90m  |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m7 |[0m [36mimport[0m { [33mSiteHeader[0m } [36mfrom[0m [32m"@/components/site-header"[0m;
+  [90m8 |[0m [36mimport[0m { [33mSITE_URL[0m, [33mSOCIAL_IMAGE[0m, [33mTWITTER_IMAGE_PATH[0m } [36mfrom[0m [32m"@/lib/site-data"[0m;
+  [90m9 |[0m
+
+Import map: aliased to relative './components/site-footer' inside of [project]/
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./app/layout.js:6:1
+Module not found: Can't resolve '@/components/site-footer'
+  [90m4 |[0m [36mimport[0m { [33mPreferencesProvider[0m } [36mfrom[0m [32m"@/components/providers/preferences-provider"[0m;
+  [90m5 |[0m [36mimport[0m { [33mToastProvider[0m } [36mfrom[0m [32m"@/components/providers/toast-provider"[0m;
+[31m[1m>[0m [90m6 |[0m [36mimport[0m { [33mSiteFooter[0m } [36mfrom[0m [32m"@/components/site-footer"[0m;
+  [90m  |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m7 |[0m [36mimport[0m { [33mSiteHeader[0m } [36mfrom[0m [32m"@/components/site-header"[0m;
+  [90m8 |[0m [36mimport[0m { [33mSITE_URL[0m, [33mSOCIAL_IMAGE[0m, [33mTWITTER_IMAGE_PATH[0m } [36mfrom[0m [32m"@/lib/site-data"[0m;
+  [90m9 |[0m
+
+Import map: aliased to relative './components/site-footer' inside of [project]/
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./app/layout.js:6:1
+Module not found: Can't resolve '@/components/site-footer'
+  [90m4 |[0m [36mimport[0m { [33mPreferencesProvider[0m } [36mfrom[0m [32m"@/components/providers/preferences-provider"[0m;
+  [90m5 |[0m [36mimport[0m { [33mToastProvider[0m } [36mfrom[0m [32m"@/components/providers/toast-provider"[0m;
+[31m[1m>[0m [90m6 |[0m [36mimport[0m { [33mSiteFooter[0m } [36mfrom[0m [32m"@/components/site-footer"[0m;
+  [90m  |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m7 |[0m [36mimport[0m { [33mSiteHeader[0m } [36mfrom[0m [32m"@/components/site-header"[0m;
+  [90m8 |[0m [36mimport[0m { [33mSITE_URL[0m, [33mSOCIAL_IMAGE[0m, [33mTWITTER_IMAGE_PATH[0m } [36mfrom[0m [32m"@/lib/site-data"[0m;
+  [90m9 |[0m
+
+Import map: aliased to relative './components/site-footer' inside of [project]/
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./app/layout.js:6:1
+Module not found: Can't resolve '@/components/site-footer'
+  [90m4 |[0m [36mimport[0m { [33mPreferencesProvider[0m } [36mfrom[0m [32m"@/components/providers/preferences-provider"[0m;
+  [90m5 |[0m [36mimport[0m { [33mToastProvider[0m } [36mfrom[0m [32m"@/components/providers/toast-provider"[0m;
+[31m[1m>[0m [90m6 |[0m [36mimport[0m { [33mSiteFooter[0m } [36mfrom[0m [32m"@/components/site-footer"[0m;
+  [90m  |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m7 |[0m [36mimport[0m { [33mSiteHeader[0m } [36mfrom[0m [32m"@/components/site-header"[0m;
+  [90m8 |[0m [36mimport[0m { [33mSITE_URL[0m, [33mSOCIAL_IMAGE[0m, [33mTWITTER_IMAGE_PATH[0m } [36mfrom[0m [32m"@/lib/site-data"[0m;
+  [90m9 |[0m
+
+Import map: aliased to relative './components/site-footer' inside of [project]/
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./app/layout.js:6:1
+Module not found: Can't resolve '@/components/site-footer'
+  [90m4 |[0m [36mimport[0m { [33mPreferencesProvider[0m } [36mfrom[0m [32m"@/components/providers/preferences-provider"[0m;
+  [90m5 |[0m [36mimport[0m { [33mToastProvider[0m } [36mfrom[0m [32m"@/components/providers/toast-provider"[0m;
+[31m[1m>[0m [90m6 |[0m [36mimport[0m { [33mSiteFooter[0m } [36mfrom[0m [32m"@/components/site-footer"[0m;
+  [90m  |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m7 |[0m [36mimport[0m { [33mSiteHeader[0m } [36mfrom[0m [32m"@/components/site-header"[0m;
+  [90m8 |[0m [36mimport[0m { [33mSITE_URL[0m, [33mSOCIAL_IMAGE[0m, [33mTWITTER_IMAGE_PATH[0m } [36mfrom[0m [32m"@/lib/site-data"[0m;
+  [90m9 |[0m
+
+Import map: aliased to relative './components/site-footer' inside of [project]/
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./app/layout.js:6:1
+Module not found: Can't resolve '@/components/site-footer'
+  [90m4 |[0m [36mimport[0m { [33mPreferencesProvider[0m } [36mfrom[0m [32m"@/components/providers/preferences-provider"[0m;
+  [90m5 |[0m [36mimport[0m { [33mToastProvider[0m } [36mfrom[0m [32m"@/components/providers/toast-provider"[0m;
+[31m[1m>[0m [90m6 |[0m [36mimport[0m { [33mSiteFooter[0m } [36mfrom[0m [32m"@/components/site-footer"[0m;
+  [90m  |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m7 |[0m [36mimport[0m { [33mSiteHeader[0m } [36mfrom[0m [32m"@/components/site-header"[0m;
+  [90m8 |[0m [36mimport[0m { [33mSITE_URL[0m, [33mSOCIAL_IMAGE[0m, [33mTWITTER_IMAGE_PATH[0m } [36mfrom[0m [32m"@/lib/site-data"[0m;
+  [90m9 |[0m
+
+Import map: aliased to relative './components/site-footer' inside of [project]/
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./app/layout.js:6:1
+Module not found: Can't resolve '@/components/site-footer'
+  [90m4 |[0m [36mimport[0m { [33mPreferencesProvider[0m } [36mfrom[0m [32m"@/components/providers/preferences-provider"[0m;
+  [90m5 |[0m [36mimport[0m { [33mToastProvider[0m } [36mfrom[0m [32m"@/components/providers/toast-provider"[0m;
+[31m[1m>[0m [90m6 |[0m [36mimport[0m { [33mSiteFooter[0m } [36mfrom[0m [32m"@/components/site-footer"[0m;
+  [90m  |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m7 |[0m [36mimport[0m { [33mSiteHeader[0m } [36mfrom[0m [32m"@/components/site-header"[0m;
+  [90m8 |[0m [36mimport[0m { [33mSITE_URL[0m, [33mSOCIAL_IMAGE[0m, [33mTWITTER_IMAGE_PATH[0m } [36mfrom[0m [32m"@/lib/site-data"[0m;
+  [90m9 |[0m
+
+Import map: aliased to relative './components/site-footer' inside of [project]/
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./app/layout.js:6:1
+Module not found: Can't resolve '@/components/site-footer'
+  [90m4 |[0m [36mimport[0m { [33mPreferencesProvider[0m } [36mfrom[0m [32m"@/components/providers/preferences-provider"[0m;
+  [90m5 |[0m [36mimport[0m { [33mToastProvider[0m } [36mfrom[0m [32m"@/components/providers/toast-provider"[0m;
+[31m[1m>[0m [90m6 |[0m [36mimport[0m { [33mSiteFooter[0m } [36mfrom[0m [32m"@/components/site-footer"[0m;
+  [90m  |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m7 |[0m [36mimport[0m { [33mSiteHeader[0m } [36mfrom[0m [32m"@/components/site-header"[0m;
+  [90m8 |[0m [36mimport[0m { [33mSITE_URL[0m, [33mSOCIAL_IMAGE[0m, [33mTWITTER_IMAGE_PATH[0m } [36mfrom[0m [32m"@/lib/site-data"[0m;
+  [90m9 |[0m
+
+Import map: aliased to relative './components/site-footer' inside of [project]/
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./app/layout.js:6:1
+Module not found: Can't resolve '@/components/site-footer'
+  [90m4 |[0m [36mimport[0m { [33mPreferencesProvider[0m } [36mfrom[0m [32m"@/components/providers/preferences-provider"[0m;
+  [90m5 |[0m [36mimport[0m { [33mToastProvider[0m } [36mfrom[0m [32m"@/components/providers/toast-provider"[0m;
+[31m[1m>[0m [90m6 |[0m [36mimport[0m { [33mSiteFooter[0m } [36mfrom[0m [32m"@/components/site-footer"[0m;
+  [90m  |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m7 |[0m [36mimport[0m { [33mSiteHeader[0m } [36mfrom[0m [32m"@/components/site-header"[0m;
+  [90m8 |[0m [36mimport[0m { [33mSITE_URL[0m, [33mSOCIAL_IMAGE[0m, [33mTWITTER_IMAGE_PATH[0m } [36mfrom[0m [32m"@/lib/site-data"[0m;
+  [90m9 |[0m
+
+Import map: aliased to relative './components/site-footer' inside of [project]/
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./app/layout.js:6:1
+Module not found: Can't resolve '@/components/site-footer'
+  [90m4 |[0m [36mimport[0m { [33mPreferencesProvider[0m } [36mfrom[0m [32m"@/components/providers/preferences-provider"[0m;
+  [90m5 |[0m [36mimport[0m { [33mToastProvider[0m } [36mfrom[0m [32m"@/components/providers/toast-provider"[0m;
+[31m[1m>[0m [90m6 |[0m [36mimport[0m { [33mSiteFooter[0m } [36mfrom[0m [32m"@/components/site-footer"[0m;
+  [90m  |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m7 |[0m [36mimport[0m { [33mSiteHeader[0m } [36mfrom[0m [32m"@/components/site-header"[0m;
+  [90m8 |[0m [36mimport[0m { [33mSITE_URL[0m, [33mSOCIAL_IMAGE[0m, [33mTWITTER_IMAGE_PATH[0m } [36mfrom[0m [32m"@/lib/site-data"[0m;
+  [90m9 |[0m
+
+Import map: aliased to relative './components/site-footer' inside of [project]/
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./app/layout.js:6:1
+Module not found: Can't resolve '@/components/site-footer'
+  [90m4 |[0m [36mimport[0m { [33mPreferencesProvider[0m } [36mfrom[0m [32m"@/components/providers/preferences-provider"[0m;
+  [90m5 |[0m [36mimport[0m { [33mToastProvider[0m } [36mfrom[0m [32m"@/components/providers/toast-provider"[0m;
+[31m[1m>[0m [90m6 |[0m [36mimport[0m { [33mSiteFooter[0m } [36mfrom[0m [32m"@/components/site-footer"[0m;
+  [90m  |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m7 |[0m [36mimport[0m { [33mSiteHeader[0m } [36mfrom[0m [32m"@/components/site-header"[0m;
+  [90m8 |[0m [36mimport[0m { [33mSITE_URL[0m, [33mSOCIAL_IMAGE[0m, [33mTWITTER_IMAGE_PATH[0m } [36mfrom[0m [32m"@/lib/site-data"[0m;
+  [90m9 |[0m
+
+Import map: aliased to relative './components/site-footer' inside of [project]/
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./app/layout.js:6:1
+Module not found: Can't resolve '@/components/site-footer'
+  [90m4 |[0m [36mimport[0m { [33mPreferencesProvider[0m } [36mfrom[0m [32m"@/components/providers/preferences-provider"[0m;
+  [90m5 |[0m [36mimport[0m { [33mToastProvider[0m } [36mfrom[0m [32m"@/components/providers/toast-provider"[0m;
+[31m[1m>[0m [90m6 |[0m [36mimport[0m { [33mSiteFooter[0m } [36mfrom[0m [32m"@/components/site-footer"[0m;
+  [90m  |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m7 |[0m [36mimport[0m { [33mSiteHeader[0m } [36mfrom[0m [32m"@/components/site-header"[0m;
+  [90m8 |[0m [36mimport[0m { [33mSITE_URL[0m, [33mSOCIAL_IMAGE[0m, [33mTWITTER_IMAGE_PATH[0m } [36mfrom[0m [32m"@/lib/site-data"[0m;
+  [90m9 |[0m
+
+Import map: aliased to relative './components/site-footer' inside of [project]/
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./app/layout.js:6:1
+Module not found: Can't resolve '@/components/site-footer'
+  [90m4 |[0m [36mimport[0m { [33mPreferencesProvider[0m } [36mfrom[0m [32m"@/components/providers/preferences-provider"[0m;
+  [90m5 |[0m [36mimport[0m { [33mToastProvider[0m } [36mfrom[0m [32m"@/components/providers/toast-provider"[0m;
+[31m[1m>[0m [90m6 |[0m [36mimport[0m { [33mSiteFooter[0m } [36mfrom[0m [32m"@/components/site-footer"[0m;
+  [90m  |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m7 |[0m [36mimport[0m { [33mSiteHeader[0m } [36mfrom[0m [32m"@/components/site-header"[0m;
+  [90m8 |[0m [36mimport[0m { [33mSITE_URL[0m, [33mSOCIAL_IMAGE[0m, [33mTWITTER_IMAGE_PATH[0m } [36mfrom[0m [32m"@/lib/site-data"[0m;
+  [90m9 |[0m
+
+Import map: aliased to relative './components/site-footer' inside of [project]/
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./app/layout.js:6:1
+Module not found: Can't resolve '@/components/site-footer'
+  [90m4 |[0m [36mimport[0m { [33mPreferencesProvider[0m } [36mfrom[0m [32m"@/components/providers/preferences-provider"[0m;
+  [90m5 |[0m [36mimport[0m { [33mToastProvider[0m } [36mfrom[0m [32m"@/components/providers/toast-provider"[0m;
+[31m[1m>[0m [90m6 |[0m [36mimport[0m { [33mSiteFooter[0m } [36mfrom[0m [32m"@/components/site-footer"[0m;
+  [90m  |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m7 |[0m [36mimport[0m { [33mSiteHeader[0m } [36mfrom[0m [32m"@/components/site-header"[0m;
+  [90m8 |[0m [36mimport[0m { [33mSITE_URL[0m, [33mSOCIAL_IMAGE[0m, [33mTWITTER_IMAGE_PATH[0m } [36mfrom[0m [32m"@/lib/site-data"[0m;
+  [90m9 |[0m
+
+Import map: aliased to relative './components/site-footer' inside of [project]/
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[browser] Uncaught Error: ./app/layout.js:6:1
+Module not found: Can't resolve '@/components/site-footer'
+  4 | import { PreferencesProvider } from "@/components/providers/preferences-provider";
+  5 | import { ToastProvider } from "@/components/providers/toast-provider";
+> 6 | import { SiteFooter } from "@/components/site-footer";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  7 | import { SiteHeader } from "@/components/site-header";
+  8 | import { SITE_URL, SOCIAL_IMAGE, TWITTER_IMAGE_PATH } from "@/lib/site-data";
+  9 |
+
+Import map: aliased to relative './components/site-footer' inside of [project]/
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+    at <unknown> (Error: ./app/layout.js:6:1)
+    at <unknown> (https://nextjs.org/docs/messages/module-not-found)
+    at <unknown> (Error: (./app/layout.js:6:1)
+    at <unknown> (https://nextjs.org/docs/messages/module-not-found)
+[browser] eval() is not supported in this environment. If this page was served with a `Content-Security-Policy` header, make sure that `unsafe-eval` is included. React requires eval() in development mode for various debugging features like reconstructing callstacks from a different environment.
+React will never use eval() in production mode 
+[browser] eval() is not supported in this environment. If this page was served with a `Content-Security-Policy` header, make sure that `unsafe-eval` is included. React requires eval() in development mode for various debugging features like reconstructing callstacks from a different environment.
+React will never use eval() in production mode 
+[browser] eval() is not supported in this environment. If this page was served with a `Content-Security-Policy` header, make sure that `unsafe-eval` is included. React requires eval() in development mode for various debugging features like reconstructing callstacks from a different environment.
+React will never use eval() in production mode 
+[browser] eval() is not supported in this environment. If this page was served with a `Content-Security-Policy` header, make sure that `unsafe-eval` is included. React requires eval() in development mode for various debugging features like reconstructing callstacks from a different environment.
+React will never use eval() in production mode 
+[browser] eval() is not supported in this environment. If this page was served with a `Content-Security-Policy` header, make sure that `unsafe-eval` is included. React requires eval() in development mode for various debugging features like reconstructing callstacks from a different environment.
+React will never use eval() in production mode 
+[browser] eval() is not supported in this environment. If this page was served with a `Content-Security-Policy` header, make sure that `unsafe-eval` is included. React requires eval() in development mode for various debugging features like reconstructing callstacks from a different environment.
+React will never use eval() in production mode 
+[browser] eval() is not supported in this environment. If this page was served with a `Content-Security-Policy` header, make sure that `unsafe-eval` is included. React requires eval() in development mode for various debugging features like reconstructing callstacks from a different environment.
+React will never use eval() in production mode 
+[browser] eval() is not supported in this environment. If this page was served with a `Content-Security-Policy` header, make sure that `unsafe-eval` is included. React requires eval() in development mode for various debugging features like reconstructing callstacks from a different environment.
+React will never use eval() in production mode 
+[browser] eval() is not supported in this environment. If this page was served with a `Content-Security-Policy` header, make sure that `unsafe-eval` is included. React requires eval() in development mode for various debugging features like reconstructing callstacks from a different environment.
+React will never use eval() in production mode 
+[browser] eval() is not supported in this environment. If this page was served with a `Content-Security-Policy` header, make sure that `unsafe-eval` is included. React requires eval() in development mode for various debugging features like reconstructing callstacks from a different environment.
+React will never use eval() in production mode 
+[browser] eval() is not supported in this environment. If this page was served with a `Content-Security-Policy` header, make sure that `unsafe-eval` is included. React requires eval() in development mode for various debugging features like reconstructing callstacks from a different environment.
+React will never use eval() in production mode 
+[browser] Detected `scroll-behavior: smooth` on the `<html>` element. To disable smooth scrolling during route transitions, add `data-scroll-behavior="smooth"` to your <html> element. Learn more: https://nextjs.org/docs/messages/missing-data-scroll-behavior
+[browser] eval() is not supported in this environment. If this page was served with a `Content-Security-Policy` header, make sure that `unsafe-eval` is included. React requires eval() in development mode for various debugging features like reconstructing callstacks from a different environment.
+React will never use eval() in production mode 
+[browser] eval() is not supported in this environment. If this page was served with a `Content-Security-Policy` header, make sure that `unsafe-eval` is included. React requires eval() in development mode for various debugging features like reconstructing callstacks from a different environment.
+React will never use eval() in production mode 
+[browser] eval() is not supported in this environment. If this page was served with a `Content-Security-Policy` header, make sure that `unsafe-eval` is included. React requires eval() in development mode for various debugging features like reconstructing callstacks from a different environment.
+React will never use eval() in production mode 
+[browser] eval() is not supported in this environment. If this page was served with a `Content-Security-Policy` header, make sure that `unsafe-eval` is included. React requires eval() in development mode for various debugging features like reconstructing callstacks from a different environment.
+React will never use eval() in production mode 
+[browser] eval() is not supported in this environment. If this page was served with a `Content-Security-Policy` header, make sure that `unsafe-eval` is included. React requires eval() in development mode for various debugging features like reconstructing callstacks from a different environment.
+React will never use eval() in production mode 
+[browser] eval() is not supported in this environment. If this page was served with a `Content-Security-Policy` header, make sure that `unsafe-eval` is included. React requires eval() in development mode for various debugging features like reconstructing callstacks from a different environment.
+React will never use eval() in production mode 
+[browser] eval() is not supported in this environment. If this page was served with a `Content-Security-Policy` header, make sure that `unsafe-eval` is included. React requires eval() in development mode for various debugging features like reconstructing callstacks from a different environment.
+React will never use eval() in production mode 
+[browser] eval() is not supported in this environment. If this page was served with a `Content-Security-Policy` header, make sure that `unsafe-eval` is included. React requires eval() in development mode for various debugging features like reconstructing callstacks from a different environment.
+React will never use eval() in production mode 
+[browser] eval() is not supported in this environment. If this page was served with a `Content-Security-Policy` header, make sure that `unsafe-eval` is included. React requires eval() in development mode for various debugging features like reconstructing callstacks from a different environment.
+React will never use eval() in production mode 
+[browser] eval() is not supported in this environment. If this page was served with a `Content-Security-Policy` header, make sure that `unsafe-eval` is included. React requires eval() in development mode for various debugging features like reconstructing callstacks from a different environment.
+React will never use eval() in production mode 
+[browser] eval() is not supported in this environment. If this page was served with a `Content-Security-Policy` header, make sure that `unsafe-eval` is included. React requires eval() in development mode for various debugging features like reconstructing callstacks from a different environment.
+React will never use eval() in production mode 
+[browser] eval() is not supported in this environment. If this page was served with a `Content-Security-Policy` header, make sure that `unsafe-eval` is included. React requires eval() in development mode for various debugging features like reconstructing callstacks from a different environment.
+React will never use eval() in production mode 
+[browser] eval() is not supported in this environment. If this page was served with a `Content-Security-Policy` header, make sure that `unsafe-eval` is included. React requires eval() in development mode for various debugging features like reconstructing callstacks from a different environment.
+React will never use eval() in production mode 
+[browser] eval() is not supported in this environment. If this page was served with a `Content-Security-Policy` header, make sure that `unsafe-eval` is included. React requires eval() in development mode for various debugging features like reconstructing callstacks from a different environment.
+React will never use eval() in production mode 
+[browser] Detected `scroll-behavior: smooth` on the `<html>` element. To disable smooth scrolling during route transitions, add `data-scroll-behavior="smooth"` to your <html> element. Learn more: https://nextjs.org/docs/messages/missing-data-scroll-behavior
+[browser] eval() is not supported in this environment. If this page was served with a `Content-Security-Policy` header, make sure that `unsafe-eval` is included. React requires eval() in development mode for various debugging features like reconstructing callstacks from a different environment.
+React will never use eval() in production mode 
+[browser] eval() is not supported in this environment. If this page was served with a `Content-Security-Policy` header, make sure that `unsafe-eval` is included. React requires eval() in development mode for various debugging features like reconstructing callstacks from a different environment.
+React will never use eval() in production mode 
+[browser] eval() is not supported in this environment. If this page was served with a `Content-Security-Policy` header, make sure that `unsafe-eval` is included. React requires eval() in development mode for various debugging features like reconstructing callstacks from a different environment.
+React will never use eval() in production mode 
+[browser] eval() is not supported in this environment. If this page was served with a `Content-Security-Policy` header, make sure that `unsafe-eval` is included. React requires eval() in development mode for various debugging features like reconstructing callstacks from a different environment.
+React will never use eval() in production mode 
+⚠ Fast Refresh had to perform a full reload when ./lib/i18n.js changed. Read more: https://nextjs.org/docs/messages/fast-refresh-reload
+⚠ Fast Refresh had to perform a full reload when ./lib/i18n.js changed. Read more: https://nextjs.org/docs/messages/fast-refresh-reload
+[browser] eval() is not supported in this environment. If this page was served with a `Content-Security-Policy` header, make sure that `unsafe-eval` is included. React requires eval() in development mode for various debugging features like reconstructing callstacks from a different environment.
+React will never use eval() in production mode 
+[browser] eval() is not supported in this environment. If this page was served with a `Content-Security-Policy` header, make sure that `unsafe-eval` is included. React requires eval() in development mode for various debugging features like reconstructing callstacks from a different environment.
+React will never use eval() in production mode 
+⚠ Fast Refresh had to perform a full reload when ./components/providers/preferences-provider.js changed. Read more: https://nextjs.org/docs/messages/fast-refresh-reload
+⚠ Fast Refresh had to perform a full reload when ./components/providers/preferences-provider.js changed. Read more: https://nextjs.org/docs/messages/fast-refresh-reload
+[browser] eval() is not supported in this environment. If this page was served with a `Content-Security-Policy` header, make sure that `unsafe-eval` is included. React requires eval() in development mode for various debugging features like reconstructing callstacks from a different environment.
+React will never use eval() in production mode 
+[browser] eval() is not supported in this environment. If this page was served with a `Content-Security-Policy` header, make sure that `unsafe-eval` is included. React requires eval() in development mode for various debugging features like reconstructing callstacks from a different environment.
+React will never use eval() in production mode 
+[browser] eval() is not supported in this environment. If this page was served with a `Content-Security-Policy` header, make sure that `unsafe-eval` is included. React requires eval() in development mode for various debugging features like reconstructing callstacks from a different environment.
+React will never use eval() in production mode 
+[browser] eval() is not supported in this environment. If this page was served with a `Content-Security-Policy` header, make sure that `unsafe-eval` is included. React requires eval() in development mode for various debugging features like reconstructing callstacks from a different environment.
+React will never use eval() in production mode 
+⨯ Error: Module [project]/components/marketing/tool-directory.js [app-ssr] (ecmascript) was instantiated because it was required from module [project]/node_modules/next/dist/esm/build/templates/app-page.js?page=/tools/[slug]/page { METADATA_0 => "[project]/app/icon.svg.mjs { IMAGE => \"[project]/app/icon.svg (static in ecmascript, tag client)\" } [app-rsc] (structured image object, ecmascript)", METADATA_1 => "[project]/app/twitter-image--metadata.js [app-rsc] (ecmascript, Next.js Server Component)", METADATA_2 => "[project]/app/opengraph-image--metadata.js [app-rsc] (ecmascript, Next.js Server Component)", MODULE_3 => "[project]/app/layout.js [app-rsc] (ecmascript, Next.js Server Component)", MODULE_4 => "[project]/app/error.js [app-rsc] (ecmascript, Next.js Server Component)", MODULE_5 => "[project]/app/loading.js [app-rsc] (ecmascript, Next.js Server Component)", MODULE_6 => "[project]/app/not-found.js [app-rsc] (ecmascript, Next.js Server Component)", MODULE_7 => "[project]/node_modules/next/dist/client/components/builtin/forbidden.js [app-rsc] (ecmascript, Next.js Server Component)", MODULE_8 => "[project]/node_modules/next/dist/client/components/builtin/unauthorized.js [app-rsc] (ecmascript, Next.js Server Component)", MODULE_9 => "[project]/node_modules/next/dist/client/components/builtin/global-error.js [app-rsc] (ecmascript, Next.js Server Component)", MODULE_10 => "[project]/app/tools/loading.js [app-rsc] (ecmascript, Next.js Server Component)", MODULE_11 => "[project]/app/tools/[slug]/loading.js [app-rsc] (ecmascript, Next.js Server Component)", MODULE_12 => "[project]/app/tools/[slug]/page.js [app-rsc] (ecmascript, Next.js Server Component)" } [app-rsc] (ecmascript) <locals>, but the module factory is not available.
+This is often caused by a stale browser cache, misconfigured Cache-Control headers, or a service worker serving outdated responses.
+To fix this, make sure your Cache-Control headers allow revalidation of chunks and review your service worker configuration. As an immediate workaround, try hard-reloading the page, clearing the browser cache, or unregistering any service workers.
+    at ignore-listed frames {
+  digest: '1490115514'
+}
+[browser] eval() is not supported in this environment. If this page was served with a `Content-Security-Policy` header, make sure that `unsafe-eval` is included. React requires eval() in development mode for various debugging features like reconstructing callstacks from a different environment.
+React will never use eval() in production mode 
+[browser] eval() is not supported in this environment. If this page was served with a `Content-Security-Policy` header, make sure that `unsafe-eval` is included. React requires eval() in development mode for various debugging features like reconstructing callstacks from a different environment.
+React will never use eval() in production mode 
+[browser] eval() is not supported in this environment. If this page was served with a `Content-Security-Policy` header, make sure that `unsafe-eval` is included. React requires eval() in development mode for various debugging features like reconstructing callstacks from a different environment.
+React will never use eval() in production mode 
+[browser] eval() is not supported in this environment. If this page was served with a `Content-Security-Policy` header, make sure that `unsafe-eval` is included. React requires eval() in development mode for various debugging features like reconstructing callstacks from a different environment.
+React will never use eval() in production mode 
+[browser] eval() is not supported in this environment. If this page was served with a `Content-Security-Policy` header, make sure that `unsafe-eval` is included. React requires eval() in development mode for various debugging features like reconstructing callstacks from a different environment.
+React will never use eval() in production mode 
+[browser] eval() is not supported in this environment. If this page was served with a `Content-Security-Policy` header, make sure that `unsafe-eval` is included. React requires eval() in development mode for various debugging features like reconstructing callstacks from a different environment.
+React will never use eval() in production mode 
+[browser] Detected `scroll-behavior: smooth` on the `<html>` element. To disable smooth scrolling during route transitions, add `data-scroll-behavior="smooth"` to your <html> element. Learn more: https://nextjs.org/docs/messages/missing-data-scroll-behavior
+[browser] eval() is not supported in this environment. If this page was served with a `Content-Security-Policy` header, make sure that `unsafe-eval` is included. React requires eval() in development mode for various debugging features like reconstructing callstacks from a different environment.
+React will never use eval() in production mode 
+[browser] A tree hydrated but some attributes of the server rendered HTML didn't match the client properties. This won't be patched up. This can happen if a SSR-ed Client Component used:
+
+- A server/client branch `if (typeof window !== 'undefined')`.
+- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
+- Date formatting in a user's locale which doesn't match the server.
+- External changing data without sending a snapshot of it along with the HTML.
+- Invalid HTML tag nesting.
+
+It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.
+
+https://react.dev/link/hydration-mismatch
+
+  ...
+    <SegmentViewNode type="layout" pagePath="layout.js">
+      <SegmentTrieNode>
+      <link>
+      <script>
+      <script>
+      <script>
+      <RootLayout>
+        <html lang="en" suppressHydrationWarning={true}>
+          <body className="manrope_9c...">
+            <Script>
+            <PreferencesProvider>
+              <ToastProvider>
+                <div className="app-shell">
+                  <div>
+                  <div>
+                  <SiteHeader>
+                    <header className="sticky top...">
+                      <div className="mx-auto fl...">
+                        <LinkComponent>
+                        <nav>
+                        <div className="hidden ite...">
+                          <LanguageToggle>
+                            <div className="inline-fle..." aria-label="Choose int...">
+                              <button
+                                type="button"
+                                onClick={function onClick}
+                                className="rounded-[12px] px-3 py-1.5 text-[11px] font-semibold tracking-[0.08em] tran..."
+-                               fdprocessedid="4e1i6a"
+                              >
++                               EN
+                              <button
+                                type="button"
+                                onClick={function onClick}
+                                className="rounded-[12px] px-3 py-1.5 text-[11px] font-semibold tracking-[0.08em] tran..."
+-                               fdprocessedid="0j76an"
+                              >
++                               ES
+                              <button
+                                type="button"
+                                onClick={function onClick}
+                                className="rounded-[12px] px-3 py-1.5 text-[11px] font-semibold tracking-[0.08em] tran..."
+-                               fdprocessedid="ymjqcv"
+                              >
++                               HI
+                        ...
+                  ...
+                ...
+ 
+[browser] A tree hydrated but some attributes of the server rendered HTML didn't match the client properties. This won't be patched up. This can happen if a SSR-ed Client Component used:
+
+- A server/client branch `if (typeof window !== 'undefined')`.
+- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
+- Date formatting in a user's locale which doesn't match the server.
+- External changing data without sending a snapshot of it along with the HTML.
+- Invalid HTML tag nesting.
+
+It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.
+
+https://react.dev/link/hydration-mismatch
+
+  ...
+    <SegmentViewNode type="page" pagePath="tools/[slu...">
+      <SegmentTrieNode>
+      <ToolPage>
+        <div className="page-shell...">
+          <script>
+          <script>
+          <script>
+          <ToolPageHeader>
+          ...
+            <LoadableComponent>
+              <Suspense fallback={<div>}>
+                ...
+                  <div className="space-y-6">
+                    <div id="tool-works..." className="workspace-...">
+                      <PanelCard title="EMI + Prep..." description="Add your l..." className="p-6 sm:p-7">
+                        <Card className="overflow-h...">
+                          <div className="rounded-[1...">
+                            <div>
+                            <div className="space-y-5">
+                              <div className="grid gap-4...">
+                                <CalculatorField field={{name:"loan...", ...}} value={3500000} ...>
+                                  <FieldGroup label="Loan amount" help={undefined}>
+                                    <div className="space-y-2">
+                                      <div>
+                                      <div className="relative">
+                                        <span>
+                                        <input
+                                          type="number"
+                                          min={0}
+                                          max={undefined}
+                                          step={50000}
+                                          value={3500000}
+                                          onChange={function onChange}
+                                          className="h-11 w-full rounded-[8px] border border-[var(--border-strong)] bg..."
+-                                         fdprocessedid="2ny8qs"
+                                        >
+                                <CalculatorField field={{name:"annu...", ...}} value={9.1} onChange={function onChange}>
+                                  <FieldGroup label="Interest rate" help={undefined}>
+                                    <div className="space-y-2">
+                                      <div>
+                                      <div className="relative">
+                                        <input
+                                          type="number"
+                                          min={0}
+                                          max={30}
+                                          step={0.1}
+                                          value={9.1}
+                                          onChange={function onChange}
+                                          className="h-11 w-full rounded-[8px] border border-[var(--border-strong)] bg..."
+-                                         fdprocessedid="7rtszo"
+                                        >
+                                <CalculatorField field={{name:"tenu...", ...}} value={20} onChange={function onChange}>
+                                  <FieldGroup label="Tenure (ye..." help={undefined}>
+                                    <div className="space-y-2">
+                                      <div>
+                                      <div className="relative">
+                                        <input
+                                          type="number"
+                                          min={1}
+                                          max={35}
+                                          step={1}
+                                          value={20}
+                                          onChange={function onChange}
+                                          className="h-11 w-full rounded-[8px] border border-[var(--border-strong)] bg..."
+-                                         fdprocessedid="xyxv8s"
+                                        >
+                                <CalculatorField field={{name:"mont...", ...}} value={5000} onChange={function onChange}>
+                                  <FieldGroup label="Extra mont..." help={undefined}>
+                                    <div className="space-y-2">
+                                      <div>
+                                      <div className="relative">
+                                        <span>
+                                        <input
+                                          type="number"
+                                          min={0}
+                                          max={undefined}
+                                          step={1000}
+                                          value={5000}
+                                          onChange={function onChange}
+                                          className="h-11 w-full rounded-[8px] border border-[var(--border-strong)] bg..."
+-                                         fdprocessedid="z5e1xl"
+                                        >
+                              ...
+                                <div className="grid gap-4...">
+                                  <CalculatorField field={{name:"prep...", ...}} value={1} onChange={function onChange}>
+                                    <FieldGroup label="Start extr..." help={undefined}>
+                                      <div className="space-y-2">
+                                        <div>
+                                        <div className="relative">
+                                          <input
+                                            type="number"
+                                            min={1}
+                                            max={360}
+                                            step={1}
+                                            value={1}
+                                            onChange={function onChange}
+                                            className="h-11 w-full rounded-[8px] border border-[var(--border-strong)] ..."
+-                                           fdprocessedid="ib2oup"
+                                          >
+                                  <CalculatorField field={{name:"oneT...", ...}} value={0} onChange={function onChange}>
+                                    <FieldGroup label="One-time p..." help={undefined}>
+                                      <div className="space-y-2">
+                                        <div>
+                                        <div className="relative">
+                                          <span>
+                                          <input
+                                            type="number"
+                                            min={0}
+                                            max={undefined}
+                                            step={10000}
+                                            value={0}
+                                            onChange={function onChange}
+                                            className="h-11 w-full rounded-[8px] border border-[var(--border-strong)] ..."
+-                                           fdprocessedid="fbg1nc"
+                                          >
+                                  <CalculatorField field={{name:"oneT...", ...}} value={12} onChange={function onChange}>
+                                    <FieldGroup label="One-time p..." help={undefined}>
+                                      <div className="space-y-2">
+                                        <div>
+                                        <div className="relative">
+                                          <input
+                                            type="number"
+                                            min={1}
+                                            max={360}
+                                            step={1}
+                                            value={12}
+                                            onChange={function onChange}
+                                            className="h-11 w-full rounded-[8px] border border-[var(--border-strong)] ..."
+-                                           fdprocessedid="y1l8ud"
+                                          >
+                              <InlineInfo>
+                              <div id="tool-action" className="flex flex-...">
+                                <Button onClick={function handleCalculate} disabled={false} size="lg" ...>
+                                  <button
+                                    ref={null}
+                                    type="button"
+                                    className="inline-flex items-center justify-center gap-2 rounded-[12px] font-semib..."
+                                    onClick={function handleCalculate}
+                                    disabled={false}
+-                                   fdprocessedid="6a88pq"
+                                  >
++                                   Calculate EMI savings
+                                ...
+                      <PanelCard title="Loan repay..." description="EMI and pr..." className="p-6 sm:p-7">
+                        <Card className="overflow-h...">
+                          <div className="rounded-[1...">
+                            <div>
+                            <div className="space-y-5">
+                              <div>
+                              <OutputSurface>
+                              <div className="flex flex-...">
+                                <Button onClick={function handleCopy} size="lg">
+                                  <button
+                                    ref={null}
+                                    type="button"
+                                    className="inline-flex items-center justify-center gap-2 rounded-[12px] font-semib..."
+                                    onClick={function handleCopy}
+-                                   fdprocessedid="qr3kbn"
+                                  >
++                                   Copy
+                                <Button onClick={function handleDownload} variant="secondary" size="lg">
+                                  <button
+                                    ref={null}
+                                    type="button"
+                                    className="inline-flex items-center justify-center gap-2 rounded-[12px] font-semib..."
+                                    onClick={function handleDownload}
+-                                   fdprocessedid="7x140hj"
+                                  >
++                                   Download
+                                <Button onClick={function handleReset} variant="secondary" size="lg">
+                                  <button
+                                    ref={null}
+                                    type="button"
+                                    className="inline-flex items-center justify-center gap-2 rounded-[12px] font-semib..."
+                                    onClick={function handleReset}
+-                                   fdprocessedid="hh08gg"
+                                  >
++                                   Clear
+                              ...
+                    ...
+ 
+[browser] eval() is not supported in this environment. If this page was served with a `Content-Security-Policy` header, make sure that `unsafe-eval` is included. React requires eval() in development mode for various debugging features like reconstructing callstacks from a different environment.
+React will never use eval() in production mode 
+[browser] A tree hydrated but some attributes of the server rendered HTML didn't match the client properties. This won't be patched up. This can happen if a SSR-ed Client Component used:
+
+- A server/client branch `if (typeof window !== 'undefined')`.
+- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
+- Date formatting in a user's locale which doesn't match the server.
+- External changing data without sending a snapshot of it along with the HTML.
+- Invalid HTML tag nesting.
+
+It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.
+
+https://react.dev/link/hydration-mismatch
+
+  ...
+    <RootLayout>
+      <html lang="en" suppressHydrationWarning={true}>
+        ...
+          <ToastProvider>
+            <div className="app-shell">
+              <div>
+              <div>
+              <SiteHeader>
+                <header className="sticky top...">
+                  <div className="mx-auto w-...">
+                    <div className="rounded-[1...">
+                      <div className="flex items...">
+                        <LinkComponent>
+                        <nav>
+                        <div className="hidden ite...">
+                          <LanguageToggle>
+                            <div className="inline-fle..." aria-label="Choose int...">
+                              <button
+                                type="button"
+                                onClick={function onClick}
+                                aria-pressed={true}
+                                className="rounded-full px-3 py-1.5 text-[11px] font-semibold tracking-[0.08em] transi..."
+-                               fdprocessedid="m3hkk"
+                              >
++                               EN
+                              <button
+                                type="button"
+                                onClick={function onClick}
+                                aria-pressed={false}
+                                className="rounded-full px-3 py-1.5 text-[11px] font-semibold tracking-[0.08em] transi..."
+-                               fdprocessedid="mmn6i4"
+                              >
++                               ES
+                              <button
+                                type="button"
+                                onClick={function onClick}
+                                aria-pressed={false}
+                                className="rounded-full px-3 py-1.5 text-[11px] font-semibold tracking-[0.08em] transi..."
+-                               fdprocessedid="65tpvu"
+                              >
++                               HI
+                        ...
+              ...
+            ...
+ 
+[browser] A tree hydrated but some attributes of the server rendered HTML didn't match the client properties. This won't be patched up. This can happen if a SSR-ed Client Component used:
+
+- A server/client branch `if (typeof window !== 'undefined')`.
+- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
+- Date formatting in a user's locale which doesn't match the server.
+- External changing data without sending a snapshot of it along with the HTML.
+- Invalid HTML tag nesting.
+
+It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.
+
+https://react.dev/link/hydration-mismatch
+
+  ...
+    <SegmentViewNode type="page" pagePath="tools/[slu...">
+      <SegmentTrieNode>
+      <ToolPage>
+        <div className="page-shell...">
+          <script>
+          <script>
+          <script>
+          <ToolPageHeader>
+          ...
+            <LoadableComponent>
+              <Suspense fallback={<div>}>
+                ...
+                  <div className="space-y-6">
+                    <div id="tool-works..." className="workspace-...">
+                      <PanelCard title="EMI + Prep..." description="Add your l..." className="p-6 sm:p-7">
+                        <Card className="overflow-h...">
+                          <div className="rounded-[1...">
+                            <div>
+                            <div className="space-y-5">
+                              <div className="grid gap-4...">
+                                <CalculatorField field={{name:"loan...", ...}} value={3500000} ...>
+                                  <FieldGroup label="Loan amount" help={undefined}>
+                                    <div className="space-y-2">
+                                      <div>
+                                      <div className="relative">
+                                        <span>
+                                        <input
+                                          type="number"
+                                          min={0}
+                                          max={undefined}
+                                          step={50000}
+                                          value={3500000}
+                                          onChange={function onChange}
+                                          className="h-11 w-full rounded-[8px] border border-[var(--border-strong)] bg..."
+-                                         fdprocessedid="0vwj6l"
+                                        >
+                                <CalculatorField field={{name:"annu...", ...}} value={9.1} onChange={function onChange}>
+                                  <FieldGroup label="Interest rate" help={undefined}>
+                                    <div className="space-y-2">
+                                      <div>
+                                      <div className="relative">
+                                        <input
+                                          type="number"
+                                          min={0}
+                                          max={30}
+                                          step={0.1}
+                                          value={9.1}
+                                          onChange={function onChange}
+                                          className="h-11 w-full rounded-[8px] border border-[var(--border-strong)] bg..."
+-                                         fdprocessedid="fahsj"
+                                        >
+                                <CalculatorField field={{name:"tenu...", ...}} value={20} onChange={function onChange}>
+                                  <FieldGroup label="Tenure (ye..." help={undefined}>
+                                    <div className="space-y-2">
+                                      <div>
+                                      <div className="relative">
+                                        <input
+                                          type="number"
+                                          min={1}
+                                          max={35}
+                                          step={1}
+                                          value={20}
+                                          onChange={function onChange}
+                                          className="h-11 w-full rounded-[8px] border border-[var(--border-strong)] bg..."
+-                                         fdprocessedid="n4vm4p"
+                                        >
+                                <CalculatorField field={{name:"mont...", ...}} value={5000} onChange={function onChange}>
+                                  <FieldGroup label="Extra mont..." help={undefined}>
+                                    <div className="space-y-2">
+                                      <div>
+                                      <div className="relative">
+                                        <span>
+                                        <input
+                                          type="number"
+                                          min={0}
+                                          max={undefined}
+                                          step={1000}
+                                          value={5000}
+                                          onChange={function onChange}
+                                          className="h-11 w-full rounded-[8px] border border-[var(--border-strong)] bg..."
+-                                         fdprocessedid="hh426k"
+                                        >
+                              ...
+                                <div className="grid gap-4...">
+                                  <CalculatorField field={{name:"prep...", ...}} value={1} onChange={function onChange}>
+                                    <FieldGroup label="Start extr..." help={undefined}>
+                                      <div className="space-y-2">
+                                        <div>
+                                        <div className="relative">
+                                          <input
+                                            type="number"
+                                            min={1}
+                                            max={360}
+                                            step={1}
+                                            value={1}
+                                            onChange={function onChange}
+                                            className="h-11 w-full rounded-[8px] border border-[var(--border-strong)] ..."
+-                                           fdprocessedid="vk83sp"
+                                          >
+                                  <CalculatorField field={{name:"oneT...", ...}} value={0} onChange={function onChange}>
+                                    <FieldGroup label="One-time p..." help={undefined}>
+                                      <div className="space-y-2">
+                                        <div>
+                                        <div className="relative">
+                                          <span>
+                                          <input
+                                            type="number"
+                                            min={0}
+                                            max={undefined}
+                                            step={10000}
+                                            value={0}
+                                            onChange={function onChange}
+                                            className="h-11 w-full rounded-[8px] border border-[var(--border-strong)] ..."
+-                                           fdprocessedid="f7k5xo"
+                                          >
+                                  <CalculatorField field={{name:"oneT...", ...}} value={12} onChange={function onChange}>
+                                    <FieldGroup label="One-time p..." help={undefined}>
+                                      <div className="space-y-2">
+                                        <div>
+                                        <div className="relative">
+                                          <input
+                                            type="number"
+                                            min={1}
+                                            max={360}
+                                            step={1}
+                                            value={12}
+                                            onChange={function onChange}
+                                            className="h-11 w-full rounded-[8px] border border-[var(--border-strong)] ..."
+-                                           fdprocessedid="radbho"
+                                          >
+                              <InlineInfo>
+                              <div id="tool-action" className="flex flex-...">
+                                <Button onClick={function handleCalculate} disabled={false} size="lg" ...>
+                                  <button
+                                    ref={null}
+                                    type="button"
+                                    className="inline-flex items-center justify-center gap-2 rounded-[12px] font-semib..."
+                                    onClick={function handleCalculate}
+                                    disabled={false}
+-                                   fdprocessedid="z8r2dw"
+                                  >
++                                   Calculate EMI savings
+                                ...
+                      <PanelCard title="Loan repay..." description="EMI and pr..." className="p-6 sm:p-7">
+                        <Card className="overflow-h...">
+                          <div className="rounded-[1...">
+                            <div>
+                            <div className="space-y-5">
+                              <div>
+                              <OutputSurface>
+                              <div className="flex flex-...">
+                                <Button onClick={function handleCopy} size="lg">
+                                  <button
+                                    ref={null}
+                                    type="button"
+                                    className="inline-flex items-center justify-center gap-2 rounded-[12px] font-semib..."
+                                    onClick={function handleCopy}
+-                                   fdprocessedid="0n0w3p"
+                                  >
++                                   Copy
+                                <Button onClick={function handleDownload} variant="secondary" size="lg">
+                                  <button
+                                    ref={null}
+                                    type="button"
+                                    className="inline-flex items-center justify-center gap-2 rounded-[12px] font-semib..."
+                                    onClick={function handleDownload}
+-                                   fdprocessedid="m7xrdg"
+                                  >
++                                   Download
+                                <Button onClick={function handleReset} variant="secondary" size="lg">
+                                  <button
+                                    ref={null}
+                                    type="button"
+                                    className="inline-flex items-center justify-center gap-2 rounded-[12px] font-semib..."
+                                    onClick={function handleReset}
+-                                   fdprocessedid="9mqsr"
+                                  >
++                                   Clear
+                              ...
+                    ...
+ 
+[browser] eval() is not supported in this environment. If this page was served with a `Content-Security-Policy` header, make sure that `unsafe-eval` is included. React requires eval() in development mode for various debugging features like reconstructing callstacks from a different environment.
+React will never use eval() in production mode 
+[browser] eval() is not supported in this environment. If this page was served with a `Content-Security-Policy` header, make sure that `unsafe-eval` is included. React requires eval() in development mode for various debugging features like reconstructing callstacks from a different environment.
+React will never use eval() in production mode 
+[browser] A tree hydrated but some attributes of the server rendered HTML didn't match the client properties. This won't be patched up. This can happen if a SSR-ed Client Component used:
+
+- A server/client branch `if (typeof window !== 'undefined')`.
+- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
+- Date formatting in a user's locale which doesn't match the server.
+- External changing data without sending a snapshot of it along with the HTML.
+- Invalid HTML tag nesting.
+
+It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.
+
+https://react.dev/link/hydration-mismatch
+
+  ...
+    <RootLayout>
+      <html lang="en" suppressHydrationWarning={true}>
+        ...
+          <ToastProvider>
+            <div className="app-shell">
+              <div>
+              <div>
+              <SiteHeader>
+                <header className="sticky top...">
+                  <div className="mx-auto w-...">
+                    <div className="rounded-[1...">
+                      <div className="flex items...">
+                        <LinkComponent>
+                        <nav>
+                        <div className="hidden ite...">
+                          <LanguageToggle>
+                            <div className="inline-fle..." aria-label="Choose int...">
+                              <button
+                                type="button"
+                                onClick={function onClick}
+                                aria-pressed={true}
+                                className="rounded-full px-3 py-1.5 text-[11px] font-semibold tracking-[0.08em] transi..."
+-                               fdprocessedid="afkc3"
+                              >
++                               EN
+                              <button
+                                type="button"
+                                onClick={function onClick}
+                                aria-pressed={false}
+                                className="rounded-full px-3 py-1.5 text-[11px] font-semibold tracking-[0.08em] transi..."
+-                               fdprocessedid="w9z3vp"
+                              >
++                               ES
+                              <button
+                                type="button"
+                                onClick={function onClick}
+                                aria-pressed={false}
+                                className="rounded-full px-3 py-1.5 text-[11px] font-semibold tracking-[0.08em] transi..."
+-                               fdprocessedid="lyo808"
+                              >
++                               HI
+                        ...
+              ...
+            ...
+ 
+[browser] A tree hydrated but some attributes of the server rendered HTML didn't match the client properties. This won't be patched up. This can happen if a SSR-ed Client Component used:
+
+- A server/client branch `if (typeof window !== 'undefined')`.
+- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
+- Date formatting in a user's locale which doesn't match the server.
+- External changing data without sending a snapshot of it along with the HTML.
+- Invalid HTML tag nesting.
+
+It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.
+
+https://react.dev/link/hydration-mismatch
+
+  ...
+    <SegmentViewNode type="page" pagePath="tools/[slu...">
+      <SegmentTrieNode>
+      <ToolPage>
+        <div className="page-shell...">
+          <script>
+          <script>
+          <script>
+          <ToolPageHeader>
+          ...
+            <LoadableComponent>
+              <Suspense fallback={<div>}>
+                ...
+                  <div className="space-y-6">
+                    <div id="tool-works..." className="workspace-...">
+                      <PanelCard title="EMI + Prep..." description="Add your l..." className="p-6 sm:p-7">
+                        <Card className="relative o...">
+                          <div className="rounded-[1...">
+                            <span>
+                            <div>
+                            <div className="space-y-5">
+                              <div className="grid gap-4...">
+                                <CalculatorField field={{name:"loan...", ...}} value={3500000} ...>
+                                  <FieldGroup label="Loan amount" help={undefined}>
+                                    <div className="space-y-2">
+                                      <div>
+                                      <div className="relative">
+                                        <span>
+                                        <input
+                                          type="number"
+                                          min={0}
+                                          max={undefined}
+                                          step={50000}
+                                          value={3500000}
+                                          onChange={function onChange}
+                                          className="h-11 w-full rounded-[8px] border border-[var(--border-strong)] bg..."
+-                                         fdprocessedid="ft8pu"
+                                        >
+                                <CalculatorField field={{name:"annu...", ...}} value={9.1} onChange={function onChange}>
+                                  <FieldGroup label="Interest rate" help={undefined}>
+                                    <div className="space-y-2">
+                                      <div>
+                                      <div className="relative">
+                                        <input
+                                          type="number"
+                                          min={0}
+                                          max={30}
+                                          step={0.1}
+                                          value={9.1}
+                                          onChange={function onChange}
+                                          className="h-11 w-full rounded-[8px] border border-[var(--border-strong)] bg..."
+-                                         fdprocessedid="p037lo"
+                                        >
+                                <CalculatorField field={{name:"tenu...", ...}} value={20} onChange={function onChange}>
+                                  <FieldGroup label="Tenure (ye..." help={undefined}>
+                                    <div className="space-y-2">
+                                      <div>
+                                      <div className="relative">
+                                        <input
+                                          type="number"
+                                          min={1}
+                                          max={35}
+                                          step={1}
+                                          value={20}
+                                          onChange={function onChange}
+                                          className="h-11 w-full rounded-[8px] border border-[var(--border-strong)] bg..."
+-                                         fdprocessedid="de7nei"
+                                        >
+                                <CalculatorField field={{name:"mont...", ...}} value={5000} onChange={function onChange}>
+                                  <FieldGroup label="Extra mont..." help={undefined}>
+                                    <div className="space-y-2">
+                                      <div>
+                                      <div className="relative">
+                                        <span>
+                                        <input
+                                          type="number"
+                                          min={0}
+                                          max={undefined}
+                                          step={1000}
+                                          value={5000}
+                                          onChange={function onChange}
+                                          className="h-11 w-full rounded-[8px] border border-[var(--border-strong)] bg..."
+-                                         fdprocessedid="q084dm"
+                                        >
+                              ...
+                                <div className="grid gap-4...">
+                                  <CalculatorField field={{name:"prep...", ...}} value={1} onChange={function onChange}>
+                                    <FieldGroup label="Start extr..." help={undefined}>
+                                      <div className="space-y-2">
+                                        <div>
+                                        <div className="relative">
+                                          <input
+                                            type="number"
+                                            min={1}
+                                            max={360}
+                                            step={1}
+                                            value={1}
+                                            onChange={function onChange}
+                                            className="h-11 w-full rounded-[8px] border border-[var(--border-strong)] ..."
+-                                           fdprocessedid="qirg5b"
+                                          >
+                                  <CalculatorField field={{name:"oneT...", ...}} value={0} onChange={function onChange}>
+                                    <FieldGroup label="One-time p..." help={undefined}>
+                                      <div className="space-y-2">
+                                        <div>
+                                        <div className="relative">
+                                          <span>
+                                          <input
+                                            type="number"
+                                            min={0}
+                                            max={undefined}
+                                            step={10000}
+                                            value={0}
+                                            onChange={function onChange}
+                                            className="h-11 w-full rounded-[8px] border border-[var(--border-strong)] ..."
+-                                           fdprocessedid="uo1up8"
+                                          >
+                                  <CalculatorField field={{name:"oneT...", ...}} value={12} onChange={function onChange}>
+                                    <FieldGroup label="One-time p..." help={undefined}>
+                                      <div className="space-y-2">
+                                        <div>
+                                        <div className="relative">
+                                          <input
+                                            type="number"
+                                            min={1}
+                                            max={360}
+                                            step={1}
+                                            value={12}
+                                            onChange={function onChange}
+                                            className="h-11 w-full rounded-[8px] border border-[var(--border-strong)] ..."
+-                                           fdprocessedid="k9dz2"
+                                          >
+                              <InlineInfo>
+                              <div id="tool-action" className="flex flex-...">
+                                <Button onClick={function handleCalculate} disabled={false} size="lg" ...>
+                                  <button
+                                    ref={null}
+                                    type="button"
+                                    className="inline-flex items-center justify-center gap-2 rounded-[12px] font-semib..."
+                                    onClick={function handleCalculate}
+                                    disabled={false}
+-                                   fdprocessedid="yuyaxeg"
+                                  >
++                                   Calculate EMI savings
+                                ...
+                      <PanelCard title="Loan repay..." description="EMI and pr..." className="p-6 sm:p-7">
+                        <Card className="relative o...">
+                          <div className="rounded-[1...">
+                            <span>
+                            <div>
+                            <div className="space-y-5">
+                              <div>
+                              <OutputSurface>
+                              <div className="flex flex-...">
+                                <Button onClick={function handleCopy} size="lg">
+                                  <button
+                                    ref={null}
+                                    type="button"
+                                    className="inline-flex items-center justify-center gap-2 rounded-[12px] font-semib..."
+                                    onClick={function handleCopy}
+-                                   fdprocessedid="vllic"
+                                  >
++                                   Copy
+                                <Button onClick={function handleDownload} variant="secondary" size="lg">
+                                  <button
+                                    ref={null}
+                                    type="button"
+                                    className="inline-flex items-center justify-center gap-2 rounded-[12px] font-semib..."
+                                    onClick={function handleDownload}
+-                                   fdprocessedid="yifxx"
+                                  >
++                                   Download
+                                <Button onClick={function handleReset} variant="secondary" size="lg">
+                                  <button
+                                    ref={null}
+                                    type="button"
+                                    className="inline-flex items-center justify-center gap-2 rounded-[12px] font-semib..."
+                                    onClick={function handleReset}
+-                                   fdprocessedid="d4k86"
+                                  >
++                                   Clear
+                              ...
+                    ...
+ 
+[browser] eval() is not supported in this environment. If this page was served with a `Content-Security-Policy` header, make sure that `unsafe-eval` is included. React requires eval() in development mode for various debugging features like reconstructing callstacks from a different environment.
+React will never use eval() in production mode 
+[browser] A tree hydrated but some attributes of the server rendered HTML didn't match the client properties. This won't be patched up. This can happen if a SSR-ed Client Component used:
+
+- A server/client branch `if (typeof window !== 'undefined')`.
+- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
+- Date formatting in a user's locale which doesn't match the server.
+- External changing data without sending a snapshot of it along with the HTML.
+- Invalid HTML tag nesting.
+
+It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.
+
+https://react.dev/link/hydration-mismatch
+
+  ...
+    <RootLayout>
+      <html lang="en" suppressHydrationWarning={true}>
+        ...
+          <ToastProvider>
+            <div className="app-shell">
+              <div>
+              <div>
+              <SiteHeader>
+                <header className="sticky top...">
+                  <div className="mx-auto w-...">
+                    <div className="rounded-[1...">
+                      <div className="flex items...">
+                        <LinkComponent>
+                        <nav>
+                        <div className="hidden ite...">
+                          <LanguageToggle>
+                            <div className="inline-fle..." aria-label="Choose int...">
+                              <button
+                                type="button"
+                                onClick={function onClick}
+                                aria-pressed={true}
+                                className="rounded-full px-3 py-1.5 text-[11px] font-semibold tracking-[0.08em] transi..."
+-                               fdprocessedid="kn2l6a"
+                              >
++                               EN
+                              <button
+                                type="button"
+                                onClick={function onClick}
+                                aria-pressed={false}
+                                className="rounded-full px-3 py-1.5 text-[11px] font-semibold tracking-[0.08em] transi..."
+-                               fdprocessedid="e3qos"
+                              >
++                               ES
+                              <button
+                                type="button"
+                                onClick={function onClick}
+                                aria-pressed={false}
+                                className="rounded-full px-3 py-1.5 text-[11px] font-semibold tracking-[0.08em] transi..."
+-                               fdprocessedid="0sbq7"
+                              >
++                               HI
+                        ...
+              ...
+            ...
+ 
+[browser] A tree hydrated but some attributes of the server rendered HTML didn't match the client properties. This won't be patched up. This can happen if a SSR-ed Client Component used:
+
+- A server/client branch `if (typeof window !== 'undefined')`.
+- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
+- Date formatting in a user's locale which doesn't match the server.
+- External changing data without sending a snapshot of it along with the HTML.
+- Invalid HTML tag nesting.
+
+It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.
+
+https://react.dev/link/hydration-mismatch
+
+  ...
+    <ToolPage>
+      <div className="page-shell...">
+        <script>
+        <script>
+        <script>
+        <ToolPageHeader>
+        ...
+          <LoadableComponent>
+            <Suspense fallback={<div>}>
+              ...
+                <div className="space-y-6">
+                  <div id="tool-works..." className="workspace-...">
+                    <PanelCard title="EMI + Prep..." description="Add your l..." className="p-6 sm:p-7">
+                      <Card className="relative o...">
+                        <div className="rounded-[1...">
+                          <span>
+                          <div>
+                          <div className="space-y-5">
+                            <div className="grid gap-4...">
+                              <CalculatorField field={{name:"loan...", ...}} value={3500000} onChange={function onChange}>
+                                <FieldGroup label="Loan amount" help={undefined}>
+                                  <div className="space-y-2">
+                                    <div>
+                                    <div className="relative">
+                                      <span>
+                                      <input
+                                        type="number"
+                                        min={0}
+                                        max={undefined}
+                                        step={50000}
+                                        value={3500000}
+                                        onChange={function onChange}
+                                        className="h-12 w-full rounded-[12px] border border-[var(--border-strong)] bg-..."
+-                                       fdprocessedid="zc87fm"
+                                      >
+                              <CalculatorField field={{name:"annu...", ...}} value={9.1} onChange={function onChange}>
+                                <FieldGroup label="Interest rate" help={undefined}>
+                                  <div className="space-y-2">
+                                    <div>
+                                    <div className="relative">
+                                      <input
+                                        type="number"
+                                        min={0}
+                                        max={30}
+                                        step={0.1}
+                                        value={9.1}
+                                        onChange={function onChange}
+                                        className="h-12 w-full rounded-[12px] border border-[var(--border-strong)] bg-..."
+-                                       fdprocessedid="6ynik"
+                                      >
+                              <CalculatorField field={{name:"tenu...", ...}} value={20} onChange={function onChange}>
+                                <FieldGroup label="Tenure (ye..." help={undefined}>
+                                  <div className="space-y-2">
+                                    <div>
+                                    <div className="relative">
+                                      <input
+                                        type="number"
+                                        min={1}
+                                        max={35}
+                                        step={1}
+                                        value={20}
+                                        onChange={function onChange}
+                                        className="h-12 w-full rounded-[12px] border border-[var(--border-strong)] bg-..."
+-                                       fdprocessedid="d66fzb"
+                                      >
+                              <CalculatorField field={{name:"mont...", ...}} value={5000} onChange={function onChange}>
+                                <FieldGroup label="Extra mont..." help={undefined}>
+                                  <div className="space-y-2">
+                                    <div>
+                                    <div className="relative">
+                                      <span>
+                                      <input
+                                        type="number"
+                                        min={0}
+                                        max={undefined}
+                                        step={1000}
+                                        value={5000}
+                                        onChange={function onChange}
+                                        className="h-12 w-full rounded-[12px] border border-[var(--border-strong)] bg-..."
+-                                       fdprocessedid="8r53ml"
+                                      >
+                            ...
+                              <div className="grid gap-4...">
+                                <CalculatorField field={{name:"prep...", ...}} value={1} onChange={function onChange}>
+                                  <FieldGroup label="Start extr..." help={undefined}>
+                                    <div className="space-y-2">
+                                      <div>
+                                      <div className="relative">
+                                        <input
+                                          type="number"
+                                          min={1}
+                                          max={360}
+                                          step={1}
+                                          value={1}
+                                          onChange={function onChange}
+                                          className="h-12 w-full rounded-[12px] border border-[var(--border-strong)] b..."
+-                                         fdprocessedid="d5yqi"
+                                        >
+                                <CalculatorField field={{name:"oneT...", ...}} value={0} onChange={function onChange}>
+                                  <FieldGroup label="One-time p..." help={undefined}>
+                                    <div className="space-y-2">
+                                      <div>
+                                      <div className="relative">
+                                        <span>
+                                        <input
+                                          type="number"
+                                          min={0}
+                                          max={undefined}
+                                          step={10000}
+                                          value={0}
+                                          onChange={function onChange}
+                                          className="h-12 w-full rounded-[12px] border border-[var(--border-strong)] b..."
+-                                         fdprocessedid="3tf0ii"
+                                        >
+                                <CalculatorField field={{name:"oneT...", ...}} value={12} onChange={function onChange}>
+                                  <FieldGroup label="One-time p..." help={undefined}>
+                                    <div className="space-y-2">
+                                      <div>
+                                      <div className="relative">
+                                        <input
+                                          type="number"
+                                          min={1}
+                                          max={360}
+                                          step={1}
+                                          value={12}
+                                          onChange={function onChange}
+                                          className="h-12 w-full rounded-[12px] border border-[var(--border-strong)] b..."
+-                                         fdprocessedid="6rz3ih"
+                                        >
+                            <InlineInfo>
+                            <div id="tool-action" className="rounded-[1...">
+                              <div className="flex flex-...">
+                                <p>
+                                <Button onClick={function handleCalculate} disabled={false} size="lg" ...>
+                                  <button
+                                    ref={null}
+                                    type="button"
+                                    className="inline-flex items-center justify-center gap-2 rounded-[12px] font-semib..."
+                                    onClick={function handleCalculate}
+                                    disabled={false}
+-                                   fdprocessedid="rf12yi"
+                                  >
++                                   Calculate EMI savings
+                    <PanelCard title="Loan repay..." description="EMI and pr..." className="p-6 sm:p-7">
+                      <Card className="relative o...">
+                        <div className="rounded-[1...">
+                          <span>
+                          <div>
+                          <div className="space-y-5">
+                            <div>
+                            <OutputSurface>
+                            <div className="rounded-[1...">
+                              <div className="flex flex-...">
+                                <Button onClick={function handleCopy} size="lg">
+                                  <button
+                                    ref={null}
+                                    type="button"
+                                    className="inline-flex items-center justify-center gap-2 rounded-[12px] font-semib..."
+                                    onClick={function handleCopy}
+-                                   fdprocessedid="0vg8u"
+                                  >
++                                   Copy
+                                <Button onClick={function handleDownload} variant="secondary" size="lg">
+                                  <button
+                                    ref={null}
+                                    type="button"
+                                    className="inline-flex items-center justify-center gap-2 rounded-[12px] font-semib..."
+                                    onClick={function handleDownload}
+-                                   fdprocessedid="z925o2"
+                                  >
++                                   Download
+                                <Button onClick={function handleReset} variant="secondary" size="lg">
+                                  <button
+                                    ref={null}
+                                    type="button"
+                                    className="inline-flex items-center justify-center gap-2 rounded-[12px] font-semib..."
+                                    onClick={function handleReset}
+-                                   fdprocessedid="o43llo"
+                                  >
++                                   Clear
+                            ...
+                  ...
+ 
+[browser] eval() is not supported in this environment. If this page was served with a `Content-Security-Policy` header, make sure that `unsafe-eval` is included. React requires eval() in development mode for various debugging features like reconstructing callstacks from a different environment.
+React will never use eval() in production mode 
+[browser] A tree hydrated but some attributes of the server rendered HTML didn't match the client properties. This won't be patched up. This can happen if a SSR-ed Client Component used:
+
+- A server/client branch `if (typeof window !== 'undefined')`.
+- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
+- Date formatting in a user's locale which doesn't match the server.
+- External changing data without sending a snapshot of it along with the HTML.
+- Invalid HTML tag nesting.
+
+It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.
+
+https://react.dev/link/hydration-mismatch
+
+  ...
+    <RootLayout>
+      <html lang="en" suppressHydrationWarning={true}>
+        ...
+          <ToastProvider>
+            <div className="app-shell">
+              <div>
+              <div>
+              <SiteHeader>
+                <header className="sticky top...">
+                  <div className="mx-auto w-...">
+                    <div className="rounded-[1...">
+                      <div className="flex items...">
+                        <LinkComponent>
+                        <nav>
+                        <div className="hidden ite...">
+                          <LanguageToggle>
+                            <div className="inline-fle..." aria-label="Choose int...">
+                              <button
+                                type="button"
+                                onClick={function onClick}
+                                aria-pressed={true}
+                                className="rounded-full px-3 py-1.5 text-[11px] font-semibold tracking-[0.08em] transi..."
+-                               fdprocessedid="uof9mic"
+                              >
++                               EN
+                              <button
+                                type="button"
+                                onClick={function onClick}
+                                aria-pressed={false}
+                                className="rounded-full px-3 py-1.5 text-[11px] font-semibold tracking-[0.08em] transi..."
+-                               fdprocessedid="bsqjzl"
+                              >
++                               ES
+                              <button
+                                type="button"
+                                onClick={function onClick}
+                                aria-pressed={false}
+                                className="rounded-full px-3 py-1.5 text-[11px] font-semibold tracking-[0.08em] transi..."
+-                               fdprocessedid="pj1kgs"
+                              >
++                               HI
+                        ...
+              ...
+            ...
+ 
+[browser] A tree hydrated but some attributes of the server rendered HTML didn't match the client properties. This won't be patched up. This can happen if a SSR-ed Client Component used:
+
+- A server/client branch `if (typeof window !== 'undefined')`.
+- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
+- Date formatting in a user's locale which doesn't match the server.
+- External changing data without sending a snapshot of it along with the HTML.
+- Invalid HTML tag nesting.
+
+It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.
+
+https://react.dev/link/hydration-mismatch
+
+  ...
+    <ToolPage>
+      <div className="page-shell...">
+        <script>
+        <script>
+        <script>
+        <ToolPageHeader>
+        ...
+          <LoadableComponent>
+            <Suspense fallback={<div>}>
+              ...
+                <div className="space-y-6">
+                  <div id="tool-works..." className="workspace-...">
+                    <PanelCard title="EMI + Prep..." description="Add your l..." className="p-6 sm:p-7">
+                      <Card className="relative o...">
+                        <div className="rounded-[1...">
+                          <span>
+                          <div>
+                          <div className="space-y-5">
+                            <div className="grid gap-4...">
+                              <CalculatorField field={{name:"loan...", ...}} value={3500000} onChange={function onChange}>
+                                <FieldGroup label="Loan amount" help={undefined}>
+                                  <div className="space-y-2">
+                                    <div>
+                                    <div className="relative">
+                                      <span>
+                                      <input
+                                        type="number"
+                                        min={0}
+                                        max={undefined}
+                                        step={50000}
+                                        value={3500000}
+                                        onChange={function onChange}
+                                        className="h-12 w-full rounded-[12px] border border-[var(--border-strong)] bg-..."
+-                                       fdprocessedid="oyk2en"
+                                      >
+                              <CalculatorField field={{name:"annu...", ...}} value={9.1} onChange={function onChange}>
+                                <FieldGroup label="Interest rate" help={undefined}>
+                                  <div className="space-y-2">
+                                    <div>
+                                    <div className="relative">
+                                      <input
+                                        type="number"
+                                        min={0}
+                                        max={30}
+                                        step={0.1}
+                                        value={9.1}
+                                        onChange={function onChange}
+                                        className="h-12 w-full rounded-[12px] border border-[var(--border-strong)] bg-..."
+-                                       fdprocessedid="3xu1zt"
+                                      >
+                              <CalculatorField field={{name:"tenu...", ...}} value={20} onChange={function onChange}>
+                                <FieldGroup label="Tenure (ye..." help={undefined}>
+                                  <div className="space-y-2">
+                                    <div>
+                                    <div className="relative">
+                                      <input
+                                        type="number"
+                                        min={1}
+                                        max={35}
+                                        step={1}
+                                        value={20}
+                                        onChange={function onChange}
+                                        className="h-12 w-full rounded-[12px] border border-[var(--border-strong)] bg-..."
+-                                       fdprocessedid="qoa4zg"
+                                      >
+                              <CalculatorField field={{name:"mont...", ...}} value={5000} onChange={function onChange}>
+                                <FieldGroup label="Extra mont..." help={undefined}>
+                                  <div className="space-y-2">
+                                    <div>
+                                    <div className="relative">
+                                      <span>
+                                      <input
+                                        type="number"
+                                        min={0}
+                                        max={undefined}
+                                        step={1000}
+                                        value={5000}
+                                        onChange={function onChange}
+                                        className="h-12 w-full rounded-[12px] border border-[var(--border-strong)] bg-..."
+-                                       fdprocessedid="09a5zr"
+                                      >
+                            ...
+                              <div className="grid gap-4...">
+                                <CalculatorField field={{name:"prep...", ...}} value={1} onChange={function onChange}>
+                                  <FieldGroup label="Start extr..." help={undefined}>
+                                    <div className="space-y-2">
+                                      <div>
+                                      <div className="relative">
+                                        <input
+                                          type="number"
+                                          min={1}
+                                          max={360}
+                                          step={1}
+                                          value={1}
+                                          onChange={function onChange}
+                                          className="h-12 w-full rounded-[12px] border border-[var(--border-strong)] b..."
+-                                         fdprocessedid="l5rvs"
+                                        >
+                                <CalculatorField field={{name:"oneT...", ...}} value={0} onChange={function onChange}>
+                                  <FieldGroup label="One-time p..." help={undefined}>
+                                    <div className="space-y-2">
+                                      <div>
+                                      <div className="relative">
+                                        <span>
+                                        <input
+                                          type="number"
+                                          min={0}
+                                          max={undefined}
+                                          step={10000}
+                                          value={0}
+                                          onChange={function onChange}
+                                          className="h-12 w-full rounded-[12px] border border-[var(--border-strong)] b..."
+-                                         fdprocessedid="5jx06"
+                                        >
+                                <CalculatorField field={{name:"oneT...", ...}} value={12} onChange={function onChange}>
+                                  <FieldGroup label="One-time p..." help={undefined}>
+                                    <div className="space-y-2">
+                                      <div>
+                                      <div className="relative">
+                                        <input
+                                          type="number"
+                                          min={1}
+                                          max={360}
+                                          step={1}
+                                          value={12}
+                                          onChange={function onChange}
+                                          className="h-12 w-full rounded-[12px] border border-[var(--border-strong)] b..."
+-                                         fdprocessedid="g2nual"
+                                        >
+                            <InlineInfo>
+                            <div id="tool-action" className="rounded-[1...">
+                              <div className="flex flex-...">
+                                <p>
+                                <Button onClick={function handleCalculate} disabled={false} size="lg" ...>
+                                  <button
+                                    ref={null}
+                                    type="button"
+                                    className="inline-flex items-center justify-center gap-2 rounded-[12px] font-semib..."
+                                    onClick={function handleCalculate}
+                                    disabled={false}
+-                                   fdprocessedid="0i8i9g"
+                                  >
++                                   Calculate EMI savings
+                    <PanelCard title="Loan repay..." description="EMI and pr..." className="p-6 sm:p-7">
+                      <Card className="relative o...">
+                        <div className="rounded-[1...">
+                          <span>
+                          <div>
+                          <div className="space-y-5">
+                            <div>
+                            <OutputSurface>
+                            <div className="rounded-[1...">
+                              <div className="flex flex-...">
+                                <Button onClick={function handleCopy} size="lg">
+                                  <button
+                                    ref={null}
+                                    type="button"
+                                    className="inline-flex items-center justify-center gap-2 rounded-[12px] font-semib..."
+                                    onClick={function handleCopy}
+-                                   fdprocessedid="v84rnt"
+                                  >
++                                   Copy
+                                <Button onClick={function handleDownload} variant="secondary" size="lg">
+                                  <button
+                                    ref={null}
+                                    type="button"
+                                    className="inline-flex items-center justify-center gap-2 rounded-[12px] font-semib..."
+                                    onClick={function handleDownload}
+-                                   fdprocessedid="s8q05"
+                                  >
++                                   Download
+                                <Button onClick={function handleReset} variant="secondary" size="lg">
+                                  <button
+                                    ref={null}
+                                    type="button"
+                                    className="inline-flex items-center justify-center gap-2 rounded-[12px] font-semib..."
+                                    onClick={function handleReset}
+-                                   fdprocessedid="aj9x97"
+                                  >
++                                   Clear
+                            ...
+                  ...
+ 
+[browser] eval() is not supported in this environment. If this page was served with a `Content-Security-Policy` header, make sure that `unsafe-eval` is included. React requires eval() in development mode for various debugging features like reconstructing callstacks from a different environment.
+React will never use eval() in production mode 
+[browser] eval() is not supported in this environment. If this page was served with a `Content-Security-Policy` header, make sure that `unsafe-eval` is included. React requires eval() in development mode for various debugging features like reconstructing callstacks from a different environment.
+React will never use eval() in production mode 
+[browser] Detected `scroll-behavior: smooth` on the `<html>` element. To disable smooth scrolling during route transitions, add `data-scroll-behavior="smooth"` to your <html> element. Learn more: https://nextjs.org/docs/messages/missing-data-scroll-behavior
+^C

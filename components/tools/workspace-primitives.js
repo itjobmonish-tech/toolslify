@@ -1,10 +1,12 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
+import { usePreferences } from "@/components/providers/preferences-provider";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { Textarea } from "@/components/ui/textarea";
+import { useTranslatedValue, useTranslatedValues } from "@/lib/runtime-localization";
 import { cn, formatFileSize, formatRelativeTime, safeJsonParse } from "@/lib/utils";
 
 export function usePersistentState(key, initialValue) {
@@ -67,31 +69,33 @@ export function useSubmitShortcut({ enabled = true, onSubmit }) {
   }, [enabled, onSubmit]);
 }
 
-export function WorkspaceHero({ badge, title, description, stats, theme }) {
+export function WorkspaceHero({ badge, title, description, stats }) {
+  const translatedBadge = useTranslatedValue(badge || "");
+  const translatedTitle = useTranslatedValue(title || "");
+  const translatedDescription = useTranslatedValue(description || "");
+  const translatedStatLabels = useTranslatedValues(stats.map((item) => item.label || ""));
+
   return (
     <Card
-      className="overflow-hidden border-[var(--border-strong)] p-6 sm:p-8"
-      style={{
-        background: `linear-gradient(135deg, ${theme.surface}, var(--surface) 52%, var(--surface-raised))`,
-      }}
+      className="workspace-hero-panel overflow-hidden border-[var(--border)] p-6 sm:p-8"
     >
       <div className="grid gap-8 lg:grid-cols-[1.1fr_0.9fr] lg:items-end">
         <div className="space-y-4">
-          <Badge tone="accent">{badge}</Badge>
+          <Badge tone="accent">{translatedBadge}</Badge>
           <div className="space-y-4">
-            <h1 className="section-title text-4xl font-semibold sm:text-5xl">{title}</h1>
-            <p className="max-w-3xl text-base leading-8 text-[var(--muted-foreground)]">{description}</p>
+            <h1 className="section-title text-4xl font-semibold sm:text-5xl">{translatedTitle}</h1>
+            <p className="max-w-3xl text-base leading-8 text-[var(--muted-foreground)]">{translatedDescription}</p>
           </div>
         </div>
 
         <div className="grid gap-4 sm:grid-cols-3">
-          {stats.map((item) => (
+          {stats.map((item, index) => (
             <div
               key={item.label}
-              className="rounded-[24px] border border-[var(--border)] bg-[var(--surface-strong)] p-4"
+              className="rounded-[18px] border border-[var(--border)] bg-[linear-gradient(180deg,var(--background-strong),var(--surface-elevated))] p-4 shadow-[var(--shadow-soft)]"
             >
               <p className="text-[11px] font-semibold uppercase tracking-[0.18em] text-[var(--muted-foreground)]">
-                {item.label}
+                {translatedStatLabels[index] || item.label}
               </p>
               <p className="mt-3 text-lg font-semibold text-[var(--foreground)]">{item.value}</p>
             </div>
@@ -102,14 +106,61 @@ export function WorkspaceHero({ badge, title, description, stats, theme }) {
   );
 }
 
-export function PanelCard({ eyebrow, title, description, children, className }) {
+export function WorkflowSteps({ steps, currentStep = 1 }) {
+  const { language } = usePreferences();
+  const translatedStepWord = useTranslatedValue("Step");
+  const translatedStepText = useTranslatedValues(
+    steps.flatMap((step) => [step.title || "", step.body || ""]),
+  );
+
   return (
-    <Card className={cn("p-5 sm:p-6", className)}>
+    <div className="grid gap-3 sm:grid-cols-3">
+      {steps.map((step, index) => {
+        const active = currentStep === index + 1;
+        const complete = currentStep > index + 1;
+        const offset = index * 2;
+
+        return (
+          <div
+            key={step.title}
+            className={cn(
+              "rounded-[18px] border p-4 transition duration-300",
+              active || complete
+                ? "border-[var(--primary-edge)] bg-[linear-gradient(180deg,color-mix(in_srgb,var(--primary-soft)_82%,white),var(--background-strong))] shadow-[var(--shadow-soft)]"
+                : "border-[var(--border)] bg-[linear-gradient(180deg,var(--background-strong),var(--surface-elevated))] hover:border-[var(--border-strong)]",
+            )}
+          >
+            <p className="text-[11px] font-semibold uppercase tracking-[0.16em] text-[var(--muted-foreground)]">
+              {language === "en" ? `Step ${index + 1}` : `${translatedStepWord} ${index + 1}`}
+            </p>
+            <p className="mt-2 text-base font-semibold text-[var(--foreground)]">{translatedStepText[offset] || step.title}</p>
+            <p className="mt-2 text-sm leading-7 text-[var(--muted-foreground)]">{translatedStepText[offset + 1] || step.body}</p>
+          </div>
+        );
+      })}
+    </div>
+  );
+}
+
+export function PanelCard({ eyebrow, title, description, children, className, minimal = false }) {
+  const translatedEyebrow = useTranslatedValue(eyebrow || "");
+  const translatedTitle = useTranslatedValue(title || "");
+  const translatedDescription = useTranslatedValue(description || "");
+
+  return (
+    <Card
+      className={cn(
+        minimal
+          ? "workbench-pane workbench-pane-minimal p-4 sm:p-5"
+          : "workbench-pane p-5 sm:p-6",
+        className,
+      )}
+    >
       {(eyebrow || title || description) && (
-        <div className="mb-5 space-y-2">
-          {eyebrow ? <Badge tone="accent">{eyebrow}</Badge> : null}
-          {title ? <h2 className="text-2xl font-semibold text-[var(--foreground)]">{title}</h2> : null}
-          {description ? <p className="text-sm leading-7 text-[var(--muted-foreground)]">{description}</p> : null}
+        <div className="relative mb-5 space-y-2 border-b border-black/5 pb-5 after:absolute after:bottom-0 after:left-0 after:h-px after:w-24 after:bg-[linear-gradient(90deg,color-mix(in_srgb,var(--tool-primary)_28%,transparent),transparent)]">
+          {eyebrow ? <Badge tone="accent">{translatedEyebrow}</Badge> : null}
+          {title ? <h2 className="text-[1.04rem] font-semibold tracking-[-0.05em] text-[var(--foreground)] sm:text-[1.18rem]">{translatedTitle}</h2> : null}
+          {description ? <p className="max-w-2xl text-[0.92rem] leading-7 text-[var(--muted-foreground)]">{translatedDescription}</p> : null}
         </div>
       )}
       {children}
@@ -118,15 +169,17 @@ export function PanelCard({ eyebrow, title, description, children, className }) 
 }
 
 export function MetricStrip({ items }) {
+  const translatedLabels = useTranslatedValues(items.map((item) => item.label || ""));
+
   return (
     <div className="grid gap-3 sm:grid-cols-2 xl:grid-cols-4">
-      {items.map((item) => (
+      {items.map((item, index) => (
         <div
           key={item.label}
-          className="rounded-[22px] border border-[var(--border)] bg-[var(--surface-strong)] px-4 py-3"
+          className="rounded-[20px] border border-[var(--border)] bg-[linear-gradient(180deg,var(--background-strong),var(--surface-elevated))] px-4 py-3 shadow-[var(--shadow-soft)]"
         >
           <p className="text-[11px] font-semibold uppercase tracking-[0.18em] text-[var(--muted-foreground)]">
-            {item.label}
+            {translatedLabels[index] || item.label}
           </p>
           <p className="mt-2 text-lg font-semibold text-[var(--foreground)]">{item.value}</p>
         </div>
@@ -136,14 +189,18 @@ export function MetricStrip({ items }) {
 }
 
 export function SegmentedControl({ label, options, value, onChange, help }) {
+  const translatedValues = useTranslatedValues([label || "", help || "", ...options.map((option) => option.label || "")]);
+  const translatedLabel = translatedValues[0] || label;
+  const translatedHelp = translatedValues[1] || help;
+
   return (
-    <div className="rounded-[24px] border border-[var(--border)] bg-[var(--surface-strong)] p-4">
+    <div className="rounded-[20px] border border-[var(--border)] bg-[linear-gradient(180deg,var(--background-strong),var(--surface-elevated))] p-4 shadow-[var(--shadow-soft)]">
       <div className="mb-4">
-        <p className="text-sm font-semibold text-[var(--foreground)]">{label}</p>
-        {help ? <p className="mt-1 text-xs text-[var(--muted-foreground)]">{help}</p> : null}
+        <p className="text-sm font-semibold text-[var(--foreground)]">{translatedLabel}</p>
+        {help ? <p className="mt-1 text-xs text-[var(--muted-foreground)]">{translatedHelp}</p> : null}
       </div>
       <div className="flex flex-wrap gap-2">
-        {options.map((option) => {
+        {options.map((option, index) => {
           const active = option.value === value;
           return (
             <button
@@ -151,13 +208,13 @@ export function SegmentedControl({ label, options, value, onChange, help }) {
               type="button"
               onClick={() => onChange(option.value)}
               className={cn(
-                "rounded-full px-4 py-2 text-sm font-semibold capitalize transition",
+                "rounded-[14px] border px-4 py-2.5 text-sm font-semibold capitalize transition duration-300",
                 active
-                  ? "bg-[var(--foreground)] text-[var(--background)]"
-                  : "border border-[var(--border-strong)] bg-[var(--surface)] text-[var(--muted-foreground)] hover:border-[var(--accent-edge)] hover:text-[var(--foreground)]",
+                  ? "border-[var(--primary-edge)] bg-[color:color-mix(in_srgb,var(--primary-soft)_72%,white)] text-[var(--accent-stronger)] shadow-[0_16px_28px_-26px_rgba(15,23,42,0.14)]"
+                  : "border-[var(--border)] bg-[var(--background-strong)] text-[var(--muted-foreground)] hover:-translate-y-0.5 hover:border-[var(--border-strong)] hover:text-[var(--foreground)]",
               )}
             >
-              {option.label}
+              {translatedValues[index + 2] || option.label}
             </button>
           );
         })}
@@ -167,12 +224,14 @@ export function SegmentedControl({ label, options, value, onChange, help }) {
 }
 
 export function RangeField({ label, help, value, min = 0, max = 100, step = 1, onChange }) {
+  const [translatedLabel, translatedHelp] = useTranslatedValues([label || "", help || ""]);
+
   return (
-    <div className="rounded-[24px] border border-[var(--border)] bg-[var(--surface-strong)] p-4">
+    <div className="rounded-[20px] border border-[var(--border)] bg-[linear-gradient(180deg,var(--background-strong),var(--surface-elevated))] p-4 shadow-[var(--shadow-soft)]">
       <div className="mb-4 flex items-start justify-between gap-4">
         <div>
-          <p className="text-sm font-semibold text-[var(--foreground)]">{label}</p>
-          {help ? <p className="mt-1 text-xs text-[var(--muted-foreground)]">{help}</p> : null}
+          <p className="text-sm font-semibold text-[var(--foreground)]">{translatedLabel || label}</p>
+          {help ? <p className="mt-1 text-xs text-[var(--muted-foreground)]">{translatedHelp || help}</p> : null}
         </div>
         <Badge>{value}%</Badge>
       </div>
@@ -191,7 +250,7 @@ export function RangeField({ label, help, value, min = 0, max = 100, step = 1, o
 
 export function ActionRow({ children, meta }) {
   return (
-    <div className="flex flex-col gap-4 rounded-[28px] border border-[var(--border)] bg-[var(--surface-strong)] p-4 sm:flex-row sm:flex-wrap sm:items-center sm:justify-between">
+    <div className="flex flex-col gap-4 rounded-[20px] border border-[var(--border)] bg-[linear-gradient(180deg,var(--background-strong),var(--surface-elevated))] p-4 shadow-[var(--shadow-soft)] sm:flex-row sm:flex-wrap sm:items-center sm:justify-between">
       <div className="flex flex-wrap gap-3">{children}</div>
       {meta ? <div className="flex flex-wrap gap-2">{meta}</div> : null}
     </div>
@@ -199,10 +258,24 @@ export function ActionRow({ children, meta }) {
 }
 
 export function OutputSurface({ output, placeholder, children, className }) {
+  const [translatedPlaceholder, translatedTitle] = useTranslatedValues([
+    placeholder || "",
+    "Result appears here",
+  ]);
+
   if (!output && !children) {
     return (
-      <div className="flex min-h-[260px] items-center justify-center rounded-[28px] border border-dashed border-[var(--border-strong)] bg-[var(--surface)] px-6 text-center text-sm leading-7 text-[var(--muted-foreground)]">
-        {placeholder}
+      <div className="workspace-output-empty flex min-h-[280px] items-center justify-center px-5 py-10 text-center">
+        <div className="max-w-sm">
+          <div className="mx-auto inline-flex h-14 w-14 items-center justify-center rounded-[16px] border border-black/5 bg-[linear-gradient(180deg,rgba(255,255,255,0.96),rgba(247,249,252,0.98))] shadow-[0_18px_36px_-28px_rgba(15,23,42,0.14)]">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7" className="text-[#546074]">
+              <path d="M7 7h10v10H7z" />
+              <path d="m9 12 2 2 4-4" />
+            </svg>
+          </div>
+          <p className="mt-5 text-[1.02rem] font-semibold tracking-[-0.04em] text-[var(--foreground)]">{translatedTitle}</p>
+          <p className="mt-2 text-sm leading-7 text-[var(--muted-foreground)]">{translatedPlaceholder}</p>
+        </div>
       </div>
     );
   }
@@ -210,7 +283,7 @@ export function OutputSurface({ output, placeholder, children, className }) {
   return (
     <div
       className={cn(
-        "min-h-[260px] rounded-[28px] border border-[var(--border-strong)] bg-[var(--surface)] p-5 text-[15px] leading-7 text-[var(--foreground)]",
+        "workspace-document-surface min-h-[280px] px-5 pb-5 pt-[64px] text-sm leading-7 text-[var(--foreground)] sm:px-6 sm:pb-6 sm:pt-[68px]",
         className,
       )}
     >
@@ -220,11 +293,14 @@ export function OutputSurface({ output, placeholder, children, className }) {
 }
 
 export function HistoryPanel({ title, history, onRestore, emptyMessage }) {
+  const { text } = usePreferences();
+  const translatedEmptyMessage = useTranslatedValue(emptyMessage || "");
+
   return (
-    <PanelCard title={title} description="Recent results stay in your browser so you can restore a stronger version later.">
+    <PanelCard title={title} description={text.recentResultsStored}>
       {!history.length ? (
-        <div className="rounded-[22px] border border-dashed border-[var(--border-strong)] px-4 py-5 text-sm leading-7 text-[var(--muted-foreground)]">
-          {emptyMessage}
+        <div className="rounded-[10px] border border-dashed border-[var(--border-strong)] px-4 py-5 text-sm leading-7 text-[var(--muted-foreground)]">
+          {translatedEmptyMessage}
         </div>
       ) : (
         <div className="space-y-3">
@@ -233,10 +309,10 @@ export function HistoryPanel({ title, history, onRestore, emptyMessage }) {
               key={item.id}
               type="button"
               onClick={() => onRestore(item)}
-              className="w-full rounded-[22px] border border-[var(--border)] bg-[var(--surface-strong)] p-4 text-left transition hover:border-[var(--accent-edge)] hover:bg-[var(--surface-raised)]"
+              className="w-full rounded-[22px] border border-[var(--border)] bg-[linear-gradient(180deg,var(--background-strong),var(--surface-elevated))] p-4 text-left transition duration-300 hover:-translate-y-0.5 hover:border-[var(--border-strong)] hover:bg-[var(--background-strong)] hover:shadow-[var(--shadow-soft-strong)]"
             >
               <div className="flex items-center justify-between gap-3">
-                <p className="text-sm font-semibold text-[var(--foreground)]">{item.label || "Saved result"}</p>
+                <p className="text-sm font-semibold text-[var(--foreground)]">{item.label || text.savedResult}</p>
                 <span className="text-xs text-[var(--muted-foreground)]">{formatRelativeTime(item.createdAt)}</span>
               </div>
               <p className="mt-2 text-sm leading-7 text-[var(--muted-foreground)]">{truncate(item.preview, 132)}</p>
@@ -248,8 +324,15 @@ export function HistoryPanel({ title, history, onRestore, emptyMessage }) {
   );
 }
 
-export function FileDropzone({ title, description, accept, file, onFileChange, accentLabel }) {
+export function FileDropzone({ title, description, accept, file, onFileChange, accentLabel, variant = "default" }) {
   const [isDragging, setIsDragging] = useState(false);
+  const { text } = usePreferences();
+  const [translatedTitle, translatedDescription, translatedReady] = useTranslatedValues([
+    title || "",
+    description || "",
+    "Ready for processing",
+  ]);
+  const buttonLabel = file ? text.replaceFile : getFileSelectLabel(title, text);
 
   function handleDragOver(event) {
     event.preventDefault();
@@ -268,25 +351,98 @@ export function FileDropzone({ title, description, accept, file, onFileChange, a
     onFileChange(nextFile);
   }
 
+  if (variant === "hero") {
+    return (
+      <label
+        className={cn("block cursor-pointer", isDragging && "scale-[1.01]")}
+        onDragOver={handleDragOver}
+        onDragLeave={handleDragLeave}
+        onDrop={handleDrop}
+      >
+        <div className="rounded-[22px] border border-black/5 bg-[linear-gradient(180deg,rgba(255,255,255,0.98),rgba(248,250,253,0.99))] p-4 shadow-[0_22px_42px_-34px_rgba(15,23,42,0.12)] sm:p-5">
+          <div className="flex min-h-[220px] flex-col items-center justify-center rounded-[20px] border border-dashed border-black/10 bg-[linear-gradient(180deg,rgba(255,255,255,0.92),rgba(249,250,252,0.98))] px-6 py-8 text-center">
+            <div className="relative mb-5 flex h-14 w-14 items-center justify-center rounded-[16px] border border-[var(--primary-edge)] bg-[linear-gradient(180deg,var(--accent-end),var(--primary))] text-white shadow-[0_22px_34px_-24px_color-mix(in_srgb,var(--tool-glow)_86%,rgba(15,23,42,0.22))]">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8">
+                <path d="M12 16V5" />
+                <path d="m7 10 5-5 5 5" />
+                <path d="M4 19h16" />
+              </svg>
+            </div>
+            <span className="inline-flex min-h-[44px] items-center justify-center rounded-[12px] border border-[var(--primary-edge)] bg-[linear-gradient(180deg,var(--accent-end),var(--primary))] px-5 text-[0.78rem] font-semibold uppercase tracking-[0.12em] text-white shadow-[0_18px_28px_-22px_color-mix(in_srgb,var(--tool-glow)_84%,rgba(15,23,42,0.22))] transition duration-300 hover:-translate-y-0.5">
+              {buttonLabel}
+            </span>
+            <p className="mt-4 max-w-md text-[1.02rem] font-semibold tracking-[-0.04em] text-[var(--foreground)]">
+              {file ? file.name : translatedTitle || title}
+            </p>
+            <p className="mt-2 max-w-md text-sm leading-7 text-[var(--muted-foreground)]">
+              {file ? formatFileSize(file.size) : `or ${text.dropFileHere.toLowerCase()}`}
+            </p>
+          </div>
+        </div>
+        <input
+          type="file"
+          accept={accept}
+          className="sr-only"
+          onChange={(event) => onFileChange(event.target.files?.[0] || null)}
+        />
+      </label>
+    );
+  }
+
   return (
     <label
       className={cn(
-        "flex cursor-pointer flex-col rounded-[28px] border border-dashed border-[var(--border-strong)] bg-[var(--surface-strong)] p-6 transition hover:border-[var(--accent-edge)] hover:bg-[var(--surface-raised)]",
-        isDragging && "border-[var(--accent-edge)] bg-[var(--accent-surface)]",
+        "block cursor-pointer rounded-[20px] border border-black/5 bg-[linear-gradient(180deg,rgba(255,255,255,0.985),rgba(248,250,253,0.995))] p-4 transition duration-300 hover:border-[color:color-mix(in_srgb,var(--tool-edge)_54%,rgba(18,24,31,0.08))] hover:shadow-[0_18px_36px_-30px_rgba(15,23,42,0.12)]",
+        isDragging && "border-[var(--primary-edge)] bg-[color:color-mix(in_srgb,var(--primary-soft)_56%,white)]",
       )}
       onDragOver={handleDragOver}
       onDragLeave={handleDragLeave}
       onDrop={handleDrop}
     >
-      <div className="flex items-center justify-between gap-4">
-        <div>
-          <p className="text-lg font-semibold text-[var(--foreground)]">{title}</p>
-          <p className="mt-2 text-sm leading-7 text-[var(--muted-foreground)]">{description}</p>
+      <div className="mb-4 flex items-start justify-between gap-4">
+        <div className="min-w-0">
+          <p className="text-sm font-semibold text-[var(--foreground)]">{translatedTitle || title}</p>
+          <p className="mt-1 text-xs leading-6 text-[var(--muted-foreground)]">
+            {translatedDescription || description}
+          </p>
         </div>
-        <Badge tone="accent">{accentLabel}</Badge>
+        <span className="inline-flex min-h-[32px] shrink-0 items-center rounded-full border border-black/5 bg-white/80 px-3 py-1.5 text-[0.68rem] font-semibold uppercase tracking-[0.16em] text-[var(--muted-foreground)]">
+          {file ? translatedReady : accentLabel || "Upload"}
+        </span>
       </div>
-      <div className="mt-5 rounded-[22px] border border-[var(--border)] bg-[var(--surface)] px-4 py-5 text-sm text-[var(--muted-foreground)]">
-        {file ? `${file.name} - ${formatFileSize(file.size)}` : isDragging ? "Drop the file here" : "Click to upload or drag a file here"}
+
+      <div className="relative flex min-h-[220px] flex-col items-center justify-center overflow-hidden rounded-[18px] border border-dashed border-black/10 bg-[linear-gradient(180deg,rgba(255,255,255,0.94),rgba(249,250,252,0.99))] px-6 py-8 text-center">
+        <span className="absolute inset-x-6 top-0 h-px bg-[linear-gradient(90deg,transparent,rgba(15,23,42,0.14),transparent)]" aria-hidden="true" />
+        {accentLabel ? (
+          <span className="absolute left-4 top-4 rounded-full border border-[var(--primary-edge)] bg-[color:color-mix(in_srgb,var(--primary-soft)_72%,white)] px-3 py-1 text-[10px] font-semibold uppercase tracking-[0.18em] text-[var(--accent-stronger)]">
+            {accentLabel}
+          </span>
+        ) : null}
+        <div className="relative inline-flex h-12 w-12 items-center justify-center rounded-[14px] border border-[var(--primary-edge)] bg-[linear-gradient(180deg,var(--accent-end),var(--primary))] text-white shadow-[0_20px_30px_-22px_color-mix(in_srgb,var(--tool-glow)_86%,rgba(15,23,42,0.22))]">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8">
+            <path d="M12 16V5" />
+            <path d="m7 10 5-5 5 5" />
+            <path d="M4 19h16" />
+          </svg>
+        </div>
+        <span className="relative mt-5 inline-flex h-11 items-center justify-center rounded-[12px] border border-[var(--primary-edge)] bg-[linear-gradient(180deg,var(--accent-end),var(--primary))] px-5 text-sm font-semibold text-white shadow-[0_18px_28px_-22px_color-mix(in_srgb,var(--tool-glow)_84%,rgba(15,23,42,0.22))]">
+          {buttonLabel}
+        </span>
+        <p className="mt-4 max-w-md text-[1.02rem] font-semibold tracking-[-0.04em] text-[var(--foreground)]">
+          {file ? file.name : isDragging ? text.dropFileHere : translatedDescription || description}
+        </p>
+        <p className="mt-2 max-w-md text-sm leading-7 text-[var(--muted-foreground)]">
+          {file
+            ? `${formatFileSize(file.size)}`
+            : isDragging
+              ? "Release to add the file."
+              : `or ${text.dropFileHere.toLowerCase()}`}
+        </p>
+        {accept ? (
+          <p className="mt-3 text-[0.7rem] font-semibold uppercase tracking-[0.16em] text-[#8a91a2]">
+            {formatAcceptLabel(accept)}
+          </p>
+        ) : null}
       </div>
       <input
         type="file"
@@ -299,38 +455,53 @@ export function FileDropzone({ title, description, accept, file, onFileChange, a
 }
 
 export function FieldGroup({ label, help, children }) {
+  const [translatedLabel, translatedHelp] = useTranslatedValues([label || "", help || ""]);
+
   return (
     <div className="space-y-2">
       <div>
-        <p className="text-sm font-semibold text-[var(--foreground)]">{label}</p>
-        {help ? <p className="mt-1 text-xs text-[var(--muted-foreground)]">{help}</p> : null}
+        <p className="text-sm font-semibold text-[var(--foreground)]">{translatedLabel || label}</p>
+        {help ? <p className="mt-1 text-xs text-[var(--muted-foreground)]">{translatedHelp || help}</p> : null}
       </div>
       {children}
     </div>
   );
 }
 
-export function InputField({ value, onChange, placeholder }) {
+export function InputField({ value, onChange, placeholder, ...props }) {
+  const translatedPlaceholder = useTranslatedValue(placeholder || "");
+
   return (
     <input
       value={value}
       onChange={(event) => onChange(event.target.value)}
-      placeholder={placeholder}
-      className="h-12 w-full rounded-[18px] border border-[var(--border-strong)] bg-[var(--surface-strong)] px-4 text-sm text-[var(--foreground)] placeholder:text-[var(--muted-foreground)]"
+      placeholder={translatedPlaceholder}
+      className="workspace-field h-[54px] w-full px-5 text-[15px] font-medium tracking-[-0.01em] text-[var(--foreground)] placeholder:text-[var(--muted-foreground)] transition duration-300 hover:border-[var(--border-strong)] focus:border-[var(--primary)] focus:outline-none"
+      {...props}
     />
   );
 }
 
-export function TextEditor({ value, onChange, placeholder, className }) {
-  return <Textarea value={value} onChange={(event) => onChange(event.target.value)} placeholder={placeholder} className={className} />;
+export function TextEditor({ value, onChange, placeholder, className, ...props }) {
+  return (
+    <Textarea
+      value={value}
+      onChange={(event) => onChange(event.target.value)}
+      placeholder={placeholder}
+      className={className}
+      {...props}
+    />
+  );
 }
 
 export function MetaNotes({ items }) {
+  const translatedLabels = useTranslatedValues(items.map((item) => item.label || ""));
+
   return (
     <div className="grid gap-3">
-      {items.map((item) => (
-        <div key={item.label} className="rounded-[20px] border border-[var(--border)] bg-[var(--surface-strong)] px-4 py-3">
-          <p className="text-xs font-semibold uppercase tracking-[0.16em] text-[var(--muted-foreground)]">{item.label}</p>
+      {items.map((item, index) => (
+        <div key={item.label} className="rounded-[18px] border border-[var(--border)] bg-[linear-gradient(180deg,var(--background-strong),var(--surface-elevated))] px-4 py-3 shadow-[var(--shadow-soft)]">
+          <p className="text-xs font-semibold uppercase tracking-[0.16em] text-[var(--muted-foreground)]">{translatedLabels[index] || item.label}</p>
           <p className="mt-2 text-sm leading-7 text-[var(--foreground)]">{item.value}</p>
         </div>
       ))}
@@ -338,15 +509,31 @@ export function MetaNotes({ items }) {
   );
 }
 
-export function LoadingSurface({ title = "Working on it..." }) {
+export function LoadingSurface({ title }) {
+  const { text } = usePreferences();
+  const translatedTitle = useTranslatedValue(title || text.processing);
+  const translatedSubtitle = useTranslatedValue("Preparing the result and smoothing the final output.");
+
   return (
-    <div className="flex min-h-[260px] flex-col justify-center gap-3 rounded-[28px] border border-[var(--border-strong)] bg-[var(--surface)] p-6">
-      <p className="text-sm font-semibold text-[var(--foreground)]">{title}</p>
+    <div className="flex min-h-[220px] flex-col justify-center gap-4 rounded-[20px] border border-black/5 bg-[linear-gradient(180deg,rgba(255,255,255,0.99),rgba(248,250,253,0.995))] p-6 shadow-[0_22px_40px_-34px_rgba(15,23,42,0.12)]">
+      <div className="flex items-center gap-3">
+        <span className="inline-flex h-10 w-10 items-center justify-center rounded-[12px] border border-[var(--primary-edge)] bg-[color:color-mix(in_srgb,var(--primary-soft)_82%,white)] text-[var(--accent-stronger)] shadow-[0_16px_26px_-22px_rgba(15,23,42,0.16)]">
+          <span className="h-4 w-4 animate-spin rounded-full border-2 border-current border-r-transparent" />
+        </span>
+        <div className="space-y-1">
+          <p className="text-sm font-semibold text-[var(--foreground)]">{translatedTitle}</p>
+          <p className="text-xs text-[var(--muted-foreground)]">{translatedSubtitle}</p>
+        </div>
+      </div>
       {Array.from({ length: 4 }).map((_, index) => (
         <div
           key={index}
-          className="h-4 animate-pulse rounded-full bg-[var(--accent-surface)]"
-          style={{ width: `${100 - index * 12}%` }}
+          className="h-3 animate-pulse rounded-full bg-[linear-gradient(90deg,color-mix(in_srgb,var(--primary-soft)_88%,white),rgba(24,31,41,0.12),color-mix(in_srgb,var(--primary-soft)_72%,white))]"
+          style={{
+            width: `${100 - index * 12}%`,
+            animationDelay: `${index * 120}ms`,
+            animationDuration: "1.3s",
+          }}
         />
       ))}
     </div>
@@ -354,30 +541,36 @@ export function LoadingSurface({ title = "Working on it..." }) {
 }
 
 export function StatusBanner({ tone = "default", children }) {
+  const translatedChildren = useTranslatedValue(typeof children === "string" ? children : "");
+
   return (
     <div
       className={cn(
-        "rounded-[22px] border px-4 py-3 text-sm leading-7",
+        "rounded-[15px] border px-4 py-3 text-sm leading-7 shadow-[0_16px_26px_-22px_rgba(15,23,42,0.1)]",
         tone === "warning"
-          ? "border-[rgba(245,158,11,0.28)] bg-[rgba(245,158,11,0.12)] text-[var(--foreground)]"
-          : "border-[var(--border)] bg-[var(--surface-strong)] text-[var(--muted-foreground)]",
+          ? "border-[rgba(245,158,11,0.24)] bg-[linear-gradient(180deg,rgba(245,158,11,0.12),rgba(245,158,11,0.07))] text-[var(--foreground)]"
+          : tone === "success"
+            ? "border-[rgba(22,130,93,0.24)] bg-[linear-gradient(180deg,rgba(22,130,93,0.12),rgba(22,130,93,0.07))] text-[var(--foreground)]"
+            : "border-black/5 bg-[linear-gradient(180deg,rgba(255,255,255,0.985),rgba(248,250,253,0.99))] text-[var(--muted-foreground)]",
       )}
     >
-      {children}
+      {typeof children === "string" ? translatedChildren : children}
     </div>
   );
 }
 
 export function StarterCard({ title = "Quick start", description, actionLabel = "Use example", onAction }) {
+  const translatedValues = useTranslatedValues([title || "", description || "", actionLabel || ""]);
+
   return (
-    <div className="rounded-[22px] border border-[var(--border)] bg-[var(--surface-strong)] p-4">
+    <div className="rounded-[18px] border border-black/5 bg-[linear-gradient(180deg,rgba(255,255,255,0.99),rgba(248,250,253,0.995))] p-4 shadow-[0_18px_34px_-30px_rgba(15,23,42,0.1)]">
       <div className="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
         <div className="space-y-1">
-          <p className="text-sm font-semibold text-[var(--foreground)]">{title}</p>
-          <p className="text-sm leading-7 text-[var(--muted-foreground)]">{description}</p>
+          <p className="text-sm font-semibold text-[var(--foreground)]">{translatedValues[0] || title}</p>
+          <p className="text-sm leading-7 text-[var(--muted-foreground)]">{translatedValues[1] || description}</p>
         </div>
         <Button variant="secondary" size="sm" onClick={onAction}>
-          {actionLabel}
+          {translatedValues[2] || actionLabel}
         </Button>
       </div>
     </div>
@@ -393,18 +586,123 @@ export function ToolbarButton({ children, ...props }) {
 }
 
 export function ActionButton({ children, ...props }) {
+  const translatedChildren = useTranslatedValue(typeof children === "string" ? children : "");
+
   return (
     <button
       type="button"
-      className="inline-flex h-11 items-center justify-center rounded-full border border-[var(--border-strong)] bg-[var(--surface)] px-5 text-sm font-semibold text-[var(--foreground)] transition hover:border-[var(--accent-edge)] hover:bg-[var(--surface-raised)] disabled:cursor-not-allowed disabled:opacity-50"
+      className="inline-flex h-10 items-center justify-center rounded-[14px] border border-[var(--border)] bg-[linear-gradient(180deg,var(--background-strong),var(--surface-elevated))] px-5 text-sm font-semibold text-[var(--foreground)] shadow-[var(--shadow-soft)] transition duration-300 hover:-translate-y-0.5 hover:border-[var(--border-strong)] hover:bg-[var(--surface-raised)] hover:shadow-[var(--shadow-soft-strong)] disabled:cursor-not-allowed disabled:opacity-50 disabled:hover:translate-y-0"
       {...props}
     >
-      {children}
+      {typeof children === "string" ? translatedChildren : children}
     </button>
+  );
+}
+
+export function CollapsiblePanel({ title, description, defaultOpen = false, children }) {
+  const { text } = usePreferences();
+  const [translatedTitle, translatedDescription] = useTranslatedValues([title || "", description || text.open]);
+
+  return (
+    <details className="workspace-details" open={defaultOpen}>
+      <summary>
+        <span>{translatedTitle || title}</span>
+        <span className="text-xs font-semibold uppercase tracking-[0.16em] text-[var(--muted-foreground)]">
+          {translatedDescription || description || text.open}
+        </span>
+      </summary>
+      <div className="workspace-details-body">{children}</div>
+    </details>
+  );
+}
+
+export function SectionKicker({ children }) {
+  const translatedChildren = useTranslatedValue(typeof children === "string" ? children : "");
+  return <p className="workspace-kicker">{typeof children === "string" ? translatedChildren : children}</p>;
+}
+
+export function TypewriterText({ text, className }) {
+  const [visibleText, setVisibleText] = useState(text);
+
+  useEffect(() => {
+    if (!text) {
+      setVisibleText("");
+      return undefined;
+    }
+
+    const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    if (prefersReducedMotion || text.length > 1400) {
+      setVisibleText(text);
+      return undefined;
+    }
+
+    const maxDuration = text.length > 800 ? 320 : text.length > 320 ? 420 : 520;
+    const frames = Math.max(10, Math.round(maxDuration / 16));
+    const chunkSize = Math.max(8, Math.ceil(text.length / frames));
+    let frame = chunkSize;
+    let frameId = 0;
+
+    setVisibleText("");
+
+    function reveal() {
+      if (frame >= text.length) {
+        setVisibleText(text);
+        frameId = 0;
+        return;
+      }
+
+      setVisibleText(text.slice(0, frame));
+      frame += chunkSize;
+      frameId = window.requestAnimationFrame(reveal);
+    }
+
+    frameId = window.requestAnimationFrame(reveal);
+
+    return () => {
+      if (frameId) {
+        window.cancelAnimationFrame(frameId);
+      }
+    };
+  }, [text]);
+
+  return <div className={cn("whitespace-pre-wrap", className)}>{visibleText}</div>;
+}
+
+export function InlineInfo({ items }) {
+  return (
+    <div className="workspace-inline-metrics">
+      {items.map((item) => (
+        <span
+          key={item}
+          className="workspace-inline-chip"
+        >
+          {item}
+        </span>
+      ))}
+    </div>
   );
 }
 
 function truncate(text = "", maxLength = 120) {
   if (text.length <= maxLength) return text;
   return `${text.slice(0, maxLength).trim()}...`;
+}
+
+function getFileSelectLabel(title = "", text = {}) {
+  const normalized = title.toLowerCase();
+
+  if (normalized.includes("pdf")) return text.selectPdfFile || "Select PDF file";
+  if (normalized.includes("video")) return text.selectVideoFile || "Select video file";
+  if (normalized.includes("image")) return text.selectImageFile || "Select image file";
+
+  return text.selectFile || "Select file";
+}
+
+function formatAcceptLabel(accept = "") {
+  if (!accept) return "";
+  if (accept.includes("image/*")) return "Accepts image files";
+  if (accept.includes("audio/*")) return "Accepts audio files";
+  if (accept.includes(".pdf")) return "Accepts PDF documents";
+
+  return `Accepts ${accept.replaceAll(",", ", ").replaceAll(".", "").toUpperCase()}`;
 }

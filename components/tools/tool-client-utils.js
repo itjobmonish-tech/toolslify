@@ -1,17 +1,19 @@
 "use client";
 
-const REQUEST_TIMEOUT_MS = 25000;
+import { recordToolUsage } from "@/lib/tool-usage";
+
+const REQUEST_TIMEOUT_MS = 40000;
 
 export async function requestJsonTool(slug, payload) {
-  const response = await fetchWithTimeout(`/api/tool/${slug}`, {
+  const result = await requestJsonEndpoint(`/api/tool/${slug}`, {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
     },
     body: JSON.stringify(payload),
   });
-
-  return parseToolResponse(response);
+  recordToolUsage(slug);
+  return result;
 }
 
 export async function requestFormTool(slug, fields) {
@@ -22,12 +24,28 @@ export async function requestFormTool(slug, fields) {
     formData.append(key, value);
   });
 
-  const response = await fetchWithTimeout(`/api/tool/${slug}`, {
+  const result = await requestJsonEndpoint(`/api/tool/${slug}`, {
     method: "POST",
     body: formData,
   });
+  recordToolUsage(slug);
+  return result;
+}
 
+export async function requestJsonEndpoint(input, init) {
+  const response = await fetchWithTimeout(input, init);
   return parseToolResponse(response);
+}
+
+export async function requestBlobEndpoint(input, init, fallbackError = "Unable to process the request.") {
+  const response = await fetchWithTimeout(input, init);
+
+  if (!response.ok) {
+    const payload = await response.json().catch(() => null);
+    throw new Error(payload?.error || fallbackError);
+  }
+
+  return response.blob();
 }
 
 export function sliderToStrength(value) {

@@ -1,13 +1,13 @@
 import { ImageResponse } from "next/og";
 
-export const alt = "Toolslify premium AI tool suite";
+export const alt = "Toolslify professional tools";
 export const size = {
   width: 1200,
   height: 630,
 };
 export const contentType = "image/png";
 
-const tags = ["AI Humanizer", "Assignments", "Meeting Notes", "Voice to Text", "PDF Converter"];
+const tags = ["Free Calculators", "Salary Data", "Mortgage Planning", "Everyday Tools"];
 
 export default function OpenGraphImage() {
   return new ImageResponse(
@@ -19,9 +19,8 @@ export default function OpenGraphImage() {
           width: "100%",
           height: "100%",
           overflow: "hidden",
-          background:
-            "linear-gradient(135deg, rgba(5,13,24,1) 0%, rgba(10,25,46,1) 52%, rgba(20,184,166,0.9) 100%)",
-          color: "#eff6ff",
+          background: "linear-gradient(135deg, #090611 0%, #1b1031 48%, #33215c 100%)",
+          color: "#f8f7ff",
           fontFamily: "system-ui, sans-serif",
         }}
       >
@@ -30,31 +29,7 @@ export default function OpenGraphImage() {
             position: "absolute",
             inset: 0,
             background:
-              "radial-gradient(circle at 16% 18%, rgba(91,140,255,0.24), transparent 28%), radial-gradient(circle at 84% 18%, rgba(20,184,166,0.24), transparent 24%)",
-          }}
-        />
-
-        <div
-          style={{
-            position: "absolute",
-            top: -80,
-            right: -40,
-            width: 320,
-            height: 320,
-            borderRadius: 9999,
-            background: "rgba(20,184,166,0.14)",
-          }}
-        />
-
-        <div
-          style={{
-            position: "absolute",
-            bottom: -90,
-            left: -20,
-            width: 280,
-            height: 280,
-            borderRadius: 9999,
-            background: "rgba(91,140,255,0.14)",
+              "radial-gradient(circle at 12% 14%, rgba(124,58,237,0.38), transparent 28%), radial-gradient(circle at 84% 20%, rgba(59,130,246,0.26), transparent 26%), radial-gradient(circle at 78% 84%, rgba(34,197,94,0.16), transparent 22%), radial-gradient(circle at 24% 88%, rgba(239,68,68,0.18), transparent 18%)",
           }}
         />
 
@@ -69,7 +44,13 @@ export default function OpenGraphImage() {
             padding: "54px 58px",
           }}
         >
-          <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center" }}>
+          <div
+            style={{
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "space-between",
+            }}
+          >
             <div
               style={{
                 display: "flex",
@@ -77,7 +58,7 @@ export default function OpenGraphImage() {
                 gap: 14,
                 padding: "12px 18px",
                 borderRadius: 9999,
-                background: "rgba(255,255,255,0.09)",
+                background: "rgba(255,255,255,0.08)",
                 border: "1px solid rgba(255,255,255,0.12)",
                 fontSize: 22,
                 fontWeight: 700,
@@ -86,10 +67,10 @@ export default function OpenGraphImage() {
               <div
                 style={{
                   display: "flex",
-                  width: 30,
-                  height: 30,
-                  borderRadius: 9999,
-                  background: "linear-gradient(135deg, #5b8cff, #2dd4bf)",
+                  width: 32,
+                  height: 32,
+                  borderRadius: 14,
+                  background: "linear-gradient(135deg, #8b5cf6, #4f46e5)",
                 }}
               />
               Toolslify
@@ -101,43 +82,41 @@ export default function OpenGraphImage() {
                 padding: "10px 16px",
                 borderRadius: 9999,
                 background: "rgba(255,255,255,0.08)",
-                color: "#dbeafe",
+                color: "#ddd6fe",
                 fontSize: 18,
                 fontWeight: 600,
-                letterSpacing: "0.08em",
-                textTransform: "uppercase",
               }}
             >
-              10,000+ users
+              Online tools
             </div>
           </div>
 
-          <div style={{ display: "flex", flexDirection: "column", gap: 22, maxWidth: 880 }}>
+          <div style={{ display: "flex", flexDirection: "column", gap: 24, maxWidth: 900 }}>
             <div
               style={{
                 display: "flex",
                 alignSelf: "flex-start",
                 padding: "10px 18px",
                 borderRadius: 9999,
-                background: "rgba(91,140,255,0.14)",
-                color: "#bfdbfe",
+                background: "rgba(124,58,237,0.18)",
+                color: "#e9ddff",
                 fontSize: 20,
                 fontWeight: 700,
               }}
             >
-              Premium AI utility suite
+              Free calculators
             </div>
 
             <div
               style={{
                 display: "flex",
-                fontSize: 72,
+                fontSize: 74,
                 lineHeight: 1.02,
                 fontWeight: 800,
                 letterSpacing: "-0.06em",
               }}
             >
-              Make AI text sound human and run cleaner workflows across the full suite.
+              Fast calculators for real decisions.
             </div>
 
             <div
@@ -145,11 +124,11 @@ export default function OpenGraphImage() {
                 display: "flex",
                 fontSize: 28,
                 lineHeight: 1.5,
-                color: "rgba(219,234,254,0.86)",
-                maxWidth: 820,
+                color: "rgba(240,235,255,0.84)",
+                maxWidth: 840,
               }}
             >
-              Humanize writing, generate assignments, summarize meetings, transcribe voice notes, and convert PDFs with a polished SaaS-grade experience.
+              Salary, cost of living, mortgage, tax, home cost, conversions, and everyday planning tools in one place.
             </div>
           </div>
 
@@ -164,7 +143,7 @@ export default function OpenGraphImage() {
                     borderRadius: 9999,
                     border: "1px solid rgba(255,255,255,0.12)",
                     background: "rgba(255,255,255,0.08)",
-                    color: "#e2e8f0",
+                    color: "#f3f0ff",
                     fontSize: 20,
                     fontWeight: 600,
                   }}
@@ -175,8 +154,8 @@ export default function OpenGraphImage() {
             </div>
 
             <div style={{ display: "flex", flexDirection: "column", gap: 8, textAlign: "right" }}>
-              <div style={{ fontSize: 20, color: "#99f6e4", fontWeight: 700 }}>No data stored</div>
-              <div style={{ fontSize: 18, color: "rgba(219,234,254,0.78)" }}>toolslify.com</div>
+              <div style={{ fontSize: 20, color: "#c4b5fd", fontWeight: 700 }}>No account required</div>
+              <div style={{ fontSize: 18, color: "rgba(240,235,255,0.78)" }}>toolslify.com</div>
             </div>
           </div>
         </div>

@@ -2,70 +2,81 @@
 
 import { useEffect, useMemo, useRef, useState } from "react";
 import { analyzeText } from "@/lib/humanizer";
+import { LANGUAGES } from "@/lib/i18n";
+import { getToolBySlug } from "@/lib/site-data";
 import { downloadTextFile } from "@/lib/utils";
+import { recordToolUsage } from "@/lib/tool-usage";
+import { useToast } from "@/components/providers/toast-provider";
 import { usePreferences } from "@/components/providers/preferences-provider";
 import { Badge } from "@/components/ui/badge";
+import { Button } from "@/components/ui/button";
 import {
-  ActionButton,
-  ActionRow,
-  FileDropzone,
   HistoryPanel,
-  LoadingSurface,
-  MetaNotes,
-  MetricStrip,
+  InlineInfo,
   OutputSurface,
   PanelCard,
   SegmentedControl,
-  StarterCard,
   StatusBanner,
   TextEditor,
   useHistoryStorage,
   usePersistentState,
   useSubmitShortcut,
 } from "@/components/tools/workspace-primitives";
-import { requestFormTool, requestJsonTool } from "@/components/tools/tool-client-utils";
 
-const languageOptions = [
-  { label: "English", value: "en" },
-  { label: "Spanish", value: "es" },
-  { label: "Hindi", value: "hi" },
-];
+const LANGUAGE_OPTIONS = LANGUAGES.map((item) => ({
+  label: item.nativeName || item.name,
+  value: item.code,
+}));
 
-const VOICE_EXAMPLE =
-  "Need to clean up tomorrow's launch notes. Update the homepage CTA, double-check the AI Humanizer demo, and send the new PDF converter screenshots to the team before 4 PM. Also remind Marcus to review the pricing copy after lunch.";
-
-export function VoiceWorkspace() {
-  const { text } = usePreferences();
-  const [draft, setDraft] = usePersistentState("toolslify:voice:draft", {
+function getInitialState() {
+  return {
     transcript: "",
     language: "en",
     output: "",
-  });
-  const { history, pushHistory } = useHistoryStorage("toolslify:voice:history");
-  const [audioFile, setAudioFile] = useState(null);
-  const [responseMeta, setResponseMeta] = useState(null);
-  const [error, setError] = useState("");
-  const [isLoading, setIsLoading] = useState(false);
+  };
+}
+
+export function VoiceWorkspace({ slug, onContentReadyChange }) {
+  const tool = getToolBySlug(slug);
+  const { text, language } = usePreferences();
+  const { showToast } = useToast();
+  const [draft, setDraft] = usePersistentState(`toolslify:voice:${slug}:draft`, getInitialState());
+  const { history, pushHistory } = useHistoryStorage(`toolslify:voice:${slug}:history`);
   const [copyState, setCopyState] = useState("idle");
+  const [error, setError] = useState("");
   const [speechSupport, setSpeechSupport] = useState(false);
   const [isRecording, setIsRecording] = useState(false);
   const recognitionRef = useRef(null);
 
-  const outputMetrics = useMemo(() => analyzeText(draft.output), [draft.output]);
+  const inputMetrics = useMemo(() => analyzeText(draft.transcript || ""), [draft.transcript]);
+  const outputMetrics = useMemo(() => analyzeText(draft.output || ""), [draft.output]);
 
   useSubmitShortcut({
-    enabled: Boolean(draft.transcript.trim() || audioFile) && !isLoading,
+    enabled: Boolean(draft.transcript.trim()),
     onSubmit: handleConvert,
   });
 
   useEffect(() => {
+    setDraft((current) => {
+      if (current.transcript || current.output || current.language === language) {
+        return current;
+      }
+
+      return {
+        ...current,
+        language,
+      };
+    });
+  }, [language, setDraft]);
+
+  useEffect(() => {
     const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
-    if (!SpeechRecognition) return;
+    if (!SpeechRecognition) return undefined;
 
     const recognition = new SpeechRecognition();
     recognition.continuous = true;
     recognition.interimResults = true;
-    recognition.lang = draft.language === "hi" ? "hi-IN" : draft.language === "es" ? "es-ES" : "en-US";
+    recognition.lang = mapLanguage(draft.language);
 
     recognition.onresult = (event) => {
       const transcript = Array.from(event.results)
@@ -91,6 +102,17 @@ export function VoiceWorkspace() {
     };
   }, [draft.language, setDraft]);
 
+  if (!tool) {
+    return <StatusBanner tone="warning">This speech tool is not configured yet.</StatusBanner>;
+  }
+
+  const hasStarted = Boolean(draft.output) || history.length > 0;
+  const controlsVisible = Boolean(draft.transcript.trim());
+
+  useEffect(() => {
+    onContentReadyChange?.(hasStarted);
+  }, [hasStarted, onContentReadyChange]);
+
   function toggleRecording() {
     if (!recognitionRef.current) return;
 
@@ -101,231 +123,225 @@ export function VoiceWorkspace() {
     }
 
     setError("");
-    setAudioFile(null);
-    recognitionRef.current.lang = draft.language === "hi" ? "hi-IN" : draft.language === "es" ? "es-ES" : "en-US";
+    recognitionRef.current.lang = mapLanguage(draft.language);
     recognitionRef.current.start();
     setIsRecording(true);
+    showToast({
+      title: "Recording started",
+      description: "Speak naturally and Toolslify will fill the transcript live.",
+      tone: "success",
+    });
   }
 
-  async function handleConvert() {
-    if (!draft.transcript.trim() && !audioFile) return;
-
-    setIsLoading(true);
-    setError("");
-
-    try {
-      const result = audioFile
-        ? await requestFormTool("voice-note-to-text", {
-            file: audioFile,
-            language: draft.language,
-            transcript: draft.transcript,
-          })
-        : await requestJsonTool("voice-note-to-text", {
-            transcript: draft.transcript,
-            language: draft.language,
-          });
-
-      setDraft((current) => ({ ...current, output: result.output }));
-      setResponseMeta(result.meta);
-      pushHistory({
-        label: audioFile ? audioFile.name : "Live transcript",
-        preview: result.output || result.meta?.guidance || draft.transcript,
-        payload: {
-          transcript: draft.transcript,
-          language: draft.language,
-          output: result.output,
-        },
-      });
-    } catch (requestError) {
-      setError(requestError.message);
-    } finally {
-      setIsLoading(false);
+  function handleConvert() {
+    if (!draft.transcript.trim()) {
+      setError("Start recording or paste speech notes first.");
+      return;
     }
+
+    const output = polishTranscriptPreview(draft.transcript);
+    setDraft((current) => ({ ...current, output }));
+    setError("");
+    pushHistory({
+      label: tool.shortName,
+      preview: output,
+      payload: {
+        ...draft,
+        output,
+      },
+    });
+    recordToolUsage(slug);
+    showToast({
+      title: `${tool.shortName} ready`,
+      description: "Your transcript is updated below with copy and download actions.",
+      tone: "success",
+    });
   }
 
   async function handleCopy() {
     if (!draft.output) return;
-    await navigator.clipboard.writeText(draft.output);
-    setCopyState("done");
-    setTimeout(() => setCopyState("idle"), 1500);
+
+    try {
+      await navigator.clipboard.writeText(draft.output);
+      setCopyState("done");
+      setTimeout(() => setCopyState("idle"), 1500);
+      showToast({
+        title: "Copied transcript",
+        description: "The transcript is ready to paste.",
+        tone: "success",
+      });
+    } catch {
+      showToast({
+        title: "Copy failed",
+        description: "Use download if clipboard access is blocked.",
+        tone: "warning",
+      });
+    }
   }
 
   function handleDownload() {
     if (!draft.output) return;
+
     downloadTextFile({
       content: draft.output,
-      filename: "toolslify-voice-transcript.txt",
+      filename: `${slug}.txt`,
+    });
+    showToast({
+      title: "Download started",
+      description: `Saving ${slug}.txt locally.`,
+      tone: "success",
     });
   }
 
   function restoreHistory(item) {
     if (!item.payload) return;
     setDraft(item.payload);
-    setAudioFile(null);
+    setError("");
   }
 
-  function loadExample() {
+  function resetDraft() {
+    setDraft(getInitialState());
     setError("");
-    setResponseMeta(null);
-    setAudioFile(null);
-    setDraft({
-      transcript: VOICE_EXAMPLE,
-      language: "en",
-      output: "",
-    });
   }
 
   return (
-    <div className="grid gap-6 xl:grid-cols-[1fr_320px]">
-      <div className="space-y-6">
-        <MetricStrip
-          items={[
-            { label: "Input mode", value: audioFile ? "Upload" : isRecording ? "Recording" : "Voice note" },
-            { label: "Language", value: draft.language.toUpperCase() },
-            { label: "Output words", value: String(outputMetrics.words) },
-            { label: "Speech API", value: speechSupport ? "Supported" : "Upload only" },
-          ]}
-        />
+    <div className="space-y-6">
+      {error ? <StatusBanner tone="warning">{error}</StatusBanner> : null}
 
-        <div className="grid gap-6 lg:grid-cols-[0.95fr_1.05fr]">
-          <div className="space-y-6">
-            <PanelCard title="Step 1: Record or upload" description="Use live browser speech capture or upload an audio file for server processing.">
-              <div className="space-y-5">
-                <StarterCard
-                  title="Use a sample voice memo"
-                  description="Load a realistic spoken note so you can test cleanup, summary points, and export actions without recording first."
-                  onAction={loadExample}
-                />
+      <div id="tool-workspace" className="workspace-grid scroll-mt-28">
+        <PanelCard
+          eyebrow="Capture"
+          title={tool.inputTitle}
+          minimal
+          className="workspace-input-pane"
+        >
+          <div className="space-y-5">
+            <div className="flex flex-wrap items-center justify-between gap-3 rounded-[18px] border border-[var(--border)] bg-[var(--surface)] p-4">
+              <Badge tone={speechSupport ? "success" : "default"}>
+                {isRecording ? "Recording" : speechSupport ? "Ready" : "Unavailable"}
+              </Badge>
+              <div className="flex flex-wrap items-center gap-3">
+                <Button onClick={toggleRecording} disabled={!speechSupport} variant="secondary">
+                  {isRecording ? "Stop recording" : "Start recording"}
+                </Button>
+              </div>
+            </div>
+
+            <TextEditor
+              value={draft.transcript}
+              onChange={(transcript) => setDraft((current) => ({ ...current, transcript }))}
+              placeholder="Record or paste speech notes here."
+              className="min-h-[240px]"
+            />
+
+            {controlsVisible ? (
+              <>
                 <SegmentedControl
                   label="Recognition language"
-                  help="Used for live browser recording and for upload processing when a server key is configured."
-                  options={languageOptions}
+                  help="Used for live microphone capture in supported browsers."
+                  options={LANGUAGE_OPTIONS}
                   value={draft.language}
                   onChange={(language) => setDraft((current) => ({ ...current, language }))}
                 />
 
-                <div className="rounded-[28px] border border-[var(--border)] bg-[var(--surface-strong)] p-5">
-                  <div className="flex items-center justify-between gap-4">
-                    <div>
-                      <p className="text-lg font-semibold text-[var(--foreground)]">Live browser recording</p>
-                      <p className="mt-2 text-sm leading-7 text-[var(--muted-foreground)]">
-                        Capture quick voice notes directly in supported browsers. Toolslify only keeps the text locally until you choose to convert it.
-                      </p>
-                    </div>
-                    <Badge tone={speechSupport ? "success" : "default"}>
-                      {speechSupport ? "Ready" : "Unavailable"}
-                    </Badge>
-                  </div>
-                  <div className="mt-5 flex flex-wrap gap-3">
-                    <ActionButton onClick={toggleRecording} disabled={!speechSupport}>
-                      {isRecording ? "Stop recording" : "Start recording"}
-                    </ActionButton>
-                    <Badge>{isRecording ? "Listening..." : "Microphone idle"}</Badge>
-                  </div>
+                <InlineInfo
+                  items={[
+                    `${inputMetrics.words} words`,
+                    draft.language.toUpperCase(),
+                    text.noDataStored,
+                  ]}
+                />
+
+                <div id="tool-action" className="flex flex-col gap-3 sm:flex-row sm:items-center">
+                  <Button onClick={handleConvert} size="lg" className="min-w-[220px]">
+                    {tool.ctaLabel}
+                  </Button>
                 </div>
-
-                <FileDropzone
-                  title="Audio upload"
-                  description="Upload MP3, WAV, M4A, OGG, or WebM audio. Add OPENAI_API_KEY later to enable production transcription for uploaded files."
-                  accept="audio/*"
-                  file={audioFile}
-                  onFileChange={setAudioFile}
-                  accentLabel="API-ready"
-                />
-              </div>
-            </PanelCard>
-
-            <PanelCard title="Captured transcript" description="Edit the live transcript before sending it through the cleaner.">
-              <TextEditor
-                value={draft.transcript}
-                onChange={(transcript) => setDraft((current) => ({ ...current, transcript }))}
-                placeholder="Recorded or pasted transcript text will appear here."
-                className="min-h-[260px]"
-              />
-            </PanelCard>
-          </div>
-
-          <div className="space-y-6">
-            {error ? <StatusBanner tone="warning">{error}</StatusBanner> : null}
-            {responseMeta?.guidance ? <StatusBanner tone="warning">{responseMeta.guidance}</StatusBanner> : null}
-            {!speechSupport ? (
-              <StatusBanner>
-                This browser does not expose the SpeechRecognition API. Upload mode still works, and live capture can be used in compatible Chromium browsers.
-              </StatusBanner>
+              </>
             ) : null}
-
-            <PanelCard title="Step 3: Transcript output" description="Clean the transcript, copy it, or download it for later editing.">
-              {isLoading ? (
-                <LoadingSurface title="Converting voice note..." />
-              ) : (
-                <OutputSurface
-                  output={draft.output}
-                  placeholder="Your cleaned transcript will appear here after you convert the voice note."
-                />
-              )}
-            </PanelCard>
-
-            <div className="grid gap-4 md:grid-cols-2">
-              <PanelCard title="Quality note">
-                <p className="text-sm leading-7 text-[var(--muted-foreground)]">
-                  {responseMeta?.qualityNote || "Transcript cleanup and source details will appear here after conversion."}
-                </p>
-              </PanelCard>
-              <PanelCard title="Source">
-                <p className="text-sm leading-7 text-[var(--muted-foreground)]">
-                  {responseMeta?.source || "Live recording or upload"}
-                </p>
-              </PanelCard>
-            </div>
           </div>
-        </div>
-
-        <ActionRow
-          meta={[
-            <Badge key="source">{audioFile ? audioFile.name : "Live transcript"}</Badge>,
-            <Badge key="privacy" tone="accent">
-              {text.noDataStored}
-            </Badge>,
-          ]}
-        >
-          <ActionButton onClick={handleConvert} disabled={isLoading || (!draft.transcript.trim() && !audioFile)}>
-            {isLoading ? "Converting..." : "Step 2: Convert audio"}
-          </ActionButton>
-          <ActionButton onClick={handleCopy} disabled={!draft.output}>
-            {copyState === "done" ? text.copied : text.copy}
-          </ActionButton>
-          <ActionButton onClick={handleDownload} disabled={!draft.output}>
-            {text.download}
-          </ActionButton>
-          <ActionButton
-            onClick={() => {
-              setDraft({ transcript: "", language: "en", output: "" });
-              setAudioFile(null);
-            }}
-            disabled={!draft.transcript && !audioFile && !draft.output}
-          >
-            {text.clear}
-          </ActionButton>
-        </ActionRow>
-      </div>
-
-      <div className="space-y-6">
-        <PanelCard title="Summary points" description="Useful follow-up reminders after you transcribe a voice note.">
-          <MetaNotes
-            items={(responseMeta?.summaryPoints || ["Convert a voice note to see quick summary points."]).map((item, index) => ({
-              label: `Point ${index + 1}`,
-              value: item,
-            }))}
-          />
         </PanelCard>
 
+        <PanelCard
+          eyebrow="Preview"
+          title={tool.outputTitle}
+          className="workspace-output-pane p-6 sm:p-7"
+        >
+          <div className="space-y-5">
+            <OutputSurface output={draft.output} placeholder={tool.outputPlaceholder} />
+
+            {draft.output ? (
+              <>
+                <div className="flex flex-col gap-3 sm:flex-row sm:flex-wrap">
+                  <Button onClick={handleCopy} size="lg">
+                    {copyState === "done" ? text.copied : text.copy}
+                  </Button>
+                  <Button onClick={handleDownload} variant="secondary" size="lg">
+                    {text.download}
+                  </Button>
+                  <Button onClick={resetDraft} variant="secondary" size="lg">
+                    {text.clear}
+                  </Button>
+                </div>
+
+                <InlineInfo
+                  items={[
+                    `${outputMetrics.words} words`,
+                    `${outputMetrics.sentences} sentences`,
+                    "Ready to export",
+                  ]}
+                />
+              </>
+            ) : (
+              <StatusBanner>
+                Record a voice note or paste spoken text on the left, then keep the cleaned transcript on this same screen.
+              </StatusBanner>
+            )}
+          </div>
+        </PanelCard>
+      </div>
+
+      {hasStarted ? (
         <HistoryPanel
-          title={text.history}
+          title={`${tool.shortName} history`}
           history={history}
           onRestore={restoreHistory}
-          emptyMessage="Voice note transcripts will stay here so you can reopen a previous recording result."
+          emptyMessage="Transcript runs stay here in this browser so you can reopen them quickly."
         />
-      </div>
+      ) : null}
     </div>
   );
+}
+
+function polishTranscriptPreview(text) {
+  return text
+    .replace(/\s+/g, " ")
+    .replace(/\s+([,.!?])/g, "$1")
+    .replace(/(^|[.!?]\s+)([a-z])/g, (match, prefix, char) => `${prefix}${char.toUpperCase()}`)
+    .trim();
+}
+
+function mapLanguage(language) {
+  if (language === "ar") return "ar-SA";
+  if (language === "bn") return "bn-BD";
+  if (language === "de") return "de-DE";
+  if (language === "es") return "es-ES";
+  if (language === "fr") return "fr-FR";
+  if (language === "hi") return "hi-IN";
+  if (language === "id") return "id-ID";
+  if (language === "it") return "it-IT";
+  if (language === "ja") return "ja-JP";
+  if (language === "ko") return "ko-KR";
+  if (language === "nl") return "nl-NL";
+  if (language === "pl") return "pl-PL";
+  if (language === "pt") return "pt-PT";
+  if (language === "ru") return "ru-RU";
+  if (language === "ta") return "ta-IN";
+  if (language === "th") return "th-TH";
+  if (language === "tr") return "tr-TR";
+  if (language === "uk") return "uk-UA";
+  if (language === "ur") return "ur-PK";
+  if (language === "vi") return "vi-VN";
+  if (language === "zh") return "zh-CN";
+  return "en-US";
 }

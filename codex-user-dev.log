@@ -1,0 +1,59 @@
+
+> toolslify@1.0.0 dev
+> next dev
+
+▲ Next.js 16.2.1 (Turbopack)
+- Local:         http://localhost:3000
+- Network:       http://10.155.209.204:3000
+✓ Ready in 956ms
+Creating turbopack project {
+  dir: 'C:\\Users\\monis\\OneDrive\\Pictures\\Documents\\toolslify',
+  testMode: true
+}
+
+ GET / 200 in 3.1s (next.js: 2.3s, application-code: 814ms)
+ GET / 200 in 213ms (next.js: 4ms, application-code: 209ms)
+ GET / 200 in 245ms (next.js: 3ms, application-code: 242ms)
+ GET / 200 in 236ms (next.js: 5ms, application-code: 231ms)
+ GET / 200 in 391ms (next.js: 8ms, application-code: 383ms)
+ GET /manifest.webmanifest 200 in 214ms (next.js: 183ms, application-code: 31ms)
+ GET /tools/quote-to-spreadsheet-converter 200 in 939ms (next.js: 785ms, generate-params: 661ms, application-code: 155ms)
+ GET /manifest.webmanifest 200 in 23ms (next.js: 9ms, application-code: 14ms)
+ POST /api/tool/quote-to-spreadsheet-converter 200 in 2.7s (next.js: 1610ms, application-code: 1099ms)
+ POST /api/tool/quote-to-spreadsheet-converter 200 in 894ms (next.js: 36ms, application-code: 857ms)
+ POST /api/tool/quote-to-spreadsheet-converter 200 in 896ms (next.js: 23ms, application-code: 873ms)
+ GET /manifest.webmanifest 200 in 66ms (next.js: 46ms, application-code: 20ms)
+ GET /manifest.webmanifest 200 in 35ms (next.js: 20ms, application-code: 15ms)
+ GET / 200 in 1101ms (next.js: 15ms, application-code: 1086ms)
+○ Compiling /tools ...
+ GET /tools/app-screenshot-localizer 200 in 1102ms (next.js: 752ms, generate-params: 29ms, application-code: 350ms)
+ GET /manifest.webmanifest 200 in 19ms (next.js: 10ms, application-code: 9ms)
+ GET /tools/app-screenshot-localizer 200 in 1750ms (next.js: 452ms, generate-params: 23ms, application-code: 1299ms)
+ GET /manifest.webmanifest 200 in 31ms (next.js: 8ms, application-code: 23ms)
+ POST /api/tool/app-screenshot-localizer 200 in 2.2s (next.js: 104ms, application-code: 2.1s)
+ GET / 200 in 143ms (next.js: 11ms, application-code: 132ms)
+ GET /manifest.webmanifest 200 in 15ms (next.js: 5ms, application-code: 9ms)
+ GET /tools/duplicate-transaction-finder 200 in 172ms (next.js: 30ms, generate-params: 20ms, application-code: 142ms)
+ GET /manifest.webmanifest 200 in 17ms (next.js: 7ms, application-code: 10ms)
+ GET /manifest.webmanifest 200 in 22ms (next.js: 6ms, application-code: 16ms)
+ GET /tools/whatsapp-chat-to-pdf-converter 200 in 161ms (next.js: 36ms, generate-params: 21ms, application-code: 124ms)
+ GET /manifest.webmanifest 200 in 30ms (next.js: 8ms, application-code: 22ms)
+ POST /api/tool/whatsapp-chat-to-pdf-converter 200 in 58ms (next.js: 30ms, application-code: 29ms)
+ GET /manifest.webmanifest 200 in 25ms (next.js: 10ms, application-code: 15ms)
+ GET /tools/image-to-prompt-generator 200 in 146ms (next.js: 33ms, generate-params: 24ms, application-code: 113ms)
+ GET /manifest.webmanifest 200 in 23ms (next.js: 4ms, application-code: 18ms)
+ POST /api/tool/image-to-prompt-generator 200 in 1800ms (next.js: 49ms, application-code: 1751ms)
+ POST /api/tool/image-to-prompt-generator 200 in 1229ms (next.js: 33ms, application-code: 1196ms)
+ GET /manifest.webmanifest 200 in 41ms (next.js: 26ms, application-code: 15ms)
+ GET /tools/screenshot-to-csv-converter 200 in 208ms (next.js: 38ms, generate-params: 27ms, application-code: 170ms)
+ GET /manifest.webmanifest 200 in 18ms (next.js: 7ms, application-code: 11ms)
+ POST /api/tool/screenshot-to-csv-converter 200 in 862ms (next.js: 59ms, application-code: 804ms)
+ POST /api/tool/screenshot-to-csv-converter 200 in 918ms (next.js: 34ms, application-code: 884ms)
+ GET /manifest.webmanifest 200 in 19ms (next.js: 8ms, application-code: 10ms)
+ GET /tools/pdf-compare-tool 200 in 159ms (next.js: 27ms, generate-params: 18ms, application-code: 132ms)
+ GET /manifest.webmanifest 200 in 22ms (next.js: 7ms, application-code: 15ms)
+ POST /api/tool/pdf-compare-tool 200 in 1891ms (next.js: 35ms, application-code: 1856ms)
+ GET /manifest.webmanifest 200 in 13ms (next.js: 6ms, application-code: 7ms)
+ GET /tools/bank-statement-to-excel-converter 200 in 152ms (next.js: 29ms, generate-params: 19ms, application-code: 123ms)
+ GET /manifest.webmanifest 200 in 14ms (next.js: 5ms, application-code: 8ms)
+ GET /manifest.webmanifest 200 in 28ms (next.js: 7ms, application-code: 21ms)

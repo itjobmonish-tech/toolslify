@@ -3,11 +3,11 @@ export default function manifest() {
     name: "Toolslify",
     short_name: "Toolslify",
     description:
-      "Premium AI utility suite for humanizing text, generating assignments, summarizing meetings, converting voice notes, and extracting value from PDFs.",
+      "Fast online calculators for salary, mortgage, tax, cost of living, home projects, health, math, time, conversions, cooking, and everyday planning.",
     start_url: "/",
     display: "standalone",
-    background_color: "#07131f",
-    theme_color: "#0f766e",
+    background_color: "#ffffff",
+    theme_color: "#ffffff",
     icons: [
       {
         src: "/icon.svg",
