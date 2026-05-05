@@ -60,7 +60,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en" data-scroll-behavior="smooth" suppressHydrationWarning>
       <head>
-        <!-- Google tag (gtag.js) -->
+        {/* Google tag (gtag.js) */}
         <script async src="https://www.googletagmanager.com/gtag/js?id=G-DXZK3NK4V0"></script>
         <script>
           {`
