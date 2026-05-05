@@ -2,9 +2,11 @@ import Script from "next/script";
 import { Manrope, Space_Grotesk } from "next/font/google";
 import "./globals.css";
 import { PreferencesProvider } from "@/components/providers/preferences-provider";
+import { ToastProvider } from "@/components/providers/toast-provider";
 import { SiteFooter } from "@/components/site-footer";
 import { SiteHeader } from "@/components/site-header";
-import { SITE_URL, SOCIAL_IMAGE, TWITTER_IMAGE_PATH } from "@/lib/site-data";
+import { DEFAULT_ROBOTS } from "@/lib/seo-metadata";
+import { SITE_DESCRIPTION, SITE_NAME, SITE_URL, SOCIAL_IMAGE, TWITTER_IMAGE_PATH } from "@/lib/site-data";
 
 const manrope = Manrope({
   subsets: ["latin"],
@@ -16,34 +18,36 @@ const spaceGrotesk = Space_Grotesk({
   subsets: ["latin"],
   display: "swap",
   variable: "--font-display",
+  weight: ["500", "600", "700"],
 });
 
 export const metadata = {
   metadataBase: new URL(SITE_URL),
-  applicationName: "Toolslify",
+  applicationName: SITE_NAME,
   title: {
-    default: "Toolslify | Premium AI Utility Suite",
-    template: "%s | Toolslify",
+    default: `${SITE_NAME} | Professional Tools`,
+    template: `%s | ${SITE_NAME}`,
   },
-  description:
-    "Toolslify is a premium multi-tool AI platform for humanizing text, generating assignments, summarizing meetings, transcribing voice notes, and converting PDFs.",
+  description: SITE_DESCRIPTION,
+  creator: SITE_NAME,
+  publisher: SITE_NAME,
+  robots: DEFAULT_ROBOTS,
   alternates: {
     canonical: "/",
   },
   openGraph: {
-    title: "Toolslify",
-    description:
-      "All-in-one AI writing toolkit for students, creators, and professionals with premium UX and production-ready workflows.",
+    title: SITE_NAME,
+    description: SITE_DESCRIPTION,
     url: SITE_URL,
-    siteName: "Toolslify",
+    siteName: SITE_NAME,
+    locale: "en_US",
     type: "website",
     images: [SOCIAL_IMAGE],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Toolslify",
-    description:
-      "Premium AI utility suite for humanizing text, summarizing notes, converting voice and PDFs, and shipping cleaner outputs faster.",
+    title: SITE_NAME,
+    description: SITE_DESCRIPTION,
     images: [TWITTER_IMAGE_PATH],
   },
   icons: {
@@ -54,17 +58,33 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en" suppressHydrationWarning>
+    <html lang="en" data-scroll-behavior="smooth" suppressHydrationWarning>
+      <head>
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=G-DXZK3NK4V0"
+          strategy="afterInteractive"
+        />
+        <Script id="google-analytics" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-DXZK3NK4V0');
+          `}
+        </Script>
+      </head>
       <body className={`${manrope.variable} ${spaceGrotesk.variable}`}>
         <Script src="/theme-init.js" strategy="beforeInteractive" />
         <PreferencesProvider>
-          <div className="app-shell">
-            <div className="ambient-rings" aria-hidden="true" />
-            <div className="ambient-grid" aria-hidden="true" />
-            <SiteHeader />
-            <main>{children}</main>
-            <SiteFooter />
-          </div>
+          <ToastProvider>
+            <div className="app-shell">
+              <div className="ambient-rings" aria-hidden="true" />
+              <div className="ambient-grid" aria-hidden="true" />
+              <SiteHeader />
+              <main>{children}</main>
+              <SiteFooter />
+            </div>
+          </ToastProvider>
         </PreferencesProvider>
       </body>
     </html>
