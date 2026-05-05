@@ -71,7 +71,15 @@ export default function RootLayout({ children }) {
           `}
         </script>
       </head>
-      <body>{children}</body>
+      <body className={`${manrope.variable} ${spaceGrotesk.variable}`}>
+        <PreferencesProvider>
+          <ToastProvider>
+            <SiteHeader />
+            {children}
+            <SiteFooter />
+          </ToastProvider>
+        </PreferencesProvider>
+      </body>
     </html>
   );
 }
